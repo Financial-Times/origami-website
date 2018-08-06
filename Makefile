@@ -1,4 +1,6 @@
 
+HOST = localhost:4000
+
 # Install dependencies
 install:
 	@echo "Installing dependencies"
@@ -22,4 +24,5 @@ serve:
 # Run pa11y against the site
 test:
 	@echo "Testing site"
-	@npx pa11y-ci --sitemap "./_site/sitemap.xml"
+	@echo '{"defaults":{"concurrency":5}}' > .pa11yci
+	@npx pa11y-ci@^2.1.1 --sitemap "http://$(HOST)/sitemap.xml" --sitemap-find "^/" --sitemap-replace "http://$(HOST)/"
