@@ -41,7 +41,7 @@ In order to get that, we'll need the foundation of our HTML to look like this:
 	&lt;/body>
 &lt;/html></code></pre>
 
-<aside><a href="https://codepen.io/ft-origami/pen/GBXgZa" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/GBXgZa" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 You won't see anything yet, but the classes and the data attribute will be working together to center our content across a span of 8 columns when we add the CSS to our page.
 
@@ -54,7 +54,7 @@ With the exception of JavaScript-only components, all of Origami's components re
 
 First, we're going to add some content for our article, so lets add a heading and some great information about fruit _below_ our warning message:
 
-<aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 <pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit&lt;/h1>  
 &lt;h3>Durian&lt;/h3>
@@ -94,7 +94,7 @@ So next up, let's add this `o-table` markup under our content:
 	&lt;/tbody>
 &lt;/table></code></pre>
 
-<aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 ## Component CSS
 
@@ -107,7 +107,7 @@ The `href` of that link references the endpoint that serves all CSS bundles in t
 
 <pre><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid"/></code></pre>
 
-<aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` CSS bundle from the Build Service.
 
 But we also want to style our content and our table.
@@ -117,7 +117,7 @@ It is important to highlight that you only need **one** link tag per page, regar
 So in order to add the styling for all of our other components, we need to add a few components to our url:
 
 <pre><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid,o-typography,o-table"/></code></pre>
-<aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
 
@@ -130,7 +130,7 @@ So our final step involves providing our table with the ability to sort its cont
 Let's add the following to our `<head>`:
 
 <pre><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table">&lt;/script></code></pre>
-<aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">CODEPEN!</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 Now you can scroll down to your table, and sort alphabetically by fruit name, or numerically by popularity.
 
