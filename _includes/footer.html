@@ -1,0 +1,19 @@
+
+<footer class="o-layout__footer o-footer-services o-footer-services--wide">
+	<div class="o-footer-services__container">
+		<div class="o-footer-services__info">
+			<span class="o-footer-services__logo">Origami</span>
+			<p class="o-footer-services__contact-email">Help or advice can be found here
+				<a href="mailto:{{site.data.contact.email}}">{{site.data.contact.email}}</a>.
+				<a href="{{site.github.repository_url}}/edit/master/{{page.path}}">
+					Suggest an edit to this page
+				</a>
+			</p>
+			<p class="o-footer-services__contact-slack"><a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a></p>
+		</div>
+		<div class="o-footer-services__base">
+			<p class="o-footer-services__source-code"><a href="{{site.github.repository_url}}">View project on GitHub</a></p>
+			<p class="o-footer-services__copyright">&#xA9; THE FINANCIAL TIMES LTD {{ site.time | date: '%Y' }}. FT and &apos;Financial Times&apos; are trademarks of The Financial Times Ltd.</p>
+		</div>
+	</div>
+</footer>

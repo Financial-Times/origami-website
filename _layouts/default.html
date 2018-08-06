@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="core">
+<head>
+
+	<!-- Page meta-information -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>{{page.title}}</title>
+	<meta name="description" content="{{page.description}}" />
+
+	<!-- TODO this needs to be removed when we go public -->
+	<meta name="robots" content="noindex, nofollow"/>
+
+	<!-- Cuts the mustard test -->
+	<script>
+		var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
+		if (cutsTheMustard) {
+			document.documentElement.className = document.documentElement.className.replace(/\bcore\b/g, 'enhanced');
+		}
+	</script>
+
+	<!-- Styles -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style>
+		/* Hide any enhanced experience content when in core mode, and vice versa. */
+		.core .o--if-js,
+		.enhanced .o--if-no-js {
+			display: none !important;
+		}
+	</style>
+	<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-fonts@^3,o-layout@^1.2.2,o-syntax-highlight@^1.1.3,o-message@^2.3.3" />
+	<link rel="stylesheet" href="/assets/main.css" />
+
+	<!-- Site links -->
+	<link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap" />
+	<link rel="canonical" href="{{site.github.url}}{{ page.url | replace: 'index.html', '' }}" />
+
+	<script>
+		(function(src) {
+			if (cutsTheMustard) {
+				var o = document.createElement('script');
+				o.async = o.defer = true;
+				o.src = src;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(o, s);
+			}
+		}('https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-fonts@^3,o-layout@^1.2.2,o-syntax-highlight@^1.1.3,o-message@^2.3.3'));
+	</script>
+
+</head>
+<body>
+
+	{% include beta-banner.html %}
+
+	<div class="o-layout" data-o-component="o-layout">
+
+		{% include header.html %}
+
+		<div class="o-layout__sidebar"></div>
+
+		<div class="o-layout__main" data-o-component="o-syntax-highlight">
+			{{content}}
+		</div>
+
+		{% include footer.html %}
+
+	</div>
+
+</body>
+</html>
