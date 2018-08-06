@@ -9,22 +9,21 @@ Using the Origami Build Service is the quickest way of getting Origami component
 
 <aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build">API and technical documentation</a>.</aside>
 
-Below is a step by step walkthrough for building page for an article about fruit, and we'll include a few Origami components to do so.
+Below is a step by step walkthrough for building page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
 
 ## Setting up your sandbox
-For this tutorial, we recommend you follow along by setting up your project in [Codepen](https://codepen.io/), or [JSBin](https://jsbin.com/?html,output).
+For this tutorial, we recommend you follow along by setting up your project in [CodePen](https://codepen.io/), or [JSBin](https://jsbin.com/?html,output).
 
+There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page.
 
-There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page. Then, we'll look at browser compatibility and our solutions for that.
-
-We'll be providing code snippets for you to follow, you can also have a look at the [result of the tutorial](#).
+We'll be providing code snippets for you to follow, you can also have a look at the [result of the tutorial](#TODO).
 
 Let's begin.
 
 ## Boilerplate HTML
 We'll need to start with some boilerplate markup.
 
-There are two important things we want on an article page—a [grid](https://registry.origami.ft.com/components/o-grid), and some consistent [typography](https://registry.origami.ft.com/components/o-typography).
+There are three things we want on a FT-like article page—a [grid](https://registry.origami.ft.com/components/o-grid), consistent [typography](https://registry.origami.ft.com/components/o-typography) and a very specific [color](https://registry.origami.ft.com/components/o-grid).
 
 In order to get that, we'll need the foundation of our HTML to look like this:
 
@@ -33,7 +32,7 @@ In order to get that, we'll need the foundation of our HTML to look like this:
 	&lt;head>
 		&lt;title>My First Origami Page&lt;/title>
 	&lt;/head>
-	&lt;body>
+	&lt;body class="o-colors-page-background">
 		&lt;div class="o-grid-container o-typography-wrapper">
 			&lt;div class="o-grid-row" data-o-grid-colspan="center 8">
 			&lt;/div>
@@ -110,13 +109,13 @@ The `href` of that link references the endpoint that serves all CSS bundles in t
 <aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` CSS bundle from the Build Service.
 
-But we also want to style our content and our table.
+But we also want to style our content and our table, and fetch the right color from our color palette.
 
 It is important to highlight that you only need **one** link tag per page, regardless of how many components you are using. The Build Service can include more than one component in the bundle we ask for, meaning that we can add multiple components to the same URL. This avoids duplicating the CSS that is shared between components, because we are only downloading it all once.
 
 So in order to add the styling for all of our other components, we need to add a few components to our url:
 
-<pre><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid,o-typography,o-table"/></code></pre>
+<pre><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid,o-colors,o-typography,o-table"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
@@ -125,14 +124,14 @@ And now, when we look at our page, we should have a styled table, different typo
 
 There is one more step, before our page is entirely functional. Not all Origami components use JavaScript. In fact, of the ones we've used in this example, only `o-table` does.
 
-So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the CSS, we fetch JavaScript bundles from an Build Service endpoint, through a `script` tag.
+So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the CSS, we fetch JavaScript bundles from a Build Service endpoint, through a `script` tag.
 
 Let's add the following to our `<head>`:
 
 <pre><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table">&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-Now you can scroll down to your table, and sort alphabetically by fruit name, or numerically by popularity.
+Now you can scroll down to your table, and sort fruit alphabetically by name, or numerically by popularity.
 
 ## Next steps
 
