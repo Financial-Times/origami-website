@@ -1,5 +1,5 @@
 ---
-title: Example Tutorial
+title: The manual build process
 ---
 
 
