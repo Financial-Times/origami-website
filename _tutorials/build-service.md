@@ -12,7 +12,7 @@ Using the Origami Build Service is the quickest way of getting Origami component
 Below is a step by step walkthrough for building page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
 
 ## Setting up your sandbox
-For this tutorial, we recommend you follow along by setting up your project in [CodePen](https://codepen.io/), or [JSBin](https://jsbin.com/?html,output).
+For this tutorial, we recommend you follow along by setting up your project in [CodePen](https://codepen.io/), or [JSBin](https://jsbin.com/).
 
 There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page.
 
@@ -23,7 +23,7 @@ Let's begin.
 ## Boilerplate HTML
 We'll need to start with some boilerplate markup.
 
-There are three things we want on a FT-like article page—a [grid](https://registry.origami.ft.com/components/o-grid), consistent [typography](https://registry.origami.ft.com/components/o-typography) and a very specific [color](https://registry.origami.ft.com/components/o-grid).
+There are three things we want on a FT-like article page—a [grid](https://registry.origami.ft.com/components/o-grid), consistent [typography](https://registry.origami.ft.com/components/o-typography) and a very specific [color](https://registry.origami.ft.com/components/o-colors).
 
 In order to get that, we'll need the foundation of our HTML to look like this:
 
@@ -72,7 +72,7 @@ So next up, let's add this `o-table` markup under our content:
 	&lt;thead>
 		&lt;th>Fruit&lt;/th>
 		&lt;th data-o-table-data-type="numeric" class="o-table__cell--numeric">Popularity (%)&lt;/th>
-		&lt;th>Taste Note&lt;/th>
+		&lt;th>Characteristic&lt;/th>
 	&lt;/thead>
 	&lt;tbody>
 		&lt;tr>
@@ -83,7 +83,7 @@ So next up, let's add this `o-table` markup under our content:
 		&lt;tr>
 			&lt;td>Dragonfruit&lt;/td>
 			&lt;td class="o-table__cell--numeric">71&lt;/td>
-			&lt;td>sweet&lt;/td>
+			&lt;td>juicy&lt;/td>
 		&lt;/tr>
 		&lt;tr>
 			&lt;td>Durian&lt;/td>
@@ -131,7 +131,7 @@ Let's add the following to our `<head>`:
 <pre><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table">&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-Now you can scroll down to your table, and sort fruit alphabetically by name, or numerically by popularity.
+Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
 
 ## Next steps
 
