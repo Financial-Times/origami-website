@@ -27,6 +27,7 @@ exclude:
   - Makefile
   - node_modules
   - README.md
+  - scripts
 
 # Jekyll plugins
 plugins:
