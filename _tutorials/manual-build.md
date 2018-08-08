@@ -17,7 +17,7 @@ We will need a folder structure for our page. So let's begin by creating a new d
 
 <pre><code class="o-syntax-highlight--html">mkdir o-fruit-demo && cd o-fruit-demo</code></pre>
 
-Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, dependencies and assets. But first, we'll start by adding an `index.html` to the root of our new project with some boilerplate HTML:
+Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, dependencies and assets. Let's start by adding an `index.html` to the root of our new project with some boilerplate HTML:
 
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
 &lt;html>
@@ -40,7 +40,9 @@ Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, d
 ├── index.html</code>
 </pre></aside>
 
-The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. First, we need to put together that source code. It will be written in plain Javascript and in SCSS, and each of those will be in their individual folders in our project:
+The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. We'll need to put together that source code before any compilation can happen. It will be written in plain Javascript and in SCSS, and each of those will be in their individual folders in our project:
+
+<pre><code class="o-syntax-highlight--html">mkdir -p src src/js src/scss && touch src/js/main.js src/scss/main.scss</code></pre>
 
 <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
 <p class="o-layout__rule-left">Our tree structure so far:</p>
@@ -54,14 +56,12 @@ The `link` and the `script` tags are pointing at our public assets, which will b
 </pre>
 </aside>
 
-<pre><code class="o-syntax-highlight--html">mkdir -p src src/js src/scss && touch src/js/main.js src/scss/main.scss</code></pre>
-
 Now we're ready to start adding components to our page.
 
 ## Component HTML
 With the exception of JavaScript-only components, all of Origami's components rely on markup. This markup, combined with the styling and the functionality, is what determines how a component will look and behave on a page. So before we can style anything, we'll need to add some component markup to our page.
 
-[o-grid](/#TODO) will determine how our content sits on our page, so lets add the following to the `<body>` our `index.html`:
+[o-grid](https://registry.origami.ft.com/components/o-grid) will determine how our content sits on our page, so lets add the following to the `<body>` our `index.html`:
 
 <pre><code class="o-syntax-highlight--html">&lt;div class="o-grid-container">
 	&lt;div class="o-grid-row" data-o-grid-colspan="center 8">
@@ -69,8 +69,8 @@ With the exception of JavaScript-only components, all of Origami's components re
 &lt;/div></code>
 </pre>
 
-We want to share some fruit knowledge, so let's add some content to that inner `div`:
-<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit&lt;/h1>  
+We want to share some fruit facts, so let's add some content to that inner `div`:
+<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>  
 &lt;h3>Durian&lt;/h3>
 &lt;p>Due to its overpowering smell, durian has been banned on many types of public transport across Thailand, Japan and Hong Kong. In Singapore, the fruit is banned across all types of public transportation and even taxis have signs to let you know they refuse to carry passengers transporting the smelly fruit.&lt;/p>
 &lt;h3>Dragonfruit&lt;/h3>
@@ -84,7 +84,11 @@ This is a good time to highlight how the manual build process provides more flex
 
 Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content. However, instead of using the default `o-table` class, let's replace it with `fruit-table` in all of the elements' classes for that variation (`fruit-table--row-stripes`, `fruit-table__cell--numeric`, &c).
 
+<aside>If you'd like to double check your work so far, we've put our <code>index.html</code> <a href="https://codepen.io/ft-origami/pen/QBJNEG" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
+
+
 <!-- <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside> -->
+
 
 ## Bower & the Origami Registry
 All [Origami-compliant components](/#TODO) are available for installation via Bower. They live in the [Origami Registry](/#TODO), and are made visible to Bower through the [Origami Bower Registry](https://origami-bower-registry.ft.com/).
@@ -101,4 +105,4 @@ This means that, in order for Bower to find the components we will be installing
 }</code>
 </pre>
 
-Next, we need to install our components as direct dependencies. We will opt to install them through the command line,
+Next, we need to install our components as direct dependencies. We will opt to install them through the command line,....
