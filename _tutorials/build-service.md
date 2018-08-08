@@ -80,7 +80,7 @@ The Build Service will perform a number of build steps to compile and bundle up 
 
 The `href` of that link references the endpoint that serves all CSS bundles in the Build Service. The most important part of this url is the query parameter - it specifies what component and which version of it we're after:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^4.4.1"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}}"/></code></pre>
 
 <aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` CSS bundle from the Build Service.
@@ -91,7 +91,7 @@ It is important to highlight that you only need **one** link tag per page, regar
 
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^4.4.1,o-colors@^4.4.1,o-typography@^5.7.5,o-table@^6.9.0"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
@@ -104,7 +104,7 @@ So our final step involves providing our table with the ability to sort its cont
 
 For now though, let's add the following to our `<head>`:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^6.9.0">&lt;/script></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^{{site.data.components.o-table.version}}">&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
