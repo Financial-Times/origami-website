@@ -98,7 +98,7 @@ So in order to add the styling for all of our other components, we need to add a
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
 
 ## Component JavaScript
-bob
+
 There is one more step, before our page is entirely functional. Not all Origami components use JavaScript. In fact, of the ones we've used in this example, only `o-table` does.
 
 So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the CSS, we fetch JavaScript bundles from a Build Service endpoint, through a `script` tag. And, also like the url for the `link` tag, the `script src` expects a query parameter, which can also be more than one component.
