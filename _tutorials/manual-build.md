@@ -19,7 +19,7 @@ We will need a folder structure for our page. So let's begin by creating a new d
 Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, dependencies and assets. Let's start by adding an `index.html` to the root of our new project with some boilerplate HTML:
 
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
-&lt;html>
+&lt;html lang="en">
 	&lt;head>
 		&lt;meta charset="utf-8">
 		&lt;title>My First Origami Project&lt;/title>
@@ -69,11 +69,11 @@ With the exception of JavaScript-only components, all of Origami's components re
 
 We want to share some fruit facts, so let's add some content to that inner `div`:
 <pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>  
-&lt;h3>Durian&lt;/h3>
+&lt;h2>Durian&lt;/h2>
 &lt;p>Due to its overpowering smell, durian has been banned on many types of public transport across Thailand, Japan and Hong Kong. In Singapore, the fruit is banned across all types of public transportation and even taxis have signs to let you know they refuse to carry passengers transporting the smelly fruit.&lt;/p>
-&lt;h3>Dragonfruit&lt;/h3>
+&lt;h2>Dragonfruit&lt;/h2>
 &lt;p>The cactus flower that produces dragon fruit survives only a single night. It blooms in the evening, ready for pollination by bats and moths, and wilts the very next day. The very brief pollination period, however, is sufficient for the plant to bear fruits.&lt;/p>
-&lt;h3>Naseberry, aka Sapodilla&lt;/h3>
+&lt;h2>Naseberry, aka Sapodilla&lt;/h2>
 &lt;p>The sapodilla tree supplies the building blocks for a number of products utilized by humans.  Long ago, the Mayas and Aztecs would boil its ‘chicle’ sap, mold it into thick blocks and cut them into small pieces to chew. They were making the first chewing gum!&lt;/p></code></pre>
 
 Finally, we want to showcase the popularity of each fruit in a sortable table. To do that, we're going to use the `o-table` component.
@@ -138,8 +138,7 @@ And your `bower.json` should now look something like this:
   }
 }</code>
 </pre>
-
-<aside>version version version lalala<a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
+g pu
 
 ## The Build Step
 
