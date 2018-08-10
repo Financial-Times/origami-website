@@ -34,7 +34,7 @@ Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, d
 &lt;/html></code></pre>
 
 <aside style="border-left: 0;padding-left:0">
-<p class="o-layout__rule-left">Our tree structure so far:</p>
+<p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── index.html</code>
 </pre></aside>
@@ -48,10 +48,10 @@ Now we're ready to start adding components to our page.
 ## Component HTML
 
 <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our tree structure so far:</p>
+<p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── index.html
-└── src
+└── src/
     └── main.js
     └── main.scss</code>
 </pre>
@@ -80,7 +80,7 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 This is a good time to highlight how the manual build process provides more flexibility, because we don't need to stick to the Origami naming convention - we can give our table whatever class name we want.
 
-Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content. However, instead of using the default `o-table` class, let's replace it with `fruit-table` in all of the elements' classes for that variation (`fruit-table--row-stripes`, `fruit-table__cell--numeric`, &c).
+Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content. However, instead of using the default `o-table` class, let's replace it with `fruit-table` in all of the elements' classes for that variation (`fruit-table--row-stripes`, `fruit-table__cell--numeric`, etc).
 
 <aside>If you'd like to double check your work, we've put our <code>index.html</code> <a href="#TODO" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
 
@@ -105,11 +105,11 @@ This means that, in order for Bower to find the components we will be installing
 </pre>
 
 <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our tree structure so far:</p>
+<p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── .bowerrc
 ├── index.html
-└── src
+└── src/
     └── main.js
     └── main.scss</code>
 </pre>
@@ -129,13 +129,13 @@ Now we need to install our components, and we can save them all to our file by r
 And your `bower.json` should now look something like this:
 
 <!-- <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our tree structure so far:</p>
+<p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── .bowerrc
 ├── bower.json
-├── bower_components
+├── bower_components/
 ├── index.html
-└── src
+└── src/
     └── main.js
     └── main.scss</code>
 </pre>
@@ -172,29 +172,29 @@ We want to compile our source code (which we don't have yet) into a public folde
 - `--watch` is a flag that will trigger a rebuild when we make changes to our project.
 
 Altogether, the command looks like this:
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">obt build --build-folder="./public/" --sass="./src/scss/main.scss" --js="./src/js/main.js" --watch</code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">obt build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
 
 You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
 
 ## Component Styling
 
 <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our tree structure so far:</p>
+<p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ── .bowerrc
 ├── bower.json
-├── bower_components
+├── bower_components/
 ├── index.html
-├── public
+├── public/
 │   ├── main.css
 │   └── main.js
-└── src
+└── src/
     └── main.js
     └── main.scss</code>
 </pre>
 </aside>
 
-Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.sccs` file.
+Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.scss` file.
 
 All Origami components have a [silent mode](/#TODO). When silent mode is 'on' (or `true`), the components' SCSS will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
 
@@ -207,7 +207,7 @@ If we open our `index.html` in a browser window, we'll see that our content is n
 
 Remember that we added an [o-typography](#TODO) class to our inner div at the beginning of the tutorial. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
-Look at your `index.html` in the browser when you're done - your headings and paragraphs should have recieved font families and styling of their own.
+Look at your `index.html` in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
 
 When you're ready, we're going to do this differently for the rest of the components on our page. This will help us understand the power of building a page manually.
 
