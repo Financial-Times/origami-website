@@ -128,7 +128,7 @@ Now we need to install our components, and we can save them all to our file by r
 
 And your `bower.json` should now look something like this:
 
-<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
+<!-- <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
 <p class="o-layout__rule-left">Our tree structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── .bowerrc
@@ -139,7 +139,7 @@ And your `bower.json` should now look something like this:
     └── main.js
     └── main.scss</code>
 </pre>
-</aside>
+</aside> -->
 
 <aside>version version version lalala<a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
 
@@ -165,7 +165,7 @@ For that, we are going to use the [Origami Build Tools](https://github.com/Finan
 
 Once it is globally installed, we can use the tools by the alias `obt`. There are many commands that come with OBT, but the one we will be focussing on today is `build`.
 
-We want to compile our source code (which we don't have yet) into a public folder that our HTMl can read. We will need to pass the `obt build` command a few arguments to do so:
+We want to compile our source code (which we don't have yet) into a public folder that our HTML can read. We will need to pass the `obt build` command a few arguments to do so:
 - `--build-folder` is set to the name and directory of our public assets folder.
 - `--sass` points at the SCSS that we want to compile into css to use in our public folder.
 - `--js` points at the JavaScript that we want to transpile into ES5 in our public folder.
@@ -196,9 +196,9 @@ You can leave that running in the background, and open your `index.html` in a br
 
 Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.sccs` file.
 
-All Origami components have a [silent mode](/#TODO). When silent mode is on (or `true`), the components' Sass will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
+All Origami components have a [silent mode](/#TODO). When silent mode is 'on' (or `true`), the components' SCSS will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
 
-Let's start off with [o-grid](/#TODO). It is likely we'll want most of the features that o-grid provides, so we'll include it without the silent mode switched on. For now, all we need in our `main.scss` is:
+Let's start off with [o-grid](/#TODO). It is likely we'll want most of the features that o-grid provides, so we'll include it with silent mode switched off (or `false`). For now, all we need in our `main.scss` is:
 
 <pre><code class="o-syntax-highlight--scss">$o-grid-is-silent: false;
 @import 'o-grid/main';</code></pre>
@@ -207,7 +207,7 @@ If we open our `index.html` in a browser window, we'll see that our content is n
 
 Remember that we added an [o-typography](#TODO) class to our inner div at the beginning of the tutorial. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
-Look at your `index.html` in the browser now - your headings and paragraphs should have recieved font families and styling of their own.
+Look at your `index.html` in the browser when you're done - your headings and paragraphs should have recieved font families and styling of their own.
 
 When you're ready, we're going to do this differently for the rest of the components on our page. This will help us understand the power of building a page manually.
 
@@ -219,7 +219,7 @@ body {
 	background: oColorsGetPaletteColor('paper');
 }</code></pre>
 
-As soon as your build has completed, visit your `index.html` again. You should have an 'FT Pink' background color.
+As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background color.
 
 We're going to get a little more granular with [o-table](/#TODO). We're after a specific variation, _and_ we've given our table a class name of its own. Ultimately, we want the base styling of a table, but we also want some stripes to tell each row apart, and we want to style the numbers we'll be using, too:
 
@@ -237,9 +237,9 @@ We're going to get a little more granular with [o-table](/#TODO). We're after a 
 	}
 }</code></pre>
 
-<aside>If you'd like to double check your work, we've put our <code>main.scss</code> <a href="/#TODO" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
-
 With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
+
+<aside>If you'd like to double check your work, we've put our <code>main.scss</code> <a href="/#TODO" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
 
 ## Component Functionality
 
@@ -247,7 +247,7 @@ The final step in our tutorial involves adding JavaScript to our components, and
 
 Not all Origami components use JavaScript. For example, of the components we have installed today, only `o-table` requires it.
 
-Origami components listen for a custom event, `o.DOMContentLoaded`, in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
+Origami components listen for a custom event—`o.DOMContentLoaded`—in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
 
 <aside><a href="/#TODO">MOAR 'BOUT INITIALISING JS</a></aside>
 
