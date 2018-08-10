@@ -16,7 +16,7 @@ For this tutorial, we recommend you follow along by setting up your project in [
 
 There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page.
 
-We'll be providing code snippets for you to follow, you can also have a look at the [result of the tutorial](/#TODO).
+<aside>We'll be providing code snippets for you to follow, but you can also have a look at the <a href="https://codepen.io/ft-origami/full/ejLNNL">result of the tutorial</a>.</aside>
 
 Let's begin.
 
@@ -30,6 +30,7 @@ In order to get that, we'll need the foundation of our HTML to look like this:
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
 &lt;html>
 	&lt;head>
+		&lt;meta charset="utf-8">
 		&lt;title>My First Origami Page&lt;/title>
 	&lt;/head>
 	&lt;body class="o-colors-page-background">
@@ -51,11 +52,11 @@ With the exception of JavaScript-only components, all of Origami's components re
 
 <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
 
-First, we're going to add some content for our article, so lets add a heading and some great information about fruit _below_ our warning message:
+First, we're going to add some content for our article, so lets add a heading and some great information about fruit in our `o-grid-row`:
 
 <aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit&lt;/h1>  
+<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>  
 &lt;h3>Durian&lt;/h3>
 &lt;p>Due to its overpowering smell, durian has been banned on many types of public transport across Thailand, Japan and Hong Kong. In Singapore, the fruit is banned across all types of public transportation and even taxis have signs to let you know they refuse to carry passengers transporting the smelly fruit.&lt;/p>
 &lt;h3>Dragonfruit&lt;/h3>
@@ -68,7 +69,7 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 All of the markup that comes with an Origami component is available on the components' page in the Origami registry.
 
-We can find the markup for the striped variation of o-table <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">in the registry</a>, and copy that HTML into our work from there.
+We can find the markup for the <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">striped variation of o-table in the registry</a>, and copy that HTML into our work from there.
 
 <aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
