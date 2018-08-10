@@ -26,7 +26,6 @@ Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, d
 
 		&lt;link rel="stylesheet" href="public/main.css">
 		&lt;script async src="public/main.js">&lt;/script>
-
 	&lt;/head>
 	&lt;body>
 
@@ -80,9 +79,13 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 This is a good time to highlight how the manual build process provides more flexibility, because we don't need to stick to the Origami naming convention - we can give our table whatever class name we want.
 
-Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content. However, instead of using the default `o-table` class, let's replace it with `fruit-table` in all of the elements' classes for that variation (`fruit-table--row-stripes`, `fruit-table__cell--numeric`, etc).
+Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content.
 
-<aside>If you'd like to double check your work, we've put our <code>index.html</code> <a href="#TODO" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
+Instead of using the default `o-table` class, let's use one called `fruit-table`. You should end up with class names like: <code style="white-space: nowrap;">fruit-table--row-stripes</code> and <code style="white-space: nowrap;">fruit-table__cell--numeric</code>.
+
+Be careful **not** to change the value of the `data-o-component` attribute. This attribute is what the `o-table` JavaScript looks for on initialisation.
+
+<aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
 
 <!-- <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside> -->
 
@@ -204,7 +207,7 @@ Let's start off with [o-grid](/#TODO). It is likely we'll want most of the featu
 
 If we open our `index.html` in a browser window, we'll see that our content is now centered on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's SCSS.
 
-Remember that we added an [o-typography](#TODO) class to our inner div at the beginning of the tutorial. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
+Remember that we added an [o-typography](/#TODO) class to our inner div at the beginning of the tutorial. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
 Look at your `index.html` in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
 
@@ -238,7 +241,7 @@ We're going to get a little more granular with [o-table](/#TODO). We're after a 
 
 With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
 
-<aside>If you'd like to double check your work, we've put our <code>main.scss</code> <a href="/#TODO" class="o-typography-link--external" target="\_blank" rel="noopener">up on CodePen</a>.</aside>
+<aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
 
 ## Component Functionality
 
