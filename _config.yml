@@ -28,6 +28,10 @@ exclude:
   - node_modules
   - README.md
   - scripts
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
 
 # Jekyll plugins
 plugins:
