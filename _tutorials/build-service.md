@@ -92,7 +92,7 @@ It is important to highlight that you only need **one** link tag per page, regar
 
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@{{site.data.components.o-table.version}}"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
