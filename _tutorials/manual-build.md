@@ -128,21 +128,6 @@ Now we need to install our components, and we can save them all to our file by r
 
 And your `bower.json` should now look something like this:
 
-<!-- <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
-├── .bowerrc
-├── bower.json
-├── bower_components/
-├── index.html
-└── src/
-    └── main.js
-    └── main.scss</code>
-</pre>
-</aside> -->
-
-<aside>version version version lalala<a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
-
 <pre><code class="o-syntax-highlight--json">{
   "name": "o-fruit-demo",
   "dependencies": {
@@ -154,12 +139,25 @@ And your `bower.json` should now look something like this:
 }</code>
 </pre>
 
+<aside>version version version lalala<a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
+
 ## The Build Step
+
+<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
+<p class="o-layout__rule-left">Our folder structure so far:</p>
+<pre><code class="o-syntax-highlight--html">o-fruit-demo
+├── .bowerrc
+├── bower.json
+├── bower_components/
+├── index.html
+└── src/
+    └── main.js
+    └── main.scss</code>
+</pre>
+</aside>
 
 So that we can see our progress as we build the page, now is the time to implement our build step.
 For that, we are going to use the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools). OBT is best installed globally, so that it is available in any directory where you choose to use Origami components.
-
-<aside><a href="/#TODO">MORE ABOUT OBT</a></aside>
 
 <pre><code class="o-syntax-highlight--html">npm i -g origami-build-tools</code></pre>
 
@@ -173,6 +171,8 @@ We want to compile our source code (which we don't have yet) into a public folde
 
 Altogether, the command looks like this:
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">obt build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
+
+<aside><a href="/#TODO">MORE ABOUT OBT</a></aside>
 
 You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
 
