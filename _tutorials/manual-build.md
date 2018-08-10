@@ -34,7 +34,6 @@ Eventually, we'll have a folder tree that separates our HTML, CSS, JavaScript, d
 &lt;/html></code></pre>
 
 <aside style="border-left: 0;padding-left:0">
-
 <p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── index.html</code>
@@ -49,7 +48,6 @@ Now we're ready to start adding components to our page.
 ## Component HTML
 
 <aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-
 <p class="o-layout__rule-left">Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── index.html
