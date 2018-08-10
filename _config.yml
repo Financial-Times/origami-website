@@ -33,6 +33,8 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+repository: Financial-Times/origami
+
 # Jekyll plugins
 plugins:
   - jekyll-redirect-from
