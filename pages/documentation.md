@@ -22,7 +22,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur accumsan urna
 <aside> Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</aside>
 
 
-## Modules
+## Components
 
 Donec et magna tincidunt, ultrices erat ut, rutrum ex. Donec vulputate nec ex sed convallis. Fusce pretium dui at pulvinar egestas. Sed dapibus sapien orci, ut placerat metus auctor a. Aenean at porttitor turpis. Fusce eros arcu, lobortis a risus non, bibendum accumsan neque. Sed egestas porta bibendum. Fusce non gravida lacus, at elementum ex. Praesent pretium finibus leo, sed blandit dolor rutrum eu.
 
