@@ -93,7 +93,7 @@ Be careful **not** to change the value of the `data-o-component` attribute. This
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/#TODO) are available for installation via Bower. They live in the [Origami Registry](/#TODO), and are made visible to Bower through the [Origami Bower Registry](https://origami-bower-registry.ft.com/).
+All [Origami-compliant components](/#TODO) are available for installation via Bower. They live in the [Origami Registry](/#TODO), and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank">Origami Bower Registry</a>.
 
 This means that, in order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 
@@ -216,10 +216,10 @@ Every component's silent mode variable is set to `true` by default, to prevent o
 
 [o-colors](/#TODO) comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a color within our brand palette. This means we'll need to use two mixins to get the right color for our page:
 
-<pre><code class="o-syntax-highlight--scss">@import 'o-colors/main';
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
 
 body {
-	background: oColorsGetPaletteColor(oColorsGetUseCase(page, background)));
+	background-color: oColorsGetPaletteColor(oColorsGetUseCase(page, background)));
 }</code></pre>
 
 As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background color.
@@ -279,6 +279,6 @@ We've stepped through a basic manual set up of components, which are the fundame
 
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard '](/#TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the ['Polyfill Service'](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/#TODO) test, which can determine which experience to serve to which browser.
+- Another service we provide is the [Polyfill Service](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
 - [Component versioning](/#TODO) is also important when building and maintaining products that use Origami components.
