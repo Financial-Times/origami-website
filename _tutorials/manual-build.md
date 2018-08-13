@@ -214,7 +214,7 @@ Look at your `index.html` in the browser when you're done - your headings and pa
 
 Every component's silent mode variable is set to `true` by default, to prevent outputting more CSS than we really need. And since we don't need all of the colors in the palette for this page, we will leave the silent mode as is.
 
-[o-colors](/#TODO) comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a color within our brand palette. This means we'll need to use two mixins to get the right color for our page: 
+[o-colors](/#TODO) comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a color within our brand palette. This means we'll need to use two mixins to get the right color for our page:
 
 <pre><code class="o-syntax-highlight--scss">@import 'o-colors/main';
 
@@ -275,7 +275,7 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 
 ## Next steps
 
-We've stepped through a basic set up of components with the Build Service, and these are the fundamental steps for any component you might want to use within your product.
+We've stepped through a basic manual set up of components, which are the fundamental steps for any component you might want to use within your product when you have more control over the styling and the functionality.
 
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
