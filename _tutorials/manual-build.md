@@ -212,12 +212,14 @@ Look at your `index.html` in the browser when you're done - your headings and pa
 
 ### Silent Mode: On
 
-Every component's silent mode variable is set to `true` by default, to prevent outputting more CSS than we really need. And since we don't need all of the colors in the palette for this page, we will leave the silent mode as is, and add this to our `main.scss`:
+Every component's silent mode variable is set to `true` by default, to prevent outputting more CSS than we really need. And since we don't need all of the colors in the palette for this page, we will leave the silent mode as is.
+
+[o-colors](/#TODO) comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a color within our brand palette. This means we'll need to use two mixins to get the right color for our page: 
 
 <pre><code class="o-syntax-highlight--scss">@import 'o-colors/main';
 
 body {
-	background: oColorsGetPaletteColor('paper');
+	background: oColorsGetPaletteColor(oColorsGetUseCase(page, background)));
 }</code></pre>
 
 As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background color.
