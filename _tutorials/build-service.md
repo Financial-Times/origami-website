@@ -7,16 +7,16 @@ title: The Build Service
 
 Using the Origami Build Service is the quickest way of getting Origami components to work in your product. The service bundles together the CSS and the JavaScript for all Origami components on a central server. You can then access specific component bundles by using a `link` or `script` tag.
 
-<aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build">API and technical documentation</a>.</aside>
+<aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank">API and technical documentation</a>.</aside>
 
 Below is a step by step walkthrough for building a page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
 
 ## Setting up your sandbox
-For this tutorial, we recommend you follow along by setting up your project in [CodePen](https://codepen.io/), or [JSBin](https://jsbin.com/).
+For this tutorial, we recommend you follow along by setting up your project in <a href="https://codepen.io/" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank" rel="noopener">JSBin</a>.
 
 There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page.
 
-We'll be providing code snippets for you to follow, you can also have a look at the [result of the tutorial](/#TODO).
+<aside>We'll be providing code snippets for you to follow, but you can also have a look at the <a href="https://codepen.io/ft-origami/full/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">result of the tutorial</a>.</aside>
 
 Let's begin.
 
@@ -28,8 +28,9 @@ There are three things we want on a FT-like article page: a [grid](https://regis
 In order to get that, we'll need the foundation of our HTML to look like this:
 
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
-&lt;html>
+&lt;html lang="en">
 	&lt;head>
+		&lt;meta charset="utf-8">
 		&lt;title>My First Origami Page&lt;/title>
 	&lt;/head>
 	&lt;body class="o-colors-page-background">
@@ -51,16 +52,16 @@ With the exception of JavaScript-only components, all of Origami's components re
 
 <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
 
-First, we're going to add some content for our article, so lets add a heading and some great information about fruit _below_ our warning message:
+First, we're going to add some content for our article, so lets add a heading and some great information about fruit in our `o-grid-row`:
 
 <aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit&lt;/h1>  
-&lt;h3>Durian&lt;/h3>
+<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>  
+&lt;h2>Durian&lt;/h2>
 &lt;p>Due to its overpowering smell, durian has been banned on many types of public transport across Thailand, Japan and Hong Kong. In Singapore, the fruit is banned across all types of public transportation and even taxis have signs to let you know they refuse to carry passengers transporting the smelly fruit.&lt;/p>
-&lt;h3>Dragonfruit&lt;/h3>
+&lt;h2>Dragonfruit&lt;/h2>
 &lt;p>The cactus flower that produces dragon fruit survives only a single night. It blooms in the evening, ready for pollination by bats and moths, and wilts the very next day. The very brief pollination period, however, is sufficient for the plant to bear fruits.&lt;/p>
-&lt;h3>Naseberry, aka Sapodilla&lt;/h3>
+&lt;h2>Naseberry, aka Sapodilla&lt;/h2>
 &lt;p>The sapodilla tree supplies the building blocks for a number of products utilized by humans.  Long ago, the Mayas and Aztecs would boil its ‘chicle’ sap, mold it into thick blocks and cut them into small pieces to chew. They were making the first chewing gum!&lt;/p></code></pre>
 
 
@@ -68,7 +69,7 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 All of the markup that comes with an Origami component is available on the components' page in the Origami registry.
 
-We can find the markup for the striped variation of o-table <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">in the registry</a>, and copy that HTML into our work from there.
+We can find the markup for the <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">striped variation of o-table in the registry</a>, and copy that HTML into our work from there.
 
 <aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
@@ -115,6 +116,6 @@ We've stepped through a basic set up of components with the Build Service, and t
 
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard '](/#TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the ['Polyfill Service'](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/#TODO) test, which can determine which experience to serve to which browser.
+- Another service we provide is the [Polyfill Service](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
 - [Component versioning](/#TODO) is also important when building and maintaining products that use Origami components.

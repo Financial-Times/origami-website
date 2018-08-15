@@ -10,3 +10,20 @@ html, body {
 	margin: 0;
 	height: 100%;
 }
+
+a[href$="TODO"] {
+	color: tomato;
+	border-bottom-color: tomato;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+aside.no-padding {
+	padding-left:0;
+	grid-row: span 7;
+
+	p { padding-left: 1em }
+	pre { margin: 0 }
+}
