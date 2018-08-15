@@ -28,6 +28,12 @@ exclude:
   - node_modules
   - README.md
   - scripts
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+repository: Financial-Times/origami
 
 # Jekyll plugins
 plugins:
