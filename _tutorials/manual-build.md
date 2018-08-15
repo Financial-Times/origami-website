@@ -9,7 +9,8 @@ Adding Origami components to your product through the manual build process gives
 This tutorial assumes that:
 - You have not implemented a build step
 - You are using a UNIX-like OS with a bash shell
-- You are familiar with [Bower](https://bower.io/), [Node.js](https://nodejs.org/en/), [npm](https://www.npmjs.com/), and [SCSS](https://sass-lang.com/)
+- You are familiar with JavaScript, and [SCSS](https://sass-lang.com/)
+- You have a basic understanding of package managers ([Bower](https://bower.io/), [npm](https://www.npmjs.com/))
 
 ## Setting up your sandbox
 We will need a folder structure for our page. So let's begin by creating a new directory to work in.
@@ -32,10 +33,10 @@ Eventually, we'll have a folder structure that separates our HTML, CSS, JavaScri
 	&lt;/body>
 &lt;/html></code></pre>
 
-<aside style="border-left: 0;padding-left:0">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
+<aside class="no-padding">
+<p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
-├── index.html</code>
+└── index.html</code>
 </pre></aside>
 
 The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. That source code will be written in plain Javascript and in SCSS, and each of those will be in their individual folders in our project:
@@ -46,8 +47,8 @@ Now we're ready to start adding components to our page.
 
 ## Component HTML
 
-<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
+<aside class="no-padding">
+<p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── index.html
 └── src/
@@ -81,19 +82,17 @@ This is a good time to highlight how the manual build process provides more flex
 
 Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content.
 
-Instead of using the default `o-table` class, let's use one called `fruit-table`. You should end up with class names like: <code style="white-space: nowrap;">fruit-table--row-stripes</code> and <code style="white-space: nowrap;">fruit-table__cell--numeric</code>.
+Instead of using the default `o-table` class, let's use one called `fruit-table`. You should end up with class names like: <code class="no-wrap">fruit-table--row-stripes</code> and <code class="no-wrap">fruit-table__cell--numeric</code>.
 
 Be careful **not** to change the value of the `data-o-component` attribute. This attribute is what the `o-table` JavaScript looks for on initialisation.
 
 <aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
 
-<!-- <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside> -->
-
 ## Bower & the Origami Registry
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/#TODO) are available for installation via Bower. They live in the [Origami Registry](/#TODO), and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank">Origami Bower Registry</a>.
+All [Origami-compliant components](/TODO) are available for installation via Bower. They live in the [Origami Registry](https://registry.origami.ft.com/components), and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external" target="\_blank" rel="noopener">Origami Bower Registry</a>.
 
 This means that, in order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 
@@ -107,8 +106,8 @@ This means that, in order for Bower to find the components we will be installing
 }</code>
 </pre>
 
-<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
+<aside class="no-padding">
+<p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── .bowerrc
 ├── index.html
@@ -144,8 +143,8 @@ And your `bower.json` should now look something like this:
 
 ## The Build Step
 
-<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
+<aside class="no-padding">
+<p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ├── .bowerrc
 ├── bower.json
@@ -177,8 +176,8 @@ You can leave that running in the background, and open your `index.html` in a br
 
 ## Component Styling
 
-<aside style="border-left: 0;padding-left:0;grid-row: span 7;">
-<p class="o-layout__rule-left">Our folder structure so far:</p>
+<aside class="no-padding">
+<p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--html">o-fruit-demo
 ── .bowerrc
 ├── bower.json
@@ -195,26 +194,26 @@ You can leave that running in the background, and open your `index.html` in a br
 
 Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.scss` file.
 
-All Origami components have a [silent mode](/#TODO). When silent mode is 'on' (or `true`), the components' SCSS will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
+All Origami components have a [silent mode](/TODO). When silent mode is 'on' (or `true`), the components' SCSS will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
 
 ### Silent Mode: Off
 
-Let's start off with [o-grid](/#TODO). It is likely we'll want most of the features that o-grid provides, so we'll include it with silent mode switched off (or `false`). For now, all we need in our `main.scss` is:
+Let's start off with [o-grid](https://registry.origami.ft.com/components/o-grid). It is likely we'll want most of the features that o-grid provides, so we'll include it with silent mode switched off (or `false`). For now, all we need in our `main.scss` is:
 
 <pre><code class="o-syntax-highlight--scss">$o-grid-is-silent: false;
 @import 'o-grid/main';</code></pre>
 
-If we open our `index.html` in a browser window, we'll see that our content is now centered on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's SCSS.
+If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's SCSS.
 
-We added an [o-typography](/#TODO) class to our inner div at the beginning of the tutorial, as well. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
+We added an [o-typography](https://registry.origami.ft.com/components/o-typography) class to our inner div at the beginning of the tutorial, as well. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
 Look at your `index.html` in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
 
 ### Silent Mode: On
 
-Every component's silent mode variable is set to `true` by default, to prevent outputting more CSS than we really need. And since we don't need all of the colors in the palette for this page, we will leave the silent mode as is.
+We'll be using [o-colors](https://registry.origami.ft.com/components/o-colors), which has a wide variety of colours in its palette. As with every other component, the `o-colors` silent mode variable is set to `true` by default to prevent outputting more CSS than we really need. And since we don't need all of the colours in the palette for this page, we will leave the silent mode for the component as is.
 
-[o-colors](/#TODO) comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a color within our brand palette. This means we'll need to use two mixins to get the right color for our page:
+o-colors comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a colour within our brand palette. This means we'll need to use two mixins to get the right colour for our page:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
 
@@ -222,9 +221,9 @@ body {
 	background-color: oColorsGetPaletteColor(oColorsGetUseCase(page, background)));
 }</code></pre>
 
-As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background color.
+As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
 
-We're going to get a little more specific with [o-table](/#TODO) since we're after a particular variation _and_ we've given our table a class name of its own.
+We're going to get a little more specific with [o-table](https://registry.origami.ft.com/components/o-table) since we're after a particular variation _and_ we've given our table a class name of its own.
 
 We want the base styling of a table, some stripes to tell each row apart, and styling for the number cells we'll be using:
 
@@ -252,9 +251,9 @@ The final step in our tutorial involves adding JavaScript to our components, and
 
 Not all Origami components use JavaScript. For example, of the components we have installed today, only `o-table` requires it.
 
-Origami components listen for a custom event—`o.DOMContentLoaded`—in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
+Origami components listen for a custom event named `o.DOMContentLoaded` in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
 
-<aside><a href="/#TODO">MOAR 'BOUT INITIALISING JS</a></aside>
+<aside>There are multiple ways to <a href="/TODO">initialise a component's JavaScript</a> when you are using Origami with the manual build process</aside>
 
 We'll need to add this to our file:
 
@@ -275,10 +274,8 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 
 ## Next steps
 
-We've stepped through a basic manual set up of components, which are the fundamental steps for any component you might want to use within your product when you have more control over the styling and the functionality.
+We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
-
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/#TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the [Polyfill Service](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
-- [Component versioning](/#TODO) is also important when building and maintaining products that use Origami components.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/TODO) test, which can determine which experience to serve to which browser.
+- Another service we provide is the [Polyfill Service](https://polyfill.io/), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- [Component versioning](/TODO) is also important when building and maintaining products that use Origami components.
