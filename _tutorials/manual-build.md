@@ -15,7 +15,7 @@ This tutorial assumes that:
 ## Setting up your sandbox
 We will need a folder structure for our page. So let's begin by creating a new directory to work in.
 
-<pre><code class="o-syntax-highlight--html">mkdir o-fruit-demo && cd o-fruit-demo</code></pre>
+<pre><code class="o-syntax-highlight--bash">mkdir o-fruit-demo && cd o-fruit-demo</code></pre>
 
 Eventually, we'll have a folder structure that separates our HTML, CSS, JavaScript, dependencies and assets. Let's start by adding an `index.html` to the root of our new project with some boilerplate HTML:
 
@@ -35,13 +35,13 @@ Eventually, we'll have a folder structure that separates our HTML, CSS, JavaScri
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 └── index.html</code>
 </pre></aside>
 
 The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. That source code will be written in plain Javascript and in SCSS, and each of those will be in their individual folders in our project:
 
-<pre><code class="o-syntax-highlight--html">mkdir src && touch src/main.js src/main.scss</code></pre>
+<pre><code class="o-syntax-highlight--bash">mkdir src && touch src/main.js src/main.scss</code></pre>
 
 Now we're ready to start adding components to our page.
 
@@ -49,7 +49,7 @@ Now we're ready to start adding components to our page.
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── index.html
 └── src/
     └── main.js
@@ -108,7 +108,7 @@ This means that, in order for Bower to find the components we will be installing
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── .bowerrc
 ├── index.html
 └── src/
@@ -126,7 +126,7 @@ Next, we need to install our components as direct dependencies, because they are
 
 Now we need to install our components, and we can save them all to our file by running:
 
-<pre><code class="o-syntax-highlight--html">bower i --save o-grid o-typography o-colors o-table</code></pre>
+<pre><code class="o-syntax-highlight--bash">bower i --save o-grid o-typography o-colors o-table</code></pre>
 
 And your `bower.json` should now look something like this:
 
@@ -145,7 +145,7 @@ And your `bower.json` should now look something like this:
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── .bowerrc
 ├── bower.json
 ├── bower_components/
@@ -159,7 +159,7 @@ And your `bower.json` should now look something like this:
 So that we can see our progress as we build the page, now is the time to implement our build step.
 For that, we are going to use the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools). As long as you have Node.js installed, you can run:
 
-<pre><code class="o-syntax-highlight--html">npx origami-build-tools [command]</code></pre>
+<pre><code class="o-syntax-highlight--bash">npx origami-build-tools [command]</code></pre>
 
 There are many commands that the Origami Build Tools provide, but the one we will be focussing on today is `build`.
 
@@ -170,7 +170,7 @@ We want to compile our source code (which we don't have yet) into a public folde
 - `--watch` is a flag that will trigger a rebuild when we make changes to our project.
 
 Altogether, the command looks like this:
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">npx origami-build-tools build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--bash">npx origami-build-tools build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
 
 You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
 
@@ -178,7 +178,7 @@ You can leave that running in the background, and open your `index.html` in a br
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ── .bowerrc
 ├── bower.json
 ├── bower_components/

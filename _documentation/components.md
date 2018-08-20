@@ -19,9 +19,9 @@ Should there be a decision tree pointing at tutorials here?
 
 Origami components that use JavaScript are **not** self starting, unless you use the [Build Service](/TODO). This means that when you add components to your page [manually](/TODO), the features that come with that component won't be available until you explicitly initialise them.
 
-<aside>The Build Service uses a component called <a href="/TODO">o-autoinit</a> which will initialise the default configuration and JavaScript for every Origami component on the page</aside>
+<aside>The Build Service uses a component called <a href="/TODO">o-autoinit</a> which will initialise the default configuration and JavaScript for every Origami component on the page.</aside>
 
-This will give you more control over the configuration of a component, and allows you to slot it in wherever is best suited to your needs. There are three ways in which we can do this, and each serves a different purpose - there isn't a 'right' method.
+This will give you more control over the configuration of a component, and it allows you to slot it in wherever is best suited to your needs. There are three ways in which we can do this, and each serves a different purpose - there isn't a 'right' method.
 
 #### Initialise all components on the page
 
@@ -38,18 +38,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 #### Initialise every instance of one Origami component
 
-If your page has multiple instances of a single Origami component on your page such as multiple [informative messages](https://registry.origami.ft.com/components/o-message@2.3.5#demo-alert-neutral), for example, you can initialise them all in one go by using the built in `init()` function, which every JavsScript-supporting component has:
+If your page has many instances of a single Origami component on your page, say multiple [informative messages](/TODO) for example, you can initialise them all in one go by using the built-in `init()` function, which every JavaScript-supporting component has:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">// Require the component, assign it to a variable
 const oMessage = require('o-message');
 
 // Initialise all the oMessages
 oMessage.init();
-}</code></pre>
+</code></pre>
 
 #### Initialise each Origami component individually
 
-You'll have most control over components in this scenario, because you can tell the component to initialise with specific configuration, at a particular time or in a significant sequence.
+You can tell a single component to initialise with some specific configuration, at a particular time or in a significant sequence. You'll have most control over the components on your page in this scenario.
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">// Require the module, assign it to a variable
 const oMessage = require('o-message');

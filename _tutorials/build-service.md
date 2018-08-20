@@ -117,5 +117,5 @@ We've stepped through a basic set up of components with the Build Service, and t
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/#TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the [Polyfill Service](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Another service we provide is the [Polyfill Service](https://polyfill.io/), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
 - [Component versioning](/#TODO) is also important when building and maintaining products that use Origami components.
