@@ -117,7 +117,7 @@ The following will be available for you to use in your project:
 
 #### ON
 
-When a component's silent mode is set to `true` or 'on', `$o-component-is-silent: on`, the SCSS mixins and variables will be made available, but they will _not_ be included and built.
+When a component's silent mode is set to `true` or 'on', `$o-component-is-silent: on`, the SCSS mixins and variables will be made available, but they will _not_ be included or built.
 
 What will be available to you in this case is:
 
@@ -128,7 +128,29 @@ What will be available to you in this case is:
 ```
 
 ### BRANDING
-### VERSIONING
+
+\#TODO
+
+### Component Versioning
+
+The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and the component's new version numbers follow the semver specification.
+
+<aside><a href="/TODO">SEMVER SPEC</a></aside>
+
+#### How components are versioned
+
+The version numbers are in the following format: `1.2.3`, which is representative of `MAJOR.MINOR.PATCH`.
+- `MAJOR`: When this changes, we refer to it as a breaking change. This usually means that we have made a drastic visual change, or a change that breaks backwards compatibility. We take care to avoid these where possible.
+- `MINOR`: When this number changes , we'll have made an improvement, added a feature or made a noticeable design tweak, for example.
+- `PATCH`: When we release patches, we are usually releasing a bug fix that does not affect the components overall functionality.
+
+#### How to request a versioned component
+
+We recommend requesting an Origami component by requesting a version range. This range is indicated by a caret (`^`), which will specify a version but will also fetch minor and patch releases in the future. So if you request `o-message@^2.3.0`, you will get `v2.3.0`. But when we release a minor (`v2.4.0`) of that component further down the line, it means you'll automatically get that, too.
+
+<aside>There are different characters that <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="\_blank" rel="noopener">specify different ranges</a></aside>
+
+By requesting a component's version range, you'll have an up-to-date component as soon as we release it.
 
 ## COMPATIBILITY
 ### MUSTARDCUT
