@@ -76,8 +76,7 @@ An Origami component generally has a comprehensive set of SCSS mixins and variab
 If we consider a small snippet of SCSS, as the one below, we can illustrate how silent mode works.
 <aside>This is an illustration of styles in a component, not an accurate representation of an <code>o-message</code> mixin.</aside>
 
-```
-$o-message-is-silent: true !default;
+<pre><code class="o-syntax-highlight--scss">$o-message-is-silent: true !default;
 
 @mixin oMessage($class: o-message) {
 	.#{$class} {
@@ -94,15 +93,14 @@ $o-message-is-silent: true !default;
 
 	// Set to silent again to avoid being output twice
 	$o-message-is-silent: true !global;
-}
-```
+}</code></pre>
 
 #### OFF
 When a component's silent mode is `false` or, 'off', `$o-component-is-silent: false`, the SCSS in the example above will be included automatically and will build all of its styles.
 
 The following will be available for you to use in your project:
-```
-.o-message {
+
+<pre><code class="o-syntax-highlight--scss">.o-message {
 	display: block;
 }
 
@@ -112,8 +110,7 @@ The following will be available for you to use in your project:
 
 @mixin oMessage($class: o-message) {
 	...
-}
-```
+}</code></pre>
 
 #### ON
 
@@ -121,11 +118,10 @@ When a component's silent mode is set to `true` or 'on', `$o-component-is-silent
 
 What will be available to you in this case is:
 
-```
-@mixin oMessage($class: o-message) {
+
+<pre><code class="o-syntax-highlight--scss">@mixin oMessage($class: o-message) {
 	...
-}
-```
+}</code></pre>
 
 ### BRANDING
 
@@ -133,9 +129,9 @@ What will be available to you in this case is:
 
 ### Component Versioning
 
-The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and the component's new version numbers follow the semver specification.
+The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the semver specification.
 
-<aside><a href="/TODO">SEMVER SPEC</a></aside>
+<aside><a href="http://semver.org/">SEMVER SPEC</a></aside>
 
 #### How components are versioned
 
@@ -146,11 +142,47 @@ The version numbers are in the following format: `1.2.3`, which is representativ
 
 #### How to request a versioned component
 
-We recommend requesting an Origami component by requesting a version range. This range is indicated by a caret (`^`), which will specify a version but will also fetch minor and patch releases in the future. So if you request `o-message@^2.3.0`, you will get `v2.3.0`. But when we release a minor (`v2.4.0`) of that component further down the line, it means you'll automatically get that, too.
+We recommend requesting an Origami component by requesting a particular version range, which is indicated by a caret (`^`). That syntax will specify a version but will also fetch minor and patch releases in the future. So if you request `o-message@^2.3.0`, you will get `v2.3.0`. But when we release a minor (`v2.4.0`) of that component further down the line, it means you'll automatically get that, too.
 
-<aside>There are different characters that <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="\_blank" rel="noopener">specify different ranges</a></aside>
+<aside>With semver you can use different characters to <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="\_blank" rel="noopener">specify different ranges</a></aside>
 
 By requesting a component's version range, you'll have an up-to-date component as soon as we release it.
+
+#### Version conflicts
+
+Almost all Origami components are built on top of other Origami components.
+
+[o-message](https://registry.origami.ft.com/components/o-message), for example, relies on [o-buttons](https://registry.origami.ft.com/components/o-message), [o-colors](https://registry.origami.ft.com/components/o-colors), [o-icons](https://registry.origami.ft.com/components/o-icons) and [o-typography](https://registry.origami.ft.com/components/o-typography), which in turn have Origami dependencies of their own, which begins an elaborate dependency tree:
+
+<pre><code class="o-syntax-highlight--bash">o-message
+├── o-buttons
+│   ├── o-colors
+│   ├── o-icons
+│   │   ├── fticons
+│   │   └── o-assets
+│   └── o-normalise
+│       └── o-colors
+├── o-colors
+├── o-icons
+│   ├── fticons
+│   └── o-assets
+└── o-typography
+    ├── o-colors
+    ├── o-fonts
+    ├── o-grid
+    └── o-icons
+        ├── fticons
+        └── o-assets</code></pre>
+
+The full `o-message` dependency tree requires `o-colors` **four** times. In order to avoid downloading four different versions of `o-colors`, we will flatten the dependencies and try to find a version of `o-colors` that all of the components can use. This is possible because Origami components use [semver ranges](#how-to-request-a-versioned-component) to specify the versions of their dependencies.
+
+However, this can also lead to situations there there is no single version that satisfies all semver ranges. This happens primarily when different ranges for the same component are specified.
+
+If, for instance, `o-message` requires `o-colors@^2.3.4`, it will be compatible with any version between `v2.3.4` and below `v3.0.0`.
+
+If the `o-typography` dependency required `o-colors@^1.2.3`, any version above and including `o-colors@2.0.0` won't be compatible with the direct `o-colors` dependency (which is `v2.3.4` and above), and will cause a conflict.
+
+The only way to fix these conflicts is to ensure that the dependencies, and the dependencies within those dependencies, are all requiring the same ranges.
 
 ## COMPATIBILITY
 ### MUSTARDCUT
