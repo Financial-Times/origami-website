@@ -4,6 +4,9 @@ collections:
   documentation:
     output: true
     permalink: /:collection/:name/
+  components:
+    output: true
+    permalink: documentation/:collection/:name/
   tutorials:
     output: true
     permalink: /:collection/:name/
