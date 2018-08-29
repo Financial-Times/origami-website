@@ -11,7 +11,6 @@ An Origami component is a collection of styles and functionality. It provides re
 ## HOW
 
 Should there be a decision tree pointing at tutorials here?
-### TUTORIALS
 
 
 ## USAGE
