@@ -27,3 +27,7 @@ aside.no-padding {
 	p { padding-left: 1em }
 	pre { margin: 0 }
 }
+
+[aria-hidden=true] {
+	display: none
+}
