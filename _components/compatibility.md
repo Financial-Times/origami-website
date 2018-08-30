@@ -99,4 +99,131 @@ If our test passes, then we can load any JavaScript our page might need, and we'
 
 ## Browser support
 
+Origami components conform to the FT's browser support standard, which looks like this:
+###### DESKTOP
+<table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
+	<thead>
+		<tr>
+			<th>Browser</th>
+			<th>Enhanced</th>
+			<th>Core</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Chrome</td>
+			<td>Latest</td>
+			<td>—</td>
+		</tr>
+		<tr>
+			<td>Chromium</td>
+			<td>—</td>
+			<td>Latest</td>
+		</tr>
+		<tr>
+			<td>Edge</td>
+			<td>Latest</td>
+			<td>–</td>
+		</tr>
+		<tr>
+			<td>Firefox</td>
+			<td>Latest</td>
+			<td>–</td>
+		</tr>
+		<tr>
+			<td>IE</td>
+			<td>11</td>
+			<td>9</td>
+		</tr>
+		<tr>
+			<td>Opera</td>
+			<td>—</td>
+			<td>Latest</td>
+		</tr>
+		<tr>
+			<td>Safari</td>
+			<td>10(6.1)</td>
+			<td>6</td>
+		</tr>
+	</tbody>
+</table>
+
+###### MOBILE
+<table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
+	<thead>
+		<tr>
+			<th>Browser</th>
+			<th>Enhanced</th>
+			<th>Core</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Android Native</td>
+			<td>—</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>BlackBerry Native</td>
+			<td>–</td>
+			<td>10</td>
+		</tr>
+		<tr>
+			<td>Chrome</td>
+			<td>Latest</td>
+			<td>—</td>
+		</tr>
+		<tr>
+			<td>Firefox</td>
+			<td>—</td>
+			<td>Latest</td>
+		</tr>
+		<tr>
+			<td>Safari</td>
+			<td>9</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Samsung Native</td>
+			<td>5 (3)</td>
+			<td>—</td>
+		</tr>
+	</tbody>
+</table>
+
+###### INTERNAL PRODUCTS
+<table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
+	<thead>
+		<tr>
+			<th>Browser</th>
+			<th>Enhanced</th>
+			<th>Core</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Chrome</td>
+			<td>Latest</td>
+			<td>—</td>
+		</tr>
+		<tr>
+			<td>Firefox</td>
+			<td>Latest</td>
+			<td>—</td>
+		</tr>
+		<tr>
+			<td>IE</td>
+			<td>11</td>
+			<td>—</td>
+		</tr>
+		<tr>
+			<td>Safari</td>
+			<td>Latest</td>
+			<td>—</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
 ## Polyfill service
