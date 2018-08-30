@@ -2,7 +2,7 @@
 title: Component Versioning
 category: usage
 ---
-# {{page.title}}
+# {{ page.title }}
 
 The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the semver specification.
 

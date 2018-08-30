@@ -3,12 +3,12 @@ title: Silent mode
 category: usage
 ---
 
-# {{page.title}}
+# {{ page.title }}
 
 Every styled Origami component comes with a 'silent mode'. At its very core, the silent mode controls the output of a component's SCSS.
 An Origami component generally has a comprehensive set of SCSS mixins and variables that define most of its styling.
 
-<aside><a href="/TODO">MOAR ABOUT SCSS MIXINS</a></aside>
+<aside>The <a href="https://sass-lang.com/guide" class="o-typography-link--external" target="\_blank" rel="noopener">Sass Guide</a> has more information about SCSS mixins, and many other features.</aside>
 
 `$o-component-silent-mode` **defaults to ON**. You do not need to explicitly set it to be on, but you do need to be aware of this default.
 
