@@ -36,7 +36,7 @@ If we consider a small snippet of SCSS, as the one below, we can illustrate how 
 
 ## ON
 
-When a component's silent mode is set to `true` or 'on': `$o-component-is-silent: on`, the SCSS mixins and variables will be made available, but they will _not_ be included or built.
+When a component's silent mode is set to `true` or 'on': `$o-component-is-silent: true`, the SCSS mixins and variables will be made available, but they will _not_ be included or built.
 
 What will be available to you in this case is:
 
