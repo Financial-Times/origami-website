@@ -56,8 +56,4 @@ The following will be available for you to use in your project:
 
 .o-message--closed {
 	display: none;
-}
-
-@mixin oMessage($class: o-message) {
-	...
 }</code></pre>
