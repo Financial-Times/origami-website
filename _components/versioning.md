@@ -1,5 +1,5 @@
 ---
-title: Component Versioning
+title: Component versioning
 category: usage
 ---
 # {{ page.title }}

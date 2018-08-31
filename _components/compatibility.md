@@ -56,51 +56,13 @@ If our test passes, then we can load any JavaScript our page might need, and we'
 	}('https://example.com/main.js));
 &lt;/script></code></pre>
 
-<a data-o-component="o-toggle" data-o-toggle-target=".target" href='#'>This</a> is what it should look like when we put it all together.
-
-<pre class="target" aria-hidden="true"><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
-&lt;html class="core" lang="en">
-&lt;head>
-	&lt;meta charset="utf-8" />
-	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	&lt;title>Origami template&lt;/title>
-	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-	&lt;script>
-		var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window);
-
-		if (cutsTheMustard) {
-			document.documentElement.className = document.documentElement.className.replace(/\bcore\b/g, 'enhanced');
-		}
-	&lt;/script>
-
-	&lt;style>
-		.core .o--if-js,
-		.enhanced .o--if-no-js { display: none !important; }
-	&lt;/style>
-
-	&lt;script>
-		(function(src) {
-			if (cutsTheMustard) {
-				var o = document.createElement('script');
-				o.async = o.defer = true;
-				o.src = src;
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(o, s);
-			}
-		}('https//example.com/main.js'));
-	&lt;/script>
-&lt;/head>
-&lt;body>
-	&lt;!-- Body content here -->
-&lt;/body>
-&lt;/html></code></pre>
+<aside>We've put the full implementation of our CTM test <a href='https://codepen.io/ft-origami/pen/rZjzbw' class="o-typography-link--external" target="\_blank" rel="noopener">on Codepen</a></aside>
 
 ## Browser support
 
 Origami components conform to the FT's browser support standard, which looks like this:
-###### DESKTOP
+
+##### DESKTOP
 <table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
 	<thead>
 		<tr>
@@ -142,13 +104,13 @@ Origami components conform to the FT's browser support standard, which looks lik
 		</tr>
 		<tr>
 			<td>Safari</td>
-			<td>10(6.1)</td>
+			<td>10 (6.1)</td>
 			<td>6</td>
 		</tr>
 	</tbody>
 </table>
 
-###### MOBILE
+##### MOBILE
 <table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
 	<thead>
 		<tr>
@@ -191,7 +153,7 @@ Origami components conform to the FT's browser support standard, which looks lik
 	</tbody>
 </table>
 
-###### INTERNAL PRODUCTS
+##### INTERNAL PRODUCTS
 <table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
 	<thead>
 		<tr>
@@ -224,6 +186,8 @@ Origami components conform to the FT's browser support standard, which looks lik
 	</tbody>
 </table>
 
-
-
 ## Polyfill service
+
+In the physical world, 'Polyfilla' is a type of plaster that is used to fill in small holes in walls. In web development, polyfills are snippets of code that implement a feature on browsers that do not natively support that feature. It means that we can write modern JavaScript without having to invest a large amount of time in making it work in older browsers.
+
+What can be time consuming, is identifying the polyfills we need, so for that, we use and maintain the <a href="http://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a> which hosts all of its own documentation.
