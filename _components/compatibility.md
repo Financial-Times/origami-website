@@ -13,11 +13,11 @@ We use a 'cuts the mustard' test to determine which category the browser request
 
 ### Cuts the mustard
 
-#### Defining a CTM test
+#### Defining a <abbr title="Cuts The Mustard">CTM</abbr> test
 
 This test checks browsers for some features that are only implemented by modern browsers. We recommend the following test:
 
-<aside>This expression comes from the BBC's <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about CTM</a></aside>
+<aside>This expression comes from the BBC's <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener') in window);</code></pre>
 
@@ -56,7 +56,7 @@ If our test passes, then we can load any JavaScript our page might need, and we'
 	}('https://example.com/main.js));
 &lt;/script></code></pre>
 
-<aside>We've put the full implementation of our CTM test <a href='https://codepen.io/ft-origami/pen/rZjzbw' class="o-typography-link--external" target="\_blank" rel="noopener">on Codepen</a></aside>
+<aside>We've put the full implementation of our <abbr title="Cuts The Mustard">CTM</abbr> test <a href='https://codepen.io/ft-origami/pen/rZjzbw' class="o-typography-link--external" target="\_blank" rel="noopener">on Codepen</a></aside>
 
 ## Browser support
 

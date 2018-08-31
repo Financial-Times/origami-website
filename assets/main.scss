@@ -16,6 +16,10 @@ a[href$="TODO"] {
 	border-bottom-color: tomato;
 }
 
+a abbr {
+	text-decoration: none;
+}
+
 .no-wrap {
 	white-space: nowrap;
 }
