@@ -63,7 +63,10 @@ If there is JavaScript to execute regardless of the experience served to the bro
 
 ## Browser support
 
+<aside>The <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/" class="o-typography-link--external" target="\_blank" rel="noopener">formal documentation</a> about the FT's browser support is available to FT staff.</aside>
+
 Origami components conform to the FT's browser support standard, which looks like this:
+
 
 ##### DESKTOP
 <table class="o-table o-table--row-stripes o-layout__main__single-span" data-o-component="o-table">
