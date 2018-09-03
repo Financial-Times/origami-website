@@ -18,7 +18,7 @@ To determine whether or not a browser supports those features, we use a 'cuts th
 
 This test checks browsers for some features that are only implemented by modern browsers. We recommend the following test:
 
-<aside>This expression comes from the BBC's <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
+<aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener') in window);</code></pre>
 
@@ -63,9 +63,9 @@ If there is JavaScript to execute regardless of the experience served to the bro
 
 ## Browser support
 
-<aside>The <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/" class="o-typography-link--external" target="\_blank" rel="noopener">formal documentation</a> about the FT's browser support is available to FT staff.</aside>
+<aside>The <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/" class="o-typography-link--external" target="\_blank" rel="noopener">formal resources</a> for the <abbr title="Financial Times">FT</abbr>'s browser support are available to <abbr title="Financial Times">FT</abbr> staff.</aside>
 
-Origami components conform to the FT's browser support standard, which looks like this:
+Origami components conform to the <abbr title="Financial Times">FT</abbr>'s browser support standard, which looks like this:
 
 
 ##### DESKTOP
@@ -99,7 +99,7 @@ Origami components conform to the FT's browser support standard, which looks lik
 			<td>–</td>
 		</tr>
 		<tr>
-			<td>IE</td>
+			<td><abbr title="Internet Explorer">IE</abbr></td>
 			<td>11</td>
 			<td>9</td>
 		</tr>
@@ -180,7 +180,7 @@ Origami components conform to the FT's browser support standard, which looks lik
 			<td>—</td>
 		</tr>
 		<tr>
-			<td>IE</td>
+			<td><abbr title="Internet Explorer">IE</abbr></td>
 			<td>11</td>
 			<td>—</td>
 		</tr>

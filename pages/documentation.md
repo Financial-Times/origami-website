@@ -13,8 +13,3 @@ nav_priority: 90
 
 
 # {{page.title}}
-
-## WHAT
-## HOW (PICKING YOUR BUILD METHOD)
-## DOCS
-list of doc pages?

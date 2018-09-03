@@ -16,8 +16,10 @@ a[href$="TODO"] {
 	border-bottom-color: tomato;
 }
 
-a abbr {
+
+abbr {
 	text-decoration: none;
+	border-bottom: 1px dotted black;
 }
 
 .no-wrap {
@@ -30,8 +32,4 @@ aside.no-padding {
 
 	p { padding-left: 1em }
 	pre { margin: 0 }
-}
-
-[aria-hidden=true] {
-	display: none
 }
