@@ -4,9 +4,9 @@ category: usage
 ---
 # {{ page.title }}
 
-The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the semver specification.
+The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the <abbr title="Semantic Versioning">semver</abbr> specification.
 
-<aside>You can find more information in the <a href="http://semver.org/" class="o-typography-link--external" target="\_blank" rel="noopener">SemVer specification</a></aside>
+<aside>You can find more information in the <a href="http://semver.org/" class="o-typography-link--external" target="\_blank" rel="noopener"><abbr href="http://semver.org/" "title="Semantic Versioning">semver</abbr> specification</a></aside>
 
 ## How components are versioned
 
@@ -19,7 +19,7 @@ The version numbers are in the following format: `1.2.3`, which is representativ
 
 We recommend requesting an Origami component by requesting a particular version range, which is indicated by a caret (`^`). That syntax will specify a version but will also fetch minor and patch releases in the future. So if you request `o-message@^2.3.0`, you will get `v2.3.0`. But when we release a minor (`v2.4.0`) of that component further down the line, it means you'll automatically get that, too.
 
-<aside>With semver you can use different characters to <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="\_blank" rel="noopener">specify different ranges</a></aside>
+<aside>With <abbr title="Semantic Versioning">semver</abbr> you can use different characters to <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="\_blank" rel="noopener">specify different ranges</a></aside>
 
 By requesting a component's version range, you'll have an up-to-date component as soon as we release it.
 
@@ -51,9 +51,9 @@ Almost all Origami components are built on top of other Origami components.
 
 Let's use `o-colors` as an example.
 
-The full `o-message` dependency tree requires `o-colors` **four** times. In order to avoid downloading four different versions of `o-colors`, we will flatten the dependencies and try to find a version of `o-colors` that all of the components requiring it can use. This is possible because [Origami components use semver ranges](#how-to-request-a-versioned-component) to specify the versions of their dependencies.
+The full `o-message` dependency tree requires `o-colors` **four** times. In order to avoid downloading four different versions of `o-colors`, we will flatten the dependencies and try to find a version of `o-colors` that all of the components requiring it can use. This is possible because [Origami components use <abbr title="Semantic Versioning">semver</abbr> ranges](#how-to-request-a-versioned-component) to specify the versions of their dependencies.
 
-However, this can also lead to situations where there is no single version that satisfies all semver ranges. This happens primarily when different ranges for the same component are specified.
+However, this can also lead to situations where there is no single version that satisfies all <abbr title="Semantic Versioning">semver</abbr> ranges. This happens primarily when different ranges for the same component are specified.
 
 If, for instance, `o-message` requires `o-colors@^2.3.4`, it will be compatible with any version between `v2.3.4` and below `v3.0.0`.
 
