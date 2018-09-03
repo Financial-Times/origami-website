@@ -6,10 +6,11 @@ title: Compatibility
 
 ## Core & enhanced experiences
 
-Origami components may present themselves differently depending on the browser they are displayed in. This means that browsers fall into two different categories: `core` and `enhanced`.
-Generally, older browsers that don't support newer JavaScript features fall under `core`, and we consider most modern browsers `enhanced`.
+`core` and `enhanced` are definitions we have for 'experiences' that we serve to a browser. The experience we serve depends on the presence of some features within the browser.
 
-We use a 'cuts the mustard' test to determine which category the browser requesting our components falls into.
+Generally, older browsers that don't support newer JavaScript features will get a `core` experience, and modern browsers will get the `enhanced` experience.
+
+To determine whether or not a browser supports those features, we use a 'cuts the mustard' test.
 
 ### Cuts the mustard
 
@@ -23,15 +24,15 @@ This test checks browsers for some features that are only implemented by modern 
 
 #### Toggling styling
 
-The styling we choose to display will rely on class names. Keeping with our categories, we will be using `.core` and `.enhanced`. Origami components contain fallback styling for the browsers that fail the test. We need to toggle the classnames based on the result of the test, and to avoid flashes of content, we'll always assume that the experience we will be served is core, until proven otherwise.
+The styling we choose to display rely on class names. Keeping with the experiences, we will be using `core` and `enhanced`. Origami components contain fallback styling for the browsers that fail the test. We need to toggle the class names based on the result of the test, and to avoid flashes of content we'll always assume that the experience we will be served is core, until proven otherwise.
 
-Your HTML source will need the `.core` class:
+Your `<html>` will need the `core` class:
 <pre><code class="o-syntax-highlight--html">&lt;html class="core"></code></pre>
 
-And we'll want to add a script to replace that class with `.enhanced` if the browser _does_ pass the test:
+And we'll want to add a script to replace that class with `enhanced` if the browser _does_ pass the test:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">if (cutsTheMustard) {
-	document.documentElement.className = document.documentElement.className.replace(/\bcore\b/g, 'enhanced');
+	document.documentElement.classList.replace('core', 'enhanced');
 }</code></pre>
 
 Finally, we need to add instructions for our styling to handle the html class:
@@ -42,7 +43,9 @@ Finally, we need to add instructions for our styling to handle the html class:
 
 #### Loading JavaScript asynchronously
 
-If our test passes, then we can load any JavaScript our page might need, and we'll need to make sure it happens asynchronously so that it doesn't block any rendering:
+If our browser passes the test and there is JavaScript that should only be served for the `enhanced` experience, we can load the JavaScript dynamically.
+
+If there is JavaScript to execute regardless of the experience served to the browser, we should add a `<script>` element to load that JavaScript.
 
 <pre><code class="o-syntax-highlight--javascript">&lt;script>
 	(function(src) {
