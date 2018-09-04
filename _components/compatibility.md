@@ -20,7 +20,9 @@ This test checks browsers for some features that are only implemented by modern 
 
 <aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var cutsTheMustard = ('querySelector' in document && 'localStorage' in window && 'addEventListener') in window);</code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var script = document.createElement('script');
+var supportsDeferredScripts = "defer" in script && "async" in script;
+window.cutsTheMustard = (typeof document.documentElement.dataset === 'object' && ('visibilityState' in document) && supportsDeferredScripts);</code></pre>
 
 #### Toggling styling
 
@@ -31,7 +33,7 @@ Your `<html>` will need the `core` class:
 
 And we'll want to add a script to replace that class with `enhanced` if the browser _does_ pass the test:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">if (cutsTheMustard) {
+<pre><code class="o-syntax-highlight--javascript">if (window.cutsTheMustard) {
 	document.documentElement.classList.replace('core', 'enhanced');
 }</code></pre>
 
@@ -49,12 +51,11 @@ If there is JavaScript to execute regardless of the experience served to the bro
 
 <pre><code class="o-syntax-highlight--javascript">&lt;script>
 	(function(src) {
-		if (cutsTheMustard) {
-			var o = document.createElement('script');
-			o.async = o.defer = true;
-			o.src = src;
+		if (window.cutsTheMustard) {
+			script.async = script.defer = true;
+			script.src = src;
 			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(o, s);
+			s.parentNode.insertBefore(script, s);
 		}
 	}('https://example.com/main.js));
 &lt;/script></code></pre>

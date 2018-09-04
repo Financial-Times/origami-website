@@ -28,26 +28,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 If your page has many instances of a single Origami component on your page, say multiple [informative messages](https://registry.origami.ft.com/components/o-message#demo-notice-inform) for example, you can initialise them all in one go by using the built-in `init()` function, which every JavaScript-supporting component has.
 
-The `init()` function accepts two optional arguments, an `HTMLElement` and an options object. What constitutes as 'options' is detailed in each components' README. 
+The `init()` function accepts two optional arguments, an `HTMLElement` and an options object. What constitutes as 'options' is detailed in each components' README.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">// Require the component, assign it to a variable
-const oMessage = require('o-message');
+<pre><code class="o-syntax-highlight--javascript">const oMessage = require('o-message');
 
 // Initialise all the oMessages
+
 oMessage.init();
 
 // == or ==
 
-// This will initialise an o-message for every o-message component found within the supplied DOM element
+// This will initialise an o-message for every o-message
+// component found within the supplied DOM element
+
 oMessage.init(HTMLElement);</code></pre>
 
 ## Initialise each Origami component individually
 
 You can tell a single component to initialise with some specific configuration, at a particular time or in a significant sequence. You'll have most control over the components on your page in this scenario.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">// Require the module, assign it to a variable
-const oMessage = require('o-message');
+<pre><code class="o-syntax-highlight--javascript">const oMessage = require('o-message');
 
 // Initialise an o-message for the passed in DOM element
-// This will initialise exactly 1 o-message, even if the DOM element has more than 1 o-message in it.
+// This will initialise exactly 1 o-message, even if the
+// DOM element has more than 1 o-message in it.
+
 new oMessage(HTMLElement);</code></pre>
