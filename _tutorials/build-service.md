@@ -2,30 +2,30 @@
 title: The Build Service
 ---
 
-
 # {{page.title}}
 
-Using the Origami Build Service is the quickest way of getting Origami components to work in your product. The service bundles together the CSS and the JavaScript for all Origami components on a central server. You can then access specific component bundles by using a `link` or `script` tag.
+Using the Origami Build Service is the quickest way of getting Origami components to work in your product. The service bundles together the <abbr title="Cascading Style Sheets">CSS</abbr> and the JavaScript for all Origami components on a central server. You can then access specific component bundles by using a `link` or `script` tag.
 
-<aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank">API and technical documentation</a>.</aside>
+<aside>You can find more detailed information on the Build Service's self hosted <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank"><abbr title="Application Programming Interface">API</abbr> and technical documentation</a>.</aside>
 
 Below is a step by step walkthrough for building a page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
+
 
 ## Setting up your sandbox
 For this tutorial, we recommend you follow along by setting up your project in <a href="https://codepen.io/" class="o-typography-link--external" target="\_blank" rel="noopener">CodePen</a>, or <a href="https://jsbin.com/" class="o-typography-link--external" target="\_blank" rel="noopener">JSBin</a>.
 
-There are usually three three parts to an Origami component; HTML, CSS and JavaScript. We're going implement one at a time to put together our page.
+There are usually three three parts to an Origami component; <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript. We're going implement one at a time to put together our page.
 
 <aside>We'll be providing code snippets for you to follow, but you can also have a look at the <a href="https://codepen.io/ft-origami/full/ejLNNL" class="o-typography-link--external" target="\_blank" rel="noopener">result of the tutorial</a>.</aside>
 
 Let's begin.
 
-## Boilerplate HTML
+## Boilerplate <abbr title="Hypertext Markup Language">HTML</abbr>
 We'll need to start with some boilerplate markup.
 
-There are three things we want on a FT-like article page: a [grid](https://registry.origami.ft.com/components/o-grid), consistent [typography](https://registry.origami.ft.com/components/o-typography) and a background [color](https://registry.origami.ft.com/components/o-colors).
+There are three things we want on a <abbr title="Financial Times">FT</abbr>-like article page: a [grid](https://registry.origami.ft.com/components/o-grid), consistent [typography](https://registry.origami.ft.com/components/o-typography) and a background [color](https://registry.origami.ft.com/components/o-colors).
 
-In order to get that, we'll need the foundation of our HTML to look like this:
+In order to get that, we'll need the foundation of our <abbr title="Hypertext Markup Language">HTML</abbr> to look like this:
 
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
 &lt;html lang="en">
@@ -43,11 +43,11 @@ In order to get that, we'll need the foundation of our HTML to look like this:
 
 <aside><a href="https://codepen.io/ft-origami/pen/GBXgZa" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-You won't see anything yet, but the classes and the data attribute will be working together to center our content across a span of 8 columns when we add the CSS to our page.
+You won't see anything yet, but the classes and the data attribute will be working together to center our content across a span of 8 columns when we add the <abbr title="Cascading Style Sheets">CSS</abbr> to our page.
 
 For now, let's finish putting together the content of our page.
 
-## Component HTML
+## Component <abbr title="Hypertext Markup Language">HTML</abbr>
 With the exception of JavaScript-only components, all of Origami's components rely on markup. This markup, combined with the styling and the functionality, is what determines how a component will look and behave on a page.
 
 <aside>A single component can have many variations, and all the variations for all components can be found in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>.</aside>
@@ -69,26 +69,26 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 All of the markup that comes with an Origami component is available on the components' page in the Origami registry.
 
-We can find the markup for the <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">striped variation of o-table in the registry</a>, and copy that HTML into our work from there.
+We can find the markup for the <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> into our work from there.
 
 <aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
 
-## Component CSS
+## Component <abbr title="Cascading Style Sheets">CSS</abbr>
 
 Now we come to the second step in putting our page together, and a big part of what makes the Build Service a quick solution.
 
-The Build Service will perform a number of build steps to compile and bundle up the SCSS that most Origami component styles are written in. Since it is all bundled for us to pick and choose from, let's begin by styling our grid. This means we'll have to add a `link` tag to our `<head>`
+The Build Service will perform a number of build steps to compile and bundle up the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that most Origami component styles are written in. Since it is all bundled for us to pick and choose from, let's begin by styling our grid. This means we'll have to add a `link` tag to our `<head>`
 
-The `href` of that link references the endpoint that serves all CSS bundles in the Build Service. The most important part of this url is the query parameter - it specifies what component and which version of it we're after:
+The `href` of that link references the endpoint that serves all <abbr title="Cascading Style Sheets">CSS</abbr> bundles in the Build Service. The most important part of this url is the query parameter - it specifies what component and which version of it we're after:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}}"/></code></pre>
 
 <aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
-Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` CSS bundle from the Build Service.
+Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` <abbr title="Cascading Style Sheets">CSS</abbr> bundle from the Build Service.
 
 But we also want to style our content and our table, and fetch the right color from our color palette.
 
-It is important to highlight that you only need **one** link tag per page, regardless of how many components you are using. The Build Service can include more than one component in the bundle we ask for, meaning that we can add multiple components to the same URL. This avoids duplicating the CSS that is shared between components, because we are only downloading it all once.
+It is important to highlight that you only need **one** link tag per page, regardless of how many components you are using. The Build Service can include more than one component in the bundle we ask for, meaning that we can add multiple components to the same URL. This avoids duplicating the <abbr title="Cascading Style Sheets">CSS</abbr> that is shared between components, because we are only downloading it all once.
 
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
@@ -101,7 +101,7 @@ And now, when we look at our page, we should have a styled table, different typo
 
 There is one more step, before our page is entirely functional. Not all Origami components use JavaScript. In fact, of the ones we've used in this example, only `o-table` does.
 
-So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the CSS, we fetch JavaScript bundles from a Build Service endpoint, through a `script` tag. And, also like the url for the `link` tag, the `script src` expects a query parameter, which can also be more than one component.
+So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the <abbr title="Cascading Style Sheets">CSS</abbr>, we fetch JavaScript bundles from a Build Service endpoint, through a `script` tag. And, also like the url for the `link` tag, the `script src` expects a query parameter, which can also be more than one component.
 
 For now though, let's add the following to our `<head>`:
 
@@ -116,6 +116,6 @@ We've stepped through a basic set up of components with the Build Service, and t
 
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/#TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the [Polyfill Service](/#TODO), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
-- [Component versioning](/#TODO) is also important when building and maintaining products that use Origami components.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/documentation/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
+- Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- [Component versioning](/documentation/components/versioning/) is also important when building and maintaining products that use Origami components.

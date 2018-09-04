@@ -9,15 +9,15 @@ Adding Origami components to your product through the manual build process gives
 This tutorial assumes that:
 - You have not implemented a build step
 - You are using a UNIX-like OS with a bash shell
-- You are familiar with JavaScript, and [SCSS](https://sass-lang.com/)
-- You have a basic understanding of package managers ([Bower](https://bower.io/), [npm](https://www.npmjs.com/))
+- You are familiar with JavaScript, and <abbr href="https://sass-lang.com/" title="Sassy Cascading Style Sheets"><a href="https://sass-lang.com/">SCSS</a></abbr>
+- You have a basic understanding of package managers ([Bower](https://bower.io/), <abbr href="https://npmjs.com/" title="Node Package Manager"><a href="https://www.npmjs.com/">npm</a></abbr>)
 
 ## Setting up your sandbox
 We will need a folder structure for our page. So let's begin by creating a new directory to work in.
 
-<pre><code class="o-syntax-highlight--html">mkdir o-fruit-demo && cd o-fruit-demo</code></pre>
+<pre><code class="o-syntax-highlight--bash">mkdir o-fruit-demo && cd o-fruit-demo</code></pre>
 
-Eventually, we'll have a folder structure that separates our HTML, CSS, JavaScript, dependencies and assets. Let's start by adding an `index.html` to the root of our new project with some boilerplate HTML:
+Eventually, we'll have a folder structure that separates our <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, JavaScript, dependencies and assets. Let's start by adding an `index.html` to the root of our new project with some boilerplate <abbr title="Hypertext Markup Language">HTML</abbr>:
 
 <pre><code class="o-syntax-highlight--html">&lt;!DOCTYPE html>
 &lt;html lang="en">
@@ -35,21 +35,21 @@ Eventually, we'll have a folder structure that separates our HTML, CSS, JavaScri
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 └── index.html</code>
 </pre></aside>
 
-The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. That source code will be written in plain Javascript and in SCSS, and each of those will be in their individual folders in our project:
+The `link` and the `script` tags are pointing at our public assets, which will be available once we have performed a build step and compiled our source code. That source code will be written in plain Javascript and in <abbr title="Sassy Cascading Style Sheets">SCSS</abbr>, and each of those will be in their individual folders in our project:
 
-<pre><code class="o-syntax-highlight--html">mkdir src && touch src/main.js src/main.scss</code></pre>
+<pre><code class="o-syntax-highlight--bash">mkdir src && touch src/main.js src/main.scss</code></pre>
 
 Now we're ready to start adding components to our page.
 
-## Component HTML
+## Component <abbr title="Hypertext Markup Language">HTML</abbr>
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── index.html
 └── src/
     └── main.js
@@ -80,7 +80,7 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 This is a good time to highlight how the manual build process provides more flexibility, because we don't need to stick to the Origami naming convention - we can give our table whatever class name we want.
 
-Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that HTML in under our content.
+Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> in under our content.
 
 Instead of using the default `o-table` class, let's use one called `fruit-table`. You should end up with class names like: <code class="no-wrap">fruit-table--row-stripes</code> and <code class="no-wrap">fruit-table__cell--numeric</code>.
 
@@ -108,7 +108,7 @@ This means that, in order for Bower to find the components we will be installing
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── .bowerrc
 ├── index.html
 └── src/
@@ -126,7 +126,7 @@ Next, we need to install our components as direct dependencies, because they are
 
 Now we need to install our components, and we can save them all to our file by running:
 
-<pre><code class="o-syntax-highlight--html">bower i --save o-grid o-typography o-colors o-table</code></pre>
+<pre><code class="o-syntax-highlight--bash">bower i --save o-grid o-typography o-colors o-table</code></pre>
 
 And your `bower.json` should now look something like this:
 
@@ -145,7 +145,7 @@ And your `bower.json` should now look something like this:
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ├── .bowerrc
 ├── bower.json
 ├── bower_components/
@@ -159,18 +159,18 @@ And your `bower.json` should now look something like this:
 So that we can see our progress as we build the page, now is the time to implement our build step.
 For that, we are going to use the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools). As long as you have Node.js installed, you can run:
 
-<pre><code class="o-syntax-highlight--html">npx origami-build-tools [command]</code></pre>
+<pre><code class="o-syntax-highlight--bash">npx origami-build-tools [command]</code></pre>
 
 There are many commands that the Origami Build Tools provide, but the one we will be focussing on today is `build`.
 
-We want to compile our source code (which we don't have yet) into a public folder that our HTML can read. We will need to pass the `npx origami-build-tools build` command a few arguments to do so:
+We want to compile our source code (which we don't have yet) into a public folder that our <abbr title="Hypertext Markup Language">HTML</abbr> can read. We will need to pass the `npx origami-build-tools build` command a few arguments to do so:
 - `--build-folder` is set to the name and directory of our public assets folder.
-- `--sass` points at the SCSS that we want to compile into css to use in our public folder.
+- `--sass` points at the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that we want to compile into css to use in our public folder.
 - `--js` points at the JavaScript that we want to transpile into ES5 in our public folder.
 - `--watch` is a flag that will trigger a rebuild when we make changes to our project.
 
 Altogether, the command looks like this:
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">npx origami-build-tools build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--bash">npx origami-build-tools build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
 
 You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
 
@@ -178,7 +178,7 @@ You can leave that running in the background, and open your `index.html` in a br
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
-<pre><code class="o-syntax-highlight--html">o-fruit-demo
+<pre><code class="o-syntax-highlight--bash">o-fruit-demo
 ── .bowerrc
 ├── bower.json
 ├── bower_components/
@@ -194,7 +194,7 @@ You can leave that running in the background, and open your `index.html` in a br
 
 Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.scss` file.
 
-All Origami components have a [silent mode](/TODO). When silent mode is 'on' (or `true`), the components' SCSS will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
+All Origami components have a [silent mode](/documentation/components/silent-mode/). When silent mode is 'on' (or `true`), the components' <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
 
 ### Silent Mode: Off
 
@@ -203,7 +203,7 @@ Let's start off with [o-grid](https://registry.origami.ft.com/components/o-grid)
 <pre><code class="o-syntax-highlight--scss">$o-grid-is-silent: false;
 @import 'o-grid/main';</code></pre>
 
-If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's SCSS.
+If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's <abbr title="Sassy Cascading Style Sheets">SCSS</abbr>.
 
 We added an [o-typography](https://registry.origami.ft.com/components/o-typography) class to our inner div at the beginning of the tutorial, as well. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
@@ -211,7 +211,7 @@ Look at your `index.html` in the browser when you're done - your headings and pa
 
 ### Silent Mode: On
 
-We'll be using [o-colors](https://registry.origami.ft.com/components/o-colors), which has a wide variety of colours in its palette. As with every other component, the `o-colors` silent mode variable is set to `true` by default to prevent outputting more CSS than we really need. And since we don't need all of the colours in the palette for this page, we will leave the silent mode for the component as is.
+We'll be using [o-colors](https://registry.origami.ft.com/components/o-colors), which has a wide variety of colours in its palette. As with every other component, the `o-colors` silent mode variable is set to `true` by default to prevent outputting more <abbr title="Cascading Style Sheets">CSS</abbr> than we really need. And since we don't need all of the colours in the palette for this page, we will leave the silent mode for the component as is.
 
 o-colors comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a colour within our brand palette. This means we'll need to use two mixins to get the right colour for our page:
 
@@ -253,7 +253,7 @@ Not all Origami components use JavaScript. For example, of the components we hav
 
 Origami components listen for a custom event named `o.DOMContentLoaded` in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
 
-<aside>There are multiple ways to <a href="/TODO">initialise a component's JavaScript</a> when you are using Origami with the manual build process</aside>
+<aside>There are multiple ways to <a href="/documentation/components/initialising">initialise a component's JavaScript</a> when you are using Origami with the manual build process</aside>
 
 We'll need to add this to our file:
 
@@ -276,6 +276,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/TODO) test, which can determine which experience to serve to which browser.
-- Another service we provide is the [Polyfill Service](https://polyfill.io/), which makes newer APIs available to older browsers, allowing us to write code to modern standards.
-- [Component versioning](/TODO) is also important when building and maintaining products that use Origami components.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/documentation/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
+- Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- [Component versioning](/documentation/components/versioning) is also important when building and maintaining products that use Origami components.
