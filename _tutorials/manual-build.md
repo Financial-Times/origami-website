@@ -194,7 +194,7 @@ You can leave that running in the background, and open your `index.html` in a br
 
 Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.scss` file.
 
-All Origami components have a [silent mode](/TODO). When silent mode is 'on' (or `true`), the components' <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
+All Origami components have a [silent mode](/documentation/components/silent-mode/). When silent mode is 'on' (or `true`), the components' <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
 
 ### Silent Mode: Off
 
@@ -253,7 +253,7 @@ Not all Origami components use JavaScript. For example, of the components we hav
 
 Origami components listen for a custom event named `o.DOMContentLoaded` in order to initialise. We'll need to add that to our project so that the `o-table` JavaScript can kick in.
 
-<aside>There are multiple ways to <a href="/TODO">initialise a component's JavaScript</a> when you are using Origami with the manual build process</aside>
+<aside>There are multiple ways to <a href="/documentation/components/initialising">initialise a component's JavaScript</a> when you are using Origami with the manual build process</aside>
 
 We'll need to add this to our file:
 
@@ -276,6 +276,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
-- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/TODO) test, which can determine which experience to serve to which browser.
+- Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/documentation/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
-- [Component versioning](/TODO) is also important when building and maintaining products that use Origami components.
+- [Component versioning](/documentation/components/versioning) is also important when building and maintaining products that use Origami components.

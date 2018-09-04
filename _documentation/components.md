@@ -17,14 +17,14 @@ How you choose to do this will depend on your projects' requirements, so there a
 	The Build service is best for quick projects or static sites or things where performance is less of a concern. This build method will fetch the Origami <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript as external files for your webpage. Be aware that this will indiscriminately fetch all stylistic variations of a component, which will increase your file size.
 
 
-	If you would like help with this, you can visit the [Build Service tutorial](/TODO)
+	If you would like help with this, you can visit the [Build Service tutorial](/tutorials/build-service/)
 
 
 - Using the manual build process:  
 	In order to customise your page and have more granular control over a components stylistic and behavioural features, you'll want to build Origami components manually. We currently do this with Bower, and install Origami components from the command line. This process relies on a build step, which you may already have in your project. If not, the <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external" target="\_blank" rel="noopener">Origami Build Tools</a> provide one.  
 
 
-	If you would like help with this, you can visit the [manual build tutorial](/TODO)
+	If you would like help with this, you can visit the [manual build tutorial](/tutorials/manual-build/)
 
 - Building branded components  
 	brandbrandbrand  
