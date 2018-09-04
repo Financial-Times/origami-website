@@ -6,12 +6,12 @@ category: usage
 
 The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the <abbr title="Semantic Versioning">semver</abbr> specification.
 
-<aside>You can find more information in the <a href="http://semver.org/" class="o-typography-link--external" target="\_blank" rel="noopener"><abbr href="http://semver.org/" "title="Semantic Versioning">semver</abbr> specification</a></aside>
+<aside>You can find more information in the <a href="http://semver.org/" class="o-typography-link--external" target="\_blank" rel="noopener"><abbr href="http://semver.org/" title="Semantic Versioning">semver</abbr> specification</a></aside>
 
 ## How components are versioned
 
 The version numbers are in the following format: `1.2.3`, which is representative of `MAJOR.MINOR.PATCH`.
-- `MAJOR`: When this changes, we refer to it as a breaking change. This usually means that we have made a drastic visual change, or a change that breaks backwards compatibility. We take care to avoid these where possible.
+- `MAJOR`: When a major is released, we refer to it as a breaking change. This usually means that we have made a drastic visual change, or a change that breaks backwards compatibility. When this changes, we will communicate the change and offer help with migration.
 - `MINOR`: When this number changes , we'll have made an improvement, added a feature or made a noticeable design tweak, for example.
 - `PATCH`: When we release patches, we are usually releasing a bug fix that does not affect the components overall functionality.
 

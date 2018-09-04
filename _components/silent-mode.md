@@ -27,7 +27,7 @@ If we consider a small snippet of <abbr title="Sassy Cascading Style Sheets">SCS
 	}
 };
 
-@if $o-message-is-silent == false) {
+@if ($o-message-is-silent == false) {
 	@include oMessage();
 
 	// Set to silent again to avoid being output twice
