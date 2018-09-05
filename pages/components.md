@@ -1,13 +1,13 @@
 ---
-title: Origami Tutorials
+title: Origami Components
 description: TODO
-permalink: /docs/tutorials/
+permalink: /docs/components/
 layout: collection
-collection_id: tutorials
+collection_id: components
 
 # Navigation config
 nav_display: true
-nav_label: Tutorials
+nav_label: Components
 ---
 
 

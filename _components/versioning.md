@@ -1,7 +1,13 @@
 ---
 title: Component versioning
 category: usage
+
+# Navigation config
+nav_display: true
+nav_label: Versioning
+nav_order: 20
 ---
+
 # {{ page.title }}
 
 The Origami team maintains and improves the components regularly. This means that we release new versions of the components frequently, and a component's new version numbers follow the <abbr title="Semantic Versioning">semver</abbr> specification.

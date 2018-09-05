@@ -1,18 +1,21 @@
 
 # Content collections
 collections:
-  documentation:
-    output: true
-    permalink: /:collection/:name/
   components:
     output: true
-    permalink: documentation/:collection/:name/
+    permalink: /docs/:collection/:name/
+  services:
+    output: true
+    permalink: /docs/:collection/:name/
   tutorials:
     output: true
-    permalink: /:collection/:name/
+    permalink: /docs/:collection/:name/
+  principles:
+    output: true
+    permalink: /docs/:collection/:name/
   specification:
     output: true
-    permalink: /:collection/:name/
+    permalink: /spec/:name/
 
 # Default front-matter
 defaults:

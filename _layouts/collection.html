@@ -8,8 +8,10 @@ layout: default
 
 	<h2 id="documents">Documents</h2>
 
+	{% assign documents = site[page.collection_id] | sort: 'nav_order', 'last' %}
+
 	<ul>
-		{% for item in site[page.collection_id] %}
+		{% for item in documents %}
 			<li>
 				<a href="{{item.url}}">{{item.title}}</a>
 			</li>
