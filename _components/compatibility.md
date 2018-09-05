@@ -1,5 +1,10 @@
 ---
 title: Compatibility
+
+# Navigation config
+nav_display: true
+nav_label: Compatibility
+nav_order: 30
 ---
 # {{ page.title }}
 

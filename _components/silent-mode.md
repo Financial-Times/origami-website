@@ -1,6 +1,11 @@
 ---
 title: Silent mode
 category: usage
+
+# Navigation config
+nav_display: true
+nav_label: Silent mode
+nav_order: 40
 ---
 
 # {{ page.title }}

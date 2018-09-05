@@ -1,6 +1,11 @@
 ---
 title: Initialising a component
 category: usage
+
+# Navigation config
+nav_display: true
+nav_label: Initialising
+nav_order: 10
 ---
 
 # {{ page.title }}
