@@ -17,15 +17,11 @@ Single static pages live in the [`pages` folder](pages). These each have `permal
 
 ### Technical documentation pages
 
-The actual documentation for Origami lives in the [`_documentation` folder](_documentation). This should contain an easier-to-digest version of the Origami specification as well as in depth guides on how to use Origami (excluding step by step tutorials).
+The actual documentation for Origami lives in the [`_components`](_components), [`_services`](_services), [`_principles`](_principles), and [`_tutorials`](_tutorials) folders. This should contain an easier-to-digest version of the Origami specification as well as in depth guides on how to use Origami.
 
 ### Specification pages
 
 The formal Origami specification lives in the [`_specification` folder](_specification).
-
-### Tutorial pages
-
-Step by step tutorials on how to use Origami live in the [`_tutorials` folder](_tutorials).
 
 
 ## Running locally
