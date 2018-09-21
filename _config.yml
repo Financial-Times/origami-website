@@ -13,9 +13,9 @@ collections:
   principles:
     output: true
     permalink: /docs/:collection/:name/
-  specification:
+  specification-v1:
     output: true
-    permalink: /spec/:name/
+    permalink: /spec/v1/:name/
 
 # Default front-matter
 defaults:
