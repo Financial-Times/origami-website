@@ -48,13 +48,15 @@
 						<div class="o-header__subnav-content">
 							<ol class="o-header__subnav-list o-header__subnav-list--breadcrumb" aria-label="Breadcrumb">
 
-								{% if page.url == '/docs/' %}
+								{% if page.url contains '/docs/' %}
 									<li class="o-header__subnav-item">
-										<a class="o-header__subnav-link" href="/docs/" aria-selected="true">
+										<a class="o-header__subnav-link" href="/docs/" {% if page.url == '/docs/' %}aria-selected="true"{% endif %}>
 											Docs
 										</a>
 									</li>
-								{% elsif page.collection_id %}
+								{% endif %}
+
+								{% if page.collection_id %}
 									<!-- Collection index page-->
 									<li class="o-header__subnav-item">
 										<a class="o-header__subnav-link" href="{{ page.url }}" aria-selected="true">
