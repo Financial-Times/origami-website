@@ -19,7 +19,7 @@ Origami maintained brands include:
 
 ## Configure your project's brand
 
-The "master" brand is the default brand, but your project may use any of the provided brands. The brand is configured once and effects all components used by your project.
+The "master" brand is the default brand, but your project may use any of the provided brands. The brand is configured once and affects all components used by your project.
 
 ### Build service
 If you are a [build service user](/docs/tutorials/build-service/), append the `brand` parameter to your build service url e.g. `&brand=internal`:
