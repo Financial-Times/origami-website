@@ -68,7 +68,7 @@ With the exception of JavaScript-only components, all of Origami's components re
 </pre>
 
 We want to share some fruit facts, so let's add some content to that inner `div`:
-<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>  
+<pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>
 &lt;h2>Durian&lt;/h2>
 &lt;p>Due to its overpowering smell, durian has been banned on many types of public transport across Thailand, Japan and Hong Kong. In Singapore, the fruit is banned across all types of public transportation and even taxis have signs to let you know they refuse to carry passengers transporting the smelly fruit.&lt;/p>
 &lt;h2>Dragonfruit&lt;/h2>
@@ -277,5 +277,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
+- Origami components support ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
 - [Component versioning](/docs/components/versioning) is also important when building and maintaining products that use Origami components.

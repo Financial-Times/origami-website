@@ -22,12 +22,12 @@ If we consider a small snippet of <abbr title="Sassy Cascading Style Sheets">SCS
 
 <pre><code class="o-syntax-highlight--scss">$o-message-is-silent: true !default;
 
-@mixin oMessage($class: o-message) {
-	.#{$class} {
+@mixin oMessage() {
+	.o-message {
 		display: block;
 	}
 
-	.#{$class}--closed {
+	.o-message--closed {
 		display: none;
 	}
 };
@@ -46,7 +46,7 @@ When a component's silent mode is set to `true` or 'on': `$o-component-is-silent
 What will be available to you in this case is:
 
 
-<pre><code class="o-syntax-highlight--scss">@mixin oMessage($class: o-message) {
+<pre><code class="o-syntax-highlight--scss">@mixin oMessage() {
 	...
 }</code></pre>
 
