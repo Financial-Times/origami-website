@@ -33,7 +33,3 @@ As a user with a [manual build process](/docs/tutorials/manual-build/), set the 
 <pre><code class="o-syntax-highlight--scss">$o-brand: "internal";
 $o-table-is-silent: false;
 @import 'o-table/main';</code></pre>
-
-## Brand a component
-
-To "brand" a component which does not yet support brands, see <a href="https://github.com/Financial-Times/o-brand" class="o-typography-link--external" target="\_blank" rel="noopener">o-brand on Github</a>.
