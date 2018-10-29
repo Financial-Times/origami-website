@@ -97,6 +97,22 @@ So in order to add the styling for all of our other components, we need to add a
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
 
+
+### Selecting A Brand
+
+By default Origami components are tailored for public facing, ft.com products -- these are known as "master brand" products. But Origami components offer tailored support for other contexts with component [branding](/docs/components/branding/).
+
+To choose a brand other than the default "master" brand, we append the `brand` parameter to our <abbr title="Cascading Style Sheets">CSS</abbr> build service url e.g. `&brand=internal`:
+
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal"/></code></pre>
+<aside><a href="https://codepen.io/ft-origami/pen/VENXyQ" class="o-typography-link--external" target="\_blank" rel="noopener">Show me the CodePen</a></aside>
+
+As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` classes has changed, as have the stripes of `o-table`. Our typography set with `o-typography` classes has also changed.
+
+Now undo that by removing `&brand=internal` from the build service url, allowing our project to default to the "master" brand again.
+
+For a list of supported brands and their purpose see [component brands](/docs/components/branding/).
+
 ## Component JavaScript
 
 There is one more step, before our page is entirely functional. Not all Origami components use JavaScript. In fact, of the ones we've used in this example, only `o-table` does.
@@ -117,6 +133,6 @@ We've stepped through a basic set up of components with the Build Service, and t
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
-- Origami components support ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Learn more about Origami supported ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - [Component versioning](/docs/components/versioning/) is also important when building and maintaining products that use Origami components.

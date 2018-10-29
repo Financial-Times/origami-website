@@ -232,6 +232,23 @@ With this, we've added all of the styling we needed for our page, so let's take 
 
 <aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
 
+### Selecting A Brand
+
+By default Origami components are tailored for public facing, ft.com products -- these are known as "master brand" products. But Origami components offer tailored support for other contexts with component [branding](/docs/components/branding/).
+
+To choose a brand other than the default "master" brand, set the `$o-brand` <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> variable at the start of your root <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> file, before importing any components.
+
+To see this in action we can set our brand to "internal":
+<pre><code class="o-syntax-highlight--scss">$o-brand: "internal"; // Set brand before anything else.
+@import 'o-colors/main';
+//...</code></pre>
+
+As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` and the stripes of `o-table` have changed. The typography of our project has also changed.
+
+Now we will undo that by deleting `$o-brand: "internal";`, making our project default to the "master" brand again.
+
+For a list of supported brands and their purpose see [component brands](/docs/components/branding/).
+
 ## Component Functionality
 
 The final step in our tutorial involves adding JavaScript to our components, and we'll be doing all of that work in `src/main.js`.
@@ -264,6 +281,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
-- Origami components support ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Learn more about Origami supported ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - [Component versioning](/docs/components/versioning) is also important when building and maintaining products that use Origami components.
