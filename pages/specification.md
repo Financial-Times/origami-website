@@ -4,11 +4,6 @@ description: TODO
 permalink: /spec/
 layout: collection
 collection_id: specification
-
-# Navigation config
-nav_display: true
-nav_label: Spec
-nav_order: 20
 ---
 
 
