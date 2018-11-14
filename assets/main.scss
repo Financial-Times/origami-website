@@ -33,3 +33,17 @@ aside.no-padding {
 	p { padding-left: 1em }
 	pre { margin: 0 }
 }
+
+// Styles over specific to override layout body styles,
+// we possibly need to find a nicer way to do this?
+// (or we need to add a teaser-like thing to o-layout 😬)
+.o-layout__main {
+
+	.blog-post__title {
+		margin-bottom: 8px;
+	}
+	.blog-post__description {
+		margin-bottom: 4px;
+	}
+
+}

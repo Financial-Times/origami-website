@@ -2,11 +2,6 @@
 title: Origami Documentation
 description: TODO
 permalink: /docs/
-
-# Navigation config
-nav_display: true
-nav_label: Documentation
-nav_order: 10
 ---
 
 
