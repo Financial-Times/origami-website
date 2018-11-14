@@ -4,7 +4,7 @@ SITEMAP = "http://localhost:4000/sitemap.xml"
 # Install dependencies
 install:
 	@echo "Installing dependencies"
-	@bundle install
+	@bundle install && bundle clean
 
 # Build the site
 build:
