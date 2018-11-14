@@ -1,5 +1,5 @@
 
-HOST = localhost:4000
+SITEMAP = "http://localhost:4000/sitemap.xml"
 
 # Install dependencies
 install:
@@ -24,8 +24,14 @@ serve:
 # Run pa11y against the site
 test:
 	@echo "Testing site"
-	@echo '{"defaults":{"concurrency":5}}' > .pa11yci
-	@npx pa11y-ci@^2.1.1 --sitemap "http://$(HOST)/sitemap.xml" --sitemap-find "^/" --sitemap-replace "http://$(HOST)/"
+ifneq ("$(wildcard /usr/bin/google-chrome)","")
+	@\
+		PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+		PA11Y_CHROMIUM_PATH=/usr/bin/google-chrome \
+		npx pa11y-ci@^2.1.1 --sitemap $(SITEMAP)
+else
+	@npx pa11y-ci@^2.1.1 --sitemap $(SITEMAP)
+endif
 
 # Fetch component data for use in the site
 fetch-component-data:

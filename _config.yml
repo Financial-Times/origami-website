@@ -35,6 +35,7 @@ permalink: /blog/:year/:month/:day/:title/
 
 # Files and directories to exclude from compilation
 exclude:
+  - .pa11yci.js
   - CNAME
   - Gemfile
   - Gemfile.lock
