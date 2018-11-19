@@ -218,7 +218,7 @@ o-colors comes  with predefined use cases. These use cases are not a valid hex c
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
 
 body {
-	background-color: oColorsGetPaletteColor(oColorsGetUseCase(page, background)));
+	background-color: oColorsGetPaletteColor(oColorsGetUseCase(page, background));
 }</code></pre>
 
 As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
