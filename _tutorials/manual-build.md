@@ -221,12 +221,10 @@ As soon as your build has completed, visit your `index.html` again. You should h
 
 We're going to get a little more specific with [o-table](https://registry.origami.ft.com/components/o-table) since we're after a particular variation.
 
-We only want the base styling of a table, styles to support the column sorting feature, and some stripes to tell each row apart:
+We only want the base styling of a table, and some stripes to tell each row apart:
 
 <pre><code class="o-syntax-highlight--scss">@import 'o-table/main';
-@include oTableBase;
-@include oTableSort;
-@include oTableRowStripes;</code></pre>
+@include oTable($opts: ('stripes'));</code></pre>
 
 With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
 
