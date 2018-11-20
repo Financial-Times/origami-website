@@ -23,6 +23,10 @@ The actual documentation for Origami lives in the [`_components`](_components), 
 
 The formal Origami specification lives in the [`_specification` folder](_specification).
 
+### Blog posts
+
+Blog posts live in the [`_posts` folder](_posts) and the file names are prefixed with the post date. Posts can include an `author` frontmatter value to signify who wrote the post, and an array of `tags` which are displayed alongside the post. The `description` frontmatter is particularly important for blog posts as it is displayed as a preview on the blog listing.
+
 
 ## Running locally
 

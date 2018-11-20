@@ -23,9 +23,19 @@ defaults:
       path: ""
     values:
       layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog-post
+      author: The Origami Team
+
+# Blog post permalinks
+permalink: /blog/:year/:month/:day/:title/
 
 # Files and directories to exclude from compilation
 exclude:
+  - .pa11yci.js
   - CNAME
   - Gemfile
   - Gemfile.lock
