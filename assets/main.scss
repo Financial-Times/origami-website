@@ -34,6 +34,13 @@ aside.no-padding {
 	pre { margin: 0 }
 }
 
+
+iframe {
+	border: none;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
 // Styles over specific to override layout body styles,
 // we possibly need to find a nicer way to do this?
 // (or we need to add a teaser-like thing to o-layout 😬)
@@ -42,6 +49,7 @@ aside.no-padding {
 	.blog-post__title {
 		margin-bottom: 8px;
 	}
+
 	.blog-post__description {
 		margin-bottom: 4px;
 	}

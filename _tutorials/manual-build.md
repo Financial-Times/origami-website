@@ -78,13 +78,9 @@ We want to share some fruit facts, so let's add some content to that inner `div`
 
 Finally, we want to showcase the popularity of each fruit in a sortable table. To do that, we're going to use the `o-table` component.
 
-This is a good time to highlight how the manual build process provides more flexibility, because we don't need to stick to the Origami naming convention - we can give our table whatever class name we want.
+This is a good time to highlight how the manual build process provides more flexibility, because we don't need to include all the table variations provided by Origami - we can include the minimum features we need.
 
 Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> in under our content.
-
-Instead of using the default `o-table` class, let's use one called `fruit-table`. You should end up with class names like: <code class="no-wrap">fruit-table--row-stripes</code> and <code class="no-wrap">fruit-table__cell--numeric</code>.
-
-Be careful **not** to change the value of the `data-o-component` attribute. This attribute is what the `o-table` JavaScript looks for on initialisation.
 
 <aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
 
@@ -223,27 +219,33 @@ body {
 
 As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
 
-We're going to get a little more specific with [o-table](https://registry.origami.ft.com/components/o-table) since we're after a particular variation _and_ we've given our table a class name of its own.
+We're going to get a little more specific with [o-table](https://registry.origami.ft.com/components/o-table) since we're after a particular variation.
 
-We want the base styling of a table, some stripes to tell each row apart, and styling for the number cells we'll be using:
+We only want the base styling of a table, and some stripes to tell each row apart:
 
 <pre><code class="o-syntax-highlight--scss">@import 'o-table/main';
-
-.fruit-table {
-	@include oTableBase;
-
-	&--row-stripes {
-		@include oTableRowStripes;
-	}
-
-	&__cell--numeric {
-		@include oTableCellNumeric;
-	}
-}</code></pre>
+@include oTable($opts: ('stripes'));</code></pre>
 
 With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
 
 <aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
+
+### Selecting A Brand
+
+By default Origami components are tailored for public facing, ft.com products -- these are known as "master brand" products. But Origami components offer tailored support for other contexts with component [branding](/docs/components/branding/).
+
+To choose a brand other than the default "master" brand, set the `$o-brand` <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> variable at the start of your root <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> file, before importing any components.
+
+To see this in action we can set our brand to "internal":
+<pre><code class="o-syntax-highlight--scss">$o-brand: "internal"; // Set brand before anything else.
+@import 'o-colors/main';
+//...</code></pre>
+
+As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` and the stripes of `o-table` have changed. The typography of our project has also changed.
+
+Now we will undo that by deleting `$o-brand: "internal";`, making our project default to the "master" brand again.
+
+For a list of supported brands and their purpose see [component brands](/docs/components/branding/).
 
 ## Component Functionality
 
@@ -277,6 +279,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
-- Origami components support ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Learn more about Origami supported ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - [Component versioning](/docs/components/versioning) is also important when building and maintaining products that use Origami components.
