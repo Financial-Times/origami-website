@@ -43,7 +43,7 @@ If we find we've ended up with too many commas or a long running sentence, odds 
 
 ##### Omit fluff and filler words
 
-By that, we mean qualifiers. Qualifiers are words like "pretty", "mostly", "probably", "usually". They can make the information in our writing ambiguous. They can also communicate  an opinion about something. Though we want to be conversational, we don't want to start documenting unhelpful statements.
+By that, we mean qualifiers. Qualifiers are words like "pretty", "mostly", "probably", "usually". They can make the information in our writing ambiguous. They can also communicate an opinion about something. Though we want to be conversational, we don't want to start documenting unhelpful statements.
 
 ##### Write for skim readers
 - code variables go in `back-ticks`
