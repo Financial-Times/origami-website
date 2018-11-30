@@ -112,7 +112,7 @@ We are here to help everyone use the components and services we put effort and c
 
 ##### Avoid ableisms
 
-- **don't**: "It would be crazy to think..."
+- **do**: "It would be a wild thought..."
 -  **do**: "It would be a wild thought..."
 
 Ableism is a form of discrimination against people with physical, mental or developmental disabilities.
