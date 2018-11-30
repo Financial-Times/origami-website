@@ -56,7 +56,7 @@ By that, we mean qualifiers. Qualifiers are words like "pretty", "mostly", "prob
 By providing any of the above, we'll allow skim readers to quickly scan our documentation to find relevant information. It also helps us break different topics down into digestible sections.
 
 ##### Avoid metaphors or colloquialisms
-- **do**: "this site has everything you need to know"
+- **do**: "This site has everything you need to know"
 - **don't**: "This site is a one stop shop for Origami"
 
 We work with many different nationalities and levels of command of the English language. We need to keep in mind that there is phrasing that non-native English speakers may not be familiar with.
