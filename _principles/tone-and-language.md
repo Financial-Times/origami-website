@@ -53,7 +53,7 @@ By that, we mean qualifiers. Qualifiers are words like "pretty", "mostly", "prob
 - highlight copy where appropriate
 - use informative, short, headings.
 
-By providing any of the above, we'll allow skim readers to quickly scan our documentation to find relevant information, quickly. It also helps us break different topics down into digestible sections.
+By providing any of the above, we'll allow skim readers to quickly scan our documentation to find relevant information. It also helps us break different topics down into digestible sections.
 
 ##### Avoid metaphors or colloquialisms
 - **do**: "this site has everything you need to know"
