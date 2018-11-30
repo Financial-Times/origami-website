@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "10.1.3"
+		"version": "10.2.0"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -25,7 +25,7 @@
 	},
 	"o-author-alerts": {
 		"name": "o-author-alerts",
-		"version": "4.2.4"
+		"version": "4.2.5"
 	},
 	"o-autoinit": {
 		"name": "o-autoinit",
@@ -61,7 +61,7 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "4.7.5"
+		"version": "4.7.8"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -89,7 +89,7 @@
 	},
 	"o-crossword": {
 		"name": "o-crossword",
-		"version": "1.8.3"
+		"version": "1.8.4"
 	},
 	"o-date": {
 		"name": "o-date",
@@ -121,7 +121,7 @@
 	},
 	"o-fonts": {
 		"name": "o-fonts",
-		"version": "3.0.4"
+		"version": "3.1.1"
 	},
 	"o-fonts-assets": {
 		"name": "o-fonts-assets",
@@ -137,7 +137,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "5.9.0"
+		"version": "5.11.0"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -185,7 +185,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "7.5.13"
+		"version": "7.6.2"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -217,7 +217,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "2.0.1"
+		"version": "2.2.2"
 	},
 	"o-link-list": {
 		"name": "o-link-list",
@@ -225,7 +225,7 @@
 	},
 	"o-load": {
 		"name": "o-load",
-		"version": "1.1.1"
+		"version": "1.1.2"
 	},
 	"o-loading": {
 		"name": "o-loading",
@@ -233,7 +233,7 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "2.4.0"
+		"version": "3.0.0"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
@@ -265,7 +265,7 @@
 	},
 	"o-share": {
 		"name": "o-share",
-		"version": "6.2.1"
+		"version": "6.2.2"
 	},
 	"o-squishy-list": {
 		"name": "o-squishy-list",
@@ -281,7 +281,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "6.9.2"
+		"version": "7.0.5"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -289,7 +289,7 @@
 	},
 	"o-teaser": {
 		"name": "o-teaser",
-		"version": "2.3.1"
+		"version": "2.3.2"
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
@@ -317,7 +317,7 @@
 	},
 	"o-tracking": {
 		"name": "o-tracking",
-		"version": "1.4.0"
+		"version": "1.4.1"
 	},
 	"o-tweet": {
 		"name": "o-tweet",
