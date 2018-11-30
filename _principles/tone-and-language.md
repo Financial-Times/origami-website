@@ -63,7 +63,7 @@ We work with many different nationalities and levels of command of the English l
 
 ## Origami-specific styles
 
-In addition to general writing styles, grammar and spelling, there are a few customised styles that we use within specifically for the Origami team.
+In addition to general writing styles, grammar and spelling, there are a few customised styles that we use specifically for Origami.
 
 ##### Always capitalise Origami when referring to the product
 
