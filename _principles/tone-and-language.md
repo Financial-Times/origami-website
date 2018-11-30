@@ -73,7 +73,7 @@ In house, most people are familiar with the Origami team. But outside of the com
 - **bad**: O-table, O-Table, o-Table
 
 Our components are named in lower case and are available to use from package managers in the same way.
-We use capitalisation within components for purposes other than their description.
+We reserve capitalisation for component code, when we need to write syntax and need to conform to syntax convention.
 
 ##### Always capitalise service names
 
