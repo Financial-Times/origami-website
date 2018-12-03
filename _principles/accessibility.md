@@ -16,7 +16,7 @@ Since FT.com uses Origami extensively, it is also our responsibility to uphold t
 
 ## Base Guidelines
 
-- We place a lot of importance on colour contrast. To encourage this, we maintain a <a href="https://registry.origami.ft.com/components/o-colors#demo-contrast-ratio-checker" class="o-typography-link--external" target="_blank" rel="noopener">contrast checker</a> that uses our colour palette. This helps our designers and other developers uphold a contrast ratio that will satisfy the minimum criteria for level AA (the minimum ratio being 4.5:1).
+- We maintain tools and implement processes to help build accessible experiences. Among them are a <a href="https://registry.origami.ft.com/components/o-colors#demo-contrast-ratio-checker" class="o-typography-link--external" target="_blank" rel="noopener">contrast ratio checker</a> that uses our colour palette, and SASS testing to error if there have been stylistic violations.
 - We test our work with screen readers, to assess how well our disabled users interact with our components.
 - We use `pa11y`, an <a href="http://pa11y.org/" class="o-typography-link--external" target="_blank" rel="noopener"> open source tool</a> that enables us to test the validity and accessibility of our markup.
 - We strive to use <a href="https://www.w3.org/TR/WCAG20-TECHS/G115.html" class="o-typography-link--external" target="_blank" rel="noopener">semantic markup</a> for all of our work, meaning that the elements we use in our components reflect their actual meaning.
