@@ -67,7 +67,7 @@ In addition to general writing styles, grammar and spelling, there are a few cus
 
 ##### Always capitalise Origami when referring to the product
 
-At the FT, most people are familiar with the Origami team. But outside of the company, origami is something entirely different, and it is important that we make that distinction.
+At the <abbr title="Financial Times">FT</abbr>, most people are familiar with the Origami team. But outside of the company, origami is something entirely different, and it is important that we make that distinction.
 
 ##### Don't capitalise component names
 
