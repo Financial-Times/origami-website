@@ -16,8 +16,8 @@ Since Origami is entirely open source, we welcome contributions from all of our 
 The <a href="https://registry.origami.ft.com/components/" class="o-typography-link--external" target="_blank" rel="noopener">Origami registry</a> houses components that the Origami team maintains, as well as components that other teams are responsible for.
 
 ### Make a proposal
-For the Origami team to oversee a components' maintenance, a proposal needs to be made.  
-You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a> project board, where all proposals are logged.
+For the Origami team to oversee a component's maintenance, a proposal needs to be made.  
+You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a> project board, where all proposals are logged.
 
 After the team has reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and build it for you.
 
