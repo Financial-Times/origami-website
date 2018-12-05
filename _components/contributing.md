@@ -27,7 +27,7 @@ npm i -g origami-build-tools
 ```
 The alias for this library is `obt`.
 
-Choose a sufficiently descriptive name for your component, and prefix it with the product you are aiming to build it for (e.g. g for 'graphics'). `o-` prefixes are generally reserved for Origami-maintained components.
+Choose a sufficiently descriptive name for your component, and prefix it with the product you are aiming to build it for (e.g. `g-` for 'graphics'). `o-` prefixes are generally reserved for Origami-maintained components.
 
 Once you've done that, run:
 
