@@ -10,5 +10,4 @@ nav_display: true
 nav_label: Principles
 ---
 
-
 # {{page.title}}
