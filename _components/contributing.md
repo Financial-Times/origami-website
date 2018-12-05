@@ -83,6 +83,6 @@ And last but not least, make sure the tests are still passing:
 obt test
 ```
 
-When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes on the components' repository.
+When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes to the component.
 
 We appreciate details about your changes and screenshots to illustrate them, where relevant. Make sure to request a review from `Financial-Times/origami-core`, which will notify all members of the Origami team, and we'll take a look at it!
