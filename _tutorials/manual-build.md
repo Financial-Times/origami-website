@@ -80,15 +80,15 @@ Finally, we want to showcase the popularity of each fruit in a sortable table. T
 
 This is a good time to highlight how the manual build process provides more flexibility, because we don't need to include all the table variations provided by Origami - we can include the minimum features we need.
 
-Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes" class="o-typography-link--external" target="\_blank" rel="noopener">the striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> in under our content.
+Let's head over to <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes"  target="\_blank" >the striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> in under our content.
 
-<aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
+<aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR"  target="\_blank" >on CodePen</a>.</aside>
 
 ## Bower & the Origami Registry
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/TODO) are available for installation via Bower. They live in the [Origami Registry](https://registry.origami.ft.com/components), and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external" target="\_blank" rel="noopener">Origami Bower Registry</a>.
+All [Origami-compliant components](/TODO) are available for installation via Bower. They live in the [Origami Registry](https://registry.origami.ft.com/components), and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/"  target="\_blank" >Origami Bower Registry</a>.
 
 This means that, in order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 
@@ -228,7 +228,7 @@ We only want the base styling of a table, and some stripes to tell each row apar
 
 With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
 
-<aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external" target="\_blank" rel="noopener">on CodePen</a>.</aside>
+<aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ"  target="\_blank" >on CodePen</a>.</aside>
 
 ### Selecting A Brand
 
@@ -279,6 +279,6 @@ Now you can sort fruit alphabetically by name or characteristic, or numerically 
 We've given you an overview of how to build components manually. There is more information about each component, its variations, its individual behaviour and configuration in the [Origami Registry](https://registry.origami.ft.com/components). Here we've covered the fundamentals, but there are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
-- Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
+- Another service we provide is the <a href="https://polyfill.io"  target="\_blank" >Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
 - Learn more about Origami supported ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
 - [Component versioning](/docs/components/versioning) is also important when building and maintaining products that use Origami components.
