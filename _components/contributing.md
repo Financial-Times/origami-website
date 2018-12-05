@@ -9,7 +9,7 @@ nav_order: 30
 
 # {{ page.title }}
 
-Since Origami is entirely open source, we welcome contributions from all of our users. There are a number of ways that you can contribute, and we providing tooling and processes to help you do that.
+Since Origami is largely open source, we welcome contributions from all of our users. There are a number of ways that you can contribute, and we provide tooling and processes to help you do that.
 
 ## Creating new components
 
@@ -19,10 +19,10 @@ The <a href="https://registry.origami.ft.com/components/" class="o-typography-li
 For the Origami team to oversee a component's maintenance, a proposal needs to be made.  
 You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a> project board, where all proposals are logged.
 
-After the team has reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and build it for you.
+After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
 ### Build an independent component
-If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be present. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
+If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be adhered to. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
 
 You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external" target="_blank" rel="noopener">Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
 
@@ -48,17 +48,17 @@ obt init o-new-component
 If there is a new feature, a bug fix or anything else missing from a component that you might need, you can:
 
 - open an issue on the components' repository
-- make the change the component yourself and make a PR
+- make the change the component yourself and open a PR
 
 ### Opening an issue
 
-It is important to us to be able to track the discussions we have over changes that we do or do not make to our work, so that we can always reference our past selves for decisions our current selves are going to make.
+Issues are important for Origami, as they provide a place for us to track discussions about changes to components. They allow us to reference past discussions and inform future decisions, and help to stop us from talking about the same thing multiple times.
 
 If there is a change you would like to see, we appreciate a detailed description of the problem and your reasoning. Our components have issue templates that help us get to the root of the problem, but feel free to be liberal in your explanations and examples when opening a new issue.
 
 ### Working on a component
 
-If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. All Origami components use this tool. As long as you have [installed it](#build-an-independent-component) you can develop your component with following steps:
+If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. All Origami components use this tool. As long as you have [installed it](#build-an-independent-component) you can develop your component with the following steps:
 
 In your chosen component's root directory, you'll need to install its dependencies:
 ```
@@ -86,6 +86,6 @@ And last but not least, make sure the tests are still passing:
 obt test
 ```
 
-When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes on the components' repository.
+When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes to the component.
 
 We appreciate details about your changes and screenshots to illustrate them, where relevant. Make sure to request a review from `Financial-Times/origami-core`, which will notify all members of the Origami team, and we'll take a look at it!
