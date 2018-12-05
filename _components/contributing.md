@@ -31,14 +31,17 @@ npm i -g origami-build-tools
 ```
 The alias for this library is `obt`.
 
-Choose a sufficiently descriptive name for your component, and prefix it with the product you are aiming to build it for (e.g. `g-` for 'graphics').  
-`o-` prefixes are generally reserved for Origami-maintained components.
+Choose a sufficiently descriptive name for your component, and prefix it with `-o`.
 
 Once you've done that, run:
 
-`obt init my-new-component`
+```
+obt init o-new-component
+```
+<aside>The reasoning behind the folder structure and requirements is explained in detail in our <a href="/spec/v1/components" class="o-typography-link">Specification</a></aside>
 
-`obt` will generate a new folder structure that meet the aforementioned requirements with the component name you've chosen, and will generate <abbr title="JavaScript">JS</abbr> and <abbr title="Syntactically Awesome Stylesheets">SASS</abbr> files with code bases that imitate other components.
+`obt init` will generate a new folder structure that meet the aforementioned requirements with the component name you've chosen, and will generate <abbr title="JavaScript">JS</abbr> and <abbr title="Syntactically Awesome Stylesheets">SASS</abbr> files with code bases that imitate other components.
+
 
 ## Updating existing components
 
@@ -69,7 +72,7 @@ obt demo --runServer --watch
 ```
 
 Generally, the demos will be available on `localhost:8999/demos/local`.  
-Visit that <abbr title="Uniform Resource Locator">URL</abbr> to see them, and start working on your changes!
+Visit that URL to see them, and start working on your changes!
 
 When you are happy with the work you've done, check that you've used the correct syntax by running:
 
