@@ -11,6 +11,30 @@ nav_order: 30
 
 Since Origami is entirely open source, we welcome contributions from all of our users. There are a number of ways that you can contribute, and we providing tooling and processes to help you do that.
 
+## Creating new components
+
+The Origami registry houses components that the Origami team maintains, as well as components that other teams are responsible for.
+
+### Make a proposal
+For the Origami team to oversee a components' maintenance, a proposal needs to be made. You can find information about that process in the [origami-proposals](#todo).
+After the team has reviewed the proposal, and if it has been accepted, the team will take responsibility for this component and build it for you.
+
+### Build an independent component
+If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, you need to be aware of the minimum requirements. These requirements allow any component to be picked up by the registry, and you can the [Origami Build Tools](#TODO) provide a boilerplate with those requirements.
+
+```
+npm i -g origami-build-tools
+```
+The alias for this library is `obt`.
+
+Choose a sufficiently descriptive name for your component, and prefix it with the product you are aiming to build it for (e.g. g for 'graphics'). `o-` prefixes are generally reserved for Origami-maintained components.
+
+Once you've done that, run:
+
+`obt init my-new-component`
+
+`obt` will generate a new folder structure that meet the aforementioned requirements, and generate <abbr title="JavaScript">JS</abbr> and <abbr title="Syntactically Awesome Stylesheets">SASS</abbr> files with code bases that imitate other components' styles.
+
 ## Updating existing components
 
 If there is a new feature, a bug fix or anything else missing from a component that you might need, you can:
@@ -26,12 +50,7 @@ If there is a change you would like to see, we appreciate a detailed description
 
 ### Working on a component
 
-If you've chosen to work on the component, you'll need the [Origami Build Tools](#TODO). These command-line tools enable us to install dependencies, build demos locally and test our work, among a few other tasks. All Origami components use this tool, and you can develop them with following steps:
-
-```
-npm i -g origami-build-tools
-```
-The alias for this library is `obt`.
+If you've chosen to work on the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally and test our work, among a few other tasks. All Origami components use this tool. As long as you have [installed the tools](#build-an-independent-component) you can develop them with following steps:
 
 In your chosen component's root directory, you'll need to install its dependencies:
 ```
@@ -62,9 +81,3 @@ obt test
 When everything is right, open a PR with your changes on the components' repository.
 
 We appreciate details about your changes and screenshots to illustrate them, where relevant. Make sure to request a review from `origami-core`, which will notify all members of the Origami team, and we'll take a look at it!
-
-<!--
-## Creating new components
-
-For the Origami team to oversee a components' maintenance, a new component needs to pass the following criteria:
-- More than one product needs to d -->
