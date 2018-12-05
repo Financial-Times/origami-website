@@ -49,7 +49,7 @@ If there is a new feature, a bug fix or anything else missing from a component t
 
 ### Opening an issue
 
-It is important to us to be able to track the discussions we have over changes that we do or do not make to our work, so that we can always reference our past selves for decisions our current selves are going to make.
+Issues are important for Origami, as they provide a place for us to track discussions about changes to components. They allow us to reference past discussions and inform future decisions, and help to stop us from talking about the same thing multiple times.
 
 If there is a change you would like to see, we appreciate a detailed description of the problem and your reasoning. Our components have issue templates that help us get to the root of the problem, but feel free to be liberal in your explanations and examples when opening a new issue.
 
