@@ -45,7 +45,7 @@ Once you've done that, run:
 If there is a new feature, a bug fix or anything else missing from a component that you might need, you can:
 
 - open an issue on the components' repository
-- make the change the component yourself and make a PR
+- make the change the component yourself and open a PR
 
 ### Opening an issue
 
