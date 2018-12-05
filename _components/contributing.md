@@ -9,7 +9,7 @@ nav_order: 30
 
 # {{ page.title }}
 
-Since Origami is entirely open source, we welcome contributions from all of our users. There are a number of ways that you can contribute, and we providing tooling and processes to help you do that.
+Since Origami is largely open source, we welcome contributions from all of our users. There are a number of ways that you can contribute, and we provide tooling and processes to help you do that.
 
 ## Creating new components
 
