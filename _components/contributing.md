@@ -19,7 +19,7 @@ The <a href="https://registry.origami.ft.com/components/" class="o-typography-li
 For the Origami team to oversee a component's maintenance, a proposal needs to be made.  
 You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a> project board, where all proposals are logged.
 
-After the team has reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and build it for you.
+After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
 ### Build an independent component
 If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be present. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
