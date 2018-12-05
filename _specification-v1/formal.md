@@ -14,7 +14,7 @@ This is the formal Origami specification. This section of the site defines in de
 
 ## Naming
 
-The name **repository** refers to a collection of files and folders which are stored in version control (such as <a href="https://git-scm.com/" class="o-typography-link--external" target="_blank">Git</a>).
+The name **repository** refers to a collection of files and folders which are stored in version control (such as <a href="https://git-scm.com/"  >Git</a>).
 
 The name **component** refers to a repository that:
 

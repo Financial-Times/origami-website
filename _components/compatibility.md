@@ -23,7 +23,7 @@ To determine whether or not a browser supports those features, we use a 'cuts th
 
 This test checks browsers for some features that are only implemented by modern browsers. We recommend the following test:
 
-<aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
+<aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard"  target="\_blank" >post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var script = document.createElement('script');
 var supportsDeferredScripts = "defer" in script && "async" in script;
@@ -65,11 +65,11 @@ If there is JavaScript to execute regardless of the experience served to the bro
 	}('https://example.com/main.js));
 &lt;/script></code></pre>
 
-<aside>We've put the full implementation of our <abbr title="Cuts The Mustard">CTM</abbr> test <a href='https://codepen.io/ft-origami/pen/rZjzbw' class="o-typography-link--external" target="\_blank" rel="noopener">on Codepen</a></aside>
+<aside>We've put the full implementation of our <abbr title="Cuts The Mustard">CTM</abbr> test <a href='https://codepen.io/ft-origami/pen/rZjzbw'  target="\_blank" >on Codepen</a></aside>
 
 ## Browser support
 
-<aside>The <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/" class="o-typography-link--external" target="\_blank" rel="noopener">formal resources</a> for the <abbr title="Financial Times">FT</abbr>'s browser support are available to <abbr title="Financial Times">FT</abbr> staff.</aside>
+<aside>The <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/"  target="\_blank" >formal resources</a> for the <abbr title="Financial Times">FT</abbr>'s browser support are available to <abbr title="Financial Times">FT</abbr> staff.</aside>
 
 Origami components conform to the <abbr title="Financial Times">FT</abbr>'s browser support standard, which looks like this:
 
@@ -202,4 +202,4 @@ Origami components conform to the <abbr title="Financial Times">FT</abbr>'s brow
 
 In the physical world, 'Polyfilla' is a type of plaster that is used to fill in small holes in walls. In web development, polyfills are snippets of code that implement a feature on browsers that do not natively support that feature. It means that we can write modern JavaScript without having to invest a large amount of time in making it work in older browsers.
 
-What can be time consuming, is identifying the polyfills we need, so for that, we use and maintain the <a href="http://polyfill.io" class="o-typography-link--external" target="\_blank" rel="noopener">Polyfill Service</a> which hosts all of its own documentation.
+What can be time consuming, is identifying the polyfills we need, so for that, we use and maintain the <a href="http://polyfill.io"  target="\_blank" >Polyfill Service</a> which hosts all of its own documentation.
