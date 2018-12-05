@@ -22,7 +22,7 @@ You can find information about that process in the <a href="https://github.com/F
 After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
 ### Build an independent component
-If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be present. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
+If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be adhered to. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
 
 You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external" target="_blank" rel="noopener">Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
 
