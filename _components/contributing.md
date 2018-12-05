@@ -13,7 +13,7 @@ Since Origami is entirely open source, we welcome contributions from all of our 
 
 ## Creating new components
 
-The Origami registry houses components that the Origami team maintains, as well as components that other teams are responsible for.
+The <a href="https://registry.origami.ft.com/components/" class="o-typography-link--external" target="_blank" rel="noopener">Origami registry</a> houses components that the Origami team maintains, as well as components that other teams are responsible for.
 
 ### Make a proposal
 For the Origami team to oversee a components' maintenance, a proposal needs to be made.  
