@@ -58,33 +58,9 @@ If there is a change you would like to see, we appreciate a detailed description
 
 ### Working on a component
 
-If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. All Origami components use this tool. As long as you have [installed it](#build-an-independent-component) you can develop your component with the following steps:
+If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more.
 
-In your chosen component's root directory, you'll need to install its dependencies:
-```
-obt install
-```
-
-If you'd like to have the demos of the component rebuild themselves as you change your work, run:
-
-```
-obt demo --runServer --watch
-```
-
-Generally, the demos will be available on `localhost:8999/demos/local`.  
-Visit that URL to see them, and start working on your changes!
-
-When you are happy with the work you've done, check that you've used the correct syntax by running:
-
-```
-obt verify
-```
-
-And last but not least, make sure the tests are still passing:
-
-```
-obt test
-```
+We provide details on what commands to use for `obt` in its <a href="https://github.com/Financial-Times/origami-build-tools#readme" class="o-typography-link--external" target="_blank" rel="noopener">documentation</a>
 
 When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes to the component.
 
