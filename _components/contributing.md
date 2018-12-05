@@ -51,11 +51,11 @@ If there is a new feature, a bug fix or anything else missing from a component t
 
 It is important to us to be able to track the discussions we have over changes that we do or do not make to our work, so that we can always reference our past selves for decisions our current selves are going to make.
 
-If there is a change you would like to see, we appreciate a detailed description of the problem and your reasoning. Our components have issue templates that help us get to the root of the problem, so feel free to be liberal in your explanations and examples when opening a new issue.
+If there is a change you would like to see, we appreciate a detailed description of the problem and your reasoning. Our components have issue templates that help us get to the root of the problem, but feel free to be liberal in your explanations and examples when opening a new issue.
 
 ### Working on a component
 
-If you've chosen to work on the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. All Origami components use this tool. As long as you have [installed the tools](#build-an-independent-component) you can develop them with following steps:
+If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. All Origami components use this tool. As long as you have [installed it](#build-an-independent-component) you can develop your component with following steps:
 
 In your chosen component's root directory, you'll need to install its dependencies:
 ```
@@ -69,7 +69,7 @@ obt demo --runServer --watch
 ```
 
 Generally, the demos will be available on `localhost:8999/demos/local`.  
-Visit that URL to see them, and start working on your changes!
+Visit that <abbr title="Uniform Resource Locator">URL</abbr> to see them, and start working on your changes!
 
 When you are happy with the work you've done, check that you've used the correct syntax by running:
 
