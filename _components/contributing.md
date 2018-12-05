@@ -16,11 +16,14 @@ Since Origami is entirely open source, we welcome contributions from all of our 
 The Origami registry houses components that the Origami team maintains, as well as components that other teams are responsible for.
 
 ### Make a proposal
-For the Origami team to oversee a components' maintenance, a proposal needs to be made. You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a>.
-After the team has reviewed the proposal, and if it has been accepted, the team will take responsibility for this component and build it for you.
+For the Origami team to oversee a components' maintenance, a proposal needs to be made.  
+You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/" class="o-typography-link--external" target="_blank" rel="noopener">origami-proposals</a> project board.
+After the team has reviewed the proposal, and if it has been accepted, we will take responsibility for this component and build it for you.
 
 ### Build an independent component
-If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, you need to be aware of the minimum requirements. These requirements allow any component to be picked up by the registry, and you can the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external" target="_blank" rel="noopener">Origami Build Tools</a> provide a boilerplate with those requirements.
+If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be present. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
+
+You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external" target="_blank" rel="noopener">Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
 
 ```
 npm i -g origami-build-tools
