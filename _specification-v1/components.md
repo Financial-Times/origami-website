@@ -65,8 +65,86 @@ A component's folder structure _may_ be organised as follows. The following is w
 </pre>
 
 
-## Requirements
+## Package management
 
-TODO this should possibly be multiple headings.
+### Supported package managers
 
-[Current documentation](https://origami.ft.com/docs/component-spec/modules/#requirements) seems to use this as a bucket list of stuff that doesn't fit elsewhere?
+TODO: Which package managers/why (with notes on bower deprecation, and talk about use in Node.js, required bower ignores)
+
+### Component dependencies
+
+TODO: Including and managing dependencies (e.g. don't rely on sub-dependencies, using dev dependencies, versions)
+
+
+## Source control
+
+TODO: git, FT GitHub - also list FTlabs/interactive etc, public/private
+
+
+## Code
+
+### Markup
+
+TODO: linting/syntax - do we need new page?
+
+### Styles
+
+TODO: is SCSS not CSS, main.scss, linting/syntax - do we need new page?, theming - deprecate and introduce branding
+
+### Behaviour
+
+TODO: is client-side JavaScript, main.js, linting/syntax - do we need new page?
+
+### Accessibility
+
+TODO: touch/keyboard/mouse, aria, screen-readers, etc
+
+
+## Testing
+
+### Automated tests
+
+TODO
+
+### Linting
+
+TODO
+
+### Browser/manual testing
+
+TODO
+
+
+## Documentation
+
+### README
+
+TODO
+
+### Migration
+
+TODO
+
+### Codedocs
+
+TODO
+
+
+## Browser support
+
+TODO: also in README? which browsers which component works for
+
+
+## Demos
+
+TODO: registry visible, hidden for testing, pa11y, link to manifest demos section
+
+
+## Build Step
+
+TODO: configuration, CI, compatibility with build service, scripts, automated tests
+
+
+## Component lifecycle
+
+TODO: versioning/releasing/deprecating
