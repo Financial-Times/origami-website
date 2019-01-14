@@ -100,7 +100,7 @@ As well as following the <a href="https://github.com/bower/spec/blob/master/json
     - **not** contain the files: `origami.json`, `README.md`, and files required to build demos
   - It **must not** include a `version` property. This is not needed and risks being out of sync with the repository's git tags
   - It **may** contain a `description` property set to a short description of the component
-  - It **should** not contain any additional properties
+  - It **should not** contain any additional properties
 
 #### Bower ignored files
 
