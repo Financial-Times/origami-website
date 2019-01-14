@@ -37,9 +37,15 @@ Components **must** be named using a short descriptive term (hyphenated if neces
 If a component is not maintained by the Origami team, then it **may** be prefixed with a different letter than `o-`, E.g. `n-button`, `g-audio`. This practice is discouraged, it's preferred that authors specify a support contact other than Origami in the component manifest.
 
 
-## Folder structure
+## Files and folder structure
 
-_This section is non-normative._
+Origami components **must** include the following files:
+
+  - `main.js` **_if_** the component has JavaScript functionality
+  - `main.scss` **_if_** the component has styles
+  - `origami.json` as outlined in [Origami.json manifest](#origamijson-manifest) above
+
+_The rest of this section is non-normative._
 
 A component's folder structure **may** be organised as follows. The following is what the Origami team use for all of their supported components, but it's not a requirement.
 
@@ -67,9 +73,70 @@ A component's folder structure **may** be organised as follows. The following is
 
 ## Package management
 
-### Supported package managers
+Origami components **must** be installable through at least one package manager (individual package managers detailed below).
 
-TODO: Which package managers/why (with notes on bower deprecation, and talk about use in Node.js, required bower ignores)
+When a consumer attempts to use a component and finds that it is installable through a particular package manager, they **should** be able to assume that the same package manager can be used to install _any_ Origami component.
+
+### Bower
+
+Origami components **must** be installable through the <a href="https://bower.io/" class="o-typography-link--external" target="_blank">Bower package manager</a>, and **should** include a `bower.json` manifest file which configures the component. The component **should not** be published to the public Bower registry (through `bower register` or similar).
+
+<aside>
+  Origami components are not published to the public Bower registry because they can be accessed through the Origami Bower Registry.
+  <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external" target="_blank">Read the service documentation</a> for more information.
+</aside>
+
+As well as following the <a href="https://github.com/bower/spec/blob/master/json.md" class="o-typography-link--external" target="_blank">`bower.json` spec</a>, there are additional requirements to make the component's Bower manifest conform to the Origami specification:
+
+  - It **must** include a `name` property set to the repository name, e.g. `o-typography`
+  - It **must** include a `main` property set to an array which **must**:
+    - reference the component's main JavaScript file (`main.js`) **_if_** it exists
+    - reference the component's main Sass file (`main.scss`) **_if_** it exists
+  - It **must** include a `dependencies` property set to an object **_if_** the component has any Origami dependencies. Each key/value pair **must**:
+    - reference a semver range and **not** a Git repository or URL
+    - **not** reference an unstable or beta version of a dependency
+  - It **must** include an `ignore` property set to an array, which **must**:
+    - include all files and directories in the component that are not required by consumers (see [ignored files](#bower-ignored-files) for an example configuration)
+    - **not** contain the files: `origami.json`, `README.md`, and files required to build demos
+  - It **must not** include a `version` property. This is not needed and risks being out of sync with the repository's git tags
+  - It **may** contain a `description` property set to a short description of the component
+  - It **should** not contain any additional properties
+
+#### Bower ignored files
+
+_This section is non-normative._
+
+The following is the list of ignored files in most component Bower configurations. This **may** be used as a starting point for new components:
+
+<pre><code class="o-syntax-highlight--json">"ignore": [
+	"**/.*",
+	"node_modules",
+	"bower_components",
+	"test",
+	"build"
+]</code></pre>
+
+### npm
+
+Origami components **may** include a `package.json` manifest, however this file **must not** be relied upon for consumption of the component **_unless_** it follows the rules outlined in [Isomorphic components](#isomorphic-components) below. As well as following the <a href="https://docs.npmjs.com/files/package.json" class="o-typography-link--external" target="_blank">`package.json` spec</a>, there are additional requirements to make the component's npm manifest conform to the Origami specification:
+
+  - It **must not** include any of the following properties: `bin`, `bugs`, `config`, `cpu`, `dependencies` (as this would indicate that the manifest is required for consumption of the component), `engines`, `engineStrict`, `files`, `main`, `os`, `preferGlobal`, `publishConfig`
+  - It **must not** include a `version` property **_unless_** the component is isomorphic, see [Isomorphic components section](#isomorphic-components) below
+  - It **must** include a `devDependencies` property set to an object **_if_** the component has any npm dependencies required for development or testing
+  - It **should** include a `private` property set to `true`
+  - It **may** include any other standard npm-defined property
+
+#### Isomorphic components
+
+Some components' JavaScript may have use cases outside the browser, most notably in Node.js applications, e.g. `o-date` could be used to format dates in the browser or on the server. Where there is a definite need for this, components **must** include a `package.json` with the following properties in addition to those outlined in the section above:
+
+  - It **must** include a `name` property set to the repository name, e.g. `o-typography`
+  - It **must** include a `version` property which is set to the value `0.0.0`
+  - It **must** include a `main` property set to either `main.js`, `server.js`, or `index.js` (outlined below)
+
+If the component requires any dependencies which are aimed solely at browsers (e.g. `o-dom`), then the `main` property in `package.json` **must** be set to either `server.js` (preferred) or `index.js` (deprecated). If all of the component's dependencies are capable of being used in a server environment, then the `main` property **should** be set to `main.js` – the same entry point as configured in `bower.json`.
+
+The component **should not** be added to the public npm registry; instead the component's documentation **should** advise consumers to install by using a tagged tarball (links to which are available from the component's GitHub repo's "releases" tab).
 
 ### Component dependencies
 
