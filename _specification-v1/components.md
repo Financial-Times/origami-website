@@ -145,7 +145,15 @@ TODO: Including and managing dependencies (e.g. don't rely on sub-dependencies, 
 
 ## Source control
 
-TODO: git, FT GitHub - also list FTlabs/interactive etc, public/private
+Origami component code **must** reside in a Git repository which has the same name as the component ([see naming conventions](#naming-conventions)). This repository **must** be stored remotely under one of the following GitHub organisations:
+
+  - [Financial-Times](https://github.com/Financial-Times)
+  - [FT-Interactive](https://github.com/ft-interactive)
+  - [FTLabs](https://github.com/ftlabs)
+
+Component repositories **should** be public by default, however they **may** be private if there is a compelling reason, e.g. to comply with a font license in the case of `o-fonts-assets`.
+
+Commit messages **should** describe the change that they introduce to a component.
 
 
 ## Code
