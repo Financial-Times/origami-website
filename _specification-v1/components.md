@@ -138,9 +138,32 @@ If the component requires any dependencies which are aimed solely at browsers (e
 
 The component **should not** be added to the public npm registry; instead the component's documentation **should** advise consumers to install by using a tagged tarball (links to which are available from the component's GitHub repo's "releases" tab).
 
-### Component dependencies
+### Specifying dependencies
 
-TODO: Including and managing dependencies (e.g. don't rely on sub-dependencies, using dev dependencies, versions)
+Components **should** have as few dependencies as possible. When a dependency is not required for use in production, it **should** be listed as a development dependency in whichever package manager you use.
+
+Dependencies used in a component **must** be added explicitly to the package manager config. Components **must not** rely on code from sub-dependencies (see example).
+
+<aside>
+  Sub-dependency example: if <code>o-component-a</code> includes <code>o-component-b</code> as a dependency and a new component you're developing requires features from both, then both must be added as explicit dependencies – you must not depend on <code>o-component-a</code> alone.
+</aside>
+
+When listing dependencies in your `bower.json` manifest, the <a href="https://semver.org/" class="o-typography-link--external" target="_blank">SemVer</a> range that you specify:
+
+  - **must** be specified in a way that allows `MINOR` and `PATCH` to automatically update. This is normally achieved by using the caret (`^`) operator
+  - **must** be greater than or equal to `1.0.0`
+  - **must not** contain a SemVer prerelease suffix, e.g. `1.0.0-beta`
+
+(See the example for clarification).
+
+<aside>
+  <p>Examples of spec-compliant dependency versions: <code>^1.0.0</code>, <code>&lt;3</code></p>
+  <p>Examples of non-spec-compliant dependency versions: <code>^0.1.0</code>, <code>1.0.0</code>, <code>~1.0.0</code>, <code>^2.0.0-beta.4</code></p>
+</aside>
+
+When an Origami component is a dependency of many other Origami components, it **must** verify and assert the widest version compatibility possible, including maintaining compatibility with earlier versions of a dependency unless to do so would be impractical. E.g. specifying a broad version range like `"o-colors": ">=3.0.0 <5"`
+
+<aside>If you want to understand more about how a SemVer expression matches specific versions, try <a href="https://semver.npmjs.com/" class="o-typography-link--external" target="_blank">npm's SemVer calculator</a>.</aside>
 
 
 ## Source control
