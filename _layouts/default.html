@@ -37,7 +37,7 @@
 			display: none !important;
 		}
 	</style>
-	<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-typography@^5.7.5,o-layout@^2.0.1,o-syntax-highlight@^1.4.0,o-message@^2.3.4,o-table@^6.9.0" />
+	<link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-typography@^5.8.0,o-layout@^3.0.0-beta.1,o-header-services@^2.3.4,o-footer-services@^2.0.3,o-syntax-highlight@^1.4.0,o-message@^2.3.4,o-table@^6.9.0&brand=internal" />
 	<link rel="stylesheet" href="/assets/main.css" />
 
 	<!-- Site links -->
@@ -53,7 +53,7 @@
 				var s = document.getElementsByTagName('script')[0];
 				s.parentNode.insertBefore(o, s);
 			}
-		}('https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-typography@^5.7.5,o-layout@^2.0.0,o-syntax-highlight@^1.4.0,o-message@^2.3.4,o-table@^6.9.0'));
+		}('https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-typography@^5.8.0,o-layout@^3.0.0-beta.1,o-header-services@^2.3.4,o-footer-services@^2.0.3,o-syntax-highlight@^1.4.0,o-message@^2.3.4,o-table@^6.9.0'));
 	</script>
 
 </head>
@@ -61,15 +61,13 @@
 
 	{% include beta-banner.html %}
 
-	<div class="o-layout" data-o-component="o-layout">
+	<div class="o-layout {% if layout.o_layout_type %}o-layout--{{layout.o_layout_type}}{% else %}o-layout--docs{% endif %}" data-o-component="o-layout">
 
-		{% include header.html %}
-
-		<div class="o-layout__sidebar"></div>
-
-		<div class="o-layout__main" data-o-component="o-syntax-highlight">
-			{{content}}
+		<div class="o-layout__header">
+			{% include header.html %}
 		</div>
+
+		{{content}}
 
 		{% include footer.html %}
 
