@@ -204,7 +204,7 @@ TODO: touch/keyboard/mouse, aria, screen-readers, etc
 
 Components **should** include automated tests which at least verify that the component can be built using <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external" target="_blank">Origami Build Tools</a>.
 
-A component author **may** additionally test their component however they like, providing that all test-related files **should** be in the `tests` directory, and also ignored as outlined in [Bower ignored files](#bower-ignored-files). A component **may** use Origami Build tools to run the tests for consistency:
+A component author **may** additionally test their component however they like, providing that all test-related files **should** be in the `test` directory, and also ignored as outlined in [Bower ignored files](#bower-ignored-files). A component **may** use Origami Build tools to run the tests for consistency:
 
 <pre><code class="o-syntax-highlight--bash">npx origami-build-tools test</code></pre>
 
