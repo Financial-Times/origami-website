@@ -202,15 +202,27 @@ TODO: touch/keyboard/mouse, aria, screen-readers, etc
 
 ### Automated tests
 
-TODO
+Components **should** include automated tests which at least verify that the component can be built using <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external" target="_blank">Origami Build Tools</a>.
+
+A component author **may** additionally test their component however they like, providing that all test-related files **should** be in the `tests` directory, and also ignored as outlined in [Bower ignored files](#bower-ignored-files). A component **may** use Origami Build tools to run the tests for consistency:
+
+<pre><code class="o-syntax-highlight--bash">npx origami-build-tools test</code></pre>
 
 ### Linting
 
-TODO
+Component JavaScript and Sass source code **should** be linted. A component author **may** use <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external" target="_blank">Origami Build Tools</a> to do this:
+
+<pre><code class="o-syntax-highlight--bash">npx origami-build-tools verify</code></pre>
+
+### Continuous integration
+
+Components **should** implement CI. If a component does so then it **should** verify that the component can be built using <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external" target="_blank">Origami Build Tools</a>, as mentioned in [Automated tests](#automated-tests).
 
 ### Browser/manual testing
 
-TODO
+All components **must** be tested with all the browsers listed in the <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/edit" class="o-typography-link--external" target="_blank">FT browser support policy</a>. If a component includes JavaScript, it **must** be error free in all the browsers that fall above the recommended minimum boundary for enhanced experience in that policy.
+
+The versions tested **should** be listed in the component’s documentation, so that when boundary recommendations are changed, it is still possible to determine the support that was designed into an older component.
 
 
 ## Documentation
