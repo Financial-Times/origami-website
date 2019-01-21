@@ -217,7 +217,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "2.2.4"
+		"version": "2.2.5"
 	},
 	"o-link-list": {
 		"name": "o-link-list",
@@ -321,7 +321,7 @@
 	},
 	"o-tracking": {
 		"name": "o-tracking",
-		"version": "1.4.1"
+		"version": "1.4.2"
 	},
 	"o-tweet": {
 		"name": "o-tweet",
@@ -329,7 +329,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "5.8.0"
+		"version": "5.8.1"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
