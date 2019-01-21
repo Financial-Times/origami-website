@@ -22,7 +22,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: default
+      layout: o-layout-docs
   - scope:
       path: ""
       type: posts

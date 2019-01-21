@@ -41,17 +41,32 @@ iframe {
 	width: 100%;
 }
 
-// Styles over specific to override layout body styles,
-// we possibly need to find a nicer way to do this?
-// (or we need to add a teaser-like thing to o-layout 😬)
-.o-layout__main {
+.o-website__hero--home {
+	background-image: url('./images/home-page-hero.jpg');
+}
 
-	.blog-post__title {
-		margin-bottom: 8px;
+
+// Blog styles introduce their own layout stuff, which isn't
+// great. We possibly need to find a nicer way to do this.
+$o-website-bottom-spacing: 28px;
+
+.o-website__blog-listing {
+	list-style: none;
+	padding: 0;
+}
+
+.o-website__blog-post {
+	margin-bottom: $o-website-bottom-spacing;
+
+	// Specificity required to override o-layout styles
+	&__title {
+		margin-bottom: 8px !important;
 	}
-
-	.blog-post__description {
-		margin-bottom: 4px;
+	&__description {
+		margin-bottom: 4px !important;
 	}
-
+	&__meta {
+		margin-bottom: 0 !important;
+		font-size: 16px !important;
+	}
 }
