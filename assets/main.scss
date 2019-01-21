@@ -48,20 +48,11 @@ iframe {
 
 // Blog styles introduce their own layout stuff, which isn't
 // great. We possibly need to find a nicer way to do this.
-
-// TODO these values are hard-coded close to the optimal line
-// length. This is just a bit rubbish really, but we can't get
-// the actual value without starting to compile all the Sass
-// here instead of using the Build Service.
-$o-website-line-length: 600px;
 $o-website-bottom-spacing: 28px;
 
 .o-website__blog-listing {
 	list-style: none;
 	padding: 0;
-
-	max-width: $o-website-line-length;
-	margin: 0 auto $o-website-bottom-spacing auto;
 }
 
 .o-website__blog-post {
