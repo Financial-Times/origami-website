@@ -41,7 +41,7 @@
 	},
 	"o-brand": {
 		"name": "o-brand",
-		"version": "3.1.1"
+		"version": "3.2.0"
 	},
 	"o-business-card": {
 		"name": "o-business-card",
@@ -61,7 +61,7 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "4.7.9"
+		"version": "4.7.10"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -121,7 +121,7 @@
 	},
 	"o-fonts": {
 		"name": "o-fonts",
-		"version": "3.2.0"
+		"version": "3.2.1"
 	},
 	"o-fonts-assets": {
 		"name": "o-fonts-assets",
@@ -181,7 +181,7 @@
 	},
 	"o-grid": {
 		"name": "o-grid",
-		"version": "4.4.4"
+		"version": "4.4.5"
 	},
 	"o-header": {
 		"name": "o-header",
@@ -285,7 +285,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "7.0.7"
+		"version": "7.0.8"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -329,7 +329,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "5.8.1"
+		"version": "5.8.2"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
