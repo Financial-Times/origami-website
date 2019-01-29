@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "html-to-text": "^4.0.0",
+    "jsdom": "^13.2.0",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  }
+}

@@ -13,6 +13,8 @@ Welcome to the first issue of the Origami Newsletter! We'll be publishing a post
 
 ## Top three things
 
+These are some of the bigger things we've worked on or released over the last month.
+
 ### New major of o-layout
 
 The v3.0.0 release of o-layout adds two new layout options: landing page and query page. These should reduce the amount of time that teams spend overriding styles. The aim of o-layout is to provide a one-stop-shop for the visual presentation of internal services and documentation. [Find more information on our blog post about this release](#TODO).
@@ -31,6 +33,8 @@ TODO
 This month’s special thanks goes to Chee Rabbits, who has been helping the team to make Origami components available on npm. They’ve been a lot of fun to work with, and have persevered time and time again with some very complicated technical problems. Thanks Chee 😊
 
 ## Broader update
+
+A digest list of the releases that have happened over the last month.
 
   - MAJOR: o-stepped-progress v1.0.0 was released, [see the registry for more info](https://registry.origami.ft.com/components/o-stepped-progress@1.0.0)
   - MAJOR: o-loading v3.0.0 was released, [see migration guide](https://github.com/Financial-Times/o-loading/blob/master/MIGRATION.md#migrating-from-2xx-to-3xx)
