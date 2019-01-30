@@ -48,7 +48,7 @@ The process:
 
   5. Run the following command: `EMAIL_SOURCE_HTML=YYYY-MM make email-generate`, where `YYYY` and `MM` correspond to the year and month of the newsletter. This will output details of the email that is to be sent including links to review the conent. **It is very important to review these files, the HTML in-browser and the plain text in a text editor**
 
-  6. Once reviewed, run the following command to send the email: `EMAIL_SOURCE_HTML=YYYY-MM EMAIL_API_KEY=XXXXXX make email-generate`, where `YYYY` and `MM` correspond to the year and month of the newsletter, and `XXXXXX` is an email platform API key (you can find this in the shared Origami lastpass).
+  6. Once reviewed, run the following command to send the email: `EMAIL_SOURCE_HTML=YYYY-MM EMAIL_API_KEY=XXXXXX make email-generate-and-send`, where `YYYY` and `MM` correspond to the year and month of the newsletter, and `XXXXXX` is an email platform API key (you can find this in the shared Origami lastpass).
 
   7. The email is sent! Enjoy
 
