@@ -53,7 +53,7 @@ async function sendNewsletter(options) {
 
 	// Compose the email
 	const body = composeEmail({
-		subject: subject,
+		subject,
 		htmlContent,
 		plainTextContent
 	});
@@ -89,7 +89,7 @@ async function sendNewsletter(options) {
 	if (!options.accessKey) {
 		console.error('');
 		console.error('Please specify an access key for the email platform');
-		console.error('using an `EMAIL_SOURCE_HTML` environment variable.');
+		console.error('using an `EMAIL_API_KEY` environment variable.');
 		console.error('');
 		process.exit(1);
 	}
@@ -125,16 +125,12 @@ function composeEmail(data) {
 	return Object.assign({
 		to: {
 			address: [
-				// TODO this is temporary,
-				// we will update to the
-				// product and tech list
-				// when ready to send
-				'origami.support@ft.com'
+				'all.ft.product.technology@ft.com'
 			]
 		},
 		from: {
 			address: 'origami.support@service.ft.com',
-			name: 'Origami'
+			name: 'The Origami Team'
 		},
 		replyTo: 'origami.support@ft.com'
 	}, data);
