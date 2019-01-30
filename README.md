@@ -32,7 +32,7 @@ Newsletter blog posts must have an accompanying email, this is outlined in the s
 
 ## Authoring and sending a newsletter
 
-Writing the Origami monthly newsletter extends the instructions for blog posts, as we also publish an email to the FT's product and technology department. The guide here won't cover the content of the newsletter, [see the original proposal for that](https://docs.google.com/document/d/1qFXWl3xcx3MUL7FHGa7eA90TjGxDdLFTItizILKHZ2k/edit).
+Writing the Origami monthly newsletter extends the instructions for blog posts, as we also publish an email to the FT's Product and Technology department. The guide here won't cover the content of the newsletter, [see the original proposal for that](https://docs.google.com/document/d/1qFXWl3xcx3MUL7FHGa7eA90TjGxDdLFTItizILKHZ2k/edit).
 
 The process:
 
