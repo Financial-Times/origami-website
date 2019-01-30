@@ -8,16 +8,27 @@ const path = require('path');
 const request = require('request-promise-native');
 
 sendNewsletter({
+	recipients: (
+		process.env.EMAIL_RECIPIENTS ?
+		process.env.EMAIL_RECIPIENTS.split(',').map(recipient => recipient.trim()) :
+		['origami.support@ft.com']
+	),
 	accessKey: process.env.EMAIL_API_KEY,
 	newsletter: process.env.EMAIL_SOURCE_HTML,
-	send: process.argv.includes('--send')
+	send: process.argv.includes('--send'),
+	local: Boolean(process.env.EMAIL_LOCAL)
 });
 
 // Generate and send the Origami newsletter
 async function sendNewsletter(options) {
 
 	// TODO change to the live URL when we publish
-	const htmlUri = `https://origami-test.ft.com/emails/newsletter-${options.newsletter}`;
+	const schemeAndHost = (
+		options.local ?
+		'http://localhost:4000' :
+		'https://origami-test.ft.com'
+	);
+	const htmlUri = `${schemeAndHost}/emails/newsletter-${options.newsletter}`;
 
 	// Fetch the HTML content from the live URL
 	let htmlContent;
@@ -53,6 +64,7 @@ async function sendNewsletter(options) {
 
 	// Compose the email
 	const body = composeEmail({
+		recipients: options.recipients,
 		subject,
 		htmlContent,
 		plainTextContent
@@ -84,6 +96,15 @@ async function sendNewsletter(options) {
 		console.log(`file://${htmlReviewFile}`);
 		console.log('');
 		return;
+	}
+
+	if (options.local) {
+		console.error('');
+		console.error('It is not possible to send an email using local');
+		console.error('HTML as a source. Remove the `EMAIL_LOCAL`');
+		console.error('environment variable and test again to send.');
+		console.error('');
+		process.exit(1);
 	}
 
 	if (!options.accessKey) {
@@ -124,9 +145,7 @@ async function sendNewsletter(options) {
 function composeEmail(data) {
 	return Object.assign({
 		to: {
-			address: [
-				'all.ft.product.technology@ft.com'
-			]
+			address: data.recipients
 		},
 		from: {
 			address: 'origami.support@service.ft.com',
