@@ -39,3 +39,11 @@ fetch-component-data:
 	@curl -s -H 'X-Api-Key: $(REPO_DATA_API_KEY)' -H 'X-Api-Secret: $(REPO_DATA_API_SECRET)' 'https://origami-repo-data.ft.com/v1/repos' \
 		| ./scripts/extract-components.js \
 		> _data/components.json
+
+# Generate a newsletter email for review
+email-generate:
+	@./scripts/email-newsletter.js
+
+# Generate and send a newsletter email
+email-generate-and-send:
+	@./scripts/email-newsletter.js --send

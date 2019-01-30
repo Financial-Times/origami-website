@@ -13,6 +13,9 @@ collections:
   principles:
     output: true
     permalink: /docs/:collection/:name/
+  emails:
+    output: true
+    permalink: /:collection/:name/
   specification-v1:
     output: true
     permalink: /spec/v1/:name/
@@ -29,6 +32,12 @@ defaults:
     values:
       layout: blog-post
       author: The Origami Team
+  - scope:
+      path: ""
+      type: emails
+    values:
+      layout: email-newsletter
+      sitemap: false
 
 # Blog post permalinks
 permalink: /blog/:year/:month/:day/:title/
