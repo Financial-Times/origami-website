@@ -45,5 +45,5 @@ email-generate:
 	@./scripts/email-newsletter.js
 
 # Generate and send a newsletter email
-email-generate:
+email-generate-and-send:
 	@./scripts/email-newsletter.js --send
