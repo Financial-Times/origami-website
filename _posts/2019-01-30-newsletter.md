@@ -38,7 +38,7 @@ This month’s special thanks goes to Chee Rabbits, who has been helping the tea
 
 A digest list of other things that have happened over the last month.
 
-  - Lee, Rowan, and Jake's all had birthdays this month 🎂
+  - Lee, Rowan, and Jake all had birthdays this month 🎂
   - We have created a public roadmap for broader Origami work over the year. Our biggest priority is always supporting users of our components and services but the roadmap helps capture everything else, [you can view it here](https://docs.google.com/spreadsheets/d/1Xvp9rnCzHdqbH8FWNoaxFvAhr5Dr9lA1o6VMOc3euEU)
   - MAJOR: o-stepped-progress v1.0.0 was released, [see the registry for more info](https://registry.origami.ft.com/components/o-stepped-progress@1.0.0)
   - MAJOR: o-loading v3.0.0 was released, [see migration guide](https://github.com/Financial-Times/o-loading/blob/master/MIGRATION.md#migrating-from-2xx-to-3xx)
