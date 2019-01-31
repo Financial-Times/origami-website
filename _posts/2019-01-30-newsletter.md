@@ -43,7 +43,6 @@ A digest list of other things that have happened over the last month.
   - MAJOR: o-stepped-progress v1.0.0 was released, [see the registry for more info](https://registry.origami.ft.com/components/o-stepped-progress@1.0.0)
   - MAJOR: o-loading v3.0.0 was released, [see migration guide](https://github.com/Financial-Times/o-loading/blob/master/MIGRATION.md#migrating-from-2xx-to-3xx)
   - MAJOR: o-video v5.0.0 was released, [see migration guide](https://github.com/Financial-Times/o-video/blob/master/MIGRATION.md#migrating-from-40-to-50)
-  - BETA: o-header-services v3.0.0-beta.3 was released, [see PR](https://github.com/Financial-Times/o-header-services/pull/51)
   - MINOR: o-typography v5.8.0 was released, [see the PR for more info](https://github.com/Financial-Times/o-typography/pull/166)
   - MINOR: 7 new faces were published to [our headshot image set](https://registry.origami.ft.com/components/headshot-images)
   - MINOR: 2 new icons were published to [our icon image set](https://registry.origami.ft.com/components/fticons)
