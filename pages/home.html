@@ -1,0 +1,81 @@
+---
+title: Origami
+description: TODO
+permalink: /
+layout: o-layout-landing
+
+# Navigation config
+nav_display: true
+nav_label: Home
+nav_order: 1
+---
+
+<div class="o-layout__hero o-layout-typography o-website__hero--home">
+
+	<h1>{{page.title}}</h1>
+	<p>
+		Origami is a group of services, components, and tools used to help build websites.
+		Origami aspires to create a unified style and experience for FT websites,
+		and make web development at the FT faster.
+	</p>
+
+</div>
+
+<div class="o-layout__main o-layout-typography">
+
+	<div class="o-layout__overview">
+
+		<div class="o-layout-item">
+			<h2>Components</h2>
+			<p>
+				We maintain a large set of front end components which can be used to
+				speed up development and make your project consistent with other FT websites.
+			</p>
+			<ul>
+				<li><a href="/docs/tutorials/">Follow the tutorials</a></li>
+				<li><a href="https://registry.origami.ft.com/components?search=&module=true&imageset=&service=&active=true&maintained=true&experimental=&deprecated=&dead=">View all of our components</a></li>
+				<li><a href="/docs/components/">Read the component docs</a></li>
+			</ul>
+		</div>
+
+		<div class="o-layout-item">
+			<h2>Services</h2>
+			<p>
+				We provide several services for use by people at the FT, the common
+				purpose of our services is to reduce duplicated effort across our development teams.
+			</p>
+			<ul>
+				<li><a href="https://registry.origami.ft.com/components?search=&module=&imageset=&service=true&active=true&maintained=true&experimental=&deprecated=&dead=">View all of our services</a></li>
+				<li><a href="/docs/services/">Read the service docs</a></li>
+			</ul>
+		</div>
+
+		<div class="o-layout-item">
+			<h2>Contributing</h2>
+			<p>
+				We're happy to accept contributions and suggestions across our range of
+				components and services. We use GitHub issues and maintain a specification to
+				help engineers contribute.
+			</p>
+			<ul>
+				<li><a href="https://github.com/Financial-Times/origami-proposals#readme">Propose a new component</a></li>
+				<li><a href="/spec/">Read the Origami specification</a></li>
+			</ul>
+		</div>
+
+		<div class="o-layout-item">
+			<h2>Contact</h2>
+			<p>
+				We're here to help developers at the FT. Please don't hesitate to contact us
+				if you have questions or feedback for the Origami team.
+			</p>
+			<ul>
+				<li><a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}" class="o-typography-link--external" target="_blank">Find us on Slack in #{{site.data.contact.slack}}</a></li>
+				<li><a href="mailto:{{site.data.contact.email}}" class="o-typography-link--external">Email us</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+

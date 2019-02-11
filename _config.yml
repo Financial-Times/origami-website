@@ -13,22 +13,31 @@ collections:
   principles:
     output: true
     permalink: /docs/:collection/:name/
-  specification:
+  emails:
     output: true
-    permalink: /spec/:name/
+    permalink: /:collection/:name/
+  specification-v1:
+    output: true
+    permalink: /spec/v1/:name/
 
 # Default front-matter
 defaults:
   - scope:
       path: ""
     values:
-      layout: default
+      layout: o-layout-docs
   - scope:
       path: ""
       type: posts
     values:
       layout: blog-post
       author: The Origami Team
+  - scope:
+      path: ""
+      type: emails
+    values:
+      layout: email-newsletter
+      sitemap: false
 
 # Blog post permalinks
 permalink: /blog/:year/:month/:day/:title/
