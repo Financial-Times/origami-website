@@ -193,7 +193,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "2.3.4"
+		"version": "3.0.3"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -209,11 +209,11 @@
 	},
 	"o-labels": {
 		"name": "o-labels",
-		"version": "3.1.1"
+		"version": "4.0.1"
 	},
 	"o-layers": {
 		"name": "o-layers",
-		"version": "2.0.6"
+		"version": "2.0.7"
 	},
 	"o-layout": {
 		"name": "o-layout",
@@ -273,7 +273,7 @@
 	},
 	"o-stepped-progress": {
 		"name": "o-stepped-progress",
-		"version": "1.0.0"
+		"version": "1.0.1"
 	},
 	"o-subs-card": {
 		"name": "o-subs-card",
@@ -285,7 +285,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "7.0.8"
+		"version": "7.0.9"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -329,7 +329,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "5.8.2"
+		"version": "5.8.3"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
