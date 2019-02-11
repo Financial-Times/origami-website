@@ -19,6 +19,8 @@ To determine whether or not a browser supports those features, we use a 'cuts th
 
 ### Cuts the mustard
 
+<aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard" class="o-typography-link--external" target="\_blank" rel="noopener">post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
+
 #### Defining a <abbr title="Cuts The Mustard">CTM</abbr> test
 
 This test checks browsers for some features that are only implemented by modern browsers. We recommend the following test:
