@@ -119,4 +119,4 @@ In language, it presents itself as wording like "lame", "crazy", "blind", "dumb"
 ### Bringing it together
 
 These guides are here to help us along when we have doubts about what we're  writing, but as long as we're writing with other people in mind, we'll be on the right path.
-If you have any questions, please [get in touch with Origami!](#/TODO)
+If you have any questions, please get in touch with us via [Slack](https://financialtimes.slack.com/messages/ft-origami) or [Email](origami.support@ft.com).
