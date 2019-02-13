@@ -181,15 +181,57 @@ Commit messages **should** describe the change that they introduce to a componen
 
 ## Code
 
+Notes:
+* "using `require` for JS, " -> "using `import` for JS,"
+
+Lies:
+* where there is a dependency on a web service component (e.g. because the module is a JavaScript library that makes AJAX requests to a service), be compatible with the version of the web service API that carries the same major version number as the module. For example, version 2.4.5, 2.4.6, and 2.7 of a module *must* all be compatible with API version 2 of the web service.
+* list, in documentation, the minimum versions of each browser family in which the component has been tested using the enhanced experience and the core experience (see [browser support](#browser-support) below)
+
+Duplicated:
+* list all build, development and testing scripts as ignored in the module's bower configuration.
+* not include package management config for any package manager other than Bower, except for package config whose only purpose is to load dependencies for development or testing of the component and which does not render the repo installable by that packaging system
+* include a bower-compatible `bower.json` file (in the root of the repo) which if present *must* conform to the requirements set out in 'Packaging and build configuration' below.
+
+
+To add elsewhere:
+* be buildable by the [build service](https://www.ft.com/__origami/service/build/v2/)
+* include a README.md file in the root of the repo, which must contain, where applicable:
+	* Any markup structure on which the module depends (if that markup is not provided by a web service). For example, a module providing CSS to style postal addresses, should include a guide to writing the correct markup. A JavaScript module that requires configuration via `data-` attributes should document those attributes.
+	* Links to repos of web services that exist to provide markup or data that is used by the module.
+* must consider touch, keyboard and mouse interaction where applicable
+* TODO: Add (#where-to-store-modules)
+
+General:
+* **must** contain a single 'main' file for each included language from which all other files of the same language are ultimate dependencies (using `import` for JS, `@import` for CSS or `{>}` for mustache as appropriate). These main files *must* be called `main.js`, `main.scss` and `main.mustache` respectively and *must* be in the module root.
+
+* **must not** be used for imperative code except JavaScript (and JavaScript must have a client-side use case to be considered a front end component)
+* **must not** contain build scripts except as required for development and testing.
+* **must not** contain configuration files that create exceptions to rules advised by this spec (such as `editorconfig`, `bowerrc` or `eslintrc`) unless absolutely necessary.
+* **must** be stored in a Git repo accessible to any FT network (see [recommendations for module locations](#where-to-store-modules) below)
+
+### Modules *should*:
+
+* have automated CI, and if they do it *must* include verification that the module can be built using the mechanism described in the build service guide (see also "Continuous integration" below)
+
 ### Markup
 
 TODO: linting/syntax - do we need new page?
 
 ### Styles
 
+Modules *must*:
+
+* where they contain Sass files, conform to the syntax and language standards for [use of Sass in Origami components]({{site.baseurl}}/docs/syntax/scss)
+
+
+* store CSS as SCSS, to enable products and other modules to make use of variables and mixins
+
 TODO: is SCSS not CSS, main.scss, linting/syntax - do we need new page?, theming - deprecate and introduce branding
 
 ### Behaviour
+
+* where they contain JavaScript files, conform to the syntax and language standards for [use of JavaScript in Origami components]({{site.baseurl}}/docs/syntax/js)
 
 TODO: is client-side JavaScript, main.js, linting/syntax - do we need new page?
 
