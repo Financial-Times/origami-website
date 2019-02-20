@@ -126,7 +126,7 @@ If a module wishes to bind to the `DOMContentLoaded` or `load` browser events, i
 
 ```js
 document.addEventListener('o.DOMContentLoaded', init);
-exports.init = init;
+export init;
 ```
 
 ### Foreign events
