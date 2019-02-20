@@ -129,21 +129,23 @@
 										{% endif %}
 
 										{% for nav_item in nav_items %}
-											<li class="o-header__subnav-item">
-												<a class="o-header__subnav-link" href="{{ nav_item.url }}"
-													{% if nav_item.url == '/' %}
-														{% if page.url == nav_item.url %}aria-selected="true"{% endif %}
-													{% else %}
-														{% if page.url contains nav_item.url %}aria-selected="true"{% endif %}
-													{% endif %}
-												>
-													{% if nav_item.nav_label %}
-														{{ nav_item.nav_label }}
-													{% else %}
-														{{ nav_item.title }}
-													{% endif %}
-												</a>
-											</li>
+											{% if nav_item.nav_display %}
+												<li class="o-header__subnav-item">
+													<a class="o-header__subnav-link" href="{{ nav_item.url }}"
+														{% if nav_item.url == '/' %}
+															{% if page.url == nav_item.url %}aria-selected="true"{% endif %}
+														{% else %}
+															{% if page.url contains nav_item.url %}aria-selected="true"{% endif %}
+														{% endif %}
+													>
+														{% if nav_item.nav_label %}
+															{{ nav_item.nav_label }}
+														{% else %}
+															{{ nav_item.title }}
+														{% endif %}
+													</a>
+												</li>
+											{% endif %}
 										{% endfor %}
 
 									{% endif %}

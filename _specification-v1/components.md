@@ -178,8 +178,9 @@ Component repositories **should** be public by default, however they **may** be 
 
 Commit messages **should** describe the change that they introduce to a component.
 
-
 ## Code
+
+Component styles and behaviour **may** assume that any HTML markup follows the hierarchical structure specified in their documentation and demos. However, components **should not** make assumptions about the order of HTML elements, and **should**, as far as possible, cope with additional HTML elements not specified.
 
 ### Markup
 
@@ -198,9 +199,7 @@ TODO: is SCSS not CSS, main.scss, linting/syntax - do we need new page?, theming
 
 ### Behaviour
 
-* where they contain JavaScript files, conform to the syntax and language standards for [use of JavaScript in Origami components]({{site.baseurl}}/docs/syntax/js)
-
-TODO: is client-side JavaScript, main.js, linting/syntax - do we need new page?
+See the Origami [javascript specification](/spec/v1/javascript).
 
 ### Accessibility
 
