@@ -139,14 +139,6 @@ Components **may** emit events defined by other components, using the other comp
 
 For the most part, use of this technique creates too much 'magic' behaviour that would not be expected by a product developer and **should not** be used. Except in some cases e.g. analytics, where the approach may be a reasonable compromise to enable loose coupling.
 
-## Subresources
-
-Origami components **may** load additional files (fonts, JSON data, images etc) from their own source. To do so safely, components **must** resolve file paths using the [Origami assets module](https://github.com/Financial-Times/o-assets):
-
-Without any explicit configuration, `o-assets` will assume, as we do for sub-resources in Sass, that the components are installed publicly at a URL path of `/bower_components` on the current host, and will form URLs on that basis.  Product developers are advised to reconfigure `o-assets` to accommodate their own server-side URL routing architecture.
-
-Where external resources are not within Origami components, a [protocol-relative URL](http://www.paulirish.com/2010/the-protocol-relative-url/) **must** be used (see [issue 173](https://github.com/Financial-Times/ft-origami/issues/173)).
-
 ## Data Storage
 
 Components that store data on the client via user-agent APIs **must** encapsulate all the logic required to get and set that data and must remain compatible with the format of data that they store, unless the major version number of the component changes. In that case the component **must not** invalidate any existing data, and **should** provide advice in docs on migrating user data from previous versions.
