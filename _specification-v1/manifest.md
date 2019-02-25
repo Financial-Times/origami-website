@@ -9,11 +9,11 @@ nav_order: 25
 
 # {{page.title}}
 
-All Origami components, imagesets and services, **should** be discoverable by the [Origami registry](#TODO). To do this, the component **must** contain an `origami.json` file in the root of its repository.
+All Origami components, imagesets and services, **should** be discoverable by the [Origami registry](https://registry.origami.ft.com/components). To do this, the component **must** contain an `origami.json` file in the root of its repository.
 
 ## Properties
 
-`origami.json` is a [JSON](#TODO) format file that is responsible for describing various aspects of an Origami component. It accepts the following properties:
+`origami.json` is a <a href="https://www.json.org/"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component. It accepts the following properties:
 
 ### description
 
