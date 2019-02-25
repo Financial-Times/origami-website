@@ -176,9 +176,9 @@ Describes contact details a user can choose from to find support for this compon
 - decommissioning the component when appropriate
 - provide support to the users of the component
 
-The object _requires_ two properties:
-- `email`: accepts a string. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
-- `slack`: accepts a string. Is a slack channel that users can go to for support. This <strong>must</strong> be in the format: organisation/channel-name
+The object **requires** two properties:
+- `email`: type `String`. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
+- `slack`: type `String`. Is a slack channel that users can go to for support. This <strong>must</strong> be in the format: organisation/channel-name
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"supportContact": {
@@ -225,8 +225,8 @@ circle</code>:	A CircleCI build status URL (https://circleci.com/api/v1/project/
 
 Applies to `{ "origamiType": "module" }` only. Outlines the browser features required for the component's functionality.
 The object accepts two properties:
-- `required`: accepts an array. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component assumes exists. If these features do not exist, the component may error.
-- `optional`: accepts an array. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
+- `required`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component assumes exists. If these features do not exist, the component may error.
+- `optional`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"origamiType": "module",
@@ -254,7 +254,9 @@ The object accepts two properties:
 	</tr>
 </table>
 
-*Applies to `{ "origamiType": "service" }` only. Is the URL on which the service is provided.
+*Applies to `{ "origamiType": "service" }` only.
+
+Is the URL on which the service is provided.
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"origamiType": "service",
@@ -273,14 +275,18 @@ The object accepts two properties:
 	</tr>
 </table>
 
-It accepts an object. Describes default options to be applied to all demos.
+Describes default options to be applied to all demos.
 The object accepts the following properties:
-- `template`: This property is _required_ when setting demo defaults. Accepts a string. Describes the path to the mustache template to render
-- `sass`: Accepts a string. Describes the path to the Sass file to compile.
-- `js`: Accepts a string. Describes the JS file to build.
-- `data`: Accepts an object. Describes data to populate to the mustache template with.
-- `documentClasses`: Accepts an object. Names CSS classes to set on the `html` tag.
-- `dependencies`: Accepts an array. Is a list of other components that are only needed for demos, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
+
+**required** (when setting demo defaults):
+- `template`: type `String`. Describes the path to the mustache template to render
+
+**optional**
+- `sass`: type `String`. Describes the path to the Sass file to compile.
+- `js`: type `String`. Describes the JS file to build.
+- `data`: type `Object`. Describes data to populate to the mustache template with.
+- `documentClasses`: type `Object`. Names CSS classes to set on the `html` tag.
+- `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"demosDefaults": {
@@ -309,17 +315,21 @@ The object accepts the following properties:
 
 It accepts an array. Is a list of configuration objects for individual demos.
 Each object in the list accepts the following properties:
-- `name`: This property is _required_. Accepts a string. Demo name which will be used as the name of the outputted html file
-- `title`: This property is _required_. Accepts a string. A title for the demo which will appear when listed in the Registry
-- `description`: This property is _required_. Accepts a string. An explanation of the purpose of the demo
-- `template`: This property is _required_. Accepts a string. Describes the path to the demo-specific mustache template to render
-- `sass`: Accepts a string. Describes the path to the demo-specific Sass file to compile.
-- `js`: Accepts a string. Describes the path to the demo-specific JS file to build.
-- `data`: Accepts an object. Describes to populate to the component-specific mustache template with
-- `documentClasses`: Accepts an object. Names CSS classes to set on the component-specific `html` tag
-- `dependencies`: Accepts an array. Is a list of other components that are only needed a this specific demo, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
-- `hidden`: Accepts a boolean. Whether the demo should be hidden in the Registry
-- `display_html`: Accepts a boolean. Whether the demo should have a HTML tab in the Registry (defaults to true)
+
+**required**:
+- `name`: type `String`. Demo name which will be used as the name of the outputted html file
+- `title`: type `String`. A title for the demo which will appear when listed in the Registry
+- `description`: type `String`. An explanation of the purpose of the demo
+- `template`: type `String`. Describes the path to the demo-specific mustache template to render
+
+**optional**:
+- `sass`: type `String`. Describes the path to the demo-specific Sass file to compile.
+- `js`: type `String`. Describes the path to the demo-specific JS file to build.
+- `data`: type `Object`. Describes to populate to the component-specific mustache template with
+- `documentClasses`: type `Object`. Names CSS classes to set on the component-specific `html` tag
+- `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
+- `hidden`: type `Boolean`. Whether the demo should be hidden in the Registry
+- `display_html`: type `Boolean`. Whether the demo should have a HTML tab in the Registry (defaults to true)
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"demos": [
@@ -344,7 +354,7 @@ Each object in the list accepts the following properties:
 	]
 }</code></pre>
 
-### Example
+## Example
 
 This example joins all of the property snippets outlined above:
 
