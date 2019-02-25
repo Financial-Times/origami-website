@@ -199,7 +199,7 @@ The object **requires** two properties:
 		<td><code>false</code></td>
 	</tr>
 </table>
-_This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a component does still use it._. Describes a set of one or more URLs where build information can be found.
+_This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a component does still use it_. Describes a set of one or more URLs where build information can be found.
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"ci": {
 		"circle": "https://circleci.com/api/v1/project/owner/repo",
