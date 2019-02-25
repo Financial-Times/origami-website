@@ -10,10 +10,10 @@ nav_display: false
 The markup **must** be [valid HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/syntax.html#syntax), except that a DOCTYPE, and opening `<html>` and `<body>` tags should be assumed (i.e. the markup should be a document body fragment which becomes a valid HTML5 document when enclosed in `<html>` and `<body>` tags).
 
 Markup **must** also conform to the following XML rules:
-- Must have a single root element.
-- All elements that are opened must be closed (including [inline SVG](https://github.com/Financial-Times/ft-origami/issues/66)).
-- Closing tags must be in order.
-- Must not have valueless attributes.
+- **Must** have a single root element.
+- All elements that are opened **must** be closed (including [inline SVG](https://github.com/Financial-Times/ft-origami/issues/66)).
+- Closing tags **must** be in order.
+- **Must** not have valueless attributes.
 
 ## Elements
 

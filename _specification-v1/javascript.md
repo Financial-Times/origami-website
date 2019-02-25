@@ -18,8 +18,8 @@ In addition, 0bject properties **must not** be named after reserved words in the
 ## Encapsulation
 
 - Components **should not** add to the global scope.
-- Components **should not** assume the existence of globals except those defined as part of ECMAScript 5 and features listed in the `browserFeatures/required` section of `origami.json`.
-- Components **must not** modify the DOM outside of areas of [owned DOM](/spec/v1/markup/#owned-dom), except:
+- Components **should not** assume the existence of globals except those defined as part of ECMAScript 5 and features listed in the `browserFeatures.required` section of `origami.json`.
+- Components **must not** modify the DOM outside of [owned DOM](/spec/v1/markup/#owned-dom) areas, except:
 	- To add [CSS feature flags](/v1/sass/#feature-flags) to the `documentElement`.
 	- Where passed a DOM element explicitly by the host application using the component.
 
