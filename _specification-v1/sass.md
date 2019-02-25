@@ -19,7 +19,7 @@ In addition, component CSS **should not** use `!important`. Valid use cases for 
 
 ## Naming Conventions
 
-CSS/Sass has limited encapsulation, so strict adherence to namespacing rules is essential. Components **must not** set or modify any CSS or Sass element in another component's namespace.
+CSS/Sass has limited encapsulation, so strict adherence to namespacing rules is essential.
 
 CSS selectors **should** follow the [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming convention. They **must** also be prefixed with the component name and written as hyphen separated, lowercase strings:
 - Good: `.o-thing--large`, `.o-thing__content`
@@ -38,6 +38,11 @@ Sass mixins and functions **must** also be prefixed with the component name, and
 - Bad: `@mixin calculate-padding()`
 
 ## CSS Selectors
+
+A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v1/sass/#naming-conventions)).
+
+- Good: `.o-thing {}`
+- Bad: `body {}`
 
 ID selectors (`#`) **must not** be used at all:
 
