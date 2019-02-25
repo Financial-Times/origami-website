@@ -182,9 +182,7 @@ Commit messages **should** describe the change that they introduce to a componen
 
 ### Markup
 
-Component styles and behaviour **may** assume that any HTML markup follows the hierarchical structure specified in their documentation and demos. However, components **should not** make assumptions about the order of HTML elements, and **should**, as far as possible, cope with additional HTML elements not specified.
-
-TODO: linting/syntax, #owned-dom - do we need new page?
+See [the Origami Markup Specification](/spec/v1/markup).
 
 ### Styles
 
