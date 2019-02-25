@@ -178,20 +178,31 @@ Component repositories **should** be public by default, however they **may** be 
 
 Commit messages **should** describe the change that they introduce to a component.
 
-
 ## Code
 
 ### Markup
 
-TODO: linting/syntax - do we need new page?
+Component styles and behaviour **may** assume that any HTML markup follows the hierarchical structure specified in their documentation and demos. However, components **should not** make assumptions about the order of HTML elements, and **should**, as far as possible, cope with additional HTML elements not specified.
+
+TODO: linting/syntax, #owned-dom - do we need new page?
 
 ### Styles
 
-TODO: is SCSS not CSS, main.scss, linting/syntax - do we need new page?, theming - deprecate and introduce branding
+Origami component styles are authored in [Sass](http://sass-lang.com/), specifically the SCSS syntax.
+
+See [the Origami Sass Specification](/spec/v1/sass).
 
 ### Behaviour
 
-TODO: is client-side JavaScript, main.js, linting/syntax - do we need new page?
+See the [Origami javascript specification](/spec/v1/javascript).
+
+### Subresources
+
+Origami components **may** load additional files (fonts, JSON data, images etc) from their own source. To do so safely, components **must** resolve file paths using the [Origami assets module](https://github.com/Financial-Times/o-assets):
+
+Without any explicit configuration, `o-assets` will assume, as we do for sub-resources in Sass, that the components are installed publicly at a URL path of `/bower_components` on the current host, and will form URLs on that basis.  Product developers are advised to reconfigure `o-assets` to accommodate their own server-side URL routing architecture.
+
+Where external resources are not within Origami components, a [protocol-relative URL](http://www.paulirish.com/2010/the-protocol-relative-url/) **must** be used (see [issue 173](https://github.com/Financial-Times/ft-origami/issues/173)).
 
 ### Accessibility
 

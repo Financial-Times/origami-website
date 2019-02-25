@@ -25,8 +25,6 @@ To determine whether or not a browser supports those features, we use a 'cuts th
 
 This test checks browsers for some features that are only implemented by modern browsers. We recommend the following test:
 
-<aside>This expression comes from the <abbr title="British Broadcasting Corporation">BBC</abbr>'s <a href="http://responsivenews.co.uk/post/18948466399/cutting-the-mustard"  target="\_blank" >post about <abbr title="Cuts The Mustard">CTM</abbr></a></aside>
-
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">var script = document.createElement('script');
 var supportsDeferredScripts = "defer" in script && "async" in script;
 window.cutsTheMustard = (typeof document.documentElement.dataset === 'object' && ('visibilityState' in document) && supportsDeferredScripts);</code></pre>

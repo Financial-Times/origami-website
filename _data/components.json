@@ -21,7 +21,7 @@
 	},
 	"g-audio": {
 		"name": "g-audio",
-		"version": "1.0.5"
+		"version": "1.0.7"
 	},
 	"o-author-alerts": {
 		"name": "o-author-alerts",
@@ -61,23 +61,27 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "4.8.2"
+		"version": "4.8.5"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
-		"version": "2.4.1"
+		"version": "2.5.0"
 	},
 	"o-comment-count": {
 		"name": "o-comment-count",
-		"version": "0.3.8"
+		"version": "0.4.0"
 	},
 	"o-comment-ui": {
 		"name": "o-comment-ui",
-		"version": "4.2.6"
+		"version": "4.3.0"
+	},
+	"o-comment-utilities": {
+		"name": "o-comment-utilities",
+		"version": "2.4.0"
 	},
 	"o-comments": {
 		"name": "o-comments",
-		"version": "4.1.2"
+		"version": "4.2.0"
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
@@ -185,7 +189,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "7.8.0"
+		"version": "7.8.2"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -193,7 +197,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "3.2.0"
+		"version": "3.2.2"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -245,7 +249,7 @@
 	},
 	"o-overlay": {
 		"name": "o-overlay",
-		"version": "2.5.0"
+		"version": "2.6.0"
 	},
 	"n-profile-ui": {
 		"name": "n-profile-ui",
@@ -293,7 +297,7 @@
 	},
 	"o-teaser": {
 		"name": "o-teaser",
-		"version": "3.2.0"
+		"version": "3.2.1"
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
@@ -313,7 +317,7 @@
 	},
 	"o-tooltip": {
 		"name": "o-tooltip",
-		"version": "3.3.0"
+		"version": "3.4.0"
 	},
 	"o-topper": {
 		"name": "o-topper",
@@ -321,7 +325,7 @@
 	},
 	"o-tracking": {
 		"name": "o-tracking",
-		"version": "1.4.2"
+		"version": "1.4.3"
 	},
 	"o-tweet": {
 		"name": "o-tweet",
@@ -329,7 +333,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "5.9.0"
+		"version": "5.9.1"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
