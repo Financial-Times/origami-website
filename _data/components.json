@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "10.2.3"
+		"version": "10.2.4"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -49,7 +49,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "5.16.0"
+		"version": "5.16.1"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -181,7 +181,7 @@
 	},
 	"o-gallery": {
 		"name": "o-gallery",
-		"version": "3.0.5"
+		"version": "3.0.6"
 	},
 	"o-grid": {
 		"name": "o-grid",
@@ -201,11 +201,11 @@
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
-		"version": "5.1.0"
+		"version": "5.1.1"
 	},
 	"o-hoverable": {
 		"name": "o-hoverable",
-		"version": "3.2.0"
+		"version": "3.2.1"
 	},
 	"o-icons": {
 		"name": "o-icons",
@@ -249,7 +249,7 @@
 	},
 	"o-overlay": {
 		"name": "o-overlay",
-		"version": "2.6.0"
+		"version": "2.6.1"
 	},
 	"n-profile-ui": {
 		"name": "n-profile-ui",
@@ -305,7 +305,7 @@
 	},
 	"o-techdocs": {
 		"name": "o-techdocs",
-		"version": "7.0.9"
+		"version": "7.0.10"
 	},
 	"o-test-component": {
 		"name": "o-test-component",
