@@ -6,8 +6,6 @@ tags:
   - Newsletter
 ---
 
-_Welcome to the second issue of the Origami Newsletter! We'll be sending out an email like this at the end of each month, keeping people in Product and Technology up-to-date with what we're working on. [Last issue](/blog/2019/01/30/newsletter/) we announced o-stepped-progress; Polyfill Service v3; and a major o-header-services beta._
-
 **TL;DR:** This issue features Origami components on npm; the release of o-layout v3, which includes two new layouts to help build internal tools and products; and the release of o-header-services v3, which includes new features, customisation, and a lot of code improvements.
 
 
@@ -25,7 +23,7 @@ o-layout provides page layouts and typography as a starting point to create inte
 
 ### New major version: o-header-services
 
-o-header-services is a component currently used by many of our tools, both internal and customer facing, to aid navigation. The new major release follows the beta we announced last issue. It reduces code complexity (both internally and from an Origami user's perspective); introduces optional dropdowns for larger navigation structures; and it is now customisable so our specialist titles may choose to make the most of o-header-services. Big thanks to Tom Dew, Carina Huse, Alex Wilson, and the rest of the team at BlueTel for their time and feedback. [Demos and a migration guide](https://registry.origami.ft.com/components/o-header-services) are avalible via the Origami Registry.
+o-header-services is a component currently used by many of our tools, both internal and customer facing, to aid navigation. The new major release follows the beta we announced last issue. It reduces code complexity (both internally and from an Origami user's perspective); introduces optional dropdowns for larger navigation structures; and it is now customisable so our specialist titles may choose to make the most of o-header-services. Big thanks to Tom Dew, Carina Huse, Alex Wilson, and the rest of the team at BlueTel for their time and feedback. [Demos and a migration guide](https://registry.origami.ft.com/components/o-header-services) are available via the Origami Registry.
 
 
 ## Special thanks
