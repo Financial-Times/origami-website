@@ -6,7 +6,11 @@ layout: o-layout-docs
 
 {% if page.collection_id %}
 
-	<h2 id="documents">Documents</h2>
+	{% if page.collection_title %}
+		<h2 id="{{page.collection_title | slugify}}">{{page.collection_title}}</h2>
+	{% else %}
+		<h2 id="documents">Documents</h2>
+	{% endif %}
 
 	{% assign documents = site[page.collection_id] | sort: 'nav_order', 'last' %}
 
