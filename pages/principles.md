@@ -1,6 +1,6 @@
 ---
 title: Origami Principles
-description: Guiding principals that Origami follows when developing products for the FT.
+description: Guiding principles that Origami follows when developing products for the FT.
 permalink: /docs/principles/
 layout: collection
 collection_id: principles
