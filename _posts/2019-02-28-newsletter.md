@@ -30,8 +30,7 @@ o-header-services is a component currently used by many of our tools, both inter
 
 ## Special thanks
 
-<!-- TODO -->
-
+Special thanks to the Enhanced Experience team who have bought [o-table](https://registry.origami.ft.com/components/o-table) to ft.com and the app. Editorial are now able to add tables to stories which are sortable, expandable, and responsive. In no particular order, thanks again to: Emily Quinn, Peter Clarke, Terry Roberts, Gabor Ottlik, Ludovic Robin, Umberto Babini, Luke Kavanagh, and to the apps team for their support. 👏
 
 ## Broader update
 
