@@ -1,6 +1,6 @@
 ---
 title: Origami Principles
-description: TODO
+description: Guiding principals that Origami follows when developing products for the FT.
 permalink: /docs/principles/
 layout: collection
 collection_id: principles
@@ -12,6 +12,4 @@ nav_label: Principles
 
 # {{page.title}}
 
-- [Accessibility](/docs/principles/accessibility)
-- [Tone and Language](/docs/principles/tone-and-language)
-- [Design](/docs/principles/design)
+Origami follows a set of guiding principles when developing products for the <abbr title="Financial Times">FT</abbr>. This section of the documentation is for people who are authoring components or services, either as a member of the Origami team, or as somebody trying to transfer their code to be maintained by the team.
