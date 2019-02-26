@@ -41,7 +41,7 @@
 	},
 	"o-brand": {
 		"name": "o-brand",
-		"version": "3.2.2"
+		"version": "3.2.3"
 	},
 	"o-business-card": {
 		"name": "o-business-card",
@@ -289,7 +289,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "7.2.0"
+		"version": "7.2.1"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -333,7 +333,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "5.9.1"
+		"version": "5.10.0"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
