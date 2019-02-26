@@ -25,7 +25,7 @@ o-layout provides page layouts and typography as a starting point to create inte
 
 ### New major version: o-header-services
 
-o-header-services is a component currently used by many of our tools, both internal and customer facing, to aid navigation. The new major release follows the beta we announced last issue. It reduces code complexity (both internally and from an Origami user's perspective); introduces optional dropdowns for more complex navigation; and it is now customisable so our specialist titles may choose to make the most of o-header-services. Big thanks to Tom Dew, Carina Huse, Alex Wilson, and the rest of the team at BlueTel for their time and feedback. [Demos and a migration guide](https://registry.origami.ft.com/components/o-header-services) are avalible via the Origami Registry.
+o-header-services is a component currently used by many of our tools, both internal and customer facing, to aid navigation. The new major release follows the beta we announced last issue. It reduces code complexity (both internally and from an Origami user's perspective); introduces optional dropdowns for larger navigation structures; and it is now customisable so our specialist titles may choose to make the most of o-header-services. Big thanks to Tom Dew, Carina Huse, Alex Wilson, and the rest of the team at BlueTel for their time and feedback. [Demos and a migration guide](https://registry.origami.ft.com/components/o-header-services) are avalible via the Origami Registry.
 
 
 ## Special thanks
