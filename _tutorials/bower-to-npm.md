@@ -1,5 +1,5 @@
 ---
-title: The Build Service
+title: Migrate From Bower To NPM
 ---
 
 # {{page.title}}
