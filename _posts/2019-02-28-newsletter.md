@@ -45,6 +45,9 @@ A digest list of other things that have happened over the last month.
   - MINOR: [o-overlay v2.6.0](https://registry.origami.ft.com/components/o-overlay@2.6.0) adds support for the whitelabel brand.
   - MINOR: [o-layers v2.1.0](https://registry.origami.ft.com/components/o-layers@2.1.0) removes o-dom as a dependency to use built-in browser functions instead and reduce bundle sizes.
   - MINOR: [o-tabs v4.3.1](https://registry.origami.ft.com/components/o-tabs@4.3.1) also removes o-dom as a dependency.
+  - MINOR: [o-techdocs v7.0.10](https://registry.origami.ft.com/components/o-techdocs@7.0.10) deprecates o-techdocs. We recommend [o-layout](https://registry.origami.ft.com/components/o-layout) instead.
+  - MINOR: [o-hoverable v3.2.1](https://registry.origami.ft.com/components/o-hoverable@3.2.1) deprecates o-hoverable. We recommend the [hover media query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/hover) instead.
+  - MINOR: [o-hierarchical-nav v5.1.1](https://registry.origami.ft.com/components/o-hierarchical-nav@5.1.1) deprecates o-hierarchical-nav. We recommend [o-header-services](https://registry.origami.ft.com/components/o-header-services) instead.
   - MINOR: [node-health-check v1.7.0](https://registry.origami.ft.com/components/node-health-check@1.7.0), new options to check an API that requires authentication (credit to Kiya Gurmesa for this one), plus documentation improvements (nice one, James Loveridge & Charlie Briggs)
   - MINOR: [polyfill-library v3.30.1](https://github.com/Financial-Times/polyfill-library/releases) now minifies feature detection JS and a fix to support online IDEs such as [repl.it](https://repl.it/) (credit to Kate Beard, who is currently bootcamping with Origami). Plus [multiple other minor releases](https://github.com/Financial-Times/polyfill-library/releases) this month have updated and added new polyfills (Jake Chamion 💪). Including, but not limited to:
     - Array.prototype.flat
