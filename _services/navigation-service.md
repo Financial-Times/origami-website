@@ -1,10 +1,7 @@
 ---
 title: Navigation Service
-description: The Origami Navigation Service provides standard navigation structures for use across FT websites.
 ---
 
-
-# {{page.title}}
 
 The Origami Navigation Service is a JSON API which provides navigation structures for use across FT websites. Using the service keeps your site consistent and reduces the need for you to manage link updates.
 

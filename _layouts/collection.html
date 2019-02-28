@@ -6,20 +6,43 @@ layout: o-layout-docs
 
 {% if page.collection_id %}
 
-	{% if page.collection_title %}
-		<h2 id="{{page.collection_title | slugify}}">{{page.collection_title}}</h2>
-	{% else %}
-		<h2 id="documents">Documents</h2>
-	{% endif %}
+	{% assign collection_info = null %}
+	{% for col in site.collections %}
+		{% if col.label == page.collection_id %}{% assign collection_info = col %}{% endif %}
+	{% endfor %}
 
 	{% assign documents = site[page.collection_id] | sort: 'nav_order', 'last' %}
 
-	<ul>
+	{% if collection_info and collection_info.output == false %}
+
+		<!-- Collection with documents that do not have their own pages -->
+
 		{% for item in documents %}
-			<li>
-				<a href="{{item.url}}">{{item.title}}</a>
-			</li>
+
+			<h2 id="{{item.title | slugify}}">{{item.title}}</h2>
+
+			{{item.content}}
+
 		{% endfor %}
-	</ul>
+
+	{% else %}
+
+		<!-- Collection with documents that have their own pages -->
+
+		{% if page.collection_title %}
+			<h2 id="{{page.collection_title | slugify}}">{{page.collection_title}}</h2>
+		{% else %}
+			<h2 id="documents">Documents</h2>
+		{% endif %}
+
+		<ul>
+			{% for item in documents %}
+				<li>
+					<a href="{{item.url}}">{{item.title}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+	{% endif %}
 
 {% endif %}
