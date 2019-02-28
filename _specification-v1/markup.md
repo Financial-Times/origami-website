@@ -3,6 +3,9 @@ title: Markup Specification
 
 # Navigation config
 nav_display: false
+
+# Collection listing config
+collection_listing_display: false
 ---
 
 # Markup Specification
