@@ -1,5 +1,7 @@
 ---
 title: Compatibility
+description: Documentation about how Origami ensures compatibility across different browsers and devices, and how you can code in a way that supports this.
+cta: Read more about Origami's compatibility
 
 # Navigation config
 nav_display: true

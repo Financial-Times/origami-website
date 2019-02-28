@@ -1,5 +1,7 @@
 ---
 title: Contributing
+description: Guidelines on how users of Origami can help us improve our components and services.
+cta: Learn how you can help
 
 # Navigation config
 nav_display: true

@@ -1,6 +1,7 @@
 ---
 title: Branding
-category: usage
+description: Documentation on using branded Origami components, which provide a distinct appearance for different areas of the FT.
+cta: Read more about how to use branding
 
 # Navigation config
 nav_display: true

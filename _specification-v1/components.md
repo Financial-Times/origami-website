@@ -1,5 +1,7 @@
 ---
 title: Component Specification
+description: A specification which describes what is required for a front-end component to be considered Origami-compatible, and included in our registry.
+cta: Read the component spec
 
 # Navigation config
 nav_display: true

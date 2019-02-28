@@ -1,5 +1,7 @@
 ---
 title: Accessibility
+description: Information on how Origami prioritises Accessibility when building components.
+cta: Read more about Origami's accessibility guidelines
 
 # Navigation config
 nav_display: true

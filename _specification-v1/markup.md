@@ -1,5 +1,6 @@
 ---
 title: Markup Specification
+description: An overview of how Origami write markup.
 
 # Navigation config
 nav_display: false

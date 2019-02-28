@@ -1,6 +1,6 @@
 ---
 title: Origami Components
-description: TODO
+description: Documentation on how to use Origami components, which provide reusable HTML, SCSS, and JavaScript for FT web pages.
 permalink: /docs/components/
 layout: collection
 collection_id: components

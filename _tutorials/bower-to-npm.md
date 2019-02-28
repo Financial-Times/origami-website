@@ -1,5 +1,7 @@
 ---
 title: Migrate From Bower To NPM
+description: An advanced tutorial which explains how to migrate from installing Origami components via Bower, to installing them via npm.
+cta: Learn how to migrate to npm
 ---
 
 # {{page.title}}

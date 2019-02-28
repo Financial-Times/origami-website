@@ -1,6 +1,7 @@
 ---
 title: Component versioning
-category: usage
+description: An explanation of how Origami components are versioned, and how to request different versions and resolve conflicts.
+cta: Read more about component versioning
 
 # Navigation config
 nav_display: true

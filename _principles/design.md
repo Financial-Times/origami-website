@@ -1,5 +1,7 @@
 ---
 title: Design
+description: Information on how Origami components are designed, and how we try to accomodate multiple use-cases.
+cta: Read more about Origami and design
 
 # Navigation config
 nav_display: true

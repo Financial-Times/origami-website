@@ -1,6 +1,7 @@
 ---
 title: Silent mode
-category: usage
+description: Documentation on how to use Origami's 'silent mode', which allows you to control the output size of a component's CSS.
+cta: Learn about silent mode
 
 # Navigation config
 nav_display: true
