@@ -1,5 +1,6 @@
 ---
 title: JavaScript Specification
+description: An overview of how the Origami team writes JavaScript.
 
 # Navigation config
 nav_display: false

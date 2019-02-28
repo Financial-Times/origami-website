@@ -1,5 +1,7 @@
 ---
 title: Tone & language
+description: Origami has a 'Plain English' language guide, which helps us to communicate effectively with our users.
+cta: Read our tone and language guide
 
 # Navigation config
 nav_display: true

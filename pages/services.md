@@ -1,6 +1,6 @@
 ---
 title: Origami Services
-description: An overview of the services that Origami provides for development teams at the FT
+description: An overview of the services that Origami provides for development teams at the FT.
 permalink: /docs/services/
 layout: collection
 collection_id: services

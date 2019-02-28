@@ -1,5 +1,6 @@
 ---
 title: Sass Specification
+description: An overview of how the Origami team writes Sass.
 
 # Navigation config
 nav_display: false

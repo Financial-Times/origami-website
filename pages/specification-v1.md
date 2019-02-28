@@ -1,6 +1,6 @@
 ---
 title: Origami Specification
-description: TODO
+description: The Origami Specification outlines the requirements for Origami-compatible components and services, helping others contribute back.
 permalink: /spec/v1/
 layout: collection
 collection_id: specification-v1

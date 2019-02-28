@@ -1,6 +1,7 @@
 ---
 title: Initialising a component
-category: usage
+description: Documentation on how to initialise Origami components when you're using a manual build process.
+cta: Learn how to initialise a component
 
 # Navigation config
 nav_display: true

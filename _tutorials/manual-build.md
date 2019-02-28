@@ -1,5 +1,7 @@
 ---
 title: The manual build process
+description: A step-by-step tutorial which teaches you how to use Origami components via a package manager, compiling them on your local machine.
+cta: Learn how to build web pages with locally-installed Origami components
 ---
 
 # {{page.title}}
