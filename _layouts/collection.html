@@ -13,36 +13,21 @@ layout: o-layout-docs
 
 	{% assign documents = site[page.collection_id] | sort: 'nav_order', 'last' %}
 
-	{% if collection_info and collection_info.output == false %}
-
-		<!-- Collection with documents that do not have their own pages -->
-
-		{% for item in documents %}
+	{% for item in documents %}
+		{% if item.collection_listing_display != false %}
 
 			<h2 id="{{item.title | slugify}}">{{item.title}}</h2>
 
-			{{item.content}}
+			{% if collection_info.output == true %}
+				<p>
+					{{item.description}}
+					<a href="{{item.url}}">{% if item.cta %}{{item.cta}}{% else %}Read more{% endif %}</a>
+				</p>
+			{% else %}
+				{{item.content}}
+			{% endif %}
 
-		{% endfor %}
-
-	{% else %}
-
-		<!-- Collection with documents that have their own pages -->
-
-		{% if page.collection_title %}
-			<h2 id="{{page.collection_title | slugify}}">{{page.collection_title}}</h2>
-		{% else %}
-			<h2 id="documents">Documents</h2>
 		{% endif %}
-
-		<ul>
-			{% for item in documents %}
-				<li>
-					<a href="{{item.url}}">{{item.title}}</a>
-				</li>
-			{% endfor %}
-		</ul>
-
-	{% endif %}
+	{% endfor %}
 
 {% endif %}
