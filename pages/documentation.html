@@ -54,7 +54,7 @@ layout: o-layout-landing
 			{% assign documents = site.services | sort: 'nav_order', 'last' %}
 			<ul>
 				{% for item in documents %}
-					<li><a href="{{item.url}}">{{item.title}}</a></li>
+					<li><a href="/docs/services/#{{item.title | slugify}}">{{item.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>

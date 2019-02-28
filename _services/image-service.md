@@ -1,10 +1,7 @@
 ---
 title: Image Service
-description: The Origami Image Service is used to optimise images for the web.
 ---
 
-
-# {{page.title}}
 
 The Origami Image Service is used to optimise images for the web. It allows development teams to resize, crop, and tint source images on the fly for their web pages.
 

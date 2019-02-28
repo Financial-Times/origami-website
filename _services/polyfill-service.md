@@ -1,10 +1,7 @@
 ---
 title: Polyfill.io
-description: Polyfill.io is a service which accepts a request for a set of browser features and returns only the polyfills that are needed by the requesting browser.
 ---
 
-
-# {{page.title}}
 
 Polyfill.io is a service which accepts a request for a set of browser features and returns only the polyfills that are needed by the requesting browser.
 

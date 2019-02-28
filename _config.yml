@@ -5,7 +5,7 @@ collections:
     output: true
     permalink: /docs/:collection/:name/
   services:
-    output: true
+    output: false
     permalink: /docs/:collection/:name/
   tutorials:
     output: true
