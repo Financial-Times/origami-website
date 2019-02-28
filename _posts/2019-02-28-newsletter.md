@@ -15,7 +15,9 @@ These are some of the bigger things we've worked on or released over the last mo
 
 ### Origami Components On NPM
 
-<!-- TODO: Jake and or Chee <3 -->
+Origami components are now available on the npmjs registry as well as the bower registry. This will help teams who have difficulty using bower in their projects. A guide for how to move a project from bower to npmjs is available on origami.ft.com/etc.
+
+If you have any queries/questions, the Origami team are ready to help.
 
 ### New major version: o-layout
 
