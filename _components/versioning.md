@@ -1,6 +1,6 @@
 ---
 title: Component versioning
-description: An explanation of how Origami components are versioned, and how to request different versions and resolve conflicts.
+description: An explanation of how Origami components are versioned, how to request different versions and resolve conflicts.
 cta: Read more about component versioning
 
 # Navigation config
