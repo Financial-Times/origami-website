@@ -33,7 +33,7 @@
 	},
 	"o-banner": {
 		"name": "o-banner",
-		"version": "2.2.22"
+		"version": "2.2.23"
 	},
 	"o-big-number": {
 		"name": "o-big-number",
@@ -93,7 +93,7 @@
 	},
 	"o-crossword": {
 		"name": "o-crossword",
-		"version": "1.8.5"
+		"version": "1.8.6"
 	},
 	"o-date": {
 		"name": "o-date",
@@ -189,7 +189,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "7.8.2"
+		"version": "7.8.3"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -237,7 +237,7 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "3.1.0"
+		"version": "3.1.1"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
@@ -301,7 +301,7 @@
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
-		"version": "2.3.0"
+		"version": "2.3.1"
 	},
 	"o-techdocs": {
 		"name": "o-techdocs",
@@ -321,7 +321,7 @@
 	},
 	"o-topper": {
 		"name": "o-topper",
-		"version": "2.6.1"
+		"version": "2.6.2"
 	},
 	"o-tracking": {
 		"name": "o-tracking",
