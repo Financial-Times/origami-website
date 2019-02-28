@@ -197,7 +197,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "3.2.5"
+		"version": "3.2.6"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -213,7 +213,7 @@
 	},
 	"o-labels": {
 		"name": "o-labels",
-		"version": "4.2.1"
+		"version": "4.2.2"
 	},
 	"o-layers": {
 		"name": "o-layers",
