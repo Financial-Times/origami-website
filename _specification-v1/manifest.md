@@ -178,7 +178,7 @@ Describes contact details a user can choose from to find support for this compon
 
 The object **requires** two properties:
 - `email`: type `String`. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
-- `slack`: type `String`. Is a slack channel that users can go to for support. This <strong>must</strong> be in the format: organisation/channel-name
+- `slack`: type `String`. Is a slack channel that users can go to for support. This **must** be in the format: organisation/channel-name
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"supportContact": {
