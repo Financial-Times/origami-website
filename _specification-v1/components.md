@@ -120,7 +120,7 @@ The following is the list of ignored files in most component Bower configuration
 
 ### npm
 
-Origami components **may** include a `package.json` manifest. As well as following the <a href="https://docs.npmjs.com/files/package.json" class="o-typography-link--external" target="_blank">`package.json` spec</a>, there are additional requirements to make the component's npm manifest conform to the Origami specification:
+Origami components **may** include a `package.json` manifest. As well as following the <a href="https://docs.npmjs.com/files/package.json" class="o-typography-link--external">`package.json` spec</a>, there are additional requirements to make the component's npm manifest conform to the Origami specification:
 
   - It **must not** include any of the following properties: `bin`, `bugs`, `config`, `cpu`, `dependencies` (as this would indicate that the manifest is required for consumption of the component), `engines`, `engineStrict`, `files`, `main`, `os`, `preferGlobal`, `publishConfig`
   - It **must not** include a `version` property
