@@ -11,7 +11,7 @@ html, body {
 	height: 100%;
 }
 
-a[href$="TODO"] {
+a[href$="#TODO"] {
 	color: tomato;
 	border-bottom-color: tomato;
 }
@@ -39,6 +39,10 @@ iframe {
 	border: none;
 	margin-bottom: 1em;
 	width: 100%;
+}
+
+table.o-manifest__table {
+	width: auto;
 }
 
 .o-website__hero--home {
