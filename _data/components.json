@@ -97,7 +97,7 @@
 	},
 	"o-date": {
 		"name": "o-date",
-		"version": "2.12.0"
+		"version": "2.13.1"
 	},
 	"o-dom": {
 		"name": "o-dom",
@@ -197,7 +197,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "3.2.6"
+		"version": "3.2.7"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
