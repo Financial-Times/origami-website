@@ -9,15 +9,13 @@ nav_order: 25
 
 # {{page.title}}
 
-All Origami components, imagesets and services, **should** be discoverable by the [Origami registry](https://registry.origami.ft.com/components). To do this, the component **must** contain an `origami.json` file in the root of its repository.
+`origami.json` is a <a href="https://www.json.org/"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component.
 
 ## Properties
 
-`origami.json` is a <a href="https://www.json.org/"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component. It accepts the following properties:
-
 ### description
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -35,7 +33,7 @@ All Origami components, imagesets and services, **should** be discoverable by th
 
 ### origamiType
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -46,10 +44,14 @@ All Origami components, imagesets and services, **should** be discoverable by th
 	</tr>
 </table>
 
-Defines the type of Origami module that the manifest belongs to. **Must** be set to one of:
+Defines the type of Origami component that the manifest belongs to. **Must** be set to one of:
 - `module`
 - `imageset`
 - `service`
+
+<aside>
+	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
+</aside>
 
 <pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
 	"origamiType": "module"
@@ -57,7 +59,7 @@ Defines the type of Origami module that the manifest belongs to. **Must** be set
 
 ### origamiVersion
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Integer</code></td>
@@ -75,7 +77,7 @@ Defines the type of Origami module that the manifest belongs to. **Must** be set
 
 ### keywords
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Array</code></td>
@@ -94,7 +96,7 @@ Expects keywords related to the component to help discover it in the registry. T
 
 ### origamiCategory
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -116,7 +118,7 @@ Describes the organisational category the component belongs to. **Must** be one 
 }</code></pre>
 
 ### support
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -134,7 +136,7 @@ Describes where a user can go for support on this component. **Should** be the U
 
 ### supportStatus
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -158,7 +160,7 @@ Describes the support status of the component's major version. **Must** be one o
 
 ### supportContact
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Object</code></td>
@@ -189,7 +191,7 @@ The object **requires** two properties:
 
 
 ### ci
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Object</code></td>
@@ -208,11 +210,11 @@ _This object is no longer used in the Origami manifest. It is documented here fo
 	}
 }</code></pre>
 
-circle</code>:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/repo)
+circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/repo)
 
 ### browserFeatures
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Object</code></td>
@@ -243,7 +245,7 @@ The object accepts two properties:
 
 ### serviceUrl
 
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>String</code></td>
@@ -264,7 +266,7 @@ Is the URL on which the service is provided.
 }</code></pre>
 
 ### demosDefaults
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Object</code></td>
@@ -302,7 +304,7 @@ The object accepts the following properties:
 }</code></pre>
 
 ### demos
-<table class="o-layout__main__single-span o-manifest__table" data-o-component="o-table">
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
 		<td><code>Array</code></td>

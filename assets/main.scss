@@ -42,20 +42,21 @@ iframe {
 }
 
 table.o-manifest__table {
-	border-collapse: collapse;
+	// border-collapse: collapse;
 
-	tr {
-		background-color: #f2f2f2;
+	// tr {
+	// 	background-color: #f2f2f2;
 
-		th {
-			text-align: right;
-			padding: 0.3em 0 0.3em 0.4em;
-		}
+	// 	th {
+	// 		text-align: right;
+	// 		padding: 0.3em 0 0.3em 0.4em;
+	// 	}
 
-		td {
-			padding: 0.3em;
-		}
-	}
+	// 	td {
+	// 		padding: 0.3em;
+	// 	}
+	// }
+	width: auto;
 }
 
 .o-manifest__example {
