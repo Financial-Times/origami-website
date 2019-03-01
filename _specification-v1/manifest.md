@@ -27,7 +27,7 @@ nav_order: 25
 </table>
 
 **Should** be a concise description of the purpose of the component.
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables"
 }</code></pre>
 
@@ -53,7 +53,7 @@ Defines the type of Origami component that the manifest belongs to. **Must** be 
 	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
 </aside>
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"origamiType": "module"
 }</code></pre>
 
@@ -71,7 +71,7 @@ Defines the type of Origami component that the manifest belongs to. **Must** be 
 </table>
 
 **Must** be set to `1`. It is the version of Origami to which the component conforms.
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"origamiVersion": 1
 }</code></pre>
 
@@ -90,7 +90,7 @@ Defines the type of Origami component that the manifest belongs to. **Must** be 
 
 Expects keywords related to the component to help discover it in the registry. These **should** be stored as an array.
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"keywords": ["table", "rows", "columns"]
 }</code></pre>
 
@@ -113,7 +113,7 @@ Describes the organisational category the component belongs to. **Must** be one 
 - `utilities`
 - `layouts`
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"origamiCategory": "components"
 }</code></pre>
 
@@ -130,7 +130,7 @@ Describes the organisational category the component belongs to. **Must** be one 
 </table>
 Describes where a user can go for support on this component. **Should** be the URL of the component's GitHub issues.
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"support": "https://github.com/Financial-Times/o-table/issues"
 }</code></pre>
 
@@ -154,7 +154,7 @@ Describes the support status of the component's major version. **Must** be one o
 - `dead`: decommissioned entirely, will receive no support
 - `experimental`: the component is not ready for production use
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"supportStatus": "active"
 }</code></pre>
 
@@ -182,7 +182,7 @@ The object **requires** two properties:
 - `email`: type `String`. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
 - `slack`: type `String`. Is a slack channel that users can go to for support. This **must** be in the format: organisation/channel-name
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"supportContact": {
 		"email": "origami.support@ft.com",
 		"slack": "financialtimes/ft-origami"
@@ -202,7 +202,7 @@ The object **requires** two properties:
 	</tr>
 </table>
 _This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a component does still use it_. Describes a set of one or more URLs where build information can be found.
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"ci": {
 		"circle": "https://circleci.com/api/v1/project/owner/repo",
 		"travis": "https://api.travis-ci.org/repos/owner/repo/builds.json",
@@ -230,7 +230,7 @@ The object accepts two properties:
 - `required`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component assumes exists. If these features do not exist, the component may error.
 - `optional`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"origamiType": "module",
 	"browserFeatures": {
 		"required": [
@@ -260,7 +260,7 @@ The object accepts two properties:
 
 Is the URL on which the service is provided.
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"origamiType": "service",
 	"serviceUrl": "https://www.ft.com/__origami/service/build/"
 }</code></pre>
@@ -290,7 +290,7 @@ The object accepts the following properties:
 - `documentClasses`: type `Object`. Names CSS classes to set on the `html` tag.
 - `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"demosDefaults": {
 		"template": "demos/src/demo.mustache"
 		"sass": "demos/src/demo.scss",
@@ -333,7 +333,7 @@ Each object in the list accepts the following properties:
 - `hidden`: type `Boolean`. Whether the demo should be hidden in the Registry
 - `display_html`: type `Boolean`. Whether the demo should have a HTML tab in the Registry (defaults to true)
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"demos": [
 		{
 			"name": "Basic table",
@@ -360,7 +360,7 @@ Each object in the list accepts the following properties:
 
 This example joins all of the property snippets outlined above:
 
-<pre class="o-manifest__example"><code class="o-syntax-highlight--json">{
+<pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables",
 	"origamiType": "module",
 	"origamiVersion": 1,
