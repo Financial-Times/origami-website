@@ -232,17 +232,18 @@ The versions tested **should** be listed in the component’s documentation, so 
 
 ## Documentation
 
+### Github Repo
+
+If the repository is hosted on GitHub, the Github “Website” URL **should** be configured to be the component's page in the Origami registry (e.g. "http://registry.origami.ft.com/components/o-grid").
+
 ### README
 
 A component **should** include a `README.md` in the root of the component's codebase. The README **should**:
 - Include a single-line description of what the component does.
 - Give examples detailing the most common use cases.
 - Provide the licence, which **should** conform to the [open source release policy](https://docs.google.com/document/d/1pI-qI3BrO5edFYdHcoDCH9wVbfbFvroclxSEtkXwpCw).
-- Set its “Website” URL to point to the Origami registry (e.g. http://registry.origami.ft.com/components/o-grid), if the repository is hosted on GitHub.
 
-The README **should not**:
-- Document methods and functions if they can be covered using [JSDoc/SassDoc](#codedocs).
-- Include generic information (e.g. installation steps that apply equally to all components in general).
+The README **should not** include generic information (e.g. installation steps that apply equally to all components in general), but a link to such documentation **may** be included.
 
 ### Migration
 
