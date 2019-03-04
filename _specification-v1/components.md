@@ -255,8 +255,7 @@ Component JavaScript **should** be documented using [JSDoc](http://usejsdoc.org/
 
 ## Browser support
 
-TODO: also in README? which browsers which component works for
-
+All components **must** be tested with all the browsers listed in the [FT browser support policy](/docs/components/compatibility/#browser-support). If a component includes JavaScript, it **must** be error free in all the browsers which fall under the "enhanced experience" in that policy.
 
 ## Demos
 
