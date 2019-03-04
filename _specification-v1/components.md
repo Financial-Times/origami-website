@@ -268,22 +268,22 @@ TODO: registry visible, hidden for testing, pa11y, link to manifest demos sectio
 TODO: configuration, CI, compatibility with build service, scripts, automated tests
 
 
-## Component lifecycle
+## Component Lifecycle
 
-### Releasing
+### Component Release
 
 The first released version of a component **must** be `v1.0.0`. Versions lower than 1 are subject to different semver parsing logic, which is a nuance best avoided.
 
 To ensure subsequent releases don't affect the current users of a component:
 
-- Follow our guidelines on [deprecating component features](#deprecation-of-a-component-feature), making sure deprecated features still work. If an interface wasn't intended for public use but wasn't made private, removal will have to follow the same deprecation process as explicitly public code.
+- Follow our guidelines on [deprecating component features](#component-feature-deprecation), making sure deprecated features still work. If an interface wasn't intended for public use but wasn't made private, removal will have to follow the same deprecation process as explicitly public code.
 - Don’t make a major release until all or most dependants have removed deprecated features.
 - When updating a dependency to the latest minor release, make a minor release.
 - When updating a dependency to the latest major release, make sure the semver range includes the previous major release (_e.g. `>=1.2.3 <3`_). If not, a major release is necessary.
 - When adding a new dependency, make a major release as it may break existing bundles.
 - When using a new browser API which requires support from the Polyfill service (added in the features list of the `origami.json`), make a major release.
 
-### Release Notice
+### Component Release Notice
 
 When new versions of components are released, updates **may** be needed to other components and products that consume the component. The following notification rules apply:
 
@@ -291,14 +291,14 @@ When new versions of components are released, updates **may** be needed to other
 - If the release is a new **minor** version, the component developer **should** notify maintainers of all components and products listed as dependents in the Origami registry, immediately after the release.
 - If the release is a new **patch** version, no notifications need be sent.
 
-#### Deprecation of a component feature
+### Component Feature Deprecation
 
 - Deprecated code **should** go into a private deprecated file, or, if there’s an abundance of deprecated code, to a directory called `deprecated`. This way, it will be much easier to work with the new code while maintaining legacy code. It will also be easier to delete when making a major release.
 - If separating deprecated code into its own `deprecated` file or directory is not pragmatic, modified code **must** be appended and prepended with a comment which begins ```@deprecated```, followed by text which describes the deprecation.
 - Deprecated functions and mixins **should** log a warning stating that they are now deprecated and offering an alternative when there is one. This warning **may** also be added to the README.
 - An issue with label `type: breaking` **must** be created as a reminder to remove deprecated code upon a future major release.
 
-#### Deprecation of a component
+### Component Deprecation
 
 In the event of deprecating an Origamicomponent, the following steps **must** be followed:
 
