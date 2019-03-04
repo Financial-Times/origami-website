@@ -2,6 +2,11 @@
 title: Markup Specification
 description: An overview of how the Origami team writes markup.
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/syntax/html/
+  - /docs/syntax/mustache/
+
 # Navigation config
 nav_display: false
 

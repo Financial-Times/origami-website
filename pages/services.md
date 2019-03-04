@@ -6,6 +6,10 @@ layout: collection
 collection_id: services
 collection_title: Services
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/developer-guide/web-services/
+
 # Navigation config
 nav_display: true
 nav_label: Services

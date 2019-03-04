@@ -5,6 +5,10 @@ permalink: /docs/principles/
 layout: collection
 collection_id: principles
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/developer-guide/general-best-practices/
+
 # Navigation config
 nav_display: true
 nav_label: Principles

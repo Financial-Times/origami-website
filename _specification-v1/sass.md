@@ -2,6 +2,10 @@
 title: Sass Specification
 description: An overview of how the Origami team writes Sass.
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/syntax/scss/
+
 # Navigation config
 nav_display: false
 

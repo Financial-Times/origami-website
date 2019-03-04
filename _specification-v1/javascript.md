@@ -2,6 +2,10 @@
 title: JavaScript Specification
 description: An overview of how the Origami team writes JavaScript.
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/syntax/js/
+
 # Navigation config
 nav_display: false
 

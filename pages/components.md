@@ -5,6 +5,11 @@ permalink: /docs/components/
 layout: collection
 collection_id: components
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/developer-guide/modules/
+  - /docs/developer-guide/modules/choosing-your-build-method/
+
 # Navigation config
 nav_display: true
 nav_label: Components

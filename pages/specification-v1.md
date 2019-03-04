@@ -4,8 +4,11 @@ description: The Origami Specification outlines the requirements for Origami-com
 permalink: /spec/v1/
 layout: collection
 collection_id: specification-v1
+
+# Redirect from legacy URLs
 redirect_from:
   - /spec/
+  - /docs/component-spec/
 
 # Navigation config
 nav_display: true
