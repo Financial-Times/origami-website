@@ -234,16 +234,23 @@ The versions tested **should** be listed in the component’s documentation, so 
 
 ### README
 
-TODO
+A component **should** include a `README.md` in the root of the component's codebase. The README **should**:
+- Include a single-line description of what the component does.
+- Give examples detailing the most common use cases.
+- Provide the licence, which **should** conform to the [open source release policy](https://docs.google.com/document/d/1pI-qI3BrO5edFYdHcoDCH9wVbfbFvroclxSEtkXwpCw).
+- Set its “Website” URL to point to the Origami registry (e.g. http://registry.origami.ft.com/components/o-grid), if the repository is hosted on GitHub.
+
+The README **should not**:
+- Document methods and functions if they can be covered using [JSDoc/SassDoc](#codedocs).
+- Include generic information (e.g. installation steps that apply equally to all components in general).
 
 ### Migration
 
-TODO
+When a new major version of a component is released a migration guide **should** be written to help users upgrade from the previous release. The migration guide **should** be added to a `MIGRATION.md` file in the root of the component's codebase, and **should** be linked to from the component's `README.md`. See [o-table's migration guide](https://github.com/Financial-Times/o-table#migration) as an example.
 
 ### Codedocs
 
-TODO
-
+Component JavaScript **should** be documented using [JSDoc](http://usejsdoc.org/) and component Sass should be documented with [SassDoc](http://sassdoc.com/). This allows users to view and search the component's public interface in the registry. For example, see [o-grid's SassDocs](https://registry.origami.ft.com/components/o-grid/sassdoc).
 
 ## Browser support
 
