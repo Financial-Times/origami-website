@@ -3,6 +3,10 @@ title: Initialising a component
 description: Documentation on how to initialise Origami components when you're using a manual build process.
 cta: Learn how to initialise a component
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/developer-guide/modules/initialising-modules/
+
 # Navigation config
 nav_display: true
 nav_label: Initialising

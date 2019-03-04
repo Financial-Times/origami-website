@@ -3,6 +3,11 @@ title: Component Specification
 description: A specification which describes what is required for a front-end component to be considered Origami-compatible, and included in our registry.
 cta: Read the component spec
 
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/component-spec/modules/
+  - /docs/background-linters/
+
 # Navigation config
 nav_display: true
 nav_label: Components
