@@ -281,8 +281,7 @@ Where styles need to be added specifically for a demo (e.g. to make the content 
 
 ## Build Step
 
-TODO: configuration, CI, compatibility with build service, scripts, automated tests
-
+All components **must** be buildable by the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/).
 
 ## Component lifecycle
 
