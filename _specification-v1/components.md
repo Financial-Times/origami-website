@@ -265,8 +265,7 @@ TODO: registry visible, hidden for testing, pa11y, link to manifest demos sectio
 
 ## Build Step
 
-TODO: configuration, CI, compatibility with build service, scripts, automated tests
-
+All components **must** be buildable by the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/).
 
 ## Component lifecycle
 
