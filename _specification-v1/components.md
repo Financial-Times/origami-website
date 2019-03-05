@@ -300,7 +300,7 @@ When new versions of components are released, updates **may** be needed to other
 
 ### Component Deprecation
 
-In the event of deprecating an Origamicomponent, the following steps **must** be followed:
+In the event of deprecating an Origami component, the following steps **must** be followed:
 
 1. Modify [origami.json](/spec/v1/manifest/) to change the `supportStatus` to `deprecated`.
 2. Change the `README.md` to have a paragraph at the top outlining the deprecation status. If it has been replaced, it must point to the new replacement component from the deprecated component.
