@@ -27,7 +27,7 @@ abbr {
 }
 
 aside.no-padding {
-	padding-left:0;
+	padding-left: 0;
 	grid-row: span 7;
 
 	p { padding-left: 1em }
@@ -49,6 +49,9 @@ table.o-manifest__table {
 	background-image: url('./images/home-page-hero.jpg');
 }
 
+.o-header-services__logo {
+	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1:origami?format=svg&source=origami&width=55);
+}
 
 // Blog styles introduce their own layout stuff, which isn't
 // great. We possibly need to find a nicer way to do this.
