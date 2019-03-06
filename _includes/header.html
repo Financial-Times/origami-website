@@ -1,64 +1,53 @@
-<header class="o-header-services" data-o-component="o-header">
-
-	{% include beta-banner.html %}
-
-	<div class="o-header-services__top o-header-services__container">
-		<div class="o-header-services__hamburger">
-			<a class="o-header-services__hamburger-icon" href="#o-header-drawer" aria-controls="o-header-drawer"><span class="o-header__visually-hidden">Menu</span></a>
-		</div>
-		<div class="o-header-services__ftlogo"></div>
+<header class="o-header-services" data-o-component="o-header-services">
+	<div class="o-header-services__top">
+			<div class="o-header-services__hamburger">
+				<a class="o-header-services__hamburger-icon" href="#" role="button">
+					<span class="o-header-services__visually-hidden">Open primary navigation</span>
+				</a>
+			</div>
+		<div class="o-header-services__logo"></div>
 		<div class="o-header-services__title">
-			<h1 class="o-header-services__product-name">
-				<a href="/">Origami</a>
-			</h1>
-			<span class="o-header-subrand__product-tagline">A component system for the FT</span>
+			<a class="o-header-services__product-name" href="/">Origami</a>
+			<span class="o-header-services__product-tagline">Frontend Components &amp; Services</span>
 		</div>
 	</div>
 
-	<nav class="o-header-services__primary-nav">
-		<div class="o-header-services__container">
-			<ul class="o-layout__primary-nav o-header-services__nav-list">
-
-				<li class="o-header-services__nav-item">
-					<a class="o-header-services__nav-link" href="/docs/"
-						{% if page.url contains '/docs/' %}aria-selected="true"{% endif %}
-					>
-						Docs
-					</a>
-				</li><li class="o-header-services__nav-item">
-					<a class="o-header-services__nav-link" href="/spec/"
-						{% if page.url contains '/spec/' %}aria-selected="true"{% endif %}
-					>
-						Spec
-					</a>
-				</li><li class="o-header-services__nav-item">
-					<a class="o-header-services__nav-link" href="https://registry.origami.ft.com/">
-						Registry
-					</a>
-				</li><li class="o-header-services__nav-item">
-					<a class="o-header-services__nav-link" href="/blog/"
-						{% if page.url contains '/blog/' %}aria-selected="true"{% endif %}
-					>
-						Blog
-					</a>
-				</li>
-
-			</ul>
-		</div>
+	<nav class="o-header-services__primary-nav" aria-label="primary">
+		<ul class="o-header-services__primary-nav-list">
+			<li>
+				<a href="/" {% if page.url == '/' %}aria-current="true"{% endif %}>
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="/docs/" {% if page.url contains '/docs/' %}aria-current="true"{% endif %}>
+					Docs
+				</a>
+			</li>
+			<li>
+				<a href="/spec/" {% if page.url contains '/spec/' %}aria-current="true"{% endif %}>
+					Specs
+				</a>
+			</li>
+			<li>
+				<a href="https://origami-registry-ui-qa.herokuapp.com/components"> Registry</a>
+			</li>
+			<li>
+				<a href="/blog/" {% if page.url contains '/blog/' %}aria-current="true"{% endif %}>
+					Blog
+				</a>
+			</li>
+		</ul>
 	</nav>
 
-	{% unless page.collection == 'posts' %}
-		{% if page.collection or page.collection_id or page.url == '/docs/' %}
-			<nav class="o-header__subnav" role="navigation" aria-label="Sub navigation" data-o-header-subnav="">
-				<div class="o-header-services__container">
-					<div class="o-header__subnav-wrap-outside">
-						<div class="o-header__subnav-wrap-inside" data-o-header-subnav-wrapper="">
-							<div class="o-header__subnav-content">
-								<ol class="o-header__subnav-list o-header__subnav-list--breadcrumb" aria-label="Breadcrumb">
 
-									{% if page.url contains '/docs/' %}
-										<li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="/docs/" {% if page.url == '/docs/' %}aria-selected="true"{% endif %}>
+	{% if page.url contains '/docs/' or page.collection_id or page.collection %}
+	<nav class="o-header-services__secondary-nav" aria-label="secondary" data-o-header-services-nav="">
+		<div class="o-header-services__secondary-nav-content" data-o-header-services-nav-list="">
+			<ol class="o-header-services__secondary-nav-list o-header-services__secondary-nav-list--ancestors" aria-label="Ancestor sections">
+			{% if page.url contains '/docs/' %}
+										<li>
+											<a href="/docs/" {% if page.url == '/docs/' %}aria-current="true"{% endif %}>
 												Docs
 											</a>
 										</li>
@@ -66,8 +55,8 @@
 
 									{% if page.collection_id %}
 										<!-- Collection index page-->
-										<li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="{{ page.url }}" aria-selected="true">
+										<li>
+											<a href="{{ page.url }}" aria-current="true">
 												{% if page.nav_label %}
 													{{ page.nav_label }}
 												{% else %}
@@ -77,9 +66,9 @@
 										</li>
 									{% elsif page.collection %}
 										<!-- Collection item page -->
-										<li class="o-header__subnav-item">
+										<li>
 											{% assign collection = site.pages | where: 'collection_id', page.collection | first %}
-											<a class="o-header__subnav-link" href="{{ collection.url }}">
+											<a href="{{ collection.url }}">
 												{% if collection.nav_label %}
 													{{ collection.nav_label }}
 												{% else %}
@@ -88,34 +77,32 @@
 											</a>
 										</li>
 									{% endif %}
+			</ol>
 
-								</ol>
-
-								<ul class="o-header__subnav-list o-header__subnav-list--children" aria-label="Subsections">
-
+			<ul class="o-header-services__secondary-nav-list o-header-services__secondary-nav-list--children" aria-label="Child sections">
 									{% if page.url == '/docs/' %}
 
-										<li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="/docs/principles/"
-												{% if page.url contains '/docs/principles/' %}aria-selected="true"{% endif %}
+										<li>
+											<a href="/docs/principles/"
+												{% if page.url contains '/docs/principles/' %}aria-current="true"{% endif %}
 											>
 												Principles
 											</a>
-										</li><li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="/docs/components/"
-												{% if page.url contains '/docs/components/' %}aria-selected="true"{% endif %}
+										</li><li>
+											<a href="/docs/components/"
+												{% if page.url contains '/docs/components/' %}aria-current="true"{% endif %}
 											>
 												Components
 											</a>
-										</li><li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="/docs/services/"
-												{% if page.url contains '/docs/services/' %}aria-selected="true"{% endif %}
+										</li><li>
+											<a href="/docs/services/"
+												{% if page.url contains '/docs/services/' %}aria-current="true"{% endif %}
 											>
 												Services
 											</a>
-										</li><li class="o-header__subnav-item">
-											<a class="o-header__subnav-link" href="/docs/tutorials/"
-												{% if page.url contains '/docs/tutorials/' %}aria-selected="true"{% endif %}
+										</li><li>
+											<a href="/docs/tutorials/"
+												{% if page.url contains '/docs/tutorials/' %}aria-current="true"{% endif %}
 											>
 												Tutorials
 											</a>
@@ -131,12 +118,12 @@
 
 										{% for nav_item in nav_items %}
 											{% if nav_item.nav_display %}
-												<li class="o-header__subnav-item">
-													<a class="o-header__subnav-link" href="{{ nav_item.url }}"
+												<li>
+													<a href="{{ nav_item.url }}"
 														{% if nav_item.url == '/' %}
-															{% if page.url == nav_item.url %}aria-selected="true"{% endif %}
+															{% if page.url == nav_item.url %}aria-current="true"{% endif %}
 														{% else %}
-															{% if page.url contains nav_item.url %}aria-selected="true"{% endif %}
+															{% if page.url contains nav_item.url %}aria-current="true"{% endif %}
 														{% endif %}
 													>
 														{% if nav_item.nav_label %}
@@ -150,57 +137,12 @@
 										{% endfor %}
 
 									{% endif %}
-
-								</ul>
-
-							</div>
-						</div>
-						<button class="o-header__subnav-button o-header__subnav-button--left" title="scroll left" aria-hidden="true" disabled></button>
-						<button class="o-header__subnav-button o-header__subnav-button--right" title="scroll right" aria-hidden="true" disabled></button>
-					</div>
-				</div>
-			</nav>
-		{% endif %}
-	{% endunless %}
-
+			</ul>
+		</div>
+		<button class="o-header-services__scroll-button o-header-services__scroll-button--left" title="scroll left" aria-hidden="true" disabled></button>
+		<button class="o-header-services__scroll-button o-header-services__scroll-button--right" title="scroll right" aria-hidden="true" disabled></button>
+	</nav>
+	{% endif %}
 </header>
 
-<div class="o-header__drawer--services o-header__drawer o--if-js" id="o-header-drawer" data-o-header-drawer="" data-o-header-drawer--no-js="">
-	<div class="o-header__drawer-inner">
-		<div class="o-header__drawer-tools">
-			<span>Origami</span>
-			<button type="button" class="o-header__drawer-tools-close" aria-controls="o-header-drawer">
-				<span class="o-header__visually-hidden">Close</span>
-			</button>
-		</div>
-		<nav class="o-header__drawer-menu o-header__drawer-menu--primary" role="navigation" aria-label="Primary navigation">
-			<ul class="o-header__drawer-menu-list">
 
-				<li class="o-header__drawer-menu-item">
-					<a class="o-header__drawer-menu-link" href="/docs/"
-						{% if page.url contains '/docs/' %}aria-selected="true"{% endif %}
-					>
-						Docs
-					</a>
-				</li><li class="o-header__drawer-menu-item">
-					<a class="o-header__drawer-menu-link" href="/spec/"
-						{% if page.url contains '/spec/' %}aria-selected="true"{% endif %}
-					>
-						Spec
-					</a>
-				</li><li class="o-header__drawer-menu-item">
-					<a class="o-header__drawer-menu-link" href="https://registry.origami.ft.com/">
-						Registry
-					</a>
-				</li><li class="o-header__drawer-menu-item">
-					<a class="o-header__drawer-menu-link" href="/blog/"
-						{% if page.url contains '/blog/' %}aria-selected="true"{% endif %}
-					>
-						Blog
-					</a>
-				</li>
-
-			</ul>
-		</nav>
-	</div>
-</div>
