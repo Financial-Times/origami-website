@@ -41,9 +41,9 @@ When using a path, it **should** be `/__origami/service/<short-name>`. The short
 When using a subdomain, it **should** be `<short-name>.ft.com`. The short name in this case is the slugified service name with -service removed, E.g. `origami-build.ft.com`.
 
 Services **must** also include a mandatory version number for all API endpoints. This **must not** expose minor version changes and **must** be prefixed with a `v`. The only exception to this rule is when the service is replicating a third-party API. E.g. a Bower registry. Good examples include:
-    - `www.ft.com/__origami/service/tweet/v1/<endpoint>`
-    - `www.ft.com/__origami/service/most-popular/v2/<endpoint>`
-    - `www.ft.com/__origami/service/jobs/v3/<endpoint>`
+- `www.ft.com/__origami/service/tweet/v1/<endpoint>`
+- `www.ft.com/__origami/service/most-popular/v2/<endpoint>`
+- `www.ft.com/__origami/service/jobs/v3/<endpoint>`
 
 The api endpoint which follows the serevice version **must** be RESTful, i.e. use the most appropriate HTTP verb and URLs that semantically describe the resource to be acted upon.
 
