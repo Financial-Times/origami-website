@@ -34,7 +34,7 @@ How you choose to include Origami components in your project will depend on your
 
 - **Using a manual build process:**
 
-	In order to customise your page and have more granular control over a components stylistic and behavioural features, you'll want to build Origami components manually. We currently do this with Bower, and install Origami components from the command line. This process relies on a build step, which you may already have in your project. If not, the <a href="https://github.com/Financial-Times/origami-build-tools"  target="\_blank" >Origami Build Tools</a> provide one.
+	In order to customise your page and have more granular control over a components stylistic and behavioural features, you'll want to build Origami components manually. We currently do this with Bower, and install Origami components from the command line. This process relies on a build step, which you may already have in your project. If not, the <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> provide one.
 
 
 	If you would like help with this, you can visit the [manual build tutorial](/docs/tutorials/manual-build/).

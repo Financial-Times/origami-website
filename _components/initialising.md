@@ -15,7 +15,7 @@ nav_order: 10
 
 # {{ page.title }}
 
-Origami components that use JavaScript are **not** self initialising, unless you use the [Build Service](https://www.ft.com/__origami/service/build/v2/). This means that when you add components to your page manually, the features that come with that component won't be available until you explicitly initialise them.
+Origami components that use JavaScript are **not** self initialising, unless you use the <a href="https://www.ft.com/__origami/service/build/v2/" class="o-typography-link--external">Build Service</a>. This means that when you add components to your page manually, the features that come with that component won't be available until you explicitly initialise them.
 
 <aside>The Build Service uses a component called <a href="https://registry.origami.ft.com/components/o-autoinit">o-autoinit</a> which will fire custom events that Origami components listen for in order to initialise their JavaScript.</aside>
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ## Initialise every instance of one Origami component
 
-If your page has many instances of a single Origami component on your page, say multiple [informative messages](https://registry.origami.ft.com/components/o-message#demo-notice-inform) for example, you can initialise them all in one go by using the built-in `init()` function, which every JavaScript-supporting component has.
+If your page has many instances of a single Origami component on your page, say multiple <a href="https://registry.origami.ft.com/components/o-message#demo-notice-inform">informative messages</a> for example, you can initialise them all in one go by using the built-in `init()` function, which every JavaScript-supporting component has.
 
 The `init()` function accepts two optional arguments, an `HTMLElement` and an options object. What constitutes as 'options' is detailed in each components' README.
 
