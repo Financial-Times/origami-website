@@ -17,9 +17,9 @@ collection_listing_display: false
 
 ## Syntax Convention
 
-JavaScript **must** be linted with [ESLint](http://www.eslint.org/).
+JavaScript **must** be linted with <a href="http://www.eslint.org/" class="o-typography-link--external">ESLint</a>.
 
-Developers **should** stick to the [Origami eslintrc config](https://github.com/Financial-Times/origami-build-tools/blob/master/config/.eslintrc.js), since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.eslintrc` file, or at the file level with a `/*eslint ... */` comment.
+Developers **should** stick to the <a href="https://github.com/Financial-Times/origami-build-tools/blob/master/config/.eslintrc.js" class="o-typography-link--external">Origami eslintrc config</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.eslintrc` file, or at the file level with a `/*eslint ... */` comment.
 
 In addition, 0bject properties **must not** be named after reserved words in the JavaScript language.
 
@@ -35,11 +35,11 @@ In addition, 0bject properties **must not** be named after reserved words in the
 
 Origami components **must** do as little as possible as the page parses. Instead they **should** provide a static `init` method which constructs instances of the component. The `init` method **should** run when the `o.DOMContentLoaded` or `o.load` events are fired.
 
-The `init` method **must** be callable with no arguments. It **may** accept arguments, but if it does, all arguments **must** be optional (see [issue 228](https://github.com/Financial-Times/ft-origami/pull/228)).
+The `init` method **must** be callable with no arguments. It **may** accept arguments, but if it does, all arguments **must** be optional (see <a href="https://github.com/Financial-Times/ft-origami/pull/228" class="o-typography-link--external">issue 228</a>).
 
 If the `init` method (or the components constructor) takes an element argument to identifying its owned DOM, it **must** accept the following types:
 
-- An [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) object
+- An <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement" class="o-typography-link--external">`HTMLElement`</a> object
 - A string containing a valid `querySelector` expression, e.g. `.main-content > [data-o-component~='o-share']`
 - Nothing (or any falsey value), which **should** be interpreted as `document.body`
 
@@ -81,7 +81,7 @@ Components **should** provide a static `destroy` method that reverts the compone
 
 ## Error Handling
 
-Components **should** use [o-errors](http://registry.origami.ft.com/components/o-errors) to report runtime JavaScript errors and exceptions, as well as log notices and other significant events, using the `oErrors.log` custom event.
+Components **should** use <a href="http://registry.origami.ft.com/components/o-errors" class="o-typography-link--external">o-errors</a> to report runtime JavaScript errors and exceptions, as well as log notices and other significant events, using the `oErrors.log` custom event.
 
 Where components do not explicitly convert exceptions into `o-errors` events, any unhandled exceptions will still be caught and reported if `o-errors` has been initalised on the page. However, the report will lack critical information about the DOM elements to which the error relates.
 
@@ -94,7 +94,7 @@ If you want to use a modern browser feature, you **must**:
 - Declare it as optional, test for it, and if not present, skip that functionality; or
 - Include code (either your own or a dependency that provides the feature, without adding it outside of your [component's scope](#encapsulation)).
 
-<aside>We recommend product developers use the <a href="http://polyfill.io/">Polyfill Service</a> to support required features in older browsers.</aside>
+<aside>We recommend product developers use the <a href="http://polyfill.io/" class="o-typography-link--external">Polyfill Service</a> to support required features in older browsers.</aside>
 
 ## Integrating With A Component
 
@@ -109,7 +109,7 @@ Components **may** expose an external API via an ESModule `export`. Components *
 Components **may** emit events to allow loose coupling with other components and the host page. In doing so, the component **must**:
 
 - Use only browser-native DOM events with bubbling enabled.
-- Where the component wishes to attach custom data to events, use the [CustomEvent](https://developer.mozilla.org/en/docs/Web/API/CustomEvent) API, and pass an object in the `details` property.
+- Where the component wishes to attach custom data to events, use the <a href="https://developer.mozilla.org/en/docs/Web/API/CustomEvent" class="o-typography-link--external">CustomEvent</a> API, and pass an object in the `details` property.
 - Trigger events only on elements within the component's owned DOM, or otherwise only on the body element.
 - Namespace event names with the name of the component in camel-case, separated from the event name with a dot, e.g. `oComponentName.eventName`
 - Name the event using the present tense, e.g. `dialogClose`, not `dialogClosed`, and using camel-case.
@@ -126,9 +126,9 @@ this.dispatchEvent(new CustomEvent('oExampleComponent.exampleEvent', {
 Components **may** bind to events emitted by themselves, other components, the host page or the browser. In doing so, the component:
 
 * **Must not** stop the propagation chain except for events created by itself.
-* **Should** bind only to the body element and use [event delegation](https://github.com/Financial-Times/ftdomdelegate) to ensure that handlers do not need to be bound every time elements are created. If not bound to the body element, handlers **must** be bound to elements within the components's owned DOM.
+* **Should** bind only to the body element and use <a href="https://github.com/Financial-Times/ftdomdelegate" class="o-typography-link--external">event delegation</a> to ensure that handlers do not need to be bound every time elements are created. If not bound to the body element, handlers **must** be bound to elements within the components's owned DOM.
 
-Components **should** handle events during the [bubbling phase](http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing), not the capturing phase (unless the event has no bubbling phase)
+Components **should** handle events during the <a href="http://stackoverflow.com/questions/4616694/what-is-event-bubbling-and-capturing" class="o-typography-link--external">bubbling phase</a>, not the capturing phase (unless the event has no bubbling phase)
 
 If a module wishes to bind to the `DOMContentLoaded` or `load` browser events, it **must** prefix the event name with `o.`, and **must** expose the function that it binds to the event via its external API, eg:
 
@@ -153,7 +153,7 @@ Components that store data on the client via user-agent APIs **must** encapsulat
 
 ## Viewport Events
 
-For viewport events that may fire several times in quick succession (`scroll`, `resize` and `orientationchange`) it's good practice to throttle listeners to these. [o-viewport](https://registry.origami.ft.com/components/o-viewport) provides pre-throttled abstractions of these events and **should** be used by components that need to listen for changes to the viewport.
+For viewport events that may fire several times in quick succession (`scroll`, `resize` and `orientationchange`) it's good practice to throttle listeners to these. <a href="https://registry.origami.ft.com/components/o-viewport">o-viewport</a> provides pre-throttled abstractions of these events and **should** be used by components that need to listen for changes to the viewport.
 
 ## Managing Layers (z-axis)
 
@@ -162,4 +162,4 @@ A component e.g. `o-overlay`, may need to display some or all of its owned DOM o
 - Broadcast changes in its own state.
 - Listen for events fired in its `o-layers__context` by other components that make use of the z-axis.
 
-Any component **may** use the `o-layers__context` class to define a new region of the DOM that can handle new layers independently of other regions of the DOM (e.g. two graphs handling their own tooltips independently, a date-picker appearing within a modal dialog). To learn more [see o-layers](https://github.com/Financial-Times/o-layers/).
+Any component **may** use the `o-layers__context` class to define a new region of the DOM that can handle new layers independently of other regions of the DOM (e.g. two graphs handling their own tooltips independently, a date-picker appearing within a modal dialog). To learn more <a href="https://github.com/Financial-Times/o-layers/" class="o-typography-link--external">see o-layers</a>.

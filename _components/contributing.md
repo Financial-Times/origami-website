@@ -15,18 +15,18 @@ Since Origami is largely open source, we welcome contributions from all of our u
 
 ## Creating new components
 
-The <a href="https://registry.origami.ft.com/components/"   >Origami registry</a> houses components that the Origami team maintains, as well as components that other teams are responsible for.
+The <a href="https://registry.origami.ft.com/components/">Origami registry</a> houses components that the Origami team maintains, as well as components that other teams are responsible for.
 
 ### Make a proposal
-For the Origami team to oversee a component's maintenance, a proposal needs to be made.  
-You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md"   >origami-proposals</a> project board, where all proposals are logged.
+For the Origami team to oversee a component's maintenance, a proposal needs to be made.
+You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external">origami-proposals</a> project board, where all proposals are logged.
 
 After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
 ### Build an independent component
 If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be adhered to. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
 
-You can use the <a href="https://www.npmjs.com/package/origami-build-tools"   >Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
+You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
 
 ```
 npm i -g origami-build-tools
@@ -62,7 +62,7 @@ If there is a change you would like to see, we appreciate a detailed description
 
 If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more.
 
-We provide details on what commands to use for `obt` in its <a href="https://github.com/Financial-Times/origami-build-tools#readme"   >documentation</a>
+We provide details on what commands to use for `obt` in its <a href="https://github.com/Financial-Times/origami-build-tools#readme" class="o-typography-link--external">documentation</a>
 
 When everything is right, open a <abbr title="Pull request">PR</abbr> with your changes to the component.
 

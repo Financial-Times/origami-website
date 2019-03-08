@@ -69,13 +69,13 @@ Becomes a *package.json* that looks like this
 }
 ```
 
-If you have anything left in your bower.json.dependencies, you should see if they exist on [npmjs](https://www.npmjs.com/) and use that version instead. Migrating a project becomes much simpler when there are no bower.json dependencies at all.
+If you have anything left in your bower.json.dependencies, you should see if they exist on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> and use that version instead. Migrating a project becomes much simpler when there are no bower.json dependencies at all.
 
-Run `npm install`, if it fails and says something similar to "code ETARGET No matching version found for @financial-times/example", it means that you would also need to update to the latest version of that component. This is because we have not published all the historical versions of Origami components onto [npmjs](https://www.npmjs.com/).
+Run `npm install`, if it fails and says something similar to "code ETARGET No matching version found for @financial-times/example", it means that you would also need to update to the latest version of that component. This is because we have not published all the historical versions of Origami components onto <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a>.
 
-Once you can run `npm install` and it completes a full installation, you can move on to updating the code in your project to use the [npmjs](https://www.npmjs.com/) version of Origami.
+Once you can run `npm install` and it completes a full installation, you can move on to updating the code in your project to use the <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> version of Origami.
 
-Origami components on [npmjs](https://www.npmjs.com/) have their JavaScript code namespaced onto `@financial-times`. This means that in your code you will need to update all `require`/`import` calls to include this namespace.
+Origami components on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> have their JavaScript code namespaced onto `@financial-times`. This means that in your code you will need to update all `require`/`import` calls to include this namespace.
 
 E.G.
 `const Layout = require("o-layout");` would become `import Layout from "@financial-times/o-layout";`

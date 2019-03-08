@@ -15,11 +15,11 @@ collection_listing_display: false
 
 # {{page.title}}
 
-Origami component styles are authored in [Sass](http://sass-lang.com/), specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
+Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
 
 ## Syntax Convention
 
-Sass **must** validate using the [Origami Sass Lint rules](https://github.com/sasstools/sass-lint), though exceptions **may** be enabled temporarily within a component [using Sass Lint comments](https://github.com/sasstools/sass-lint#disabling-linters-via-source).
+Sass **must** validate using the <a href="https://github.com/sasstools/sass-lint" class="o-typography-link--external">Origami Sass Lint rules</a>, though exceptions **may** be enabled temporarily within a component <a href="https://github.com/sasstools/sass-lint#disabling-linters-via-source" class="o-typography-link--external">using Sass Lint comments</a>.
 
 Component indent type (tabs or spaces) is not standardised: developers **must** respect whatever indent type is already in use when editing existing components.
 
@@ -29,7 +29,7 @@ In addition, component CSS **should not** use `!important`. Valid use cases for 
 
 CSS/Sass has limited encapsulation, so strict adherence to namespacing rules is essential.
 
-CSS selectors **should** follow the [BEM](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) naming convention. They **must** also be prefixed with the component name and written as hyphen separated, lowercase strings:
+CSS selectors **should** follow the <a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" class="o-typography-link--external">BEM</a> naming convention. They **must** also be prefixed with the component name and written as hyphen separated, lowercase strings:
 - Good: `.o-thing--large`, `.o-thing__content`
 - Bad: `.largething`, `.oThingContent`
 
@@ -78,9 +78,9 @@ High specificity **should** be minimised. For instance, the pseudo class `:not` 
 - Good: `.o-thing-input {} .o-thing-radio {}`
 - Bad: `.o-thing-input {} .o-thing-input:not([type=radio]) {} .o-thing-input[type=radio] {}`
 
-Pseudo selectors such as `:focus` or `:hover` **should** be used to style a component's state. In the case of `:focus`, Origami components **must** enable a focused style that is distinct from its normal style (the focus style is usually provided by [o-normalise](https://github.com/Financial-Times/o-normalise)).
+Pseudo selectors such as `:focus` or `:hover` **should** be used to style a component's state. In the case of `:focus`, Origami components **must** enable a focused style that is distinct from its normal style (the focus style is usually provided by <a href="https://github.com/Financial-Times/o-normalise" class="o-typography-link--external">o-normalise</a>).
 
-Where an ARIA role is appropriate ([no ARIA is better than bad ARIA)](https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190207/), it **should** be used to style a component's state. For example [aria-expanded](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded), with a correctly namespaced selector, **should** be used to style an expandable element:
+Where an ARIA role is appropriate (<a href="https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190207/" class="o-typography-link--external">no ARIA is better than bad ARIA)</a>), it **should** be used to style a component's state. For example <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded" class="o-typography-link--external">aria-expanded</a>, with a correctly namespaced selector, **should** be used to style an expandable element:
 
 - Good: `.o-example[aria-expanded=true]`
 - Bad _(if an aria role is avalible)_: `.o-example--expanded`
@@ -106,7 +106,7 @@ Components **must not** overwrite variables defined by another component. Instea
 
 ## Sass Placeholders
 
-Placeholder selectors (`%`) **must not** be used to reference other components, but **may** be used within a component, see [Issue #254](https://github.com/Financial-Times/ft-origami/issues/254).
+Placeholder selectors (`%`) **must not** be used to reference other components, but **may** be used within a component, see <a href="https://github.com/Financial-Times/ft-origami/issues/254" class="o-typography-link--external">Issue #254</a>.
 
 The `@extends` command **must not** be used to extend placeholders defined in other components, unless the component can only be consumed via `@extends` for historical reasons. This is because extending placeholders defined in other components creates unpredictable cascades and unreliable results, as the order components are included is unpredictable. A placeholder **may** be extended if defined within the same component.
 
@@ -142,7 +142,7 @@ This prevents the accidental output of styles if the component is included twice
 
 To support a [core and enhanced experience](/docs/components/compatibility/#core--enhanced-experiences) components must render acceptably without JavaScript avalible. Styles which only apply if JavaScript is avalible **must** be applied with a feature detect such as `.o--if-js`, and to hide an element of a component when JavaScript is avalible use `o--if-no-js`. If the component provides its own JavaScript feature flag, it **must** be named `.o-componentname--js`.
 
-To detect other features, standardised feature detects **should** be used as a preference, such as the CSS [@supports](https://developer.mozilla.org/en-US/docs/Web/CSS/@supports) at-rule. Otherwise a CSS class on the `documentElement` **may** be used to indicate feature support. The class name **should** be configurable, and default to the class name used by [Modernizr](https://modernizr.com/):
+To detect other features, standardised feature detects **should** be used as a preference, such as the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" class="o-typography-link--external">@supports</a> at-rule. Otherwise a CSS class on the `documentElement` **may** be used to indicate feature support. The class name **should** be configurable, and default to the class name used by <a href="https://modernizr.com/" class="o-typography-link--external">Modernizr</a>:
 ```
 $o-thing-inline-svg-support: ‘.inlinesvg’ !default;
 $o-thing-inline-svg-support .o-thing__feature {
@@ -150,7 +150,7 @@ $o-thing-inline-svg-support .o-thing__feature {
 }
 ```
 
-Component developers **must not** use feature flags that need to be set manually by a product developer (i.e. those outside [Modernizr](https://modernizr.com/) or Origami). Component developers **must** assume that feature flag classes will be set on the `documentElement`, i.e. the HTML tag.
+Component developers **must not** use feature flags that need to be set manually by a product developer (i.e. those outside <a href="https://modernizr.com/" class="o-typography-link--external">Modernizr</a> or Origami). Component developers **must** assume that feature flag classes will be set on the `documentElement`, i.e. the HTML tag.
 
 ## Browser Targeting
 
@@ -160,7 +160,7 @@ In order of preference, when targeting styles at a specific browser or user-agen
 
 - Assess if the proportion of impacted users is worth the fix.
 - Tweak designs to accommodate most browsers instead.
-- Use [browser hacks](http://browserhacks.com/):
+- Use <a href="http://browserhacks.com/" class="o-typography-link--external">browser hacks</a>:
 ```
 .el {
     background: url(‘data:image/png;base64,/* data */’) bottom right no-repeat;
@@ -172,4 +172,4 @@ In order of preference, when targeting styles at a specific browser or user-agen
 ```
 - Rely on JavaScript user-agent sniffing (as a last resort, in some rare edge cases).
 
-Component developers **must not** use [IE conditional comments](https://www.quirksmode.org/css/condcom.html) to target user agents (use [browser hacks](http://browserhacks.com/) instead).
+Component developers **must not** use <a href="https://www.quirksmode.org/css/condcom.html" class="o-typography-link--external">IE conditional comments</a> to target user agents (use <a href="http://browserhacks.com/" class="o-typography-link--external">browser hacks</a> instead).

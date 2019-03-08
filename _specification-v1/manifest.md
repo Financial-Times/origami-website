@@ -15,7 +15,7 @@ nav_order: 25
 
 # {{page.title}}
 
-`origami.json` is a <a href="https://www.json.org/"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component.
+`origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component.
 
 ## Properties
 
@@ -233,8 +233,8 @@ circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/r
 
 Applies to `{ "origamiType": "module" }` only. Outlines the browser features required for the component's functionality.
 The object accepts two properties:
-- `required`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component assumes exists. If these features do not exist, the component may error.
-- `optional`: type `Array`. A list of [Polyfill Service](https://polyfill.io) features or [Modernizr](https://modernizr.com/docs/) tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
+- `required`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component assumes exists. If these features do not exist, the component may error.
+- `optional`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
 
 <pre><code class="o-syntax-highlight--json">{
 	"origamiType": "module",
@@ -294,7 +294,7 @@ The object accepts the following properties:
 - `js`: type `String`. Describes the JS file to build.
 - `data`: type `Object`. Describes data to populate to the mustache template with.
 - `documentClasses`: type `Object`. Names CSS classes to set on the `html` tag.
-- `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
+- `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 
 <pre><code class="o-syntax-highlight--json">{
 	"demosDefaults": {
@@ -335,7 +335,7 @@ Each object in the list accepts the following properties:
 - `js`: type `String`. Describes the path to the demo-specific JS file to build.
 - `data`: type `Object`. Describes to populate to the component-specific mustache template with
 - `documentClasses`: type `Object`. Names CSS classes to set on the component-specific `html` tag
-- `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the [Build Service](https://www.ft.com/__origami/service/build)
+- `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 - `hidden`: type `Boolean`. Whether the demo should be hidden in the Registry
 - `display_html`: type `Boolean`. Whether the demo should have a HTML tab in the Registry (defaults to true)
 
