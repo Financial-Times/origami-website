@@ -23,7 +23,7 @@ Node.js and <a href="https://github.com/Financial-Times/origami-service" class="
 
 ## Naming Conventions
 
-All of our services **should** be named in the pattern "Origami <name> Service", e.g. Origami Build Service, Origami Image Service. Services **may** make exceptions to this naming structure in circumstances where “Service” doesn’t effectively describe what the application does, e.g. with Origami Bower Registry. If you think that a different name might be required then discuss with the team.
+All of our services **should** be named in the pattern "Origami &#x3C;name&#x3E; Service", e.g. Origami Build Service, Origami Image Service. Services **may** make exceptions to this naming structure in circumstances where “Service” doesn’t effectively describe what the application does, e.g. with Origami Bower Registry. If you think that a different name might be required then discuss with the team.
 
 Names **may** be slugified where needed (this is a lower case, hyphenated version of the name, e.g. origami-build-service, origami-image-service). For instance, a slugified name **must** be used for the service's:
   - System code.
