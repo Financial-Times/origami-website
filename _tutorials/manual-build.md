@@ -94,7 +94,7 @@ Let's head over to <a href="https://registry.origami.ft.com/components/o-table#d
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/TODO) are available for installation via Bower. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
+All [Origami-compliant components](/spec/v1/components) are available for installation via Bower. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
 
 This means that, in order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 
