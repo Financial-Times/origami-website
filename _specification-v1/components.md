@@ -198,11 +198,6 @@ Without any explicit configuration, `o-assets` will assume, as we do for sub-res
 
 Where external resources are not within Origami components, a <a href="http://www.paulirish.com/2010/the-protocol-relative-url/" class="o-typography-link--external">protocol-relative</a> URL **must** be used (see <a href="https://github.com/Financial-Times/ft-origami/issues/173" class="o-typography-link--external">issue 173</a>.
 
-### Accessibility
-
-TODO: touch/keyboard/mouse, aria, screen-readers, etc
-
-
 ## Testing
 
 ### Automated tests
