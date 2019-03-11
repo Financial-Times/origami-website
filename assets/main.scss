@@ -35,6 +35,11 @@ iframe {
 	width: 100%;
 }
 
+img {
+	display: inline-block;
+	max-width: 100%;
+}
+
 table.o-manifest__table {
 	width: auto;
 }
