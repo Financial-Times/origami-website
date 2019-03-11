@@ -10,7 +10,7 @@ author: Lee Moody
 
 Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
 
-Our component registry and main site were presented as separate sites, which made moving between the Origami documentation and a specific component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
+Our component registry and main site were presented as separate sites, which made moving between the documentation and a specific component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
 
 In addition, the content of our sites has grown organically over time as new tools, approaches, and components have come and gone. This meant some outdated content was left in place, the structure of the site became less clear, and the UI was added to as needed and not always considered as a whole.
 
@@ -80,4 +80,4 @@ We maintained the link to GitHub as that is often used. The component version is
 
 ## Conclusions
 
-We're excited to have released the unified design, overhauled documentation, refined specifications, and new site structure. We hope the changes we've made make it easier to work with Origami, and easier to reach out to the team. If you have any feedback please let the team know. &#x1F603;
+We're excited to have released updated documentation and specifications, especially alongisde the improved site structure and unified design. We hope the changes we've made make it easier to work with Origami, and easier to reach out to the team. If you have any feedback please let the team know. &#x1F603;
