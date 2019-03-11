@@ -8,9 +8,9 @@ author: Lee Moody
 
 ## Motivation &amp; Goals
 
-Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, our components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatibile component, service, and imageset avalible.
+Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, our components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
 
-Our component registry and main site were presented as seperate sites, which made moving between the Origami documentation and a specifc component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
+Our component registry and main site were presented as separate sites, which made moving between the Origami documentation and a specific component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
 
 In addition, the content of our sites has grown organically over time as new tools, approaches, and components have come and gone. Naturally this meant some outdated content was left behind, the structure of the site became less clear, and the UI was added to as needed and not always considered as a whole.
 
@@ -18,7 +18,7 @@ With this in mind, our aims were to:
 - Bring the Origami website and component registry together with a unified design.
 - Update the site structure, to help all people find the information they need.
 - Overhaul our documentation, with our principles and latest best practises in mind.
-- Refine our specifications, by reducing verboseness and removing less relevent requirements.
+- Refine our specifications, by reducing verboseness and removing less relevant requirements.
 
 ## Homepage
 
@@ -66,7 +66,7 @@ As with our documentation, the Origami specifcation has also been reviewed and s
 
 Our component registry is now in-keeping with our main site and other internal tools from the FT.
 
-The right hand sidebar is where we have made the most content changes. We found in qualitative user research many people don't make use of all the sidebar content whilst some ignore it entirely. So we decided to leave detailed useage instructions to our improved documentation site and use the sidebar for key component-wide details and helpful links.
+The right hand sidebar is where we have made the most content changes. We found in qualitative user research many people don't make use of all the sidebar content whilst some ignore it entirely. So we decided to leave detailed usage instructions to our improved documentation site and use the sidebar for key component-wide details and helpful links.
 
 We maintained the link to Github as that is often used. The component version is also useful to copy and paste, so we maintained that under "install component". New sections in the right hand sidebar include an issue/contact section, again to encourage our users to give feedback or ask for help. We also moved the brand switcher into the sidebar along with the version selector. Now the right hand sidebar can be consistent across a components demos, readme, SassDoc, and JSDoc, so switching brand, version, or jumping to Github is always at hand.
 
