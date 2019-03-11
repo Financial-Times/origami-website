@@ -8,11 +8,11 @@ author: Lee Moody
 
 ## Motivation &amp; Goals
 
-Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, our components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
+Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
 
 Our component registry and main site were presented as separate sites, which made moving between the Origami documentation and a specific component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
 
-In addition, the content of our sites has grown organically over time as new tools, approaches, and components have come and gone. Naturally this meant some outdated content was left behind, the structure of the site became less clear, and the UI was added to as needed and not always considered as a whole.
+In addition, the content of our sites has grown organically over time as new tools, approaches, and components have come and gone. This meant some outdated content was left in place, the structure of the site became less clear, and the UI was added to as needed and not always considered as a whole.
 
 With this in mind, our aims were to:
 - Bring the Origami website and component registry together with a unified design.
@@ -35,9 +35,9 @@ On our homepage we've removed detail and instead focus on pointing people in the
 
 ## Documentation
 
-We've rewrote our documentation to cover our latest recommendations. As part of the rewrite we have introduced new sections like "[tone and language](/docs/principles/tone-and-language/)" -- a great reference whilst writing documentation. Elsewhere sections have been removed, often where the documentation can be found elsewhere (e.g. we shouldn't repeat <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recommendations).
+We've rewritten our documentation to cover our latest recommendations. As part of the rewrite we have introduced new sections like "[tone and language](/docs/principles/tone-and-language/)" -- a great reference whilst writing documentation. Some sections have been removed, often where the documentation can be found elsewhere (e.g. we shouldn't repeat <abbr title="Web Content Accessibility Guidelines">WCAG</abbr> recommendations).
 
-Perhaps the most stricking change is how we have restructured and presented the documentation under "principles", "components", "services", and "tutorials". Each section is clearly highlighted with a heading and content list.
+Perhaps the most striking change is how we have restructured and presented the documentation under "principles", "components", "services", and "tutorials". Each section is now explicitly highlighted with a heading and content list.
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-before.png?source=origami&width=620" />
@@ -63,11 +63,11 @@ As with our documentation, the Origami specifcation has also been reviewed and s
 
 ## Registry
 
-Our component registry is now in-keeping with our main site and other internal tools from the FT.
+Our component registry is now in line with our main site and other internal tools from the FT.
 
 The right hand sidebar is where we have made the most content changes. We found in qualitative user research many people don't make use of all the sidebar content whilst some ignore it entirely. So we decided to leave detailed usage instructions to our improved documentation site and use the sidebar for key component-wide details and helpful links.
 
-We maintained the link to Github as that is often used. The component version is also useful to copy and paste, so we maintained that under "install component". New sections in the right hand sidebar include an issue/contact section, again to encourage our users to give feedback or ask for help. We also moved the brand switcher into the sidebar along with the version selector. Now the right hand sidebar can be consistent across a components demos, readme, SassDoc, and JSDoc, so switching brand, version, or jumping to Github is always at hand.
+We maintained the link to GitHub as that is often used. The component version is also useful to copy and paste, so we kept that under "install component". New sections in the right hand sidebar include an issue/contact section, again to encourage our users to give feedback or ask for help. We also moved the brand switcher into the sidebar along with the version selector. These options exist in the right hand sidebar across component demos, READMEs, SassDocs and JSDocs. Hopefully this will minimize context switching and will make choosing a different brand, version or visiting GitHub more intuitive.
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-before.png?source=origami&width=620" />
