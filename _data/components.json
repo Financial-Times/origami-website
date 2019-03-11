@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "10.3.3"
+		"version": "10.3.5"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -353,7 +353,7 @@
 	},
 	"o-viewport": {
 		"name": "o-viewport",
-		"version": "3.3.0"
+		"version": "3.3.2"
 	},
 	"o-visual-effects": {
 		"name": "o-visual-effects",
