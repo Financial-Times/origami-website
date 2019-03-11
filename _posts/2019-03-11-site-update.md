@@ -24,7 +24,6 @@ With this in mind, our aims were to:
 
 On our homepage we've removed detail and instead focus on pointing people in the right direction. We've also increased the prominence of our contact details. As a services team we want to encourage any questions, feedback, and collaboration.
 
-<!-- TODO replace this with the live URL -->
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-before.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami homepage before. There's a lot of text.</figcaption>
