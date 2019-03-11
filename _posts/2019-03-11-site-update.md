@@ -26,11 +26,11 @@ On our homepage we've removed detail and instead focus on pointing people in the
 
 <!-- TODO replace this with the live URL -->
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-before.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-before.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami homepage before. There's a lot of text.</figcaption>
 </figure>
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-after.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-after.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami homepage after. There's less text and more clear calls to action, such as to contact the team.</figcaption>
 </figure>
 
@@ -41,11 +41,11 @@ We've rewrote our documentation to cover our latest recommendations. As part of 
 Perhaps the most stricking change is how we have restructured and presented the documentation under "principles", "components", "services", and "tutorials". Each section is clearly highlighted with a heading and content list.
 
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-before.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-before.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami documentation before. Content types are not seperated very clearly, although the body of the page explains where to find what documentation.</figcaption>
 </figure>
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-after.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-after.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami documentation after. We use headings and lists to make the page more easy to scan.</figcaption>
 </figure>
 
@@ -54,11 +54,11 @@ Perhaps the most stricking change is how we have restructured and presented the 
 As with our documentation, the Origami specifcation has also been reviewed and simplified where possible.
 
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-before.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-before.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami specification before. The navigation bar is larger than present, e.g. "Third party components" has been removed.</figcaption>
 </figure>
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-after.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-after.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami specification after. The navigation bar more clearly points to our three specifications: component, service, and origami.json specification.</figcaption>
 </figure>
 
@@ -71,11 +71,11 @@ The right hand sidebar is where we have made the most content changes. We found 
 We maintained the link to Github as that is often used. The component version is also useful to copy and paste, so we maintained that under "install component". New sections in the right hand sidebar include an issue/contact section, again to encourage our users to give feedback or ask for help. We also moved the brand switcher into the sidebar along with the version selector. Now the right hand sidebar can be consistent across a components demos, readme, SassDoc, and JSDoc, so switching brand, version, or jumping to Github is always at hand.
 
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-before.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-before.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami registry before. The style does not match our main site or other internal products from the FT, and there is a lot of detail which detracts from the main content of the page.</figcaption>
 </figure>
 <figure>
-    <img src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-after.png?source=origami&width=620" />
+    <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-after.png?source=origami&width=620" />
     <figcaption class="o-typography-caption">The Origami registry after. The design matches our main site and other internal FT products, secondary content is less verbose, and our contact details are more discoverable.</figcaption>
 </figure>
 
