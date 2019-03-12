@@ -3,9 +3,6 @@
 
 This is the source code for the Origami website as well as a place to open up issues on Origami as a whole. Please visit [origami.ft.com] if you're looking for the documentation.
 
-**:warning: WORK IN PROGRESS :warning:**<br/>
-This is currently a work in progress, and we're porting across content from the live site piece by piece. The content here is subject to change without notice and you shouldn't consider this the canonical Origami documentation yet.
-
 
 ## Editing this site
 
