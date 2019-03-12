@@ -22,11 +22,10 @@ sendNewsletter({
 // Generate and send the Origami newsletter
 async function sendNewsletter(options) {
 
-	// TODO change to the live URL when we publish
 	const schemeAndHost = (
 		options.local ?
 		'http://localhost:4000' :
-		'https://origami-test.ft.com'
+		'https://origami.ft.com'
 	);
 	const htmlUri = `${schemeAndHost}/emails/newsletter-${options.newsletter}`;
 
