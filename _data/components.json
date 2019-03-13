@@ -197,7 +197,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "3.2.8"
+		"version": "3.2.9"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -221,7 +221,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "3.1.4"
+		"version": "3.1.5"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
