@@ -22,7 +22,7 @@ As always, we welcome any feedback or questions you might have about the new web
 
 ### Polyfills served
 
-Three years ago, the [Polyfill Service](https://polyfill.io) served 400 million polyfills per month. Today, it serves **5.6 billion** every week, which is about **800 million** _every day_ 💪
+Three years ago, the [Polyfill Service](https://polyfill.io) served 400 million polyfills per month. Today, it serves **800 million** _every day_ 💪.
 
 ### ECMAScript Modules vs CommonJS
 
@@ -38,14 +38,14 @@ We have since reverted those changes and are working on a different approach. If
 
 ## Special thanks
 
-Special thanks to the BizOps team for implementing the most recent version of <a href="https://registry.origami.ft.com/components/o-layout?brand=internal" target="_blank">o-layout</a> so quickly after its release, and flagging small bugs for us 🙌
+Special thanks to the BizOps team for implementing the most recent version of <a href="https://registry.origami.ft.com/components/o-layout?brand=internal" target="_blank">o-layout</a> so quickly after its release, and flagging small bugs for us 🙌.
 
 ## Broader update
 
 A digest list of other things that have happened over the last month.
 
-  - MAJOR: [o-lazy-load v1.0.0](https://registry.origami.ft.com/components/o-lazy-load@1.0.0) is no longer in beta.
+  - MAJOR: [o-lazy-load v1.0.0](https://registry.origami.ft.com/components/o-lazy-load@1.0.0) is no longer in beta and is ready for use on production websites.
   - MINOR: [o-chat v3.1.0](https://registry.origami.ft.com/components/o-chat@3.1.0) deprecates o-chat. If you have any questions about this component, please speak to the team.
-  - MINOR: 17 new faces were published to [our headshot image set](https://registry.origami.ft.com/components/headshot-images)
+  - MINOR: 17 new faces were published to [our headshot image set](https://registry.origami.ft.com/components/headshot-images).
 
 *[TL;DR]: too long; didn't read
