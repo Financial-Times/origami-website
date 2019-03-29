@@ -50,5 +50,22 @@ A digest list of other things that have happened over the last month.
   - BETA: o-table v7.3.0-beta.1 was released, adding in table filtering. [See the registry for demos](https://registry.origami.ft.com/components/o-table@7.3.0-beta.1)
   - MINOR: [o-chat v3.1.0](https://registry.origami.ft.com/components/o-chat@3.1.0) deprecates o-chat. If you have any questions about this component, please speak to the team.
   - MINOR: 17 new faces were published to [our headshot image set](https://registry.origami.ft.com/components/headshot-images).
+    - MINOR: o-tracking v1.5.0 and v1.6.0 were released, thanks Asuka Ochi! [See the releases for more information](https://github.com/Financial-Times/o-tracking/releases)
+  - MINOR/REVERT: the following components recieved minor bumps as part of the attempted ESM switch:
+    - [o-assets](https://registry.origami.ft.com/components/o-assets)
+    - [o-date](https://registry.origami.ft.com/components/o-date)
+    - [o-element-visibility](https://registry.origami.ft.com/components/o-element-visibility)
+    - [o-errors](https://registry.origami.ft.com/components/o-errors)
+    - [o-expander](https://registry.origami.ft.com/components/o-expander)
+    - [o-overlay](https://registry.origami.ft.com/components/o-overlay)
+    - [o-share](https://registry.origami.ft.com/components/o-share)
+    - [o-tabs](https://registry.origami.ft.com/components/o-tabs)
+    - [o-video](https://registry.origami.ft.com/components/o-video)
+    - [o-viewport](https://registry.origami.ft.com/components/o-viewport)
+  - PATCH: [o-footer v6.1.1](https://registry.origami.ft.com/components/o-footer@6.1.1) was released, updating the demo date to 2019
+  - PATCH: [o-footer-services v2.1.2](https://registry.origami.ft.com/components/o-footer-services@2.1.2) was released, updating the demo date to 2019
+  - PATCH: [o-header-services v3.2.7](https://registry.origami.ft.com/components/o-header-services@3.2.7) was released, improving progressive font loading
+  - PATCH: [o-forms v6.0.2](https://registry.origami.ft.com/components/o-forms@6.0.2) was released, fixing loading state styles
+  - PATCH: [o-layout](https://registry.origami.ft.com/components/o-layout) patches v3.1.1–3.1.8 were released, fixing small bugs. [See the releases for more information](https://github.com/Financial-Times/o-layout/releases)
 
 *[TL;DR]: too long; didn't read
