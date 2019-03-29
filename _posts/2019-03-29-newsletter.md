@@ -26,19 +26,15 @@ Three years ago, the [Polyfill Service](https://polyfill.io) served 400 million 
 
 ### ECMAScript Modules vs CommonJS
 
-The problem: We attempted to replace CommonJS with ECMAScript Modules across some of our components.
+We attempted to replace CommonJS with ECMAScript Modules across some of our components to align them more closely to the standard of JavaScript that is used in web browsers (ECMAScript Modules). The intention wass to get to a place where teams would not need to compile Origami components' JavaScript in order to use it.
 
-The aim was to align our components' JavaScript more closely to the standard of JavaScript that is used in web browsers, which is ECMAScript Modules. 
+This shift caused a breaking change as it brought about client-side JavaScript errors for some projects and users. We have since reverted those changes and are working on a different approach.
 
-We also wanted to update our tooling infrastructure to avoid relying on `babel-plugin-add-module-exports`. The intention is to get to a place where teams would not need to compile Origami components' JavaScript in order to use it.
-
-This shift caused a breaking change as it brought about client-side JavaScript errors for some projects and users. 
-
-We have since reverted those changes and are working on a different approach. If there is anything that we might have missed or any questions you might have, please get in touch with the team.
+If there is anything that we might have missed or any questions you might have, please get in touch with the team.
 
 ## Special thanks
 
-Special thanks to the BizOps team for implementing the most recent version of <a href="https://registry.origami.ft.com/components/o-layout?brand=internal" target="_blank">o-layout</a> so quickly after its release, and flagging small bugs for us 🙌.
+Special thanks to Rhys Evans for implementing the most recent version of <a href="https://registry.origami.ft.com/components/o-layout?brand=internal" target="_blank">o-layout</a> so quickly after its release, and flagging small bugs for us 🙌.
 
 ## Broader update
 
