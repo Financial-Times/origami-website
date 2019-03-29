@@ -7,15 +7,15 @@ references:
       - image: circleci/ruby:2.4-node-browsers
   cache_dependencies: &cache_dependencies
     save_cache:
-      key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      key: gem-cache-v2-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       paths:
         - ~/.bundle
   restore_dependencies: &restore_dependencies
     restore_cache:
       keys:
-        - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-        - gem-cache-v1-{{ arch }}-{{ .Branch }}-
-        - gem-cache-v1-{{ arch }}-
+        - gem-cache-v2-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+        - gem-cache-v2-{{ arch }}-{{ .Branch }}-
+        - gem-cache-v2-{{ arch }}-
 
 # Circle jobs
 jobs:
