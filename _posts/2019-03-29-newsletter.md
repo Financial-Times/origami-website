@@ -26,7 +26,7 @@ Three years ago, the [Polyfill Service](https://polyfill.io) served 400 million 
 
 ### ECMAScript Modules vs CommonJS
 
-We attempted to replace CommonJS with ECMAScript Modules across some of our components to align them more closely to the standard of JavaScript that is used in web browsers (ECMAScript Modules). The intention wass to get to a place where teams would not need to compile Origami components' JavaScript in order to use it.
+We attempted to replace CommonJS with ECMAScript Modules across some of our components to align them more closely to the standard of JavaScript that is used in web browsers (ECMAScript Modules). The intention was to get to a place where teams would not need to compile Origami components' JavaScript in order to use it.
 
 This shift caused a breaking change as it brought about client-side JavaScript errors for some projects and users. We have since reverted those changes and are working on a different approach.
 
