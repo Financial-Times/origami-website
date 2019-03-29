@@ -35,7 +35,7 @@ The process:
 
   1. Branch off of master and create the required files. The format for the newsletter is strict, and you should probably copy an older newsletter to make sure it's correct. You need to create two files in this repo, replacing the date as appropriate (set to the expected published date):
     - `_posts/YYYY-MM-DD-newsletter.md`: for the blog post on the website
-    - `_emails/newsletter-YYYY-MM.md`: for the email we distribute
+    - `_emails/newsletter-YYYY-MM.html`: for the email we distribute
 
   2. Write the newsletter. This is best done in the blog post, as this is standard Markdown. The email newsletter relies on some pretty gross Liquid templating to ensure that we avoid copy/paste errors in the HTML. Sorry. The email also has required front-matter: a `title` which becomes the subject of the email, and `companion_post_url` which is used to link to the blog post and should be the full URL.
 
