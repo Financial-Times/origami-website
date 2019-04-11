@@ -84,7 +84,7 @@ If you are doing any `require`/`import` calls to files within the `src` folder, 
 E.G.
 `const Layout = require("o-layout/src/js/layout");` would become `import Layout from "@financial-times/o-layout/dist/js/layout";`
 
-If using Sass from Origami, you do not need to change the `@import` or `@include` however you will need to update the Sass-compiler's IncludePath to have `node_modules/@financial-times` and not `bower_components`.
+If using Sass from Origami, you do not need to change the `@import` or `@include` however you will need to update the Sass-compiler's IncludePath to have `node_modules` and `node_modules/@financial-times`, instead of `bower_components`.
 
 ## Troubleshooting
 
@@ -92,4 +92,4 @@ If using Sass from Origami, you do not need to change the `@import` or `@include
 This is due to the version of the package not being on npm, you will need to upgrade to the latest version of the package in order to use it via npm.
 
 ### Sass cannot build
-In order for Sass to find the mixins etc for Origami, you will need to add 'node_modules/@financial-times' to the Sass 'includePaths'.
+In order for Sass to find the mixins etc for Origami, you will need to add `node_modules` and `node_modules/@financial-times` to the Sass 'includePaths'.
