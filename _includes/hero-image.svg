@@ -1,0 +1,1136 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="470">
+  <path fill="#D6D6D6" d="M108.394 19.063l-88.433-65.38-41.086 92.635z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M51.227-23.202l57.167 42.265-21.317-88.365z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M91.396-51.399l16.998 70.462 5.223-8.49z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M-19.499 45.976l127.893-26.913-26.932 95.118z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M-19.499 45.976l100.961 68.205-97.994-45.934z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EDEDED" d="M113.617-6.833v17.406l-6.242-17.406z">
+    <animate attributeType="CSS" attributeName="fill" values="#EDEDED;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EDEDED" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M163.417 7.167l-49.8 3.406v-49.822z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M108.394 19.063l5.223-8.49 49.8-3.406z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M81.462 114.181l26.932-95.118v79.189z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M173.73 93.125l-65.336 5.127V19.063z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M163.417 7.167L142.68-12.161l27.364-2.177z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M108.394 19.063l55.023-11.896 52.453 66.729-42.14 19.229z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M215.87 97.289V73.896l-42.14 19.229z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M201.77 125.97l14.1-28.681-42.14-4.164z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EFEFEF" d="M108.394 98.252l65.336-5.127-54.318 91.489z">
+    <animate attributeType="CSS" attributeName="fill" values="#EFEFEF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EFEFEF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M81.462 114.181l26.932-15.929-26.932 53.674z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M119.412 184.614l-37.95-32.688 26.932-53.674z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M81.462 114.181l-98.086 53.578 9.568-95.07z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EFEFEF" d="M81.462 151.926v-37.745l-117.794 64.344z">
+    <animate attributeType="CSS" attributeName="fill" values="#EFEFEF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EFEFEF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M173.73 93.125l-54.318 91.489 82.358-58.644z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M244.5 211.167L220.332 156.5l-18.562-30.53-82.358 58.644 38.088 65.72z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M271.832 193.167l-27.332 18-24.168-54.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M296.332 239.666l-24.5-46.499-27.332 18z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M243.332 125l-23 31.5 51.5 36.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EDEDED" d="M201.77 125.97l18.562 30.53 23-31.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#EDEDED;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EDEDED" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M215.87 97.289l-14.1 28.681 41.562-.97z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M271.832 193.167L243.332 125 365.5 177.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M381.666 151l-138.334-26L365.5 177.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M163.417 7.167l13.916-46.416 14.94 45.198z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M208.391-14.877L192.273 5.949l-8.824-26.697z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F5F5F5" d="M215.87 73.896L192.273 5.949l-28.856 1.218z">
+    <animate attributeType="CSS" attributeName="fill" values="#F5F5F5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F5F5F5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M285.25 27.5L192.273 5.949 225.5-38z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M215.87 73.896L243.332 125 215.87 97.289z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M192.273 5.949l23.597 67.947L243.332 125l41.918-97.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M243.332 125l41.918-97.5L381.666 151z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M252.689-8.194L285.25 27.5 324-13z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M81.462 151.926L0 224v-53.679z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F4F4F4" d="M-34.254 316.521L81.462 151.926 0 224z">
+    <animate attributeType="CSS" attributeName="fill" values="#F4F4F4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F4F4F4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M81.462 151.926L5.467 261.144l113.945-76.53z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M119.412 184.614L38.047 303.606l-32.58-42.462z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M151.415 261.144l6.085-10.81-38.088-65.72z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M38.047 303.606l81.365-118.992 32.003 76.53z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M46.808 321.642l-8.761-18.036 113.368-42.462-28.857 78.534z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EDEDED" d="M113.282 372.657l-66.474-51.015 75.75 18.036z">
+    <animate attributeType="CSS" attributeName="fill" values="#EDEDED;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EDEDED" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M112.767 394.3l.515-21.643-66.474-51.015z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M38.047 303.606l8.761 18.036L0 357.971v-37.573z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M5.467 261.144l32.58 42.462-92.239 40.709z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M112.767 394.3l-65.959-72.658-86.169 67.17z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M122.558 339.678L147.196 416l-33.914-43.343z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M112.767 394.3l.515-21.643L147.196 416z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M122.558 339.678l49.172-16.955-20.315-61.579z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M183.003 308.134l-11.273 14.589-20.315-61.579z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D8D8D8" d="M196.929 265.694l-45.514-4.55 6.085-10.81z">
+    <animate attributeType="CSS" attributeName="fill" values="#D8D8D8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D8D8D8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M183.003 308.134l13.926-42.44-45.514-4.55z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CBCBCB" d="M195.161 317.417l-12.158-9.283-11.273 14.589z">
+    <animate attributeType="CSS" attributeName="fill" values="#CBCBCB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CBCBCB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CDCDCD" d="M196.929 265.694l-13.926 42.44 12.158 9.283z">
+    <animate attributeType="CSS" attributeName="fill" values="#CDCDCD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CDCDCD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M171.73 322.723l-49.172 16.955L147.196 416z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M208.865 325.375l-13.704-7.958-23.431 5.306z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M147.196 416l61.669-90.625-37.135-2.652z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D0D0D0" d="M112.767 394.3l-72.401 55.282-51.207-59.741z">
+    <animate attributeType="CSS" attributeName="fill" values="#D0D0D0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D0D0D0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M57.667 470l-63.11-73.861.067 79.027z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D4D4D4" d="M112.767 394.3l-72.401 55.282 28.652 33.68z">
+    <animate attributeType="CSS" attributeName="fill" values="#D4D4D4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D4D4D4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M147.196 416l-78.178 67.262 43.749-88.962z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EDEDED" d="M147.196 470l-70.63 6.768L147.196 416z">
+    <animate attributeType="CSS" attributeName="fill" values="#EDEDED;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EDEDED" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M147.196 416l30.834 59.166L147.196 470z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M209.833 463.498l-16.666 40.499L147.196 416z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#B3B3B3" d="M213.5 476.768l-3.667-13.27-8.133 19.764z">
+    <animate attributeType="CSS" attributeName="fill" values="#B3B3B3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#B3B3B3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C1C1C1" d="M259 459.998l-49.167 3.5 12.334 46.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#C1C1C1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C1C1C1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M237 444.331l-27.167 19.167L147.196 416z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M208.865 325.375L147.196 416 237 444.331z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M195.161 317.417l44.339-20.583-30.635 28.541z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C6C6C6" d="M196.929 265.694l-1.768 51.723 44.339-20.583z">
+    <animate attributeType="CSS" attributeName="fill" values="#C6C6C6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C6C6C6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M208.865 325.375l73.969-20.04-43.334-8.501z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M237 444.331l-28.135-118.956 73.969-20.04z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CFCFCF" d="M259 459.998l-22-15.667-27.167 19.167z">
+    <animate attributeType="CSS" attributeName="fill" values="#CFCFCF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CFCFCF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D3D3D3" d="M282.834 305.335L259 459.998l-22-15.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#D3D3D3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D3D3D3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M245.85 477.85L259 459.998l18.167 20.983z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M196.929 265.694l47.571-54.527-87 39.167z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M239.5 296.834l-42.571-31.14 47.571-54.527z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M296.332 239.666L239.5 296.834l5-85.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M282.834 305.335l-43.334-8.501 56.832-57.168z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M259 459.998l116.621-22.485-92.787-132.178z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M345.205 225.251l-48.873 14.415-24.5-46.499z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M282.834 305.335l13.498-65.669 48.873-14.415z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M365.5 177.667l-93.668 15.5 73.373 32.084z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M380.151 209.288l-34.946 15.963 20.295-47.584z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M381.666 151L365.5 177.667l14.651 31.621z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M285.25 27.5l44.424-46.221 16.84 9.445z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M381.666 151L346.514-9.276 285.25 27.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M395.251-16.347L381.666 151 345.638-13z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M518.639 44.054L381.666 151l13.219-162.829z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M531.366 4.39l-12.727 39.664L401.327-8.92z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M381.666 151L518.639 44.054l-32.638 177.611z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M380.151 209.288l105.85 12.377L381.666 151z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M380.151 209.288l-34.946 15.963L447.334 254z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M412 384.854L447.334 254l-102.129-28.749z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M412 384.854l-129.166-79.519 62.371-80.084z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M375.621 437.513L412 384.854l-129.166-79.519z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M259 459.998l116.621-22.485L333.458 546z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F4F4F4" d="M412 384.854l-36.379 52.659 60.832-40.702z">
+    <animate attributeType="CSS" attributeName="fill" values="#F4F4F4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F4F4F4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M447.334 254L412 384.854l58-59.479z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M470 325.375l-33.547 71.436L412 384.854z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M375.621 437.513l60.832-40.702 2.065 94.945z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M358.884 480.578l16.737-43.065 47.277 41.038z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M532.581 381.601l-96.128 15.21L470 325.375z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D0D0D0" d="M531.366 4.39L544.5-9.276 424.505-6.548z">
+    <animate attributeType="CSS" attributeName="fill" values="#D0D0D0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D0D0D0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M518.639 44.054L551 7.25l-19.634-2.86z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M618 0l-67 7.25 67 24.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M584.5 80.5l33.5-49-67-24.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M518.639 44.054L551 7.25l33.5 73.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M486.001 221.665L584.5 80.5l-65.861-36.446z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M597 201.459L584.5 80.5l-98.499 141.165z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M653.5 19.063l-69 61.437 33.5-49z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M618 0l35.5 19.063L618 31.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M584.5 80.5l69-61.437L737 77z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M713.5 7.25l-60 11.813L737 77z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M618 0l35.5 19.063-3.513-36.938z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DADADA" d="M551 7.25l-19.634-2.86L544.5-9.276 618 0z">
+    <animate attributeType="CSS" attributeName="fill" values="#DADADA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DADADA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C9C9C9" d="M652.252 5.949L713.5 7.25l-60 11.813z">
+    <animate attributeType="CSS" attributeName="fill" values="#C9C9C9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C9C9C9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D7D7D7" d="M790 39.922L737 77 713.5 7.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#D7D7D7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D7D7D7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M792 19.063l-2 20.859L713.5 7.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C1C1C1" d="M652.371 5.951l61.247 1.301L647-43z">
+    <animate attributeType="CSS" attributeName="fill" values="#C1C1C1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C1C1C1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M792 19.063L713.5 7.25 870.5-43z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#B9B9B9" d="M792-17.875L713.5 7.25l-42.006-31.742z">
+    <animate attributeType="CSS" attributeName="fill" values="#B9B9B9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#B9B9B9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M874 44.054l-82-24.991-2 20.859z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M737 77l53-37.078L758.5 87z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M800 70.861l-10-30.939L758.5 87z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M874 44.054l-74 26.807-10-30.939z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M792 19.063l82 24.991-21.988-72.437z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M883-1.013l-9 45.067-20.807-68.546z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M956 55.392l-82-11.338 9-45.067z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M937.5 84.5L874 44.054l82 11.338z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M925.5 156L874 44.054 937.5 84.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M865 186.332l9-142.278-74 26.807z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M643 187.963L584.5 80.5 597 201.459z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M737 77l-152.5 3.5L643 187.963z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M486.001 221.665l-105.85-12.377 67.183 34.822z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M447.334 254v-9.89l-67.183-34.822z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M470 278l-22.666-24v-9.89z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M486.001 221.665l-38.667 22.445L470 278z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M496 311.104l-26 14.271L447.334 254 470 278z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M570 254l-74 57.104L470 278z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E5E5E5" d="M486.001 221.665L470 278l100-24z">
+    <animate attributeType="CSS" attributeName="fill" values="#E5E5E5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E5E5E5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M597 201.459L570 254l-83.999-32.335z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M470 325.375l26-14.271 36.581 70.497z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M570 254l-74 57.104h117.75z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E5E5E5" d="M609.144 346.353l4.606-35.249H496z">
+    <animate attributeType="CSS" attributeName="fill" values="#E5E5E5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E5E5E5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M604.327 374.833l-71.746 6.768L496 311.104z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M609.144 346.353l-4.817 28.48L496 311.104z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CCC" d="M630.5 275L570 254l27-52.541z">
+    <animate attributeType="CSS" attributeName="fill" values="#CCC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CCC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M643 187.963l-46 13.496L630.5 275z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M613.75 311.104L630.5 275 570 254z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M656 289.688L630.5 275l57.5-25.168z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M643 187.963l45 61.869L630.5 275z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M613.75 311.104l-4.606 35.249L656 289.688z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M532.581 381.601l-96.128 15.21 108.32 99.178z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M438.518 491.756l-2.065-94.945 108.32 99.178z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M532.581 381.601l12.192 114.388h17.894z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M604.327 374.833l-71.746 6.768 23.379 88.889z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M630.5 275l-16.75 36.104L656 289.688z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M692 377.839l-82.856-31.486L656 289.688z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M604.327 374.833L692 377.839l-82.856-31.486z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M704.298 437.513L692 377.839l-87.673-3.006z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M555.96 470.49l48.367-95.657-4.077 142.501z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M704.298 437.513l-103.437 58.476 3.466-121.156z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M718 503.997l-26-126.158 29.333 48.829z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D8D8D8" d="M632.572 477.317l71.726-39.804 8.876 43.065z">
+    <animate attributeType="CSS" attributeName="fill" values="#D8D8D8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D8D8D8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M956 55.392L874-8.103l154.188-20.28z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M1006.343 100.027L956 55.392l74.936-87.011z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F3F3F3" d="M937.5 84.5l23.28 36.506L925.5 156z">
+    <animate attributeType="CSS" attributeName="fill" values="#F3F3F3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F3F3F3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M865 186.332L925.5 156 874 44.054z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M883 220.869l-18-34.537L925.5 156z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D0D0D0" d="M1035.053 245.835L925.5 156l117.043 23.052z">
+    <animate attributeType="CSS" attributeName="fill" values="#D0D0D0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D0D0D0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M960.78 121.006l45.563-20.979 36.2 79.025z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M925.5 156l35.28-34.994 81.763 58.046zM937.5 84.5l68.843 15.527-45.563 20.979z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F4F4F4" d="M956 55.392l50.343 44.635L937.5 84.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#F4F4F4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F4F4F4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1042.543 179.052l-36.2-79.025 85.507-36.566z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1122.433 13.504l-30.583 49.957-60.229-91.844z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D8D8D8" d="M1006.343 100.027l85.507-36.566-61.233-93.375z">
+    <animate attributeType="CSS" attributeName="fill" values="#D8D8D8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D8D8D8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1035.053 245.835l100.447-24.966-92.957-41.817z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1133.5 193.5l2 27.369-92.957-41.817z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1141 212.443l-7.5-18.943 2 27.369z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1166.5 170.5l-33 23 7.5 18.943z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M1173.842 230.066L1141 212.443l-5.5 8.426z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M1166.5 170.5l7.342 59.566L1141 212.443z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1133.5 193.5l26.5-61.019 6.5 38.019z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1042.543 179.052L1160 132.481l-26.5 61.019z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M1091.85 63.461l68.15 69.02-117.457 46.571z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1168.5 55.392l-76.65 8.069 68.15 69.02z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1148 34.204l20.5 21.188-76.65 8.069z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" stroke="#E8E8E8" stroke-miterlimit="10" d="M1122.433 13.504l-30.583 49.957L1148 34.204z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EAEAEA" d="M1062.331-14.218l60.102 27.722 40.975-25.472z">
+    <animate attributeType="CSS" attributeName="fill" values="#EAEAEA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EAEAEA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1148 34.204l-25.567-20.7L1227-51.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EFEFEF" d="M1160 132.481l22.136-6.809-13.636-70.28z">
+    <animate attributeType="CSS" attributeName="fill" values="#EFEFEF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EFEFEF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M1166.5 170.5l25.372-14.5L1160 132.481z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M1173.842 230.066l28.515-4.784L1191.872 156l-25.372 14.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1182.136 125.672l9.736 30.328L1160 132.481z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M1291.482 93.937l-109.346 31.735 9.736 30.328z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1168.5 55.392l13.636 70.28 109.346-31.735z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M1148 34.204l88.809-20.7-68.309 41.888z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M1291.482 93.937l-54.673-80.433-68.309 41.888z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M1304.215 24.544l-67.406-11.04 54.673 80.433z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1414.311 44.054l-122.829 49.883 12.733-69.393z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1424.047 23.586l-9.736 20.468-110.096-19.51z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M1496.695 49.782l-82.384-5.728 9.736-20.468z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M1406.821 132.481l7.49-88.427-122.829 49.883z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M1367.127 151.491l-75.645-57.554 115.339 38.544z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M1318.444 156l-26.962-62.063 75.645 57.554z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M1191.872 156l99.61-62.063L1318.444 156z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1310.955 193.5l7.489-37.5h-126.572z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1367.127 151.491l-56.172 42.009 7.489-37.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M1424.047 23.586l-119.832.958 99.609-72.628z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CFCFCF" d="M1496.695 49.782l-72.648-26.196 16.476-35.835z">
+    <animate attributeType="CSS" attributeName="fill" values="#CFCFCF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CFCFCF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1413.38-14.218l10.667 37.804 16.476-35.835z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1496.695 49.782l46.434-67.908-99.345 9.478z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1570.091 34.204l-73.396 15.578 73.396-106.854z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1546.874 60.563l23.217-26.359-73.396 15.578z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1554.363 132.481l-57.668-82.699 50.179 10.781z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1406.821 132.481l89.874-82.699-36.324 124.968z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1554.363 132.481l-93.992 42.269 36.324-124.968z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C8C8C8" d="M1538.636 204.145l-78.265-29.395 93.992-42.269z">
+    <animate attributeType="CSS" attributeName="fill" values="#C8C8C8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C8C8C8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M1546.874 60.563l7.489 71.918 18.724-35.959z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M1561.301 64.185l-14.427-3.622 26.213 35.959z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1570.091 34.204l-23.217 26.359 14.427 3.622z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1573.087 96.522l-11.786-32.337 8.79-29.981z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1554.363 132.481l18.724-35.959 6.954 81.199zM1538.636 204.145l41.405-26.424-25.678-45.24z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1148 34.204l76.143-43.929-36.643 1.077z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M1122.433 13.504l-30.583 49.957L1148 34.204z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1148 34.204l69.89-40.321 18.919 19.621z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M1269.87 18.919l-33.061-5.415 8.599-17.035z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1217.89-6.117l18.919 19.621 8.599-17.035z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1269.87 18.919l14.352-23.912-37.572 2.695z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M1304.215 24.544l-2.753-29.107h42.674z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1269.87 18.919l34.345 5.625-5.136-54.294z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1570.091 34.204L1603.5-4.563l-33.409-13.563z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M1573.087 96.522L1600 90.117l4.25-46.063z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1570.091 34.204l2.996 62.318 28.624-48.193z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CCC" d="M1580.041 177.721l-6.954-81.199L1651 153.75z">
+    <animate attributeType="CSS" attributeName="fill" values="#CCC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CCC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C5C5C5" d="M1616.25 86.25l-43.163 10.272 37.975 27.894z">
+    <animate attributeType="CSS" attributeName="fill" values="#C5C5C5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C5C5C5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M1554.363 236.5l-15.727-32.355 41.405-26.424z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C9C9C9" d="M1475.25 248.5l-14.879-73.75 78.265 29.395z">
+    <animate attributeType="CSS" attributeName="fill" values="#C9C9C9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C9C9C9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C9C9C9" d="M1440.75 258.75l19.621-84 14.879 73.75z">
+    <animate attributeType="CSS" attributeName="fill" values="#C9C9C9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C9C9C9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D8D8D8" d="M1382.25 239.75l78.121-65-19.621 84z">
+    <animate attributeType="CSS" attributeName="fill" values="#D8D8D8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D8D8D8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1367.127 151.491l15.123 88.259 78.121-65z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1406.821 132.481l-39.694 19.01 93.244 23.259z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M1414.311 44.054l-7.49 88.427 89.874-82.699zM1570.091 34.204l31.106 14.99 2.303-53.757z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C6C6C6" d="M1580.041 177.721l-25.678 58.779 73.549-32.355z">
+    <animate attributeType="CSS" attributeName="fill" values="#C6C6C6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C6C6C6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CFCFCF" d="M1475.25 248.5l79.113-12-15.727-32.355z">
+    <animate attributeType="CSS" attributeName="fill" values="#CFCFCF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CFCFCF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1583.538 289.94l-38.935-15.172 9.76-38.268z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1547.18 320.287l36.358-30.347-38.935-15.172z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CECECE" d="M1480.761 276.484l-5.511-27.984-34.5 10.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#CECECE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CECECE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#BFBFBF" d="M1544.603 274.768l-63.842 1.716-5.511-27.984z">
+    <animate attributeType="CSS" attributeName="fill" values="#BFBFBF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#BFBFBF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M1554.363 236.5l-79.113 12 69.353 26.268z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D3D3D3" d="M1583.538 289.94l-29.175-53.44 68.66-30.204z">
+    <animate attributeType="CSS" attributeName="fill" values="#D3D3D3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D3D3D3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#B4B4B4" d="M1580.041 177.721l34.25 18.905 5.003-32.165z">
+    <animate attributeType="CSS" attributeName="fill" values="#B4B4B4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#B4B4B4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CDCDCD" d="M1583.538 289.94l19.931 22.998 1.769-68.965z">
+    <animate attributeType="CSS" attributeName="fill" values="#CDCDCD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CDCDCD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EFEFEF" d="M1564.07 333.457l-16.89-13.17 36.358-30.347z">
+    <animate attributeType="CSS" attributeName="fill" values="#EFEFEF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EFEFEF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1440.75 258.75l12.24 136.831 27.771-119.097z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M1547.18 320.287l-94.19 75.294 27.771-119.097z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CCC" d="M1544.603 274.768l-63.842 1.716 66.419 43.803z">
+    <animate attributeType="CSS" attributeName="fill" values="#CCC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CCC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M1564.07 333.457l19.468-43.517 55.825 64.415z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M1592.411 435.661l-28.341-102.204 95.332 26.052z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M1565.359 427.932l-1.289-94.475 28.341 102.204z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1547.18 320.287l18.179 107.645-1.289-94.475z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M1452.99 395.581l94.19-75.294 18.179 107.645z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M1382.25 239.75l1.745 10.683-62.41 40.939z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CDCDCD" d="M1440.75 258.75l-56.755-8.317-1.745-10.683z">
+    <animate attributeType="CSS" attributeName="fill" values="#CDCDCD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CDCDCD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D0D0D0" d="M1452.99 395.581l-68.995-145.148 56.755 8.317z">
+    <animate attributeType="CSS" attributeName="fill" values="#D0D0D0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D0D0D0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1321.585 291.372l62.41-40.939 68.995 145.148z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M1328.742 410.182l-7.157-118.81 131.405 104.209z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M1310.955 193.5l56.172-42.009 15.123 88.259zM1236.809 239.75l74.146-46.25 10.63 97.872z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EDEDED" d="M1191.872 156l44.937 83.75 74.146-46.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#EDEDED;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EDEDED" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M1202.357 225.282l34.452 14.468-44.937-83.75z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C8C8C8" d="M1592.411 435.661l-27.052-7.729 20.446 65.962z">
+    <animate attributeType="CSS" attributeName="fill" values="#C8C8C8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C8C8C8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CCC" d="M1475.25 464.863l90.109-36.931 20.446 65.962z">
+    <animate attributeType="CSS" attributeName="fill" values="#CCC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CCC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M1452.99 395.581l22.26 69.282 90.109-36.931z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1592.411 435.661l-4.64 40.908 26.045 7.648z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D4D4D4" d="M1619.515 404.852l-27.104 30.809 12.827 29.097z">
+    <animate attributeType="CSS" attributeName="fill" values="#D4D4D4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D4D4D4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C7C7C7" d="M1475.25 464.863l-9.129 10.696 43.805-1.59z">
+    <animate attributeType="CSS" attributeName="fill" values="#C7C7C7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C7C7C7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D6D6D6" d="M1416.333 437.667l58.917 27.196-34.5 42.804z">
+    <animate attributeType="CSS" attributeName="fill" values="#D6D6D6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D6D6D6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M1452.99 395.581l-36.657 42.086 58.917 27.196z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M1380.333 470.211l36-32.544 15.103 43.297z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M1328.742 410.182l87.591 27.485 36.657-42.086z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M1380.333 470.211l-51.591-60.029 87.591 27.485z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1300.667 459.315l79.666 10.896-51.591-60.029z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M1270.333 395.581l58.409 14.601-7.157-118.81z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M1254.332 375.998l16.001 19.583 51.252-104.209z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1264.999 397.332l35.668 61.983-16.668 13.352z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DADADA" d="M1254.332 375.998l10.667 21.334 5.334-1.751z">
+    <animate attributeType="CSS" attributeName="fill" values="#DADADA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DADADA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M1300.667 459.315l-35.668-61.983 5.334-1.751z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1328.742 410.182l-28.075 49.133-30.334-63.734z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M1380.333 470.211l-79.666-10.896-16.668 13.352z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C2C2C2" d="M1170.5 404.852l113.499 67.815-78.499 8.297z">
+    <animate attributeType="CSS" attributeName="fill" values="#C2C2C2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C2C2C2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D7D7D7" d="M1264.999 397.332l19 75.335-113.499-67.815z">
+    <animate attributeType="CSS" attributeName="fill" values="#D7D7D7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D7D7D7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1254.332 375.998l-83.832 28.854 94.499-7.52z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M1236.809 239.75l84.776 51.622-101.654 63.783z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1254.332 375.998l-34.401-20.843 101.654-63.783z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1170.5 404.852l49.431-49.697 34.401 20.843z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1179.036 327.166l40.895 27.989-49.431 49.697z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M1236.809 239.75l-57.773 87.416 40.895 27.989z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M1157.25 289.94l21.786 37.226 57.773-87.416z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1135.5 236.5l21.75 53.44 79.559-50.19z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F2F2F2" d="M1055.809 339.889l101.441-49.949-21.75-53.44z">
+    <animate attributeType="CSS" attributeName="fill" values="#F2F2F2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F2F2F2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M1098.884 360.062l58.366-70.122-101.441 49.949z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M1179.036 327.166l-80.152 32.896 58.366-70.122z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1170.5 404.852l-71.616-44.79 80.152-32.896z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1105 389.001l-6.116-28.939 71.616 44.79z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M1097 380.004l8 8.997-6.116-28.939z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CDCDCD" d="M1055.809 339.889L1097 380.004l1.884-19.942z">
+    <animate attributeType="CSS" attributeName="fill" values="#CDCDCD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CDCDCD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EFEFEF" d="M1049 415.001l48-34.997-41.191-40.115z">
+    <animate attributeType="CSS" attributeName="fill" values="#EFEFEF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EFEFEF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E5E5E5" d="M1049 415.001l56-26-8-8.997z">
+    <animate attributeType="CSS" attributeName="fill" values="#E5E5E5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E5E5E5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M1105 440.667v-51.666l-56 26z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1125.333 450.334L1105 389.001v51.666z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M1170.5 404.852l-45.167 45.482L1105 389.001z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D3D3D3" d="M1115.166 459.315l10.167-8.981-20.333-9.667z">
+    <animate attributeType="CSS" attributeName="fill" values="#D3D3D3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D3D3D3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C8C8C8" d="M1090 465.991l15-25.324 10.166 18.648z">
+    <animate attributeType="CSS" attributeName="fill" values="#C8C8C8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C8C8C8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M1049 415.001l41 50.99 15-25.324z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DDD" d="M1115.166 459.315L1090 465.991l8.884 18.675z">
+    <animate attributeType="CSS" attributeName="fill" values="#DDD;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DDD" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#BCBCBC" d="M1125.333 450.334l-10.167 8.981 70.168 39.351z">
+    <animate attributeType="CSS" attributeName="fill" values="#BCBCBC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#BCBCBC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M1170.5 404.852l-45.167 45.482L1230 534.333z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M1115.166 459.315l-12.583 19.591 42.65-2.728z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#BCBCBC" d="M1090 465.991l-20.5 10.734 26.644 2.181z">
+    <animate attributeType="CSS" attributeName="fill" values="#BCBCBC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#BCBCBC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M1049 415.001l41 50.99-35.667 18.675z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C3C3C3" d="M1032 430l17-14.999 5.333 69.665z">
+    <animate attributeType="CSS" attributeName="fill" values="#C3C3C3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C3C3C3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D3D3D3" d="M997.333 377.445L1032 430l17-14.999z">
+    <animate attributeType="CSS" attributeName="fill" values="#D3D3D3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D3D3D3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1055.809 339.889l-58.476 37.556L1049 415.001z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F1F1F1" d="M1135.5 236.5v-15.631l-100.447 24.966z">
+    <animate attributeType="CSS" attributeName="fill" values="#F1F1F1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F1F1F1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D9D9D9" d="M1055.809 339.889L1135.5 236.5l-100.447 9.335z">
+    <animate attributeType="CSS" attributeName="fill" values="#D9D9D9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D9D9D9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E4E4E4" d="M883 220.869L925.5 156l109.553 89.835z">
+    <animate attributeType="CSS" attributeName="fill" values="#E4E4E4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E4E4E4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1135.5 220.869V236.5l38.342-6.434z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DEDEDE" d="M1035.053 245.835l-42.721 64.499 63.477 29.555z">
+    <animate attributeType="CSS" attributeName="fill" values="#DEDEDE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DEDEDE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E9E9E9" d="M883 220.869l109.332 89.465 42.721-64.499z">
+    <animate attributeType="CSS" attributeName="fill" values="#E9E9E9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E9E9E9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E2E2E2" d="M1310.955 193.5l10.63 97.872 60.665-51.622z">
+    <animate attributeType="CSS" attributeName="fill" values="#E2E2E2;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E2E2E2" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#F0F0F0" d="M1202.357 225.282L1135.5 236.5l101.309 3.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#F0F0F0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#F0F0F0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M737 77l-94 110.963 126.658 3.509z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M758.5 87L737 77l32.658 114.472z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E0E0E0" d="M800 70.861l-30.342 120.611L758.5 87z">
+    <animate attributeType="CSS" attributeName="fill" values="#E0E0E0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E0E0E0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M865 186.332l-95.342 5.14L800 70.861z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M794.716 236.5L865 186.332l-95.342 5.14z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M883 220.869l-18.005-34.537-70.279 50.168z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M688 249.832l81.658-58.36L643 187.963z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E6E6E6" d="M724 260.5l-36-10.668 81.658-58.36z">
+    <animate attributeType="CSS" attributeName="fill" values="#E6E6E6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E6E6E6" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M794.716 236.5L724 260.5l45.658-69.028z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M867.25 254.75L883 220.869 794.716 236.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M853.75 264l13.5-9.25-72.534-18.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M820.5 269.76l33.25-5.76-59.034-27.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M772 287.25l22.716-50.75 25.784 33.26z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D1D1D1" d="M724 260.5l70.716-24L772 287.25z">
+    <animate attributeType="CSS" attributeName="fill" values="#D1D1D1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D1D1D1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M656 289.688l32-39.856 36 10.668z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M692 377.839L724 260.5l-68 29.188z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M772 287.25l-80 90.589L724 260.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EBEBEB" d="M820.5 269.76L772 287.25l17.5 36z">
+    <animate attributeType="CSS" attributeName="fill" values="#EBEBEB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EBEBEB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CFCFCF" d="M853.75 264l-64.25 59.25 31-53.49z">
+    <animate attributeType="CSS" attributeName="fill" values="#CFCFCF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CFCFCF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E5E5E5" d="M883 220.869l-15.75 33.881 46.25 70.252z">
+    <animate attributeType="CSS" attributeName="fill" values="#E5E5E5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E5E5E5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#EEE" d="M992.332 310.334L913.5 325.002 883 220.869z">
+    <animate attributeType="CSS" attributeName="fill" values="#EEE;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#EEE" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#C4C4C4" d="M867.25 254.75l46.25 70.252L853.75 264z">
+    <animate attributeType="CSS" attributeName="fill" values="#C4C4C4;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#C4C4C4" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DBDBDB" d="M789.5 323.25l124 1.752L853.75 264z">
+    <animate attributeType="CSS" attributeName="fill" values="#DBDBDB;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DBDBDB" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#CACACA" d="M932.5 360.5l-19-35.498-124-1.752z">
+    <animate attributeType="CSS" attributeName="fill" values="#CACACA;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#CACACA" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#ECECEC" d="M992.332 310.334L932.5 360.5l-19-35.498z">
+    <animate attributeType="CSS" attributeName="fill" values="#ECECEC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#ECECEC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M961.5 367l-29-6.5 38.75 17.339z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M992.332 310.334L961.5 367l-29-6.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DCDCDC" d="M997.333 377.445L961.5 367l30.832-56.666z">
+    <animate attributeType="CSS" attributeName="fill" values="#DCDCDC;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DCDCDC" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M971.25 377.839l26.083-.394L961.5 367z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#B9B9B9" d="M979.108 384.239l18.225-6.794-26.083.394z">
+    <animate attributeType="CSS" attributeName="fill" values="#B9B9B9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#B9B9B9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M1032 430l-41.963-36.859 7.296-15.696z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M971.25 377.839l8.439 126.232 10.348-110.93z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#BFBFBF" d="M1032 430l-41.963-36.859L979.416 507z">
+    <animate attributeType="CSS" attributeName="fill" values="#BFBFBF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#BFBFBF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#959595" d="M1054.333 484.666L1032 430l-34.136 49.986z">
+    <animate attributeType="CSS" attributeName="fill" values="#959595;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#959595" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#B9B9B9" d="M971.25 377.839L932.5 360.5l46.608 133.247z">
+    <animate attributeType="CSS" attributeName="fill" values="#B9B9B9;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#B9B9B9" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M932.5 360.5L883.625 477l90.198 1.637z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D0D0D0" d="M789.5 323.25l143 37.25-156 126.5z">
+    <animate attributeType="CSS" attributeName="fill" values="#D0D0D0;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D0D0D0" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E3E3E3" d="M883.625 477L932.5 360.5 778.893 485.06z">
+    <animate attributeType="CSS" attributeName="fill" values="#E3E3E3;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E3E3E3" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#DFDFDF" d="M721.333 426.668L776.5 491.25l-57.831-2.786z">
+    <animate attributeType="CSS" attributeName="fill" values="#DFDFDF;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#DFDFDF" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E8E8E8" d="M789.5 323.25L692 377.839l29.333 48.829z">
+    <animate attributeType="CSS" attributeName="fill" values="#E8E8E8;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E8E8E8" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E7E7E7" d="M772 287.25l17.5 36-97.5 54.589z">
+    <animate attributeType="CSS" attributeName="fill" values="#E7E7E7;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E7E7E7" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M721.333 426.668L789.5 323.25l-13 168z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#D5D5D5" d="M990.037 393.141l-10.929-8.902 18.225-6.794z">
+    <animate attributeType="CSS" attributeName="fill" values="#D5D5D5;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#D5D5D5" begin="mouseenter" dur="1s"/>
+  </path>
+  <path fill="#E1E1E1" d="M992.332 310.334l5.001 67.111 58.476-37.556z">
+    <animate attributeType="CSS" attributeName="fill" values="#E1E1E1;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#E1E1E1" begin="mouseenter" dur="1s"/>
+  </path>
+</svg>
