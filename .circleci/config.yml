@@ -1,35 +1,14 @@
-version: 2
+version: 2.1
 
-# References to reduce duplication in the rest of the config
-references:
-  container: &container_config
-    docker:
-      - image: circleci/ruby:2.4-node-browsers
-  cache_dependencies: &cache_dependencies
-    save_cache:
-      key: gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-      paths:
-        - ~/.bundle
-  restore_dependencies: &restore_dependencies
-    restore_cache:
-      keys:
-        - gem-cache-v1-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-        - gem-cache-v1-{{ arch }}-{{ .Branch }}-
-        - gem-cache-v1-{{ arch }}-
+# Commands to share between jobs
+commands:
 
-# Circle jobs
-jobs:
-
-  # Verify code then run unit and integration tests
   test:
-    <<: *container_config
     steps:
       - checkout
-      - *restore_dependencies
-      - run:
-          name: Install dependencies
-          command: make install
-      - *cache_dependencies
+      - restore-dependencies
+      - install-dependencies
+      - cache-dependencies
       - run:
           name: Run the site
           command: make serve
@@ -41,12 +20,8 @@ jobs:
           name: Run Pa11y tests
           command: make test
 
-  # Fetch and commit component changes
   autocommit:
-    <<: *container_config
     steps:
-      - checkout
-      - *restore_dependencies
       - run:
           name: Fetch component changes
           command: make fetch-component-data
@@ -59,6 +34,48 @@ jobs:
               git commit _data/components.json -m 'Update component data [ci skip]';
               git push origin master;
             fi
+
+  install-dependencies:
+    steps:
+      - run:
+          name: Install dependencies
+          command: make install
+
+  restore-dependencies:
+    steps:
+      - restore_cache:
+          keys:
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-gem{{ checksum "Gemfile.lock" }}-npm{{ checksum "package-lock.json" }}
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-gem{{ checksum "Gemfile.lock" }}
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-master-gem{{ checksum "Gemfile.lock" }}-npm{{ checksum "package-lock.json" }}
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-master-gem{{ checksum "Gemfile.lock" }}
+            - dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-master
+
+  cache-dependencies:
+    steps:
+      - save_cache:
+          key: dependency-cache-v1-{{ arch }}-{{ .Environment.CIRCLE_JOB }}-{{ .Branch }}-gem{{ checksum "Gemfile.lock" }}-npm{{ checksum "package-lock.json" }}
+          paths:
+            - node_modules
+            - vendor/bundle
+
+# Circle jobs
+jobs:
+
+  # Verify code then run unit and integration tests
+  test:
+    docker:
+      - image: circleci/ruby:2.4-node-browsers
+    steps:
+      - test
+
+  # Fetch and commit component changes
+  autocommit:
+    docker:
+      - image: circleci/ruby:2.4-node-browsers
+    steps:
+      - autocommit
 
 # Circle workflows
 workflows:
