@@ -172,7 +172,7 @@ We want to compile our source code (which we don't have yet) into a public folde
 - `--watch` is a flag that will trigger a rebuild when we make changes to our project.
 
 Altogether, the command looks like this:
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--bash">npx origami-build-tools build --build-folder="./public/" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--bash">npx origami-build-tools build --build-folder="public" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
 
 You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
 
