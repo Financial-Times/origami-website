@@ -2,9 +2,26 @@
 SITEMAP = "http://localhost:4000/sitemap.xml"
 
 # Install dependencies
-install:
-	@echo "Installing dependencies"
-	@bundle install && bundle clean
+install: install-ruby-gems install-node-modules
+
+# Install bundler
+install-bundler:
+ifeq ("$(shell which bundler)","")
+	@gem install bundler
+endif
+
+# Install ruby gems
+install-ruby-gems: install-bundler
+ifdef CI
+	@bundle check --path=vendor/bundle || bundle install --path=vendor/bundle
+	@bundle package
+else
+	@bundle check || bundle install
+endif
+
+# Install node modules
+install-node-modules:
+	@npm install
 
 # Build the site
 build:
@@ -24,13 +41,10 @@ serve:
 # Run pa11y against the site
 test:
 	@echo "Testing site"
-ifneq ("$(wildcard /usr/bin/google-chrome)","")
-	@\
-		PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-		PA11Y_CHROMIUM_PATH=/usr/bin/google-chrome \
-		npx pa11y-ci@^2.1.1 --sitemap $(SITEMAP)
-else
+ifeq ("$(shell which ./node_modules/.bin/pa11y-ci)","")
 	@npx pa11y-ci@^2.1.1 --sitemap $(SITEMAP)
+else
+	@./node_modules/.bin/pa11y-ci --sitemap $(SITEMAP)
 endif
 
 # Fetch component data for use in the site
