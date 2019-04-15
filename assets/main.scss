@@ -44,21 +44,33 @@ table.o-manifest__table {
 	width: auto;
 }
 
-.o-website__hero--home {
-	padding: 0;
-	
-	&.o-layout__hero:before {
-		content: none;
-	}
-
-	svg {
-		width: 100vw;
-	}
+.o-layout__hero:before {
+	background-image: url('./images/home-page-hero.jpg');
 }
 
-.o-website__hero--text {
-	position: absolute;
-	pointer-events: none;
+svg {
+	display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 490px) {
+	.o-website__hero--home {
+		padding: 0;
+		
+		&.o-layout__hero:before {
+			content: none;
+		}
+
+		svg {
+			display: block;
+			width: 100vw;
+			min-height: 40vh;
+		}
+	}
+
+	.o-website__hero--text {
+		position: absolute;
+		pointer-events: none;
+	}
 }
 
 
