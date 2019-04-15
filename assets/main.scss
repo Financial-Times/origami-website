@@ -45,9 +45,22 @@ table.o-manifest__table {
 }
 
 .o-website__hero--home {
-// 	// background-image: url('./images/home-page-hero.jpg');
-	// background-image: url('./images/hero-image.svg');
+	padding: 0;
+	
+	&.o-layout__hero:before {
+		content: none;
+	}
+
+	svg {
+		width: 100vw;
+	}
 }
+
+.o-website__hero--text {
+	position: absolute;
+	pointer-events: none;
+}
+
 
 .o-header-services__logo {
 	background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/ftlogo-v1:origami?format=svg&source=origami&width=55);
