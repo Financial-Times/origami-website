@@ -15,7 +15,7 @@ commands:
           background: true
       - run:
           name: Wait for site to be ready
-          command: sleep 5
+          command: sleep 20
       - run:
           name: Run Pa11y tests
           command: make test
