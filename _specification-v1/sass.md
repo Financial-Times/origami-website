@@ -171,7 +171,7 @@ All functions and mixins which delegate to the `o-brand` component, and brand co
 
 Components which support brands **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
 
-The `o-brand` component **must not** be used directly by projects, it is intended for use within other Origami components. To provide a public interface for brand mixins like `oBrandCustomize`, create a component specifc mixin which delegates to it. E.g. For a component `o-example`:
+The `o-brand` component **must not** be used directly by projects, it is intended for use within other Origami components. To provide a public interface for brand mixins like `oBrandCustomize`, create a component specific mixin which delegates to it. E.g. For a component `o-example`:
 ```scss
 @mixin oExampleCustomize($variables) {
 	@include oBrandCustomize($component: 'o-example', $variables);
