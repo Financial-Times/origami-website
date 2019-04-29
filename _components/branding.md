@@ -18,7 +18,7 @@ Origami components may be branded to provide a distinct appearance within differ
 Origami maintained brands include:
 - master: FT branding for public ft.com sites and affiliates.
 - internal: Style suitable for internal products, tools, and documentation.
-- whitelabel: Base, structural styles only to build on (experimental).
+- whitelabel: Base, structural styles only to build on and customise.
 
 ## An example component
 

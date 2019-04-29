@@ -10,6 +10,7 @@ redirect_from:
 # Navigation config
 nav_display: true
 nav_label: Manifest
+nav_heading_selector: h2, h3
 nav_order: 25
 ---
 
@@ -80,6 +81,21 @@ Defines the type of Origami component that the manifest belongs to. **Must** be 
 <pre><code class="o-syntax-highlight--json">{
 	"origamiVersion": 1
 }</code></pre>
+
+### brands
+
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
+	<tr>
+		<th scope="row" role="rowheader">Type</th>
+		<td><code>Array</code></td>
+	</tr>
+	<tr>
+		<th scope="row" role="rowheader">Required</th>
+		<td><code>false</code></td>
+	</tr>
+</table>
+
+For components which support [brands](/docs/components/branding/), this **must** an array of one or more brands: "master", "internal, "whitelabel".
 
 ### keywords
 
@@ -334,6 +350,7 @@ Each object in the list accepts the following properties:
 - `sass`: type `String`. Describes the path to the demo-specific Sass file to compile.
 - `js`: type `String`. Describes the path to the demo-specific JS file to build.
 - `data`: type `Object`. Describes to populate to the component-specific mustache template with
+- `brands`: type `Array`. For components which support [brands](/docs/components/branding/), this describes one or more brands which the demo applies to ("master", "internal, "whitelabel")
 - `documentClasses`: type `Object`. Names CSS classes to set on the component-specific `html` tag
 - `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 - `hidden`: type `Boolean`. Whether the demo should be hidden in the Registry
@@ -351,7 +368,8 @@ Each object in the list accepts the following properties:
 			"description": "Striped table implementation",
 			"template": "demos/src/striped-table.mustache",
 			"sass": "demos/src/striped-table.scss",
-			"documentClasses": "demo-striped-table-container"
+			"documentClasses": "demo-striped-table-container",
+			"brands": ["master", "internal"]
 		},
 		{
 			"name": "pa11y",
