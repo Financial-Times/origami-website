@@ -148,7 +148,7 @@ Origami components are used by products across the Financial Times Group. Some o
 
 A brand may be thought of as a theme, in that it uses Sass to change the appearence of a component. But it may also provide unique features with brand specifc Sass. For an example see our [component brand documentation](/docs/components/branding/).
 
-A project chooses a brand by [setting the brand variable](/docs/components/branding/#configure-your-projects-brand), which effects all Origami components included by that project. If no brand is chosen the master brand is used by default.
+A project chooses a brand by [setting the brand variable](/docs/components/branding/#configure-your-projects-brand), which affects all Origami components included by that project. If no brand is chosen the master brand is used by default.
 
 ### Register Supported Brands
 
