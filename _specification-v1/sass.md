@@ -138,6 +138,48 @@ To support silent mode, components **must** include a public, silent mode variab
 
 This prevents the accidental output of styles if the component is included twice in the same product. For example, given component A and component B both include a dependency of component C.
 
+## Branding
+
+Origami components are used by products across the Financial Times Group. Some of these products or product groups require a distinct appearence or feature. To cater for these usecases Origami components **may** change their appearence by supporting one or more of the following brands:
+
+- master: FT branding for public ft.com sites and affiliates.
+- internal: Style suitable for internal products, tools, and documentation.
+- whitelabel: Base, structural styles only to build on and customise.
+
+A brand may be thought of as a theme, in that it uses Sass to change the appearence of a component. But it may also provide unique features with brand specifc Sass. For an example see our [component brand documentation](/docs/components/branding/).
+
+A project chooses a brand by [setting the brand variable](/docs/components/branding/#configure-your-projects-brand), which effects all Origami components included by that project. If no brand is chosen the master brand is used by default.
+
+### Register Supported Brands
+
+If a component supports brands, it **must** register the brands it supports under the `brands` property in its [`origami.json`](/spec/v1/manifest/) file.
+E.g. to support all three Origami brands add:
+
+```json
+"brands" : [
+    "master",
+    "internal",
+    "whitelabel"
+],
+```
+
+### Create A Brand Sass File
+
+All functions and mixins which delegate to the `o-brand` component, and brand configuration, **should** be placed in the component's `src/scss/_brand.scss` file.
+
+### Include The oBrand Component
+
+Components which support brands **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
+
+The `o-brand` component **must not** be used directly by projects, it is intended for use within other Origami components. To provide a public interface for brand mixins like `oBrandCustomize`, create a component specifc mixin which delegates to it. E.g. For a component `o-example`:
+```scss
+@mixin oExampleCustomize($variables) {
+	@include oBrandCustomize($component: 'o-example', $variables);
+}
+```
+
+See the [o-brand README](https://registry.origami.ft.com/components/o-brand/readme) to learn how to add brand support to a component.
+
 ## Feature Flags
 
 To support a [core and enhanced experience](/docs/components/compatibility/#core--enhanced-experiences) components must render acceptably without JavaScript avalible. Styles which only apply if JavaScript is avalible **must** be applied with a feature detect such as `.o--if-js`, and to hide an element of a component when JavaScript is avalible use `o--if-no-js`. If the component provides its own JavaScript feature flag, it **must** be named `.o-componentname--js`.
