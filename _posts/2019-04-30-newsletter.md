@@ -45,7 +45,7 @@ A digest list of other things that have happened over the last month.
 - MINOR: [o-tracking@v1.7.0](https://registry.origami.ft.com/components/o-tracking@1.7.0) adds a `getRootID` method (credit to Alex Florisca).
 - MINOR: [o-table@v7.3.0](https://registry.origami.ft.com/components/o-table@7.3.0) introduces a new feature, support for a filterable table (you may remember we announced a beta for this last edition).
 - MINOR: [o-typography@v5.11.0](https://registry.origami.ft.com/components/o-typography@5.11.0) corrects the bold font weight of MetricWeb for internal brand users (700 to 600) and make the default "sans", "serif", or "display" bold font weight customisable for whitelabel brand users (e.g. specialist titles).
-- PATCH: [o-video@v5.1.13](https://registry.origami.ft.com/components/o-video@5.1.13) maintains the placeholder image aspect ratio and centers.
+- PATCH: [o-video@v5.1.3](https://registry.origami.ft.com/components/o-video@5.1.3) maintains the placeholder image aspect ratio and centers.
 - PATCH: The following components were also updated, to use the latest `ftdomdelegate` over `dom-delegate`:
     - o-share@^6.4.2
     - o-gallery@^3.0.7
