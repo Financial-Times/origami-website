@@ -1,39 +1,71 @@
 ---
 title: Origami Newsletter, April 2019
-description: This issue features improvements to the image service, a new table filtering feature, and two new browser polyfills.
-author: Lee Moody
-tags:
-  - Newsletter
+companion_post_url: https://origami.ft.com/blog/2019/03/29/newsletter/
 ---
 
-**TL;DR:** This issue features improvements to the image service, a new table filtering feature, and two new browser polyfills.
+<!-- TL;DR -->
+{% capture text %}
 
-## Top three things
+  This issue features improvements to the image service, a new table filtering feature, and two new browser polyfills.
 
-These are some of the bigger things we've worked on or released over the last month.
+{% endcapture %}
+{% include email/tldr.html content=text %}
 
-### Origami Image Service
 
-We maintain a group of [image sets](https://registry.origami.ft.com/components?search=&module=&imageset=true&service=&active=true&maintained=true&experimental=&deprecated=&dead=) such as icons, logos, and headshot images for our journalists. They're usually included in projects using the [Origmai Image Service](https://www.ft.com/__origami/service/image/v2/). This month we worked on improvements which allow us to publish updated images more quickly and reliably. We also moved the Image Service to it's own Fastly service and enabled shielding, which makes us more resilient to spikes of traffic &#x1F680;. These improvements have the added benefit of increasing our cache-hit-ratio which, when we gather more data, we hope to find reduces costs also.
+<!-- Top 3 things -->
+{% include email/h2.html content="Top three things" %}
 
-### Table Filtering
+{% capture text %}These are some of the bigger things we've worked on or released over the last month.{% endcapture %}
+{% include email/paragraph.html content=text %}
 
-[Last edition](https://origami.ft.com/blog/2019/03/29/newsletter/) we announced an o-table beta with a new filter feature, this is now released as part of o-table@^7.3.0. See the [demo in the registry](https://registry.origami.ft.com/components/o-table@7.3.0#demo-filter) and documentation in the [README](https://registry.origami.ft.com/components/o-table@7.3.0/readme?brand=master#filtering).
+<!-- Thing 1 -->
+{% include email/h3.html content="Origami Image Service" %}
+{% capture text %}
 
-### New Polyfills
+  We maintain a group of <a target="_blank" href="https://registry.origami.ft.com/components?search=&module=&imageset=true&service=&active=true&maintained=true&experimental=&deprecated=&dead=">image sets</a> such as icons, logos, and headshot images for our journalists. They're usually included in projects using the <a target="_blank" href="https://www.ft.com/__origami/service/image/v2/">Origmai Image Service</a>. This month we worked on improvements which allow us to publish updated images more quickly and reliably. We also moved the Image Service to it's own Fastly service and enabled shielding, which makes us more resilient to spikes of traffic &#x1F680;. These improvements have the added benefit of increasing our cache-hit-ratio which, when we gather more data, we hope to find reduces costs also.
 
-We have released two new polyfills to the [Polyfill Service](https://polyfill.io/v3/) this month: [toggleAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute) and [requestIdleCallback / cancelIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback). &#x1F389;
+{% endcapture %}
+{% include email/paragraph.html content=text %}
 
-The [requestIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback) method queues a function for when the browser is idle. It's useful to schedule non-critical tasks so the browser is free to respond quickly to user input, animation, and other events where low latency is important.
+<!-- Thing 2 -->
+{% include email/h3.html content="Table Filtering" %}
+{% capture text %}
 
-## Special thanks
+    <a target="_blank" href="https://origami.ft.com/blog/2019/03/29/newsletter/">Last edition</a> we announced an o-table beta with a new filter feature, this is now released as part of o-table@^7.3.0. See the <a target="_blank" href="https://registry.origami.ft.com/components/o-table@7.3.0#demo-filter">demo in the registry</a> and documentation in the <a target="_blank" href="https://registry.origami.ft.com/components/o-table@7.3.0/readme?brand=master#filtering">README</a>.
 
-A big thank you to the team(s) which made our move to Bracken House so smooth! We're based on the lower ground floor, but you'll also find us roaming the third floor and the swanky garden roof.
+{% endcapture %}
+{% include email/paragraph.html content=text %}
 
-## Broader update
+<!-- Thing 3 -->
+{% include email/h3.html content="New Polyfills" %}
+{% capture text %}
 
-A digest list of other things that have happened over the last month.
+    We have released two new polyfills to the <a target="_blank" href="https://polyfill.io/v3/">Polyfill Service</a> this month: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute">toggleAttribute</a> and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback">requestIdleCallback / cancelIdleCallback</a>. &#x1F389;
 
+    The <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback">requestIdleCallback</a> method queues a function for when the browser is idle. It's useful to schedule non-critical tasks so the browser is free to respond quickly to user input, animation, and other events where low latency is important.
+
+{% endcapture %}
+{% include email/paragraph.html content=text %}
+
+
+<!-- Special thanks -->
+{% include email/h2.html content="Special thanks" %}
+
+{% capture text %}
+
+    A big thank you to the team(s) which made our move to Bracken House so smooth! We're based on the lower ground floor, but you'll also find us roaming the third floor and the swanky garden roof.
+
+{% endcapture %}
+{% include email/paragraph.html content=text %}
+
+
+<!-- Broader update -->
+{% include email/h2.html content="Broader update" %}
+
+{% capture text %}A digest list of other things that have happened over the last month:{% endcapture %}
+{% include email/paragraph.html content=text %}
+
+{% capture text %}
 - MAJOR: [origami-image-set-tools@v2.2.0](https://registry.origami.ft.com/components/origami-image-set-tools@2.2.0) was released. Improves publish speed by refactoring and dropping support for NodeJS 10 and below, includes the image hash in the filename of the image when publishing, and includes version and host in the imageset file. These changes allow us to publish updates to [our image sets](https://registry.origami.ft.com/components?search=&module=&imageset=true&service=&active=true&maintained=true&experimental=&deprecated=&dead=) more quickly and reliably as mentioned above.
 - MAJOR: [ftdomdelegate@v3.0.0](https://registry.origami.ft.com/components/ftdomdelegate@3.0.0) was released. Originally decided in 2015, we at last released a new major of `ftdomdelegate` which removes the alias `dom-delegate`. If your project depends on `dom-delegate` swap it for `ftdomdelegate`. Using just `ftdomdelegate` will reduce your bundle size by not including two copies. Thanks for making it happen Matt Hinchliffe. For more context see: https://github.com/Financial-Times/ftdomdelegate/pull/93
 - MINOR: [polyfill-library@v3.33.0](https://github.com/Financial-Times/polyfill-library/releases) includes  a bunch of updates to existing polyfills including but not limited to `Object.assign`, `Symbol.match`, `Event` (for more [see recent releases](https://github.com/Financial-Times/polyfill-library/releases)). As disucssed above, we have also released two new polyfills [toggleAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute) and [requestIdleCallback / cancelIdleCallback](https://developer.mozilla.org/en-US/docs/Web/API/Window/requestIdleCallback). These are now available via the [Polyfil Service](https://polyfill.io/v3/).
@@ -51,5 +83,5 @@ A digest list of other things that have happened over the last month.
     - o-gallery@^3.0.7
     - o-tooltip@^3.4.1
     - o-overlay@^2.7.3
-
-*[TL;DR]: too long; didn't read
+{% endcapture %}
+{% include email/markdown-list.html content=text %}
