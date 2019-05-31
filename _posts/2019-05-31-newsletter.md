@@ -18,7 +18,7 @@ This month we released a new version of `o-forms@^7.0.0` with some major improve
 - We've reduced the minified bundle size by *30%* &#x1F389;.
 - Markup has been simplified, and has become more flexible — we've reduced the amount of wrapper elements, and inputs may be used independently of a form element more easily.
 - We've included a new markdown document about form accessibility.
-- We're included a new interactive error summary alongside built-in form validation.
+- We've included a new interactive error summary alongside built-in form validation.
 
 You can find [o-forms demos](https://registry.origami.ft.com/components/o-forms@7.0.3) and the [migration guide](https://registry.origami.ft.com/components/o-forms@7.0.3/readme?brand=master#migration) in the registry.
 
