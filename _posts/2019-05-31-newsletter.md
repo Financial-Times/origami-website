@@ -38,7 +38,7 @@ The `o-colors` contrast checker was also updated this month with some shiny new 
 
 <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-05-31-newsletter/contrast-checker.png?source=origami" />
 
-You can find the contrast checker on the [o-colours demo](https://registry.origami.ft.com/components/o-colors@4.8.8) page of the registry.
+You can find the contrast checker on the [o-colors demo](https://registry.origami.ft.com/components/o-colors@4.8.8) page of the registry.
 
 ## Special thanks
 
