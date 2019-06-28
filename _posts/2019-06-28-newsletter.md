@@ -18,7 +18,7 @@ We're super pleased to announce that Chee Rabbits will be joining the Origami te
 
 ### Operational Documentation
 
-We've spent a lot of time this month improving our operational documentation, using the excellent [System Operability Score (SOS) app](https://sos.in.ft.com/). Our experience using SOS has been great, and it definitely encouraged us to stop putting off improving our service's operability. Also we're pretty proud to be at the top of the team leaderboard 😉
+We've spent a lot of time this month improving our operational documentation, using the excellent [System Operability Score (SOS) app](https://sos.in.ft.com/). Our experience using SOS has been great, and it definitely encouraged us to stop putting off improving our service's operability. Also we're pretty proud to be at the top of the team leaderboard 😉.
 
 ### 10% Time
 
