@@ -34,7 +34,7 @@ A digest list of other things that have happened over the last month.
 
 - MINOR: 6 new faces were published to [our headshot image set](https://registry.origami.ft.com/components/headshot-images).
 - MINOR: o-header-services v3.3.0 was released, [updating the default drawer behaviour for fDi Intelligence](https://github.com/Financial-Times/o-header-services/issues/102)
-- PATCH: o-buttons has had some updates to help with DAC accessiblity compliance [v5.16.5 and v5.16.6 were released](https://github.com/Financial-Times/o-buttons/releases).
+- PATCH: o-buttons has had some updates to help with DAC accessibility compliance [v5.16.5 and v5.16.6 were released](https://github.com/Financial-Times/o-buttons/releases).
 - PATCH: o-forms has been patched a few times since the v7.0.0 release, we're now on v7.0.9. [See the releases for more information](https://github.com/Financial-Times/o-forms/releases). We also patched the previous major version, which is now v6.0.3.
 - PATCH: o-header [v7.8.7, v7.8.8, and v7.8.9 were all released](https://github.com/Financial-Times/o-header/releases), fixing some accessibility issues raised by DAC (Digital Accessibility Centre). Thanks to Matt Hinchliffe
 - PATCH: o-overlay was [patched a couple of times in v2.7.6 and v2.7.7](https://github.com/Financial-Times/o-overlay/releases) to meet DAC accessibility requirements.
