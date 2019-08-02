@@ -26,7 +26,7 @@ Lee [added](https://github.com/Financial-Times/origami-repo-data/pull/118) each 
 
 ### Origami Navigation Data is $2000 cheaper a year
 
-Jake wrote a tool called [Static Site Fastly Deployer](https://github.com/Financial-Times/static-site-fastly-deployer). It lets you host a static site entirely on Fastly's infrastructure, with no back-end. It's based on a [similar tool](https://github.com/katef/vcl-static-site-generator) by Fastly's own Kate Flavel. It's already in to use! It's replaced the expensive S3 buckets from which we used to fetch the navigation data, saving us $170 a month!
+Jake wrote a tool called [Static Site Fastly Deployer](https://github.com/Financial-Times/static-site-fastly-deployer). It lets you host a static site entirely on Fastly's infrastructure, with no back-end. It's based on a [similar tool](https://github.com/katef/vcl-static-site-generator) by Fastly's own Kate Flavel. And it's already in use! It's replaced the expensive S3 buckets from which we used to fetch the navigation data, saving us $170 a month!
 
 <figure>
 	<img
