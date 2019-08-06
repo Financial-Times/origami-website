@@ -2,10 +2,6 @@
 
 A site to document the Origami team, spec, components, and services.
 
-## Code
-
-origami
-
 ## Service Tier
 
 Bronze
