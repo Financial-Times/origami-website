@@ -140,7 +140,7 @@ Static assets (such as images) included from the same repository **must** be ref
 
 ### Links
 
-Links to real URLs **must** be [protocol-relative](www.paulirish.com/2010/the-protocol-relative-url/):
+Links to real URLs **must** be [protocol-relative](https://www.paulirish.com/2010/the-protocol-relative-url/):
 ```
 <a href="//www.google.com">Google</a>
 ```
