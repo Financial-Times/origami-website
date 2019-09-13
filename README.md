@@ -1,5 +1,5 @@
 
-# Origami [![CircleCI](https://circleci.com/gh/Financial-Times/origami.svg?style=svg&circle-token=cb21c81a8c339ecb5305a90e508fb24c3ef9c222)](https://circleci.com/gh/Financial-Times/origami) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENCE)
+# Origami [![CircleCI](https://circleci.com/gh/Financial-Times/origami.svg?style=svg&circle-token=cb21c81a8c339ecb5305a90e508fb24c3ef9c222)](https://circleci.com/gh/Financial-Times/origami) [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 This is the source code for the Origami website as well as a place to open up issues on Origami as a whole. Please visit [origami.ft.com] if you're looking for the documentation.
 
