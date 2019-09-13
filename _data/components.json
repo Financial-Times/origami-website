@@ -1,11 +1,11 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "13.0.0"
+		"version": "13.1.0"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
-		"version": "3.0.3"
+		"version": "4.0.0"
 	},
 	"n-alert-banner": {
 		"name": "n-alert-banner",
@@ -33,7 +33,7 @@
 	},
 	"o-banner": {
 		"name": "o-banner",
-		"version": "2.2.25"
+		"version": "2.3.0"
 	},
 	"o-big-number": {
 		"name": "o-big-number",
@@ -49,7 +49,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "5.16.6"
+		"version": "5.16.7"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -61,7 +61,7 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "4.9.0"
+		"version": "4.10.2"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -93,11 +93,11 @@
 	},
 	"o-crossword": {
 		"name": "o-crossword",
-		"version": "1.9.0"
+		"version": "1.10.0"
 	},
 	"o-date": {
 		"name": "o-date",
-		"version": "3.1.3"
+		"version": "3.1.4"
 	},
 	"o-dom": {
 		"name": "o-dom",
@@ -121,7 +121,7 @@
 	},
 	"o-fetch-jsonp": {
 		"name": "o-fetch-jsonp",
-		"version": "2.1.1"
+		"version": "2.2.0"
 	},
 	"o-fonts": {
 		"name": "o-fonts",
@@ -189,7 +189,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "7.8.10"
+		"version": "7.8.11"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -197,7 +197,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "3.3.3"
+		"version": "3.3.4"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -241,19 +241,19 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "3.1.3"
+		"version": "3.1.4"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
-		"version": "1.7.3"
+		"version": "1.7.4"
 	},
 	"n-notification": {
 		"name": "n-notification",
-		"version": "6.2.0"
+		"version": "6.2.1"
 	},
 	"o-overlay": {
 		"name": "o-overlay",
-		"version": "2.7.9"
+		"version": "2.7.10"
 	},
 	"o-permutive": {
 		"name": "o-permutive",
@@ -277,7 +277,7 @@
 	},
 	"o-share": {
 		"name": "o-share",
-		"version": "6.4.6"
+		"version": "6.5.0"
 	},
 	"o-spacing": {
 		"name": "o-spacing",
@@ -301,7 +301,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "7.3.3"
+		"version": "7.4.0"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -321,7 +321,7 @@
 	},
 	"o-test-component": {
 		"name": "o-test-component",
-		"version": "1.0.33"
+		"version": "1.0.34"
 	},
 	"o-toggle": {
 		"name": "o-toggle",
