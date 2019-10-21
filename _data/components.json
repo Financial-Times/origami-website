@@ -1,11 +1,11 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "13.1.0"
+		"version": "13.4.0"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
-		"version": "4.0.0"
+		"version": "4.0.1"
 	},
 	"n-alert-banner": {
 		"name": "n-alert-banner",
@@ -13,11 +13,11 @@
 	},
 	"o-aside-panel": {
 		"name": "o-aside-panel",
-		"version": "3.0.4"
+		"version": "3.0.5"
 	},
 	"o-assets": {
 		"name": "o-assets",
-		"version": "3.4.1"
+		"version": "3.4.2"
 	},
 	"g-audio": {
 		"name": "g-audio",
@@ -25,7 +25,7 @@
 	},
 	"o-author-alerts": {
 		"name": "o-author-alerts",
-		"version": "4.2.5"
+		"version": "4.2.6"
 	},
 	"o-autoinit": {
 		"name": "o-autoinit",
@@ -41,11 +41,11 @@
 	},
 	"o-brand": {
 		"name": "o-brand",
-		"version": "3.2.4"
+		"version": "3.2.5"
 	},
 	"o-business-card": {
 		"name": "o-business-card",
-		"version": "1.0.4"
+		"version": "1.0.5"
 	},
 	"o-buttons": {
 		"name": "o-buttons",
@@ -57,11 +57,11 @@
 	},
 	"o-chat": {
 		"name": "o-chat",
-		"version": "3.1.0"
+		"version": "3.1.1"
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "4.10.2"
+		"version": "4.10.3"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -89,15 +89,15 @@
 	},
 	"o-cookies": {
 		"name": "o-cookies",
-		"version": "1.1.1"
+		"version": "1.1.2"
 	},
 	"o-crossword": {
 		"name": "o-crossword",
-		"version": "1.10.0"
+		"version": "1.10.1"
 	},
 	"o-date": {
 		"name": "o-date",
-		"version": "3.1.4"
+		"version": "3.1.5"
 	},
 	"o-dom": {
 		"name": "o-dom",
@@ -109,7 +109,7 @@
 	},
 	"o-email-only-signup": {
 		"name": "o-email-only-signup",
-		"version": "5.0.4"
+		"version": "5.0.5"
 	},
 	"o-errors": {
 		"name": "o-errors",
@@ -141,7 +141,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "7.0.11"
+		"version": "7.1.1"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -149,39 +149,39 @@
 	},
 	"o-ft-buttons": {
 		"name": "o-ft-buttons",
-		"version": "1.7.7"
+		"version": "1.7.8"
 	},
 	"o-ft-footer": {
 		"name": "o-ft-footer",
-		"version": "2.0.6"
+		"version": "2.0.7"
 	},
 	"o-ft-forms": {
 		"name": "o-ft-forms",
-		"version": "0.13.4"
+		"version": "0.13.5"
 	},
 	"o-ft-header": {
 		"name": "o-ft-header",
-		"version": "2.5.18"
+		"version": "2.5.19"
 	},
 	"o-ft-icons": {
 		"name": "o-ft-icons",
-		"version": "3.5.2"
+		"version": "3.5.3"
 	},
 	"o-ft-legacy-signin": {
 		"name": "o-ft-legacy-signin",
-		"version": "0.1.7"
+		"version": "0.1.8"
 	},
 	"o-ft-typography": {
 		"name": "o-ft-typography",
-		"version": "1.16.1"
+		"version": "1.16.2"
 	},
 	"ftdomdelegate": {
 		"name": "ftdomdelegate",
-		"version": "3.0.2"
+		"version": "3.1.0"
 	},
 	"o-gallery": {
 		"name": "o-gallery",
-		"version": "3.0.8"
+		"version": "3.0.9"
 	},
 	"o-grid": {
 		"name": "o-grid",
@@ -189,7 +189,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "7.8.11"
+		"version": "7.8.12"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -253,7 +253,7 @@
 	},
 	"o-overlay": {
 		"name": "o-overlay",
-		"version": "2.7.10"
+		"version": "2.7.11"
 	},
 	"o-permutive": {
 		"name": "o-permutive",
@@ -265,7 +265,7 @@
 	},
 	"o-promobox": {
 		"name": "o-promobox",
-		"version": "1.3.8"
+		"version": "1.3.9"
 	},
 	"o-quote": {
 		"name": "o-quote",
@@ -273,7 +273,7 @@
 	},
 	"o-section-head": {
 		"name": "o-section-head",
-		"version": "1.0.5"
+		"version": "1.0.6"
 	},
 	"o-share": {
 		"name": "o-share",
@@ -289,7 +289,7 @@
 	},
 	"o-stepped-progress": {
 		"name": "o-stepped-progress",
-		"version": "1.0.2"
+		"version": "1.0.3"
 	},
 	"o-subs-card": {
 		"name": "o-subs-card",
@@ -301,7 +301,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "7.4.0"
+		"version": "7.4.1"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -309,7 +309,7 @@
 	},
 	"o-teaser": {
 		"name": "o-teaser",
-		"version": "3.5.6"
+		"version": "3.5.7"
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
@@ -341,7 +341,7 @@
 	},
 	"o-tweet": {
 		"name": "o-tweet",
-		"version": "1.0.0"
+		"version": "1.0.1"
 	},
 	"o-typography": {
 		"name": "o-typography",
@@ -349,7 +349,7 @@
 	},
 	"o-useragent": {
 		"name": "o-useragent",
-		"version": "2.2.1"
+		"version": "2.2.2"
 	},
 	"o-utils": {
 		"name": "o-utils",
