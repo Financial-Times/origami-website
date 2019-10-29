@@ -1,0 +1,23 @@
+digraph {
+    splines=ortho
+    concentrate=true
+
+    "o-colors" -> "o-typography"
+    "o-colors" -> "o-buttons"
+    "o-typography" -> "o-buttons"
+    "o-colors" -> "o-table"
+    "o-typography" -> "o-table"
+    "o-buttons" -> "o-table"
+    "o-colors" -> "ft.com's article page"
+    "o-typography" -> "ft.com's article page"
+    "o-buttons" -> "ft.com's article page"
+    "o-buttons" -> "ft.com's article page"
+    "o-table" -> "ft.com's article page"
+
+    "o-colors" -> "an internal tool"
+    "o-typography" -> "an internal tool"
+    "o-buttons" -> "an internal tool"
+    "o-buttons" -> "an internal tool"
+    "o-table" -> "an internal tool"
+
+}

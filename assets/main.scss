@@ -55,7 +55,7 @@ svg {
 @media (prefers-reduced-motion: no-preference) and (min-width: 490px) {
 	.o-website__hero--home {
 		padding: 0;
-		
+
 		&.o-layout__hero:before {
 			content: none;
 		}
