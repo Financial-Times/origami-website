@@ -41,9 +41,9 @@ As low level components are used to build other components there are more projec
 
 ## Typography
 
-As a low level component [o-typography](https://registry.origami.ft.com/components/o-typography) is used by every group in Product & Tech in some way. It includes fundamental typographical styles including fonts, font scales, and tools to customise them for more unique projects. But it also includes more specific styles to present Financial Times articles. This creates a huge dependency graph and makes releasing major changes tricky -- it requires coordination between many groups and impacts over 167 projects across the Financial Times Group.
+As a low level component [o-typography](https://registry.origami.ft.com/components/o-typography) is used by every group in Product & Tech in some way. It includes fundamental typographical styles including fonts, font scales, and tools to customise them for more unique projects. But it also includes more specific styles to present Financial Times articles. This creates a huge dependency graph and makes releasing major changes tricky &#8212; it requires coordination between many groups and impacts over 167 projects across the Financial Times Group.
 
-If we want to make major changes to our article typography across "master brand" projects such as those which power ft.com, amp pages, interactive graphic pages, the app, and our content management systems that should not impact other teams -- like Operations and Reliability, Internal Products, Specialist Titles (or this blog).
+If we want to make major changes to our article typography across "master brand" projects such as those which power ft.com, amp pages, interactive graphic pages, the app, and our content management systems that should not impact other teams &#8212; like Operations and Reliability, Internal Products, Specialist Titles (or this blog).
 
 So we're splitting specific styles used by ft.com and other "master brand" products from o-typography into two new components:
 
@@ -115,4 +115,13 @@ We also simplified the developer interface for new button themes, which may be c
 
 [o-colors](https://registry.origami.ft.com/components/o-colors) (yep, we use [British English for documentation and American English in our code](https://origami.ft.com/docs/principles/tone-and-language/#use-british-english-for-documentation)), one of our lowest level components, also has some updates.
 
-These are mostly developer focused updates but also remove technical debt from our introduction of [component brands](https://origami.ft.com/docs/components/branding/) (master, internal, and whitelabel); reduce the CSS bundle size for some users (for faster websites); and make changes to reduce the chance that visual errors make it to production. See more details in the [o-colors v6 proposal](https://github.com/Financial-Times/o-colors/issues/198).
+These are mostly developer focused updates but also remove technical debt from our introduction of [component brands](https://origami.ft.com/docs/components/branding/) (master, internal, and whitelabel); reduce the CSS bundle size for some users (for faster websites); and make changes to reduce the chance that visual errors make it to production. See more details in the [o-colors v5 proposal](https://github.com/Financial-Times/o-colors/issues/198).
+
+## Dependants
+
+Because of the major cascade, we've taken the opportunity to implement more recent Origami proposals across all our components. These include [consistent ways to customise components](https://github.com/Financial-Times/origami-proposals/issues/14), so Origami can better support products with a unique look; [removing CSS class name modification](https://github.com/Financial-Times/origami-proposals/issues/4), to encourage style reuse and faster sites; [primary Sass mixins](https://github.com/Financial-Times/origami-proposals/issues/6), so developers can work with Origami more efficiently; and [moving from CommonJS JavaScript modules to browser native ECMAScript modules](https://github.com/Financial-Times/origami-build-tools/issues/609), to support modern methods and tools of bundling up and delivering our websites and apps to customers.
+
+
+## Release
+
+We will start to release betas for these changes next week, with an announcement and full releases following soon after. We've discussed our plans with groups across the Financial Times and are planning a time to support Customer Products directly with their more complex upgrade path. If you have any questions, concerns, or feedback please reach out to the team &#8212; we're here to help. 😊
