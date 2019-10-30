@@ -6,22 +6,22 @@ author: Lee Moody
 
 The Origami team maintain around 52 front end components. A component is a shared piece of user-interface which, along with other components, is used to build a webpage.
 
-We are working on a major release of low level components including o-typography, o-buttons, and o-colors which will require a major release of dependent components which use them, and components which use those components, and so on. This is a process we call a major cascade.
+We are working on a major release of low level components including [o-typography](https://registry.origami.ft.com/components/o-typography), [o-buttons](https://registry.origami.ft.com/components/o-buttons), and [o-colors](https://registry.origami.ft.com/components/o-colors) which will require a major release of dependent components which use them, and components which use those components, and so on. This is a process we call a major cascade.
 
-In this blog post we'll discuss what a major cascade looks like and what high-level improvements migrating to the latest version of Origami components will bring.
+In this blog post we'll discuss what a major cascade looks like; what high-level improvements have been made; and how they further our aims to help bring design consistency and reduce the time teams spend repeating work.
 
 ## The Major Cascade
 
-Some components are low level &#8212; fundamental building blocks used to build most pages and lots of other components. o-typography is an example of a low level component.
+Some components are low level &#8212; fundamental building blocks used to build many other components and end products. [o-typography](https://registry.origami.ft.com/components/o-typography) is an example of a low level component.
 
-Other components are high level &#8212; complex components which are used in end products and rarely used to build other components. o-table is an example of a high level component.
+Other components are high level &#8212; complex components which are used in end products and rarely used to build other components. [o-table](https://registry.origami.ft.com/components/o-table) is an example of a high level component.
 
 As low level components are used to build other components there are more projects between them and the end product. To make major changes to a low level component means upgrading each project in-between step by step.
 
 <figure>
 	<img alt="" src="/assets/images/2019-10-31-major-cascade/all-graph.svg?source=origami" />
 	<figcaption class="o-typography-caption">
-        An example graph of product dependencies. Low level components o-colors and o-typography branch out; they are included in final products directly and indirectly via other components including o-table.
+        An example graph of product dependencies. Low level components o-colors and o-typography branch out; they are included in final products directly and indirectly via other components including o-table. In reality the graph is much more complex because many projects comprise "ft.com".
 	</figcaption>
 </figure>
 
@@ -35,19 +35,27 @@ As low level components are used to build other components there are more projec
 <figure>
 	<img alt="" src="/assets/images/2019-10-31-major-cascade/table-graph.svg?source=origami" />
 	<figcaption class="o-typography-caption">
-        Dependencies on o-table, a high level dependency, are a small portion of the overall graph. If a major version of o-table is released the end projects may be updated immediately.
+        Dependencies on o-table, a high level dependency, are a small portion of the overall graph. If a major version of o-table is released the end products may be updated immediately.
 	</figcaption>
 </figure>
 
 ## Typography
 
-o-typography is used by every group in Product & Tech in some way: from ft.com, through internal tools, to specialist titles. o-typography includes fundamental Financial Times typographical styles including our fonts and font scale, but also includes more specific styles to present ft.com articles. This creates a huge dependency graph and makes releasing major changes tricky -- it requires coordination between many groups and impacts over 167 projects across the Financial Times, which may or may not be active.
+As a low level component [o-typography](https://registry.origami.ft.com/components/o-typography) is used by every group in Product & Tech in some way. It includes fundamental typographical styles including fonts, font scales, and tools to customise them for more unique projects. But it also includes more specific styles to present Financial Times articles. This creates a huge dependency graph and makes releasing major changes tricky -- it requires coordination between many groups and impacts over 167 projects across the Financial Times Group.
 
-If we want to make major changes to our article typography across ft.com, the app, interactive graphic pages, amp pages, and our content management systems that should not impact our internal tooling. So as part of the major release of o-typography we're splitting specific styles used by ft.com and other "master brand" products from o-typography into two new components. These are o-editorial-typography and o-editorial-layout. These smaller, simpler, higher level components means:
+If we want to make major changes to our article typography across "master brand" projects such as those which power ft.com, amp pages, interactive graphic pages, the app, and our content management systems that should not impact other teams -- like Operations and Reliability, Internal Products, Specialist Titles (or this blog).
 
-- Faster iteration on article typographical styles.
+So we're splitting specific styles used by ft.com and other "master brand" products from o-typography into two new components:
+
+- **o-typography (updated)**: Fundamental typographic tooling and user interface styles.
+- **o-editorial-typography (new)**: Editorial styles including headlines, tags, and bylines.
+- **o-editorial-layout (new)**: Styles to layout editorial typography within an article.
+
+Splitting o-typography into smaller, simpler, higher level components means:
+
+- Faster iteration of editorial styles.
 - Faster websites (through smaller CSS bundle sizes).
-- Smaller migration paths when major releases are made.
+- Smaller migration paths when major changes are made, impacting fewer teams.
 - A reduced learning curve for developers and designers.
 
 Along with the Product Design team we also audited existing users of editorial styles. Where we discovered design divergence between projects we merged an updated version back into o-editorial-typography to improve design consistency and quality when moving between Financial Times experiences.
@@ -73,4 +81,7 @@ Along with the Product Design team we also audited existing users of editorial s
 	</figcaption>
 </figure>
 
-With editorial styles moved, we made a host of other changes to simplify o-typography for developers. See more details in the [o-typography v6 proposal](https://github.com/Financial-Times/o-typography/issues).
+This process of design rationalisation fed into Origami components and our new [Sketch UI Kit](https://medium.com/ft-product-technology/ft-design-basics-1-why-we-finally-built-a-ui-kit-850e98b127bf), to help the design team prototype new experiences more efficiently without recreating existing elements.
+
+With editorial styles moved, we also made a host of other changes to simplify o-typography for developers. See more details in the [o-typography v6 proposal](https://github.com/Financial-Times/o-typography/issues/203).
+
