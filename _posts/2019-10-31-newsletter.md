@@ -53,7 +53,7 @@ If your team maintains an Origami compatible component which doesn't already use
 
 Our special thanks this month goes to everyone who has contributed to the design basics working group. Thanks Luke Griffiths, Caroline Nevitt, Mark Limb, Simon Coxon, and Jessica Engerer! They helped rationalise inconsistent design in typography and buttons for the upcoming [major releases](/2019/10/31/major-cascade/) discussed above, and have created a Sketch UI Kit of Origami components. Learn more about the new [UI Kit in Luke Griffiths' blog post](https://medium.com/ft-product-technology/ft-design-basics-1-why-we-finally-built-a-ui-kit-850e98b127bf).
 
-## Broader update
+## Broader Update
 
 A digest list of other things that have happened since our last update.
 
