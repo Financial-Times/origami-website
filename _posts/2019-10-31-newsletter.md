@@ -12,7 +12,7 @@ tags:
 	</strong>
 </abbr> {{page.description}}
 
-## Top things
+## Top Things
 
 These are some of the bigger things we've done over the last three months since our previous newsletter...
 
