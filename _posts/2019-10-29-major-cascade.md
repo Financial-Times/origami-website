@@ -85,3 +85,34 @@ This process of design rationalisation fed into Origami components and our new [
 
 With editorial styles moved, we also made a host of other changes to simplify o-typography for developers. See more details in the [o-typography v6 proposal](https://github.com/Financial-Times/o-typography/issues/203).
 
+## Buttons
+
+[o-buttons](https://registry.origami.ft.com/components/o-buttons) is another low level component, with broad use across Financial Times Groups. We're making changes to simplify the developer interface, encourage style reuse for faster websites, and make custom buttons created by projects consistent with default buttons.
+
+<figure>
+	<img alt="" src="/assets/images/2019-10-31-major-cascade/buttons-before.png?source=origami" />
+	<figcaption class="o-typography-caption">
+        o-buttons currently. In the right column "primary" buttons of different themes. In the left column "secondary" buttons. The rows show the different states of each button, for example when hovered, focused with the keyboard, or pressed. Each button has its own quirks, especially the final two rows.
+	</figcaption>
+</figure>
+
+
+<figure>
+	<img alt="" src="/assets/images/2019-10-31-major-cascade/buttons-after.png?source=origami" />
+	<figcaption class="o-typography-caption">
+        o-buttons after. There is consistency between "primary" and "secondary" buttons, improved accessibility checks, and better contrast between each button state.
+	</figcaption>
+</figure>
+
+
+We worked with the design team to generate custom buttons in the same way as default Origami buttons. This simplifies maintenance, improves design consistency, and was added to the [Sketch UI Kit](https://medium.com/ft-product-technology/ft-design-basics-1-why-we-finally-built-a-ui-kit-850e98b127bf) to support future design work.
+
+The colours for each state are automatically chosen based on design rules and [WCAG 2.1](https://www.w3.org/TR/WCAG21/) recommendations for colour contrast, to maintain our [commitments to accessibility](https://www.ft.com/accessibility) and <abbr title="Digital Accessibility Centre">DAC</abbr> accreditation.
+
+We also simplified the developer interface for new button themes, which may be created by specifying a single colour. Developers can find out more about upcoming changes in the [pre-release migration guide](https://github.com/Financial-Times/o-buttons/blob/d5d4e15e060aa897e3c870f717840ce1b48b4828/MIGRATION.md).
+
+## Colours
+
+[o-colors](https://registry.origami.ft.com/components/o-colors) (yep, we use [British English for documentation and American English in our code](https://origami.ft.com/docs/principles/tone-and-language/#use-british-english-for-documentation)), one of our lowest level components, also has some updates.
+
+These are mostly developer focused updates but also remove technical debt from our introduction of [component brands](https://origami.ft.com/docs/components/branding/) (master, internal, and whitelabel); reduce the CSS bundle size for some users (for faster websites); and make changes to reduce the chance that visual errors make it to production. See more details in the [o-colors v6 proposal](https://github.com/Financial-Times/o-colors/issues/198).
