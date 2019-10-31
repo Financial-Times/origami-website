@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "13.4.0"
+		"version": "13.4.1"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -81,7 +81,7 @@
 	},
 	"o-comments": {
 		"name": "o-comments",
-		"version": "5.1.1"
+		"version": "6.0.1"
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
@@ -221,7 +221,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "3.2.0"
+		"version": "3.2.1"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
@@ -337,7 +337,7 @@
 	},
 	"o-tracking": {
 		"name": "o-tracking",
-		"version": "1.7.2"
+		"version": "1.7.3"
 	},
 	"o-tweet": {
 		"name": "o-tweet",
