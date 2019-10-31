@@ -19,21 +19,21 @@ Other components are high level &#8212; complex components which are used in end
 As low level components are used to build other components there are more projects between them and the end product. To make major changes to a low level component means upgrading each project in-between step by step.
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/all-graph.svg?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/all-graph.svg?source=origami" />
 	<figcaption class="o-typography-caption">
         An example graph of product dependencies. Low level components o-colors and o-typography branch out; they are included in final products directly and indirectly via other components including o-table. In reality the graph is much more complex because many projects comprise "ft.com".
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/typography-graph.svg?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/typography-graph.svg?source=origami" />
 	<figcaption class="o-typography-caption">
         Dependencies on o-typography, a low level dependency, are a large portion of the overall graph. Components in-between including o-buttons and o-table must be upgraded before the end products can be upgraded.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/table-graph.svg?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/table-graph.svg?source=origami" />
 	<figcaption class="o-typography-caption">
         Dependencies on o-table, a high level dependency, are a small portion of the overall graph. If a major version of o-table is released the end products may be updated immediately.
 	</figcaption>
@@ -61,21 +61,21 @@ Splitting o-typography into smaller, simpler, higher level components means:
 Along with the Product Design team we also audited existing users of editorial styles. Where we discovered design divergence between projects we merged an updated version back into o-editorial-typography to improve design consistency and quality when moving between Financial Times experiences.
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/blockquote-1.png?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-1.png?source=origami" />
 	<figcaption class="o-typography-caption">
         Unique blockquote-like style one.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/blockquote-2.png?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-2.png?source=origami" />
 	<figcaption class="o-typography-caption">
         Unique blockquote-like style two.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/blockquote-3.png?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-3.png?source=origami" />
 	<figcaption class="o-typography-caption">
         Unique blockquote-like style three.
 	</figcaption>
@@ -90,7 +90,7 @@ With editorial styles moved, we also made a host of other changes to simplify o-
 [o-buttons](https://registry.origami.ft.com/components/o-buttons) is another low level component, with broad use across Financial Times Groups. We're making changes to simplify the developer interface, encourage style reuse for faster websites, and make custom buttons created by projects consistent with default buttons.
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/buttons-before.png?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/buttons-before.png?source=origami" />
 	<figcaption class="o-typography-caption">
         o-buttons currently. In the right column "primary" buttons of different themes. In the left column "secondary" buttons. The rows show the different states of each button, for example when hovered, focused with the keyboard, or pressed. Each button has its own quirks, especially the final two rows.
 	</figcaption>
@@ -98,7 +98,7 @@ With editorial styles moved, we also made a host of other changes to simplify o-
 
 
 <figure>
-	<img alt="" src="/assets/images/2019-10-31-major-cascade/buttons-after.png?source=origami" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/buttons-after.png?source=origami" />
 	<figcaption class="o-typography-caption">
         o-buttons after. There is consistency between "primary" and "secondary" buttons, improved accessibility checks, and better contrast between each button state.
 	</figcaption>
