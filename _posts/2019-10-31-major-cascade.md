@@ -1,6 +1,7 @@
 ---
 title: Major Cascade 2019
-description: We are working on a major release of low level components like o-typography, o-buttons, and o-colors, which will also mean a major release of other components which depend on them. What are we up to? And why?
+description: We are working on a major release of low level components like o-typography. In this post we'll discuss what improvements are being made and how they further our aims to help bring design consistency and reduce the time teams spend repeating work.
+
 author: Lee Moody
 ---
 
@@ -19,21 +20,21 @@ Other components are high level &#8212; complex components which are used in end
 As low level components are used to build other components there are more projects between them and the end product. To make major changes to a low level component means upgrading each project in-between step by step.
 
 <figure>
-	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/all-graph.svg?source=origami" />
+	<img alt="" src="/assets/images/2019-10-31-major-cascade/all-graph.svg" />
 	<figcaption class="o-typography-caption">
         An example graph of product dependencies. Low level components o-colors and o-typography branch out; they are included in final products directly and indirectly via other components including o-table. In reality the graph is much more complex because many projects comprise "ft.com".
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/typography-graph.svg?source=origami" />
+	<img alt="" src="/assets/images/2019-10-31-major-cascade/typography-graph.svg" />
 	<figcaption class="o-typography-caption">
         Dependencies on o-typography, a low level dependency, are a large portion of the overall graph. Components in-between including o-buttons and o-table must be upgraded before the end products can be upgraded.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/table-graph.svg?source=origami" />
+	<img alt="" src="/assets/images/2019-10-31-major-cascade/table-graph.svg" />
 	<figcaption class="o-typography-caption">
         Dependencies on o-table, a high level dependency, are a small portion of the overall graph. If a major version of o-table is released the end products may be updated immediately.
 	</figcaption>

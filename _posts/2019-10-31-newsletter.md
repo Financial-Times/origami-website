@@ -27,7 +27,7 @@ We've been working on upgrades to fundamental Origami components like o-typograp
 - Maintenance and integration efficiency with fewer developer interfaces.
 - Removing technical debt.
 
-Find out [more about the changes we're making and why](/2019/10/31/major-cascade/) in our blog post.
+Find out [more about the changes we're making and why](/blog/2019/10/31/major-cascade/) in our blog post.
 
 We will start to release betas for these changes next week, with an announcement and full releases following soon after. Projects which depend on Origami components will need developer input to upgrade. We’ve discussed our plans with groups across the Financial Times and are planning a time to support Customer Products directly with their more complex upgrade path. If you have any questions, concerns, or feedback please reach out to the team — we’re here to help. 😊
 
@@ -40,7 +40,7 @@ With this new found power we made a little Origami Fox friend. Our little Origam
 <figure>
 	<img
 		alt=""
-		src="/assets/images/2019-10-31-newsletter/fox-friend.png?source=origami"
+		src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-newsletter/fox-friend.png?source=origami&quality=highest"
 	/>
 	<figcaption class="o-typography-caption">
 		A comment from Fox Friend on an o-comments PR. The comments team have done a great job at reducing the bundle size of o-comments by over 120kb without compression.
@@ -51,7 +51,7 @@ If your team maintains an Origami compatible component which doesn't already use
 
 ## Special Thanks
 
-Our special thanks this month goes to everyone who has contributed to the design basics working group. Thanks Luke Griffiths, Caroline Nevitt, Mark Limb, Simon Coxon, and Jessica Engerer! They helped rationalise inconsistent design in typography and buttons for the upcoming [major releases](/2019/10/31/major-cascade/) discussed above, and have created a Sketch UI Kit of Origami components. Learn more about the new [UI Kit in Luke Griffiths' blog post](https://medium.com/ft-product-technology/ft-design-basics-1-why-we-finally-built-a-ui-kit-850e98b127bf).
+Our special thanks this month goes to everyone who has contributed to the design basics working group. Thanks Luke Griffiths, Caroline Nevitt, Mark Limb, Simon Coxon, and Jessica Engerer! They helped rationalise inconsistent design in typography and buttons for the upcoming [major releases](/blog/2019/10/31/major-cascade/) discussed above, and have created a Sketch UI Kit of Origami components. Learn more about the new [UI Kit in Luke Griffiths' blog post](https://medium.com/ft-product-technology/ft-design-basics-1-why-we-finally-built-a-ui-kit-850e98b127bf).
 
 ## Broader Update
 
