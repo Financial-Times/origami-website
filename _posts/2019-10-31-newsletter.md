@@ -43,7 +43,7 @@ With this new found power we made a little Origami Fox friend. Our little Origam
 		src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-newsletter/fox-friend.png?source=origami&quality=highest"
 	/>
 	<figcaption class="o-typography-caption">
-		A comment from Fox Friend on an o-comments PR. The comments team have done a great job at reducing the bundle size of o-comments by over 120kb without compression.
+		A comment from Fox Friend on an o-comments pull request (a request to make changes to its codebase). The comments team have done a great job at reducing the bundle size of o-comments by over 130kb without compression.
 	</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ Our special thanks this month goes to everyone who has contributed to the design
 
 ## Broader Update
 
-A digest list of other things that have happened since our last update.
+A digest list of other things that have happened since our last update:
 
 - MINOR: [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools/) now outputs more useful Sass errors. It also has updated boilerplate to create new components with our latest continuous integration tools.
 - MINOR: [o-banner](https://github.com/Financial-Times/o-banner) has a new `appendTo` option so imperatively made banners may be inserted into the DOM at a point which is most appropriate for keyboard users.
