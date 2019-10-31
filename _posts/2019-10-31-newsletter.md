@@ -20,7 +20,7 @@ These are some of the bigger things we've done over the last three months since 
 
 We've been working on upgrades to fundamental Origami components like o-typography, o-colors, and o-buttons. Releasing a new version of these components necessitates a major release of other components too. So we've taken the opportunity to introduce recent proposals across all our 52 components. The upgrades focus on:
 
-- Improving our ability iterate on and share editorial styles across projects.
+- Improving our ability to iterate on and share editorial styles across projects.
 - Improving our ability to customise Origami for unique products.
 - Design consistency.
 - Smaller bundle sizes for quicker sites.
