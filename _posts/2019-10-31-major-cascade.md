@@ -44,7 +44,7 @@ As low level components are used to build other components there are more projec
 
 As a low level component [o-typography](https://registry.origami.ft.com/components/o-typography) is used by every group in Product & Tech in some way. It includes fundamental typographical styles including fonts, font scales, and tools to customise them for more unique projects. But it also includes more specific styles to present Financial Times articles. This creates a huge dependency graph and makes releasing major changes tricky &#8212; it requires coordination between many groups and impacts over 167 projects across the Financial Times Group.
 
-If we want to make major changes to our article typography across "master brand" projects such as those which power ft.com, amp pages, interactive graphic pages, the app, and our content management systems that should not impact other teams &#8212; like Operations and Reliability, Internal Products, Specialist Titles (or this blog).
+If we want to make major changes to our article typography across "master brand" projects such as those which power ft.com, amp pages, interactive graphic pages, the app, and our content management systems, that should not impact other teams &#8212; like Operations and Reliability, Internal Products, Specialist Titles (or this blog).
 
 So we're splitting specific styles used by ft.com and other "master brand" products from o-typography into two new components:
 
