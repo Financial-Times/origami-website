@@ -16,7 +16,7 @@ This tutorial assumes that:
 - You have not implemented a build step
 - You are using a UNIX-like OS with a bash shell
 - You are familiar with JavaScript, and <abbr title="Sassy Cascading Style Sheets"><a href="https://sass-lang.com/" class="o-typography-link--external">SCSS</a></abbr>
-- You have a basic understanding of package managers (<a href="https://bower.io/" class="o-typography-link--external">Bower</a>), <abbr title="Node Package Manager"><a href="https://www.npmjs.com/" class="o-typography-link--external">npm</a></abbr>)
+- You have a basic understanding of package managers (<a href="https://bower.io/" class="o-typography-link--external">Bower</a>, <abbr title="Node Package Manager"><a href="https://www.npmjs.com/" class="o-typography-link--external">NPM</a></abbr>)
 
 ## Setting up your sandbox
 We will need a folder structure for our page. So let's begin by creating a new directory to work in.
@@ -94,9 +94,11 @@ Let's head over to <a href="https://registry.origami.ft.com/components/o-table#d
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/spec/v1/components) are available for installation via Bower. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
+All [Origami-compliant components](/spec/v1/components) are available for installation via Bower or NPM. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
 
-This means that, in order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
+For this tutorial we will use Bower instead of NPM. Using bower ensures a flat dependency tree by default, so we don't accidentally include multiple conflicting versions of a component (there is a separate [Bower to NPM tutorial](https://origami.ft.com/docs/tutorials/bower-to-npm/), which builds on this tutorial).
+
+In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 
 <pre><code class="o-syntax-highlight--json">{
 	"registry": {
@@ -196,45 +198,60 @@ You can leave that running in the background, and open your `index.html` in a br
 
 Now we can begin styling our components. For this, all of our work is going to happen in our `src/main.scss` file.
 
-All Origami components have a [silent mode](/docs/components/silent-mode/). When silent mode is 'on' (or `true`), the components' <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> will not be compiled — instead, only its mixins and functions will be available. In this tutorial, we are going to use a mix of 'on' and 'off' silent modes for components.
+### Output All Component Styles
 
-### Silent Mode: Off
+To include the components Sass use `@import`. For example this makes all `o-grid` Sass mixins, functions, and variables available:
+<pre><code class="o-syntax-highlight--scss">@import 'o-grid/main';</code></pre>
 
-Let's start off with <a href="https://registry.origami.ft.com/components/o-grid">o-grid</a>. It is likely we'll want most of the features that o-grid provides, so we'll include it with silent mode switched off (or `false`). For now, all we need in our `main.scss` is:
+By default Origami components do not output any CSS when you import them. This is so your project can granularly include only the CSS it needs from each component. To output a components CSS use its mixins, which are documented in the component [README](https://registry.origami.ft.com/components/o-grid/readme#sass) and [Sassdoc](https://registry.origami.ft.com/components/o-grid/sassdoc). Most components include a primary mixin which matches the component name. These include all CSS by default and accept a map of options to include CSS for specific features. For the `o-grid` component this is a mixin named `oGrid`:
 
-<pre><code class="o-syntax-highlight--scss">$o-grid-is-silent: false;
+<pre><code class="o-syntax-highlight--scss">@import 'o-grid/main';
+// output all o-grid css
+@include oGrid();</code></pre>
+
+<aside>
+All Origami components have a <a href="/docs/components/silent-mode/">silent mode</a> variable which, when set to false, also outputs all of the CSS for a component.
+
+<pre><code class="o-syntax-highlight--scss">// deprecated: output all o-grid css using the silent mode variable
+$o-grid-is-silent: false;
 @import 'o-grid/main';</code></pre>
 
-If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning. Since we've requested all of the `o-grid` styling, the styling applies to those classes as soon as we include the component's <abbr title="Sassy Cascading Style Sheets">SCSS</abbr>.
+You may see this in existing projects but this method of including CSS is deprecated. We recommend using the component's mixins instead.
+</aside>
+
+If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning.
 
 We added an <a href="https://registry.origami.ft.com/components/o-typography">o-typography</a> class to our inner div at the beginning of the tutorial, as well. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
 Look at your `index.html` in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
 
-### Silent Mode: On
-
-We'll be using <a href="https://registry.origami.ft.com/components/o-colors">o-colors</a>, which has a wide variety of colours in its palette. As with every other component, the `o-colors` silent mode variable is set to `true` by default to prevent outputting more <abbr title="Cascading Style Sheets">CSS</abbr> than we really need. And since we don't need all of the colours in the palette for this page, we will leave the silent mode for the component as is.
-
-o-colors comes  with predefined use cases. These use cases are not a valid hex code but they refer to the name of a colour within our brand palette. This means we'll need to use two mixins to get the right colour for our page:
-
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
-
-body {
-	background-color: oColorsGetPaletteColor(oColorsGetUseCase(page, background));
-}</code></pre>
-
-As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
+### Output Component Styles Granularly
 
 We're going to get a little more specific with <a href="https://registry.origami.ft.com/components/o-table">o-table</a> since we're after a particular variation.
 
-We only want the base styling of a table, and some stripes to tell each row apart:
+We only want the base styling of a table, and some stripes to tell each row apart, so pass an options map to the `oTable` mixin:
 
 <pre><code class="o-syntax-highlight--scss">@import 'o-table/main';
 @include oTable($opts: ('stripes'));</code></pre>
 
-With this, we've added all of the styling we needed for our page, so let's take another look at our `index.html` and admire our handywork.
+Other options are [documented in the README](https://registry.origami.ft.com/components/o-table/readme#sass).
+
+### Use Component Sass Functions
+
+We'll be using <a href="https://registry.origami.ft.com/components/o-colors">o-colors</a>, which has a wide variety of colours in its palette. Since we don't need all of the colours in the palette for this page, we will not include the primary mixin `oColors`. Instead we will use some Sass functions `o-colors` provides.
+
+o-colors defines [colours by name](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours), e.g. "crimson", and [colours by usecase](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours) e.g. "page background". We can use the Sass functions `oColorsByName` and `oColorsByUsecase` to get a colours hex value from our palette.
+
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
+
+body {
+	background-color: oColorsByUsecase('page', 'background');
+}</code></pre>
+
+As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
 
 <aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external">on CodePen</a>.</aside>
+
 
 ### Selecting A Brand
 
