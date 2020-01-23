@@ -10,7 +10,7 @@ redirect_from:
 # Navigation config
 nav_display: true
 nav_label: Manifest
-nav_heading_selector: h2, h3
+nav_heading_selector: h1, h2, h3
 nav_order: 25
 ---
 
