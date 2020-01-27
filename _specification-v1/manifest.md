@@ -207,7 +207,7 @@ The object **requires** two properties:
 <pre><code class="o-syntax-highlight--json">{
 	"supportContact": {
 		"email": "origami.support@ft.com",
-		"slack": "financialtimes/ft-origami"
+		"slack": "financialtimes/origami-support"
 	}
 }</code></pre>
 
@@ -394,7 +394,7 @@ This example joins all of the property snippets outlined above:
 	"supportStatus": "active",
 	"supportContact": {
 			"email": "origami.support@ft.com",
-			"slack": "financialtimes/ft-origami"
+			"slack": "financialtimes/origami-support"
 		}
 	"browserFeatures": {
 		"required": [
