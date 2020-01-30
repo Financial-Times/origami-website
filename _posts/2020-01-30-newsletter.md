@@ -39,7 +39,7 @@ We'll be setting up invites soon and hope to see some of you there! Keep an eye 
 
 ### Major Cascade
 
-At the end of last year a lot of Origami's time was spent working in Customer Products on the Major Cascade. This is where Origami release new major versions for each of our components, and it has an impact on teams using these components (for those interested in what a Major Cascade is and why we were doing it, [Lee wrote a blog post](http://localhost:4000/blog/2019/10/31/major-cascade/)).
+At the end of last year a lot of Origami's time was spent working in Customer Products on the Major Cascade. This is where Origami release new major versions for each of our components, and it has an impact on teams using these components (for those interested in what a Major Cascade is and why we were doing it, [Lee wrote a blog post](https://origami.ft.com/blog/2019/10/31/major-cascade/)).
 
 Now that the work to migrate Customer Products is largely finished, we're available to help out in other areas of Product and Tech for anyone who needs it. If you're having difficulty migrating, then please give us a shout and we'll arrange something.
 
