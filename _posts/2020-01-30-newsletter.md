@@ -46,7 +46,11 @@ Now that the work to migrate Customer Products is largely finished, we're availa
 
 ## Special thanks
 
-This month’s special thanks go to everyone from Customer Products who helped with the Major Cascade, particularly Edd Sowden who coordinated engineering effort, and Allison Bayer who helped with delivery. It was nice to work more closely with you all, and although it was a bit of a slog we got there in the end!
+We have a few people to thank, especially as we didn't send a December newsletter!
+
+So special thanks go to everyone from Customer Products who helped with the Major Cascade, particularly Edd Sowden who coordinated engineering effort, and Allison Bayer who helped with delivery. It was nice to work more closely with you all, and although it was a bit of a slog we got there in the end!
+
+We'd also like to say thanks to everyone who's attended or is attending an Introduction to Origami session. Your feedback is really useful and we're able to keep improving it thanks to your input!
 
 
 ## Broader update
