@@ -30,7 +30,9 @@ We've reorganised our Slack channels in an attempt to be more open and transpare
 
 The Origami Open Meeting has been around since the team originally formed (I couldn't find the exact date for the first one, but it was in 2013). One of its original purposes was to discuss Origami's progress with people from other areas of Product and Tech, but it has slowly evolved into more of a support forum.
 
-We've been reassessing this meeting and have made some changes. Introducing Origami Office Hours! We'll be hosting an hour-long session weekly but from now on it will be in the 3rd Floor breakout area. The agenda will be public and editable, and the session will be split in two: the first part will be dedicated to helping people who prefer to speak to the team at a set time, the second part will be a backlog grooming session for us which anyone is free to attend and contribute to.
+We've been reassessing this meeting and have made some changes. Introducing Origami Office Hours! We'll be hosting an hour-long session weekly but from now on it will be in the 3rd Floor breakout area of Bracken House. We'll have a hangout link for our colleagues in Sofia and will make sure the meeting is accessible to people who prefer to dial in.
+
+The agenda will be public and editable, and the session will be split in two: the first part will be dedicated to helping people who prefer to speak to the team at a set time, the second part will be a backlog grooming session for us which anyone is free to attend and contribute to.
 
 We'll be setting up invites soon and hope to see some of you there! Keep an eye on Slack and your calendars (also feel free to respond to this email and ask to be included).
 
