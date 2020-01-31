@@ -1,6 +1,6 @@
 ---
 title: Origami Newsletter, January 2020
-description: This issue features some changes to our Slack channels, a replacement for the Origami Open Meeting, and an update on the Major Cascade.
+description: This issue features some changes to our Slack channels, a replacement for the Origami Open Meeting, an update on the Major Cascade, and a number of polyfill.io improvements including a new nodeJS library.
 author: Rowan Manning
 tags:
   - Newsletter
@@ -15,7 +15,7 @@ tags:
 
 ## Top three things
 
-These are some of the bigger things we've worked on or released over the last month.
+These are some of the bigger things we've worked on since our last update at the end of November.
 
 ### Slack Channels
 
@@ -55,10 +55,11 @@ We'd also like to say thanks to everyone who's attended or is attending an Intro
 
 ## Broader update
 
-A digest list of other things that have happened over the last month:
+A digest list of other things that have happened:
 
-  - TODO
-
-
+  - NEW: [polyfill-library-node](https://github.com/Financial-Times/polyfill-library-node). An FT alternative to core-js for nodeJS environments. Loads all ECMAScript-262 (excluding annex-B) polyfills into nodeJS.
+  - MAJOR: [polyfill-service-url-builder](https://github.com/Financial-Times/polyfill-service-url-builder) now works with browserslist configuration.
+  - MINOR: [polyfill.io](https://polyfill.io/) polyfill targeting was updated for Edge and other browsers so our users can all expect slightly faster load times.
+  - MAJOR: All Origami maintained components have been updated as part of the [major cascade](https://origami.ft.com/blog/2019/10/31/major-cascade/)), with some follow up releases to fix bugs or improve documentation &#8212; thanks to everyone who contributed.
 
 *[TL;DR]: too long; didn't read
