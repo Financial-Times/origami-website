@@ -85,7 +85,7 @@
 	},
 	"o-comments": {
 		"name": "o-comments",
-		"version": "7.3.0"
+		"version": "7.4.1"
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.1.8"
+		"version": "8.1.11"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -221,7 +221,7 @@
 	},
 	"o-icons": {
 		"name": "o-icons",
-		"version": "6.0.0"
+		"version": "6.0.2"
 	},
 	"o-labels": {
 		"name": "o-labels",
@@ -233,7 +233,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "4.0.4"
+		"version": "4.0.5"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
@@ -253,7 +253,7 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "4.0.1"
+		"version": "4.0.2"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
@@ -269,7 +269,7 @@
 	},
 	"o-permutive": {
 		"name": "o-permutive",
-		"version": "1.0.7"
+		"version": "1.0.8"
 	},
 	"n-profile-ui": {
 		"name": "n-profile-ui",
@@ -317,7 +317,7 @@
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "8.0.0"
+		"version": "8.0.1"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -373,7 +373,7 @@
 	},
 	"o-video": {
 		"name": "o-video",
-		"version": "6.0.1"
+		"version": "6.0.2"
 	},
 	"o-viewport": {
 		"name": "o-viewport",
