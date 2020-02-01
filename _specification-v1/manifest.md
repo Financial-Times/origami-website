@@ -309,7 +309,7 @@ The object accepts the following properties:
 - `sass`: type `String`. Describes the path to the Sass file to compile.
 - `js`: type `String`. Describes the JS file to build.
 - `data`: type `Object`. Describes data to populate to the mustache template with.
-- `documentClasses`: type `Object`. Names CSS classes to set on the `html` tag.
+- `documentClasses`: type `String`. Names CSS classes to set on the `html` tag.
 - `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 
 <pre><code class="o-syntax-highlight--json">{
@@ -351,7 +351,7 @@ Each object in the list accepts the following properties:
 - `js`: type `String`. Describes the path to the demo-specific JS file to build.
 - `data`: type `Object`. Describes to populate to the component-specific mustache template with
 - `brands`: type `Array`. For components which support [brands](/docs/components/branding/), this describes one or more brands which the demo applies to ("master", "internal, "whitelabel")
-- `documentClasses`: type `Object`. Names CSS classes to set on the component-specific `html` tag
+- `documentClasses`: type `String`. Names CSS classes to set on the component-specific `html` tag
 - `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 - `hidden`: type `Boolean`. Whether the demo should be hidden in the Registry
 - `display_html`: type `Boolean`. Whether the demo should have a HTML tab in the Registry (defaults to true)
