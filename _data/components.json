@@ -129,7 +129,7 @@
 	},
 	"o-expander": {
 		"name": "o-expander",
-		"version": "5.0.2"
+		"version": "5.0.3"
 	},
 	"o-fetch-jsonp": {
 		"name": "o-fetch-jsonp",
@@ -233,7 +233,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "4.0.5"
+		"version": "4.0.7"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
