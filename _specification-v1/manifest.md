@@ -111,7 +111,7 @@ For components which support [brands](/docs/components/branding/), this **must**
 	</tr>
 </table>
 
-Expects keywords related to the component to help discover it in the registry. These **should** be stored as an array.
+Expects keywords related to the component to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
 
 <pre><code class="o-syntax-highlight--json">{
 	"keywords": ["table", "rows", "columns"]
