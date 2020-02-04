@@ -47,7 +47,7 @@ nav_order: 25
 	</tr>
 	<tr>
 		<th scope="row" role="rowheader">Required</th>
-		<td><code>true/code></td>
+		<td><code>true</code></td>
 	</tr>
 </table>
 
@@ -126,7 +126,7 @@ Expects keywords related to the project to help discover it in the registry. The
 	</tr>
 	<tr>
 		<th scope="row" role="rowheader">Required</th>
-		<td><code>true*</code></td>
+		<td><code>true</code>*</td>
 	</tr>
 </table>
 
