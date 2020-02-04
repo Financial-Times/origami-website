@@ -18,7 +18,7 @@ The actual documentation for Origami lives in the [`_components`](_components), 
 
 ### Specification pages
 
-The formal Origami specification lives in the [`_specification` folder](_specification).
+The formal Origami specification lives in the [`_specification-v1` folder](_specification-v1).
 
 ### Blog posts
 
