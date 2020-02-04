@@ -303,17 +303,17 @@ Is the URL on which the service is provided.
 </table>
 
 Describes default options to be applied to all demos.
+
 The object accepts the following properties:
 
-**required** (when setting demo defaults):
 - `template`: type `String`. Describes the path to the mustache template to render
-
-**optional**
 - `sass`: type `String`. Describes the path to the Sass file to compile.
 - `js`: type `String`. Describes the JS file to build.
 - `data`: type `Object`. Describes data to populate to the mustache template with.
 - `documentClasses`: type `String`. Names CSS classes to set on the `html` tag.
 - `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
+
+All of these properties are **optional**.
 
 <pre><code class="o-syntax-highlight--json">{
 	"demosDefaults": {
