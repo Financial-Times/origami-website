@@ -126,9 +126,11 @@ Expects keywords related to the component to help discover it in the registry. T
 	</tr>
 	<tr>
 		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
+		<td><code>true*</code></td>
 	</tr>
 </table>
+
+*Applies to `{ "origamiType": "module" }` only.
 
 Describes the organisational category the component belongs to. **Must** be one of:
 - `components`
