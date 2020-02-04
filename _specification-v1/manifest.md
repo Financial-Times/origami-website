@@ -43,7 +43,7 @@ nav_order: 25
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code> or <code>null</null></td>
+		<td><code>String</code> or <code>null</code></td>
 	</tr>
 	<tr>
 		<th scope="row" role="rowheader">Required</th>
