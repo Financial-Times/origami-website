@@ -16,7 +16,7 @@ nav_order: 25
 
 # {{page.title}}
 
-`origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami component.
+`origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami project.
 
 ## Properties
 
@@ -33,7 +33,7 @@ nav_order: 25
 	</tr>
 </table>
 
-**Should** be a concise description of the purpose of the component.
+**Should** be a concise description of the purpose of the project.
 <pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables"
 }</code></pre>
@@ -51,11 +51,11 @@ nav_order: 25
 	</tr>
 </table>
 
-Defines the type of Origami component that the manifest belongs to. **Must** be set to one of:
+Defines the type of Origami project that the manifest belongs to. **Must** be set to one of:
 - `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
 - `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
-- `null`: An Origami component that does not fit any of the named categories
+- `null`: An Origami project that does not fit any of the named categories
 
 <aside>
 	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
@@ -78,7 +78,7 @@ Defines the type of Origami component that the manifest belongs to. **Must** be 
 	</tr>
 </table>
 
-**Must** be set to `1`. It is the version of Origami to which the component conforms.
+**Must** be set to `1`. It is the version of Origami to which the project conforms.
 <pre><code class="o-syntax-highlight--json">{
 	"origamiVersion": 1
 }</code></pre>
@@ -111,7 +111,7 @@ For components which support [brands](/docs/components/branding/), this **must**
 	</tr>
 </table>
 
-Expects keywords related to the component to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
+Expects keywords related to the project to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
 
 <pre><code class="o-syntax-highlight--json">{
 	"keywords": ["table", "rows", "columns"]
@@ -153,7 +153,7 @@ Describes the organisational category the component belongs to. **Must** be one 
 		<td><code>true</code></td>
 	</tr>
 </table>
-Describes where a user can go for support on this component. **Should** be the URL of the component's GitHub issues.
+Describes where a user can go for support on this project. **Should** be the URL of the project's GitHub issues.
 
 <pre><code class="o-syntax-highlight--json">{
 	"support": "https://github.com/Financial-Times/o-table/issues"
@@ -172,12 +172,12 @@ Describes where a user can go for support on this component. **Should** be the U
 	</tr>
 </table>
 
-Describes the support status of the component's major version. **Must** be one of:
+Describes the support status of the project's major version. **Must** be one of:
 - `active`: feature development ongoing, bug reports will be gratefully received and acted upon promptly
-- `maintained`: not actively developed but reproducible bugs will be fixed promptly and work done where necessary to maintain compatibility with browsers and other components
+- `maintained`: not actively developed but reproducible bugs will be fixed promptly and work done where necessary to maintain compatibility with platforms and other projects
 - `deprecated`: not actively developed, not recommended for new projects, only the most disabling bugs will be addressed and only when time allows, but existing implementations may still work
 - `dead`: decommissioned entirely, will receive no support
-- `experimental`: the component is not ready for production use
+- `experimental`: the project is not ready for production use
 
 <pre><code class="o-syntax-highlight--json">{
 	"supportStatus": "active"
@@ -196,12 +196,12 @@ Describes the support status of the component's major version. **Must** be one o
 	</tr>
 </table>
 
-Describes contact details a user can choose from to find support for this component. The owner(s) identified in the support options commit to:
+Describes contact details a user can choose from to find support for this project. The owner(s) identified in the support options commit to:
 - reviewing code prior to release
 - signing off on deployments
 - publishing and maintaining up to date releases and documentation
-- decommissioning the component when appropriate
-- provide support to the users of the component
+- decommissioning the project when appropriate
+- provide support to the users of the project
 
 The object **requires** two properties:
 - `email`: type `String`. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
@@ -226,7 +226,7 @@ The object **requires** two properties:
 		<td><code>false</code></td>
 	</tr>
 </table>
-_This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a component does still use it_. Describes a set of one or more URLs where build information can be found.
+_This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a project does still use it_. Describes a set of one or more URLs where build information can be found.
 <pre><code class="o-syntax-highlight--json">{
 	"ci": {
 		"circle": "https://circleci.com/api/v1/project/owner/repo",
