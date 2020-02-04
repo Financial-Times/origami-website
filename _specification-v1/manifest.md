@@ -43,18 +43,19 @@ nav_order: 25
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
 	<tr>
 		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code></td>
+		<td><code>String</code> or <code>null</null></td>
 	</tr>
 	<tr>
 		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
+		<td><code>true/code></td>
 	</tr>
 </table>
 
 Defines the type of Origami component that the manifest belongs to. **Must** be set to one of:
-- `module`
-- `imageset`
-- `service`
+- `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
+- `"imageset"`: A set of images that have an alias on the Origami Image Service
+- `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
+- `null`: An Origami component that does not fit any of the named categories
 
 <aside>
 	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
