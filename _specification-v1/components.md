@@ -220,7 +220,7 @@ Components **should** implement CI. If a component does so then it **should** ve
 
 ### Browser/manual testing
 
-All components **must** be tested with all the browsers listed in the <a href="https://docs.google.com/document/d/1mByh6sT8zI4XRyPKqWVsC2jUfXHZvhshS5SlHErWjXU/edit" class="o-typography-link--external">FT browser support policy</a>. If a component includes JavaScript, it **must** be error free in all the browsers that fall above the recommended minimum boundary for enhanced experience in that policy.
+All components **must** be tested with all the browsers listed in the <a href="/docs/components/compatibility/#browser-support">FT browser support policy</a>. If a component includes JavaScript, it **must** be error free in all the browsers that fall above the recommended minimum boundary for enhanced experience in that policy.
 
 The versions tested **should** be listed in the component’s documentation, so that when boundary recommendations are changed, it is still possible to determine the support that was designed into an older component.
 
