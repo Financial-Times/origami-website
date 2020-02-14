@@ -37,7 +37,7 @@
 	},
 	"o-banner": {
 		"name": "o-banner",
-		"version": "3.1.0"
+		"version": "3.2.0"
 	},
 	"o-big-number": {
 		"name": "o-big-number",
@@ -53,7 +53,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "6.0.5"
+		"version": "6.0.8"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.1.11"
+		"version": "8.1.12"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -233,7 +233,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "4.0.8"
+		"version": "4.0.11"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
@@ -254,6 +254,10 @@
 	"o-message": {
 		"name": "o-message",
 		"version": "4.0.2"
+	},
+	"o-meter": {
+		"name": "o-meter",
+		"version": "1.0.0"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
@@ -353,7 +357,7 @@
 	},
 	"o-tracking": {
 		"name": "o-tracking",
-		"version": "2.0.5"
+		"version": "2.0.6"
 	},
 	"o-tweet": {
 		"name": "o-tweet",
