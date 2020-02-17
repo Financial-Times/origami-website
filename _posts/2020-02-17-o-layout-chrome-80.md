@@ -17,7 +17,7 @@ All these sites are built with our [o-layout](https://registry.origami.ft.com/co
 
 The World Wide Web Consortium (W3C), who help define the web standards which browsers implement, proposed a change to how CSS grid layouts are calculated in a [draft CSS Grid specification](https://github.com/w3c/csswg-drafts/commit/25e3f631310207ed83746530b4066b6278c3234f).
 
-The draft updates how the length of flexible rows or columns, which grow or shrink according to available space, are calculated in certain circumstances. _More context including why the change was proposed can be found in the [CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2177).)_
+The draft updates how the length of flexible rows or columns, which grow or shrink according to available space, are calculated in certain circumstances. _(More context including why the change was proposed can be found in the [CSS Working Group drafts issue](https://github.com/w3c/csswg-drafts/issues/2177).)_
 
 ## How Did That Break o-layout?
 
