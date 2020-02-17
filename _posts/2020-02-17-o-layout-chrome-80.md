@@ -1,17 +1,17 @@
 ---
 title: CSS Grid In Chrome 80
-description: Users of Google Chrome may recently have seen a broken layout for many of our internal tools and products which use the o-layout component. Users of Firefox, Safari, and other browsers were not effected. In this post we'll discuss what changed in Chrome 80.
+description: Users of Google Chrome may recently have seen a broken layout for many of our internal tools and products which use the o-layout component. Users of Firefox, Safari, and other browsers were not affected. In this post we'll discuss what changed in Chrome 80.
 
 author: Lee Moody
 ---
 
-Users of Google Chrome may recently have seen a broken layout for many of our internal tools and products. Users who did not upgrade Chrome, users of Firefox, Safari, and other browsers were not effected.
+Users of Google Chrome may recently have seen a broken layout for many of our internal tools and products. Users who did not upgrade Chrome, users of Firefox, Safari, and other browsers were not affected.
 
-In this blog post we'll take a brief look at what changed in Chrome 80 and how it effected us.
+In this blog post we'll take a brief look at what changed in Chrome 80 and how it affected us.
 
 ## What Happened?
 
-Many of our internal tools such as [bizops](https://biz-ops.in.ft.com/), [sos](https://sos.in.ft.com/), [people finder](https://people-finder.in.ft.com/), the [Origami registry](registry.origami.ft.com/), and even this blog displayed with a visually broken layout for Google Chrome users who upgraded to Chrome 80. Although content was still visible, it made using these sites pretty difficult. Users who did not upgrade Chrome, users of Firefox, Safari, and other browsers were not effected.
+Many of our internal tools such as [bizops](https://biz-ops.in.ft.com/), [sos](https://sos.in.ft.com/), [people finder](https://people-finder.in.ft.com/), the [Origami registry](registry.origami.ft.com/), and even this blog displayed with a visually broken layout for Google Chrome users who upgraded to Chrome 80. Although content was still visible, it made using these sites pretty difficult. Users who did not upgrade Chrome, users of Firefox, Safari, and other browsers were not affected.
 
 All these sites are built with our [o-layout](https://registry.origami.ft.com/components/o-layout) component. `o-layout` uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) to position headers, footers, sidebars, and other key areas of the page at different screen sizes. CSS Grid is great at this. It enables a developer to flexibly position content in columns and rows, a little like a fancy table.
 
