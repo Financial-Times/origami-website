@@ -24,7 +24,7 @@ The draft updates how the length of flexible rows or columns, which grow or shri
 The content of our layouts need to keep within the contained width of our header component [o-header-services](https://registry.origami.ft.com/components/o-header-services). To achieve this `o-layout` uses a horizontally centred CSS Grid with a max width to match our header.
 
 <figure>
-	<img alt="" src="/assets/images/2020-02-17-o-layout-chrome-80/firefox-1.png" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-1.png?width=1200&source=origami" />
 	<figcaption class="o-typography-caption">
         A basic CSS Grid with a max width. There is a header on one row, a fixed width sidebar on the second row, and also a main content area with flexible size on the second row.
 	</figcaption>
@@ -35,14 +35,14 @@ Using a grid with a max width like this means we can create new layouts with dif
 But [o-header-services](https://registry.origami.ft.com/components/o-header-services) has a background which bleeds to the edge of the screen. To achieve this we set the header width to 100% the browser width. So the header went beyond the width of our grid. We then positioned the header to the left.
 
 <figure>
-	<img alt="" src="/assets/images/2020-02-17-o-layout-chrome-80/firefox-2.png" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-2.png?width=1200&source=origami" />
 	<figcaption class="o-typography-caption">
         The grid container with its max width is still centred the same but the header now goes off the edge of the screen.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2020-02-17-o-layout-chrome-80/firefox-3.png" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-3.png?width=1200&source=origami" />
 	<figcaption class="o-typography-caption">
         Now the header is positioned to the left and takes up the full screen width. The grid container is still centred in the same way, with the sidebar and main content area contained in its max width.
 	</figcaption>
@@ -52,14 +52,14 @@ But [o-header-services](https://registry.origami.ft.com/components/o-header-serv
 Our sidebar has a fixed width and the main content area is flexible to fill the remaining space in our grid container. In the current [Candidate Recommendation](https://www.w3.org/2019/Process-20190301/#candidate-rec) of the CSS Grid specification our header overflow does not increase the width of the main area. In the draft version of the CSS Grid specification, the main area grows to match the width of our spanning header element and overflows the grid container also. For `o-layout` this caused a wide, misaligned grid with horizontal page scroll.
 
 <figure>
-	<img alt="" src="/assets/images/2020-02-17-o-layout-chrome-80/chrome-2.png" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/chrome-2.png?width=1200&source=origami" />
 	<figcaption class="o-typography-caption">
         In Chrome 80 the main content area also expands beyond the edge of the screen. The page is now horizontally scrollable.
 	</figcaption>
 </figure>
 
 <figure>
-	<img alt="" src="/assets/images/2020-02-17-o-layout-chrome-80/chrome-3.png" />
+	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/chrome-3.png?width=1200&source=origami" />
 	<figcaption class="o-typography-caption">
         When the header is positioned to the left, and the page scrolled left, things are looking even worse in Chrome 80.
 	</figcaption>
