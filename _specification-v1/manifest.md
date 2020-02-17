@@ -309,7 +309,7 @@ The object accepts the following properties:
 - `template`: type `String`. Describes the path to the mustache template to render
 - `sass`: type `String`. Describes the path to the Sass file to compile.
 - `js`: type `String`. Describes the JS file to build.
-- `data`: type `Object`. Describes data to populate to the mustache template with.
+- `data`: type `Object` or `String`. Describes data to populate to the mustache template with. If this is a string it must be a path to a JSON file containing the data, relative to the root of the repo.
 - `documentClasses`: type `String`. Names CSS classes to set on the `html` tag.
 - `dependencies`: type `Array`. Is a list of other components that are only needed for demos, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
 
@@ -352,7 +352,7 @@ Each object in the list accepts the following properties:
 **optional**:
 - `sass`: type `String`. Describes the path to the demo-specific Sass file to compile.
 - `js`: type `String`. Describes the path to the demo-specific JS file to build.
-- `data`: type `Object`. Describes to populate to the component-specific mustache template with
+- `data`: type `Object` or `String`. Describes data to populate to the component-specific mustache template with. If this is a string it must be a path to a JSON file containing the data, relative to the root of the repo.
 - `brands`: type `Array`. For components which support [brands](/docs/components/branding/), this describes one or more brands which the demo applies to ("master", "internal, "whitelabel")
 - `documentClasses`: type `String`. Names CSS classes to set on the component-specific `html` tag
 - `dependencies`: type `Array`. Is a list of other components that are only needed a this specific demo, which will be loaded via the <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external">Build Service</a>
