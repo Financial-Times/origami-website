@@ -138,6 +138,28 @@ To support silent mode, components **must** include a public, silent mode variab
 
 This prevents the accidental output of styles if the component is included twice in the same product. For example, given component A and component B both include a dependency of component C.
 
+## Primary Mixin
+
+Components **should** provide a primary mixin with a name that matches the component name. E.g. a component `o-thing` **should** provide a mixin `oThing`. If defined, a primary mixin **must** output all component CSS when no arguments are given as if [silent mode](#sass-silent-mode) was turned off. A primary mixin **may** accept a list or map of options `$opts` to control what CSS is output. E.g.
+
+```scss
+// outputs all o-thing css
+// .o-thing {}
+// .o-thing--primary {}
+// .o-thing--secondary {}
+// .o-thing--inverse {}
+@include oThing();
+
+// outputs base o-thing css, required by all o-thing features
+// but only outputs the css for one inverse theme
+// these example options are arbitrary and are decided by the component
+// .o-thing {}
+// .o-thing--inverse {}
+@include oThing($opts: (
+    'theme': ('inverse')
+));
+```
+
 ## Branding
 
 Origami components are used by products across the Financial Times Group. Some of these products or product groups require a distinct appearance or feature. To cater for these usecases Origami components **may** change their appearance by supporting one or more of the following brands:
