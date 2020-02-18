@@ -83,7 +83,7 @@ Pseudo selectors such as `:focus` or `:hover` **should** be used to style a comp
 Where an ARIA role is appropriate (<a href="https://www.w3.org/TR/2019/NOTE-wai-aria-practices-1.1-20190207/" class="o-typography-link--external">no ARIA is better than bad ARIA)</a>), it **should** be used to style a component's state. For example <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded" class="o-typography-link--external">aria-expanded</a>, with a correctly namespaced selector, **should** be used to style an expandable element:
 
 - Good: `.o-example[aria-expanded=true]`
-- Bad _(if an aria role is avalible)_: `.o-example--expanded`
+- Bad _(if an aria role is available)_: `.o-example--expanded`
 
 ## Private Sass
 
@@ -140,13 +140,13 @@ This prevents the accidental output of styles if the component is included twice
 
 ## Branding
 
-Origami components are used by products across the Financial Times Group. Some of these products or product groups require a distinct appearence or feature. To cater for these usecases Origami components **may** change their appearence by supporting one or more of the following brands:
+Origami components are used by products across the Financial Times Group. Some of these products or product groups require a distinct appearance or feature. To cater for these usecases Origami components **may** change their appearance by supporting one or more of the following brands:
 
 - master: FT branding for public ft.com sites and affiliates.
 - internal: Style suitable for internal products, tools, and documentation.
 - whitelabel: Base, structural styles only to build on and customise.
 
-A brand may be thought of as a theme, in that it uses Sass to change the appearence of a component. But it may also provide unique features with brand specifc Sass. For an example see our [component brand documentation](/docs/components/branding/).
+A brand may be thought of as a theme, in that it uses Sass to change the appearance of a component. But it may also provide unique features with brand specific Sass. For an example see our [component brand documentation](/docs/components/branding/).
 
 A project chooses a brand by [setting the brand variable](/docs/components/branding/#configure-your-projects-brand), which affects all Origami components included by that project. If no brand is chosen the master brand is used by default.
 
@@ -182,7 +182,7 @@ See the [o-brand README](https://registry.origami.ft.com/components/o-brand/read
 
 ## Feature Flags
 
-To support a [core and enhanced experience](/docs/components/compatibility/#core--enhanced-experiences) components must render acceptably without JavaScript avalible. Styles which only apply if JavaScript is avalible **must** be applied with a feature detect such as `.o--if-js`, and to hide an element of a component when JavaScript is avalible use `o--if-no-js`. If the component provides its own JavaScript feature flag, it **must** be named `.o-componentname--js`.
+To support a [core and enhanced experience](/docs/components/compatibility/#core--enhanced-experiences) components must render acceptably without JavaScript avalible. Styles which only apply if JavaScript is available **must** be applied with a feature detect such as `.o--if-js`, and to hide an element of a component when JavaScript is available use `o--if-no-js`. If the component provides its own JavaScript feature flag, it **must** be named `.o-componentname--js`.
 
 To detect other features, standardised feature detects **should** be used as a preference, such as the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" class="o-typography-link--external">@supports</a> at-rule. Otherwise a CSS class on the `documentElement` **may** be used to indicate feature support. The class name **should** be configurable, and default to the class name used by <a href="https://modernizr.com/" class="o-typography-link--external">Modernizr</a>:
 ```
