@@ -55,6 +55,12 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 - `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
 - `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
+- `"cli"`: 	A command line tool
+- `"library"`: 	A library that is not a front-end component
+- `"website"`: Origami websites that aren't intended to be services
+- `"config"`: Projects that are configuration for other projects
+- `"example"`: Example and boilerplate projects
+- `"meta"`: Repository-only projects that relate to how Origami works
 - `null`: An Origami project that does not fit any of the named categories
 
 <aside>
