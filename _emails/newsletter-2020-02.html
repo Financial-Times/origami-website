@@ -55,7 +55,7 @@ Read it here: [CSS Grid in Chrome
 {% capture text %}
 
 We've created a new component that was in high demand, the
-[Meter](https://registry.origami.ft.com/components/o-meter).
+[Meter](https://registry.origami.ft.com/components/o-meter?brand=internal).
 
 Similar components had been in use on internal and O&R products for a while, and
 now we've made this which helps increase consistency across all our teams and
@@ -74,7 +74,7 @@ Isn't it beautiful?
 
 Our thanks this month goes to Olga Averjanova for diving all the way in and
 creating a new component
-([o-meter](https://registry.origami.ft.com/components/o-meter)), and [a
+([o-meter](https://registry.origami.ft.com/components/o-meter?brand=internal)), and [a
 polyfill](https://github.com/Financial-Times/polyfill-library/pull/461)!
 
 A remarkable level of contribution for two weeks on the team! Thanks, Olga! 😊
@@ -86,11 +86,10 @@ A remarkable level of contribution for two weeks on the team! Thanks, Olga! 😊
 <!-- Broader update -->
 {% include email/h2.html content="Broader Update" %}
 
-{% capture text %}A digest list of other things that have happened since our last update:{% endcapture %}
+{% capture text %}A digest list of other things that have happened this month:{% endcapture %}
 {% include email/markdown.html content=text %}
 
 {% capture text %}
-A digest list of other things that have happened this month:
 
 - Most of the team got one year older 🎂
 - We created a [JSON schema representation](https://github.com/Financial-Times/origami-manifest-specification-schema) of [the manifest specification](https://origami.ft.com/spec/v1/manifest/)
@@ -102,7 +101,7 @@ A digest list of other things that have happened this month:
 - Banner's customization options were [greatly improved](https://github.com/Financial-Times/o-banner/pull/95) for teams like Envoy and Accounts.
 - We added a [new animal](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-28-newsletter/honker.png?source=origami). They tell everyone about our new releases in #origami-support on Slack.
 - We decommissioned origami-webhooks
-= Polyfill.io documentation was improved
+- Polyfill.io documentation was improved
 
 {% endcapture %}
 {% include email/markdown-list.html content=text %}
