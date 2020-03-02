@@ -31,7 +31,7 @@ action](https://github.com/Financial-Times/origami-project-board-action/).
 We started with 348 things to do. We haven't yet seen that number drop below
 three hundred, but we've done 534 of them and we're working on the rest.
 
-![capture of Newman from Seinfeld with the caption "the mail never stops" ](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-28-newsletter/the-mail-never-stops.png?source=origami)
+![capture of Newman from Seinfeld with the caption "the mail never stops" ](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-03-02-newsletter/the-mail-never-stops.png?source=origami)
 
 ### Layout post-mortem
 
@@ -52,7 +52,7 @@ Similar components had been in use on internal and O&R products for a while, and
 now we've made this which helps increase consistency across all our teams and
 all their products.
 
-![the o-meter component in action](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-28-newsletter/o-meter.png?width=1200&quality=highest&source=origami)
+![the o-meter component in action](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-03-02-newsletter/o-meter.png?width=1200&quality=highest&source=origami)
 
 Isn't it beautiful?
 
@@ -78,7 +78,7 @@ A digest list of other things that have happened:
 - Label's font weight has been updated to semibold, so we can remove a font from ft.com to improve performance
 - Grid's `snappy mode` is deprecated!
 - Banner's customization options were [greatly improved](https://github.com/Financial-Times/o-banner/pull/95) for teams like Envoy and Accounts.
-- We added a [new animal](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-28-newsletter/honker.png?source=origami). They tell everyone about our new releases in #origami-support on Slack.
+- We added a [new animal](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-03-02-newsletter/honker.png?source=origami). They tell everyone about our new releases in #origami-support on Slack.
 - We decommissioned origami-webhooks
 - Polyfill.io documentation was improved
 
