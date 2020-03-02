@@ -65,7 +65,7 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "5.0.6"
+		"version": "5.1.0"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.1.13"
+		"version": "8.2.1"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -197,7 +197,7 @@
 	},
 	"o-grid": {
 		"name": "o-grid",
-		"version": "5.0.2"
+		"version": "5.1.0"
 	},
 	"o-header": {
 		"name": "o-header",
@@ -225,7 +225,7 @@
 	},
 	"o-labels": {
 		"name": "o-labels",
-		"version": "5.0.0"
+		"version": "5.0.1"
 	},
 	"o-layers": {
 		"name": "o-layers",
@@ -257,7 +257,7 @@
 	},
 	"o-meter": {
 		"name": "o-meter",
-		"version": "1.0.0"
+		"version": "2.0.0"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
