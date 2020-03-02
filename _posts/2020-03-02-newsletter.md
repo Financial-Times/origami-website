@@ -1,24 +1,23 @@
 ---
 title: Origami Newsletter, February 2020
-companion_post_url: https://origami.ft.com/blog/2020/03/02/newsletter/
+description: A new component, a project board and a post-mortem.
+author: Chee Rabbits
+tags:
+  - Newsletter
 ---
 
-<!-- TL;DR -->
-{% capture text %}
-A new component, a project board and a post-mortem.
-{% endcapture %}
+<abbr title="Too long; didn't read">
+	<strong>
+	TL;DR:
+	</strong>
+</abbr> {{page.description}}
 
-{% include email/tldr.html content=text %}
 
-<!-- Top things -->
-{% include email/h2.html content="Top Things" %}
+## Top three things
 
-{% capture text %}Here's the big stuff we've done this month:{% endcapture %}
-{% include email/markdown.html content=text %}
+Here's the big stuff we've done this month:
 
-<!-- Thing 1 -->
-{% include email/h3.html content="Origami Project Board" %}
-{% capture text %}
+### Origami Project Board
 
 In our [continued](https://origami.ft.com/blog/2020/01/31/newsletter/) efforts
 towards openness we've created a [GitHub project
@@ -34,10 +33,7 @@ three hundred, but we've done 534 of them and we're working on the rest.
 
 ![capture of Newman from Seinfeld with the caption "the mail never stops" ](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-28-newsletter/the-mail-never-stops.png?source=origami)
 
-{% endcapture %} {% include email/markdown.html content=text %}
-
-<!-- Thing 2 -->
-{% include email/h3.html content="Layout post-mortem" %} {% capture text %}
+### Layout post-mortem
 
 The latest version of Chrome made some unexpected changes to how they rendered
 things, and it broke the layout on a few of our internal projects. We reacted
@@ -47,12 +43,7 @@ what we changed.
 Read it here: [CSS Grid in Chrome
 80](https://origami.ft.com/blog/2020/02/17/o-layout-chrome-80/)
 
-{% endcapture %} {% include email/markdown.html content=text %}
-
-<!-- Thing 3 -->
-{% include email/h3.html content="Meter component" %}
-
-{% capture text %}
+### Meter component
 
 We've created a new component that was in high demand, the
 [Meter](https://registry.origami.ft.com/components/o-meter?brand=internal).
@@ -65,12 +56,7 @@ all their products.
 
 Isn't it beautiful?
 
-{% endcapture %} {% include email/markdown.html content=text %}
-
-<!-- Special thanks -->
-{% include email/h2.html content="Special Thanks" %}
-
-{% capture text %}
+## Special thanks
 
 Our thanks this month goes to Olga Averjanova for diving all the way in and
 creating a new component
@@ -79,17 +65,10 @@ polyfill](https://github.com/Financial-Times/polyfill-library/pull/461)!
 
 A remarkable level of contribution for two weeks on the team! Thanks, Olga! 😊
 
-{% endcapture %}
-{% include email/markdown.html content=text %}
 
+## Broader update
 
-<!-- Broader update -->
-{% include email/h2.html content="Broader Update" %}
-
-{% capture text %}A digest list of other things that have happened this month:{% endcapture %}
-{% include email/markdown.html content=text %}
-
-{% capture text %}
+A digest list of other things that have happened:
 
 - Most of the team got one year older 🎂
 - We created a [JSON schema representation](https://github.com/Financial-Times/origami-manifest-specification-schema) of [the manifest specification](https://origami.ft.com/spec/v1/manifest/)
@@ -103,5 +82,4 @@ A remarkable level of contribution for two weeks on the team! Thanks, Olga! 😊
 - We decommissioned origami-webhooks
 - Polyfill.io documentation was improved
 
-{% endcapture %}
-{% include email/markdown-list.html content=text %}
+*[TL;DR]: too long; didn't read
