@@ -19,7 +19,7 @@ The <a href="https://registry.origami.ft.com/components/">Origami registry</a> h
 
 ### Make a proposal
 For the Origami team to oversee a component's maintenance, a proposal needs to be made.
-You can find information about that process in the <a href="https://github.com/Financial-Times/origami-proposals/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external">origami-proposals</a> project board, where all proposals are logged.
+You can find information about that process in the <a href="https://github.com/Financial-Times/origami/blob/master/.github/CONTRIBUTING.md" class="o-typography-link--external">origami</a> project board, where all proposals are logged.
 
 After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
