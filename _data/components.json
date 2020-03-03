@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "14.1.0"
+		"version": "15.0.0"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -65,7 +65,7 @@
 	},
 	"o-colors": {
 		"name": "o-colors",
-		"version": "5.1.0"
+		"version": "5.1.1"
 	},
 	"o-comment-api": {
 		"name": "o-comment-api",
@@ -137,7 +137,7 @@
 	},
 	"o-fonts": {
 		"name": "o-fonts",
-		"version": "4.0.2"
+		"version": "4.1.0"
 	},
 	"o-fonts-assets": {
 		"name": "o-fonts-assets",
@@ -257,7 +257,7 @@
 	},
 	"o-meter": {
 		"name": "o-meter",
-		"version": "2.0.0"
+		"version": "2.0.1"
 	},
 	"o-normalise": {
 		"name": "o-normalise",
