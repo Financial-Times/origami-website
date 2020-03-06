@@ -26,7 +26,7 @@ If migrating from Bower to npm, [please refer to our migration guide](https://or
 
 ## How to avoid multiple versions of Origami in the dependency tree
 
-We have built a tool called [lockspot](https://www.npmjs.com/package/lockspot) which can be used to report about any dependencies which have multiple versions of themselves, such as Origami dependencies. 
+There is a tool called [lockspot](https://www.npmjs.com/package/lockspot) which can be used to report about any packages which are included with more than one version, such as Origami dependencies. E.G. Detecting that `o-table@6` and `o-table@7` are both in the dependency tree.
 
 Below we will set up [lockspot](https://www.npmjs.com/package/lockspot) to fail a project which has multiple versions of dependencies from `@financial-times`.
 
