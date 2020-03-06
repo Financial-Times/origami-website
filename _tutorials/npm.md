@@ -32,55 +32,12 @@ Below we will set up [lockspot](https://www.npmjs.com/package/lockspot) to fail 
 
 Here is how to use it with an npm/yarn/pnpm project:
 
-1. Create a file called `./scripts/lockspot` and make it executable.
 
-``` bash
-> mkdir ./scripts
-> touch ./scripts/lockspot
-> chmod +x ./scripts/lockspot
-```
-
-2. Place this into the `./scripts/lockspot` file.
-
-```js
-#!/usr/bin/env node
-"use strict";
-
-const PACKAGE_LOCK_FILE = "package-lock.json";
-const fs = require("fs");
-const process = require("process");
-const execSync = require("child_process").execSync;
-
-if (!fs.existsSync(PACKAGE_LOCK_FILE)) {
-	console.error("Could not find $PACKAGE_LOCK_FILE when running prepare");
-	process.exit(1);
-}
-
-try {
-	execSync(`npx lockspot flat --pattern '^@financial-times/' --file "${PACKAGE_LOCK_FILE}"`, {
-		encoding: "utf-8"
-	});
-} catch (e) {
-	const ANSI_YELLOW = "\x1b[33m";
-	const depcount = execSync(`npx lockspot depcount --min 2 --pattern '^@financial-times/' --file "${PACKAGE_LOCK_FILE}"`, {
-		encoding: "utf-8"
-	});
-	console.error(`${ANSI_YELLOW}Checking the ${PACKAGE_LOCK_FILE} file showed some FT components were included multiple times with different versions.
-This is currently not supported by Origami components. 
-This can result in client builds including multiple copies of the CSS/JS for those packages, increasing build size.
-Please check the dependency ranges to ensure each dependency is only included once.
-
-FT components included more than once, with their count:
-${depcount}`);
-}
-
-```
-
-3. Run the `./scripts/lockspot` executable before `npm pack`/`npm publish`/`npm install` by adding a `prepare` script to the `package.json`.
+1. Run the package `is-origami-flat` before `npm pack`/`npm publish`/`npm install` by adding a `prepare` script to the `package.json`.
 
 ``` json
 {
-    "prepare": "./scripts/lockspot"
+    "prepare": "npx is-origami-flat"
 }
 ```
 
