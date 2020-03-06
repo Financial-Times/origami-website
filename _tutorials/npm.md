@@ -42,28 +42,38 @@ Here is how to use it with an npm/yarn/pnpm project:
 
 2. Place this into the `./scripts/lockspot` file.
 
-```bash
-#!/bin/bash
-set -e
-PACKAGE_LOCK_FILE="package-lock.json"
+```js
+#!/usr/bin/env node
+"use strict";
 
-if [ ! -f "$PACKAGE_LOCK_FILE" ]; then
-	echo "Could not find $PACKAGE_LOCK_FILE when running ./scripts/lockspot"
-	exit 1
-fi
+const PACKAGE_LOCK_FILE = "package-lock.json";
+const fs = require("fs");
+const process = require("process");
+const execSync = require("child_process").execSync;
 
-# Verify that financial-times namespaced dependencies are only included once - this
-# ensures that client builds don't end up including multiple versions of Origami
-# components, bloating code size unnecessarily.
-if
-	[ -f "$PACKAGE_LOCK_FILE" ] &&
-	! npx lockspot flat --pattern '^@financial-times/' --file "$PACKAGE_LOCK_FILE";
-then
-	echo -e "\033[33mChecking the package-lock.json file showed some FT components were included multiple times with different versions. This is currently not supported by Origami components. This can also result in client builds including multiple copies of the CSS/JS for those packages, increasing build size. Please check the dependency ranges to ensure each dependency is only included once.\n\nFT components included more than once, with their count:"
-	npx lockspot depcount --min 2 --pattern '^@financial-times/' --file "$PACKAGE_LOCK_FILE"
-	echo -e "\033[0m"
-	exit 1
-fi
+if (!fs.existsSync(PACKAGE_LOCK_FILE)) {
+	console.error("Could not find $PACKAGE_LOCK_FILE when running prepare");
+	process.exit(1);
+}
+
+try {
+	execSync(`npx lockspot flat --pattern '^@financial-times/' --file "${PACKAGE_LOCK_FILE}"`, {
+		encoding: "utf-8"
+	});
+} catch (e) {
+	const ANSI_YELLOW = "\x1b[33m";
+	const depcount = execSync(`npx lockspot depcount --min 2 --pattern '^@financial-times/' --file "${PACKAGE_LOCK_FILE}"`, {
+		encoding: "utf-8"
+	});
+	console.error(`${ANSI_YELLOW}Checking the ${PACKAGE_LOCK_FILE} file showed some FT components were included multiple times with different versions.
+This is currently not supported by Origami components. 
+This can result in client builds including multiple copies of the CSS/JS for those packages, increasing build size.
+Please check the dependency ranges to ensure each dependency is only included once.
+
+FT components included more than once, with their count:
+${depcount}`);
+}
+
 ```
 
 3. Run the `./scripts/lockspot` executable before `npm pack`/`npm publish`/`npm install` by adding a `prepare` script to the `package.json`.
