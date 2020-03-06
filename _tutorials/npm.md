@@ -17,7 +17,7 @@ If migrating from Bower to npm, [please refer to our migration guide](https://or
 
 ## Drawbacks
 
-- The Origami Team have not finalised how Origami components on npm should work, it is considered not stable.
+- The Origami Team have not finalised how Origami components on npm should work, it is considered not stable and future major releases are likely to change the interface of our npm packages.
 
 - Need to use extra tooling to ensure multiple versions of Origami are not included in the dependency tree.
 
