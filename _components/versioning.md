@@ -26,6 +26,8 @@ The version numbers are in the following format: `1.2.3`, which is representativ
 - `MINOR`: When this number changes , we'll have made an improvement, added a feature or made a noticeable design tweak, for example.
 - `PATCH`: When we release patches, we are usually releasing a bug fix that does not affect the components overall functionality.
 
+_When a new `MAJOR` release affects many dependent components and projects we call this a [major cascade](/docs/components/major-cascade/). It may require [extra consideration and support](/docs/components/major-cascade/) before release._
+
 ## How to request a versioned component
 
 We recommend requesting an Origami component by requesting a particular version range, which is indicated by a caret (`^`). That syntax will specify a version but will also fetch minor and patch releases in the future. So if you request `o-message@^2.3.0`, you will get `v2.3.0`. But when we release a minor (`v2.4.0`) of that component further down the line, it means you'll automatically get that, too.
