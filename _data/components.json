@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "15.0.0"
+		"version": "16.0.0"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -37,7 +37,7 @@
 	},
 	"o-banner": {
 		"name": "o-banner",
-		"version": "3.2.0"
+		"version": "3.3.0"
 	},
 	"o-big-number": {
 		"name": "o-big-number",
@@ -253,7 +253,7 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "4.0.2"
+		"version": "4.1.0"
 	},
 	"o-meter": {
 		"name": "o-meter",
