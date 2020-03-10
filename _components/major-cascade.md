@@ -73,6 +73,6 @@ A group of people bought together from different teams can share solutions to is
 
 ## Summary
 
-- Upgrades must happen in order as Origami require a flat dependency tree (all project dependencies have to be using the same major version of a component).
+- Upgrades must happen in order as Origami requires a flat dependency tree (all project dependencies have to be using the same major version of a component).
 - After all Origami components have been upgraded, many teams are able to upgrade at their own convenience, one project at a time.
 - Some groups who manage large, complex dependency graphs (like Customer Products) may need a dedicated time and team to coordinate a roll out, with direct Origami support.
