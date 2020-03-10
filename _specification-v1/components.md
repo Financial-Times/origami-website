@@ -296,7 +296,7 @@ To ensure subsequent releases don't affect the current users of a component:
 
 When new versions of components are released, updates **may** be needed to other components and products that consume the component. The following notification rules apply:
 
-- If the release is a new **major** version, the component developer **must** notify maintainers of all components and products listed as dependents in the Origami registry, at least 1 day prior to the release being tagged (to enable other breaking changes to be suggested), and again immediately after the release.
+- If the release is a new **major** version, the component developer **must** notify maintainers of all components and products with dependents, at least 1 day prior to the release being tagged (to enable other breaking changes to be suggested), and again immediately after the release. When a new **major** release affects many dependent components and projects we call this a [major cascade](/docs/components/major-cascade/). It **may** require [extra consideration](/docs/components/major-cascade/) before release.
 - If the release is a new **minor** version, the component developer **should** notify maintainers of all components and products listed as dependents in the Origami registry, immediately after the release.
 - If the release is a new **patch** version, no notifications need be sent.
 
