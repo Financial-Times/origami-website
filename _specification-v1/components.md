@@ -262,7 +262,7 @@ When deciding what demos to create, demos:
 - **Should not** be used to explain configuration and implementation differences, these should be explained in the component’s README.
 
 When building demos, they:
-- **Should** have a description explaining what they show ([see origami.json](/spec/v1/manifest/#demos)).
+- **Must** have a description explaining what they show ([see origami.json](/spec/v1/manifest/#demos)).
 - **Should** be reproducable using the [Origami Build Service](/docs/services/#build-service) by copying the demo markup.
 - **Should not** include more than necessary to demonstrate the component, including: any headings, backgrounds, margins or other content that are not part of the component itself.
 
