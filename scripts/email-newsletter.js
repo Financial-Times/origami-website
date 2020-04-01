@@ -48,6 +48,12 @@ async function sendNewsletter(options) {
 		process.exit(1);
 	}
 
+	// Add a max width to all images
+	const imgManipulationJsdom = new JSDOM(htmlContent);
+	const images = imgManipulationJsdom.window.document.querySelectorAll('img');
+	images.forEach(i => i.style['max-width'] = '100%');
+	htmlContent = imgManipulationJsdom.serialize();
+
 	// Generate the plain text content
 	const plainTextContent = htmlToText.fromString(htmlContent, {
 		ignoreImage: true,
