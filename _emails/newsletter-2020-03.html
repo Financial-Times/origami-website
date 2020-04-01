@@ -1,22 +1,24 @@
 ---
 title: Origami Newsletter, March 2020
-description: This issue features remote first working, deep spring cleaning, and an improved release workflow.
-author: Lee Moody
-tags:
-  - Newsletter
+companion_post_url: https://origami.ft.com/blog/2020/04/01/newsletter/
 ---
 
-<abbr title="Too long; didn't read">
-	<strong>
-	TL;DR:
-	</strong>
-</abbr> {{page.description}}
+<!-- TL;DR -->
+{% capture text %}
+This issue features remote first working, deep spring cleaning, and an improved release workflow.
+{% endcapture %}
 
-## Top Things
+{% include email/tldr.html content=text %}
 
-These are some of the bigger things we've done over the last month.
+<!-- Top things -->
+{% include email/h2.html content="Top Things" %}
 
-### Remote First
+{% capture text %}These are some of the bigger things we've done over the last month.{% endcapture %}
+{% include email/markdown.html content=text %}
+
+<!-- Thing 1 -->
+{% include email/h3.html content="Remote First" %}
+{% capture text %}
 
 It's hard to believe we were largely working from an office at the beginning of this month. A reminder that we're here to help. Our level of support is the same, and we’re happy to help via a hangout or Slack. 😊
 
@@ -30,7 +32,10 @@ Email us here: origami.support@ft.com
 
 Or join our recurring open meeting: Origami Office Hours, every Friday at 3pm ([https://meet.google.com/vpi-zszo-avx](https://meet.google.com/vpi-zszo-avx)).
 
-### Spring Cleaning
+{% endcapture %} {% include email/markdown.html content=text %}
+
+<!-- Thing 2 -->
+{% include email/h3.html content="Spring Cleaning" %} {% capture text %}
 
 In response to _these times_, we've been doing more spring cleaning of the Origami estate than usual.
 
@@ -42,7 +47,12 @@ In response to _these times_, we've been doing more spring cleaning of the Origa
 - We updated the support status for a host of older components, with recommendations for modern alternatives.
 - Many stale issues which were never prioritised have been actioned. Such as using dummy data in [o-header](https://registry.origami.ft.com/components/o-header) demos, and pointing users to the [Navigation Service](https://www.ft.com/__origami/service/navigation/) instead; tweaking the Origami Registry UI, for example to make sure the "copy to html" button does not obscure demo HTML and works consistently; and we fixed a few [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) issues which highlighted a performance bug ([o-buttons](https://registry.origami.ft.com/components/o-buttons), which has a lot of demos, builds around 7-8 times faster! 🎉) — watch this space, we have more [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) improvements to come.
 
-### New Component Release Workflow
+{% endcapture %} {% include email/markdown.html content=text %}
+
+<!-- Thing 3 -->
+{% include email/h3.html content="New Component Release Workflow" %}
+
+{% capture text %}
 
 We've introduced [an optional new workflow](https://github.com/Financial-Times/origami/issues/30) for releasing Origami projects. If your team maintains an Origami component, we hope you love it as much as we do!
 
@@ -56,11 +66,26 @@ The benefits of this approach are:
 - Releasing happens faster (we had some projects which had many minor changes which had not been released yet).
 - In the future we can add extra features/protections to versioning, such as enforcing a migration guide exists for a major release.
 
-## Special Thanks
+{% endcapture %} {% include email/markdown.html content=text %}
+
+<!-- Special thanks -->
+{% include email/h2.html content="Special Thanks" %}
+
+{% capture text %}
 
 This months special thanks goes to you all! You're all doing a great job. Treat yourselves kindly. We miss your faces. ❤️
 
-## Broader Update
+{% endcapture %}
+{% include email/markdown.html content=text %}
+
+
+<!-- Broader update -->
+{% include email/h2.html content="Broader Update" %}
+
+{% capture text %}A digest list of other things that have happened this month:{% endcapture %}
+{% include email/markdown.html content=text %}
+
+{% capture text %}
 
 A digest list of other things that have happened since our last update:
 
@@ -92,3 +117,6 @@ the project.
 - PATCH: [origami-image-service](https://github.com/Financial-Times/origami-image-service), adds tests for SVG purification.
 - [origami-registry-ui](https://github.com/Financial-Times/origami-registry-ui), we removed a US Heroku backend to save a little extra money. As a Fastly backed bronze service we realised a US backend was surplus. We also improved a number of UI elements as described previously, including ensuring the "copy to html" button does not obscure demo HTML and works consistently.
 - [origami-website](https://github.com/Financial-Times/origami-website), [documents the need for a major cascade](https://origami.ft.com/docs/components/major-cascade/) and adds [a new guide for using Origami via npm](https://origami.ft.com/docs/tutorials/npm/).
+
+{% endcapture %}
+{% include email/markdown-list.html content=text %}
