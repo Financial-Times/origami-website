@@ -18,7 +18,7 @@ These are some of the bigger things we've done over the last month.
 
 ### Remote First
 
-It's hard to believe we were largely working from an office at the beginning of this month. A reminder that we're here to help. Our level of support is the same, and we’re happy to help via a hangout or Slack any time. 😊
+It's hard to believe we were largely working from an office at the beginning of this month. A reminder that we're here to help. Our level of support is the same, and we’re happy to help via a hangout or Slack. 😊
 
 We're also running our workshops as usual. This month we ran out first ever fully remote "An Introduction to Origami" workshop for our fellow colleagues in Sofia. Thanks to everyone who attended!
 
