@@ -139,10 +139,10 @@ Expects keywords related to the project to help discover it in the registry. The
 *Applies to `{ "origamiType": "module" }` only.
 
 Describes the organisational category the component belongs to. **Must** be one of:
-- `components`
-- `primitives`
-- `utilities`
-- `layouts`
+- `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
+- `"primitives"`: Base components that provide minimal markup and are used by other components
+- `"components"`: Components built from primitives and utilities, which provide markup for a complete user interface
+- `"layouts"`: Complex components that provide styles for the whole page
 
 <pre><code class="o-syntax-highlight--json">{
 	"origamiCategory": "components"
