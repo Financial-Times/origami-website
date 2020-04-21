@@ -112,7 +112,7 @@ When you filter this by the area that the person works in, you can see that Cust
 
 ## Prior Experience
 
-We also asked _**"Have you ever built or contributed to an Origami component?"**_, and gave respondents the ability to indicate whether they've either built a component, contributed to a component, or both. The vast majority of respondents are have neither built nor contributed to the development of a component:
+We also asked _**"Have you ever built or contributed to an Origami component?"**_, and gave respondents the ability to indicate whether they've either built a component, contributed to a component, or both. The vast majority of respondents have neither built nor contributed to the development of a component:
 
 <table
 	class="o-table o-table--row-stripes"
