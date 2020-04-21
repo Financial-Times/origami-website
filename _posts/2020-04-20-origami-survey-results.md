@@ -1,6 +1,6 @@
 ---
 title: Origami Survey Results, Building Components
-description: TODO
+description: 'Some charts outlining the results of our recent survey titled "Origami Survey: Building Components"'
 author: Rowan Manning
 hasCharts: true
 ---
