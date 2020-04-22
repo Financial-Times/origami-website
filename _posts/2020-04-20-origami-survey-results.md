@@ -11,7 +11,7 @@ hasCharts: true
 
 We recently sent out an internal survey titled "Origami Survey: Building Components". The survey was designed to gather some quantititive data from our users, and the aim was to help us understand the barriers that teams have to developing their own Origami (or Origami-compatible) components. We sent the survey to engineers, and indicated that we were interested in responses from engineers of all seniorities and levels of experience with Origami.
 
-After two weeks, we had **{{results | size}} responses** from different groups within Product and Technology. This post will explore some of the results, and what we can learn from them.
+After two weeks, we had **{{results | size}} responses** from different groups within Product and Technology. This post will explore some of the results, and what we can learn from them. (Bear in mind that while great that we've got this many responses, we should be wary of drawing too many conclusions from 27 out of all the engineers in Product and Technology).
 
 To help segment the data, we asked each respondent which area of Product and Technology they worked in, as well as asking them to self-report their level of familiarity with using Origami components.
 
