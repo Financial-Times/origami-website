@@ -105,3 +105,18 @@ $o-website-bottom-spacing: 28px;
 strong {
 	font-weight: 600;
 }
+
+// Charts
+
+.chart {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.chart-grid {
+	display: flex;
+	flex-wrap: wrap;
+	.chart {
+		width: 50%;
+	}
+}
