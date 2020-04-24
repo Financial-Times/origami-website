@@ -22,7 +22,7 @@ For this tutorial, we recommend you follow along by setting up your project in <
 
 There are usually three three parts to an Origami component; <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript. We're going implement one at a time to put together our page.
 
-<aside>We'll be providing code snippets for you to follow, but you can also have a look at the <a href="https://codepen.io/ft-origami/full/ejLNNL" class="o-typography-link--external">result of the tutorial</a>.</aside>
+<aside>We'll be providing code snippets for you to follow, but you can also have a look at the <a href="https://codepen.io/ft-origami/full/ejLNNL" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">result of the tutorial (opens a new tab)</a>.</aside>
 
 Let's begin.
 
@@ -47,7 +47,7 @@ In order to get that, we'll need the foundation of our <abbr title="Hypertext Ma
 	&lt;/body>
 &lt;/html></code></pre>
 
-<aside><a href="https://codepen.io/ft-origami/pen/GBXgZa" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/GBXgZa" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 You won't see anything yet, but the classes and the data attribute will be working together to center our content across a span of 8 columns when we add the <abbr title="Cascading Style Sheets">CSS</abbr> to our page.
 
@@ -60,7 +60,7 @@ With the exception of JavaScript-only components, all of Origami's components re
 
 First, we're going to add some content for our article, so lets add a heading and some great information about fruit in our `o-grid-row`:
 
-<aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/KBxwWN" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 <pre style="white-space: pre-line"><code class="o-syntax-highlight--html">&lt;h1>Funky Fruit Facts&lt;/h1>
 &lt;h2>Durian&lt;/h2>
@@ -77,7 +77,7 @@ All of the markup that comes with an Origami component is available on the compo
 
 We can find the markup for the <a href="https://registry.origami.ft.com/components/o-table#demo-row-stripes">striped variation of o-table in the registry</a>, and copy that <abbr title="Hypertext Markup Language">HTML</abbr> into our work from there.
 
-<aside><a href="https://codepen.io/ft-origami/pen/wxEBda" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/wxEBda" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 ## Component <abbr title="Cascading Style Sheets">CSS</abbr>
 
@@ -89,7 +89,7 @@ The `href` of that link references the endpoint that serves all <abbr title="Cas
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}}"/></code></pre>
 
-<aside><a href="https://codepen.io/ft-origami/pen/ajazYj" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/ajazYj" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` <abbr title="Cascading Style Sheets">CSS</abbr> bundle from the Build Service.
 
 But we also want to style our content and our table, and fetch the right color from our color palette.
@@ -99,7 +99,7 @@ It is important to highlight that you only need **one** link tag per page, regar
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}"/></code></pre>
-<aside><a href="https://codepen.io/ft-origami/pen/LBJErq" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/LBJErq" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
 
@@ -111,7 +111,7 @@ By default Origami components are tailored for public facing, ft.com products --
 To choose a brand other than the default "master" brand, we append the `brand` parameter to our <abbr title="Cascading Style Sheets">CSS</abbr> build service url e.g. `&brand=internal`:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal"/></code></pre>
-<aside><a href="https://codepen.io/ft-origami/pen/VENXyQ" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/VENXyQ" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` classes has changed, as have the stripes of `o-table`. Our typography set with `o-typography` classes has also changed.
 
@@ -128,7 +128,7 @@ So our final step involves providing our table with the ability to sort its cont
 For now though, let's add the following to our `<head>`:
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^{{site.data.components.o-table.version}}">&lt;/script></code></pre>
-<aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" class="o-typography-link--external">Show me the CodePen</a></aside>
+<aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
 
