@@ -12,7 +12,7 @@ redirect_from:
 
 Using the Origami Build Service is the quickest way of getting Origami components to work in your product. The service bundles together the <abbr title="Cascading Style Sheets">CSS</abbr> and the JavaScript for all Origami components on a central server. You can then access specific component bundles by using a `link` or `script` tag.
 
-<aside>You can find more detailed information on the Build Service's self hosted <a href="https://jsbin.com/" class="o-typography-link--external"><abbr title="Application Programming Interface">API</abbr> and technical documentation</a>.</aside>
+<aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external"><abbr title="Application Programming Interface">API</abbr> and technical documentation</a>.</aside>
 
 Below is a step by step walkthrough for building a page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
 
