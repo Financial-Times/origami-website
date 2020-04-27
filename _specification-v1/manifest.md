@@ -102,7 +102,7 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-For components which support [brands](/docs/components/branding/), this **must** an array of one or more brands: "master", "internal, "whitelabel".
+For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
 
 ### keywords
 
