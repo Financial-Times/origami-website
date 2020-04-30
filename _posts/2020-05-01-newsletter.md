@@ -34,7 +34,7 @@ This work has already proved to be useful by immediately finding a visual regres
 
 ### Moved from CircleCI to GitHub Actions
 
-We've moved all of our automated tooling which was on CircleCI to GitHub Actions. This should free shorten the size of the CircleCI queue for every FT project, making their CI feedback loop shorter.
+We've moved all of our automated tooling which was on CircleCI to GitHub Actions. This should shorten the size of the CircleCI queue for every FT project, making everyone's feedback loop shorter.
 
 Moving to GitHub Actions has helped us manage all our repositories by making it simple to automate types of work such as releasing changes, adding tickets to our project board.
 
