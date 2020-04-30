@@ -43,7 +43,7 @@ As part of this work we've also made a [GitHub Action for the Operations & Relia
 
 ## Special Thanks
 
-This months special thanks goes to TODO
+This months special thanks goes to all the people who filled in our first survey. You all are helping to improve Origami, thank you.
 
 ## Broader Update
 
