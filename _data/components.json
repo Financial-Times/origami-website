@@ -5,7 +5,7 @@
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
-		"version": "4.2.1"
+		"version": "4.5.0"
 	},
 	"n-alert-banner": {
 		"name": "n-alert-banner",
@@ -13,7 +13,7 @@
 	},
 	"o-aside-panel": {
 		"name": "o-aside-panel",
-		"version": "3.0.5"
+		"version": "3.0.6"
 	},
 	"o-assets": {
 		"name": "o-assets",
@@ -57,7 +57,7 @@
 	},
 	"o-card": {
 		"name": "o-card",
-		"version": "3.0.3"
+		"version": "3.0.4"
 	},
 	"o-chat": {
 		"name": "o-chat",
@@ -101,7 +101,7 @@
 	},
 	"o-date": {
 		"name": "o-date",
-		"version": "4.0.3"
+		"version": "4.0.5"
 	},
 	"o-dom": {
 		"name": "o-dom",
@@ -109,11 +109,11 @@
 	},
 	"o-editorial-layout": {
 		"name": "o-editorial-layout",
-		"version": "1.1.1"
+		"version": "1.1.2"
 	},
 	"o-editorial-typography": {
 		"name": "o-editorial-typography",
-		"version": "1.0.8"
+		"version": "1.0.9"
 	},
 	"o-element-visibility": {
 		"name": "o-element-visibility",
@@ -129,7 +129,7 @@
 	},
 	"o-expander": {
 		"name": "o-expander",
-		"version": "5.0.5"
+		"version": "5.0.6"
 	},
 	"o-fetch-jsonp": {
 		"name": "o-fetch-jsonp",
@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.3.4"
+		"version": "8.3.5"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -205,7 +205,7 @@
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
-		"version": "1.0.1"
+		"version": "1.0.2"
 	},
 	"o-header-services": {
 		"name": "o-header-services",
@@ -213,11 +213,11 @@
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
-		"version": "5.1.1"
+		"version": "5.1.2"
 	},
 	"o-hoverable": {
 		"name": "o-hoverable",
-		"version": "3.2.1"
+		"version": "3.2.2"
 	},
 	"o-icons": {
 		"name": "o-icons",
@@ -233,7 +233,7 @@
 	},
 	"o-layout": {
 		"name": "o-layout",
-		"version": "4.1.7"
+		"version": "4.1.8"
 	},
 	"o-lazy-load": {
 		"name": "o-lazy-load",
@@ -317,11 +317,11 @@
 	},
 	"o-syntax-highlight": {
 		"name": "o-syntax-highlight",
-		"version": "3.0.2"
+		"version": "3.0.3"
 	},
 	"o-table": {
 		"name": "o-table",
-		"version": "8.0.8"
+		"version": "8.0.9"
 	},
 	"o-tabs": {
 		"name": "o-tabs",
@@ -329,7 +329,7 @@
 	},
 	"o-teaser": {
 		"name": "o-teaser",
-		"version": "5.0.3"
+		"version": "5.1.0"
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
@@ -353,7 +353,7 @@
 	},
 	"o-topper": {
 		"name": "o-topper",
-		"version": "3.0.2"
+		"version": "3.0.3"
 	},
 	"o-tracking": {
 		"name": "o-tracking",
@@ -365,7 +365,7 @@
 	},
 	"o-typography": {
 		"name": "o-typography",
-		"version": "6.3.3"
+		"version": "6.3.5"
 	},
 	"o-useragent": {
 		"name": "o-useragent",
