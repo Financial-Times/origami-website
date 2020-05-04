@@ -4,9 +4,15 @@
     "html-to-text": "^4.0.0",
     "jsdom": "^13.2.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "request-promise-native": "^1.0.5",
+    "snyk": "^1.317.0"
   },
   "devDependencies": {
     "pa11y-ci": "^2.1.1"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
