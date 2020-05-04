@@ -47,25 +47,24 @@ This months special thanks goes to all the people who filled in our first survey
 
 ## Broader Update
 
-A digest list of other things that have happened since our last update:
+A digest of other things that have happened since our last update:
 
-o-share got a new design built for a small variation which will be used on live blogs <img src='https://user-images.githubusercontent.com/10405691/78160045-4f447380-743b-11ea-88c7-62660222f125.png' alt='the new o-share small variation' /> -- https://github.com/Financial-Times/o-share/pull/165
+o-share got a new design built for a small variation which will be used on live blogs <img src='https://user-images.githubusercontent.com/10405691/78160045-4f447380-743b-11ea-88c7-62660222f125.png' alt='the new o-share small variation' />
 
-o-share also got improved accessbility and analytics support thanks to Glynn Phillips in Customer Products. -- https://github.com/Financial-Times/o-share/pull/168 https://github.com/Financial-Times/o-share/pull/170
-
-polyfill-library fixed a bug for Map support in Internet Explorer -- https://github.com/Financial-Times/polyfill-library/issues/536
-
-polyfill-library also added Object.fromEntries support in Internet Explorer -- https://github.com/Financial-Times/polyfill-library/issues/536
-
-polyfill-library fixed a bug in HTMLCanvasElement.prototype.toBlob support for Edge -- https://github.com/Financial-Times/polyfill-library/pull/561
-
-polyfill-library added URLSearchParams.sort method support for all browsers -- https://github.com/Financial-Times/polyfill-library/pull/562
-
-polyfill-librarb added CSS.Supports support for all browsers -- https://github.com/Financial-Times/polyfill-library/pull/569
+o-share also got improved accessbility and analytics support thanks to Glynn Phillips in Customer Products.
 
 o-quote now has an editorial style thanks to Josh from the Content Innovation team.
 <img src='https://user-images.githubusercontent.com/10405691/78697295-82ce4480-78f8-11ea-99af-278ea5eae152.png' alt='the new o-quote editorial design' />
 
-o-editorial-layout uses the new editorial quote style from o-quote <img src='https://user-images.githubusercontent.com/10405691/80201001-5ebe7300-861b-11ea-98c1-8c4448db4f25.png' alt='new editorial quote style in o-editorial-layout' /> -- https://github.com/Financial-Times/o-editorial-layout/pull/14
+o-editorial-layout uses the new editorial quote style from o-quote <img src='https://user-images.githubusercontent.com/10405691/80201001-5ebe7300-861b-11ea-98c1-8c4448db4f25.png' alt='new editorial quote style in o-editorial-layout' />
 
 o-teaser uses a new design which updated the spacing thanks to Eray and Mark from the Apps team.
+
+polyfill-library fixed a bug for `Map` support in Internet Explorer
+
+polyfill-library also added `Object.fromEntries` support in Internet Explorer
+
+polyfill-library fixed a bug in `HTMLCanvasElement.prototype.toBlob` for Edge
+
+polyfill-library added `URLSearchParams.sort` and `CSS.Supports` support for all browsers
+
