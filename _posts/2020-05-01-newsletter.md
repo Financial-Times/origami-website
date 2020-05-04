@@ -63,9 +63,9 @@ polyfill-library added URLSearchParams.sort method support for all browsers -- h
 
 polyfill-librarb added CSS.Supports support for all browsers -- https://github.com/Financial-Times/polyfill-library/pull/569
 
-o-quote now has an editorial style <img src='https://user-images.githubusercontent.com/10405691/78697295-82ce4480-78f8-11ea-99af-278ea5eae152.png' alt='the new o-quote editorial design' /> -- https://github.com/Financial-Times/o-quote/pull/55
+o-quote now has an editorial style thanks to Josh from the Content Innovation team.
+<img src='https://user-images.githubusercontent.com/10405691/78697295-82ce4480-78f8-11ea-99af-278ea5eae152.png' alt='the new o-quote editorial design' />
 
 o-editorial-layout uses the new editorial quote style from o-quote <img src='https://user-images.githubusercontent.com/10405691/80201001-5ebe7300-861b-11ea-98c1-8c4448db4f25.png' alt='new editorial quote style in o-editorial-layout' /> -- https://github.com/Financial-Times/o-editorial-layout/pull/14
 
 o-teaser uses a new design which updated the spacing -- https://github.com/Financial-Times/o-teaser/pull/164
-
