@@ -26,11 +26,13 @@ After the team have reviewed and accepted the proposal, according to the project
 ### Build an independent component
 If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be adhered to. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
 
-You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> for this, as it will provide a boilerplate with those requirements.
+You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools v9</a> for this, as it will provide a boilerplate with those requirements.
 
 ```
-npm i -g origami-build-tools
+npm i -g origami-build-tools@9.0.13
 ```
+_Note: This tutorial was written for Origami Build Tools v9 and will not work with the latest major release._
+
 The alias for this library is `obt`.
 
 Choose a sufficiently descriptive name for your component, and prefix it with `-o`.
