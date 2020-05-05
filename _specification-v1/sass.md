@@ -21,7 +21,7 @@ Origami component styles are authored in <a href="http://sass-lang.com/" class="
 
 Sass **must** validate using the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, though exceptions **may** be enabled temporarily within a component <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">using Stylelint comments</a>.
 
-By default the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a> enforce a tab indentation style. However indentation style (tabs or spaces) is not standardised: developers **must** respect whatever indent type is already in use when editing existing components. To change indentation style update the components `.stylelintrc.js` configuration.
+By default the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a> enforce a tab indentation style. However indentation style (tabs or spaces) is not standardised: developers **must** respect whatever indent type is already in use when editing existing components. To change indentation style update the component's `.stylelintrc.js` configuration.
 
 In addition, component CSS **should not** use `!important`. Valid use cases for `!important` exist, but usually only at the product level. If `!important` is used in a component, a comment must be left in code to explain why it was necessary.
 
