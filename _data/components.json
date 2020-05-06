@@ -5,7 +5,7 @@
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
-		"version": "4.5.0"
+		"version": "4.5.2"
 	},
 	"n-alert-banner": {
 		"name": "n-alert-banner",
@@ -33,7 +33,7 @@
 	},
 	"o-autoinit": {
 		"name": "o-autoinit",
-		"version": "2.0.2"
+		"version": "2.0.3"
 	},
 	"o-banner": {
 		"name": "o-banner",
@@ -197,7 +197,7 @@
 	},
 	"o-grid": {
 		"name": "o-grid",
-		"version": "5.2.0"
+		"version": "5.2.2"
 	},
 	"o-header": {
 		"name": "o-header",
@@ -293,7 +293,7 @@
 	},
 	"o-share": {
 		"name": "o-share",
-		"version": "7.3.1"
+		"version": "7.4.2"
 	},
 	"n-sliding-popup": {
 		"name": "n-sliding-popup",
@@ -333,7 +333,7 @@
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
-		"version": "3.0.5"
+		"version": "3.0.6"
 	},
 	"o-techdocs": {
 		"name": "o-techdocs",
