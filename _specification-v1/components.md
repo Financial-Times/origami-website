@@ -57,8 +57,8 @@ _The rest of this section is non-normative._
 A component's folder structure **may** be organised as follows. The following is what the Origami team use for all of their supported components, but it's not a requirement.
 
 <aside class="no-padding">
-<p><a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> provides a useful command to generate a component boilerplate in this style for you:</p>
-<pre style="white-space: normal; word-break: keep-all;"><code class="o-syntax-highlight--bash">npx origami-build-tools init o-example-component</code>
+<p>Origami provides a command to initialise a new component in this style:</p>
+<pre style="white-space: normal; word-break: keep-all;"><code class="o-syntax-highlight--bash">npm init origami-component</code>
 </pre>
 </aside>
 
