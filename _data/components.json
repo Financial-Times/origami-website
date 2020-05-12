@@ -85,7 +85,7 @@
 	},
 	"o-comments": {
 		"name": "o-comments",
-		"version": "7.5.2"
+		"version": "7.5.4"
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
@@ -101,7 +101,7 @@
 	},
 	"o-date": {
 		"name": "o-date",
-		"version": "4.0.5"
+		"version": "4.0.6"
 	},
 	"o-dom": {
 		"name": "o-dom",
@@ -197,7 +197,7 @@
 	},
 	"o-grid": {
 		"name": "o-grid",
-		"version": "5.2.2"
+		"version": "5.2.3"
 	},
 	"o-header": {
 		"name": "o-header",
@@ -353,7 +353,7 @@
 	},
 	"o-topper": {
 		"name": "o-topper",
-		"version": "3.0.4"
+		"version": "3.0.5"
 	},
 	"o-tracking": {
 		"name": "o-tracking",
