@@ -167,7 +167,7 @@ As long as you have Node.js installed, you can run:
 
 <pre><code class="o-syntax-highlight--bash">npx @financial-times/origami-workshop</code></pre>
 
-This command will compile your code to `public` directory every time you make a change, and serve it locally for you to preview in a browser e.g. at `htpp://localhost:3000`. You can leave that running in the background, and refresh your browser to see the styling changes we'll be making in the next step.
+This command will compile your code to a `public` directory every time you make a change, and serve it locally for you to preview in a browser e.g. at `htpp://localhost:3000`. You can leave that running in the background, and refresh your browser to see the styling changes we'll be making in the next step.
 
 ## Component Styling
 
