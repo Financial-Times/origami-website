@@ -31,8 +31,8 @@ Eventually, we'll have a folder structure that separates our <abbr title="Hypert
 		&lt;meta charset="utf-8">
 		&lt;title>My First Origami Project&lt;/title>
 
-		&lt;link rel="stylesheet" href="public/main.css">
-		&lt;script async src="public/main.js">&lt;/script>
+		&lt;link rel="stylesheet" href="/main.css">
+		&lt;script async src="/main.js">&lt;/script>
 	&lt;/head>
 	&lt;body>
 
@@ -161,22 +161,13 @@ And your `bower.json` should now look something like this:
 </aside>
 
 So that we can see our progress as we build the page, now is the time to implement our build step.
-For that, we are going to use the <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>. As long as you have Node.js installed, you can run:
+What we need is something to bundle the JavaScript we write, and compile Sass to CSS for the browser. But build steps may vary per application or team, so setting up build tools is out of scope for this tutorial. So we can focus on how to use Origami components we are going to use the <a href="https://github.com/Financial-Times/origami-workshop" class="o-typography-link--external">Origami Workshop tool</a>.
 
-<pre><code class="o-syntax-highlight--bash">npx origami-build-tools [command]</code></pre>
+As long as you have Node.js installed, you can run:
 
-There are many commands that the Origami Build Tools provide, but the one we will be focussing on today is `build`.
+<pre><code class="o-syntax-highlight--bash">npx @financial-times/origami-workshop</code></pre>
 
-We want to compile our source code (which we don't have yet) into a public folder that our <abbr title="Hypertext Markup Language">HTML</abbr> can read. We will need to pass the `npx origami-build-tools build` command a few arguments to do so:
-- `--build-folder` is set to the name and directory of our public assets folder.
-- `--sass` points at the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that we want to compile into css to use in our public folder.
-- `--js` points at the JavaScript that we want to transpile into ES5 in our public folder.
-- `--watch` is a flag that will trigger a rebuild when we make changes to our project.
-
-Altogether, the command looks like this:
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--bash">npx origami-build-tools build --build-folder="public" --sass="./src/main.scss" --js="./src/main.js" --watch</code></pre>
-
-You can leave that running in the background, and open your `index.html` in a browser to see the styling changes we'll be making in the next step.
+This command will compile your code to `public` directory every time you make a change, and serve it locally for you to preview in a browser e.g. at `htpp://localhost:3000`. You can leave that running in the background, and refresh your browser to see the styling changes we'll be making in the next step.
 
 ## Component Styling
 
@@ -190,6 +181,7 @@ You can leave that running in the background, and open your `index.html` in a br
 ├── public/
 │   ├── main.css
 │   └── main.js
+│   └── index.html
 └── src/
     └── main.js
     └── main.scss</code>
@@ -200,8 +192,12 @@ Now we can begin styling our components. For this, all of our work is going to h
 
 ### Output All Component Styles
 
+So we can monitor what projects component assets are being used, some components require a global Sass `$system-code` variable is set. This should be the project's <a href="https://biz-ops.in.ft.com" class="o-typography-link--external">biz-ops system code</a>, but we can set it to `test` for now in `src/main.scss`:
+<pre><code class="o-syntax-highlight--scss">$system-code: 'test';</code></pre>
+
 To include the components Sass use `@import`. For example this makes all `o-grid` Sass mixins, functions, and variables available:
-<pre><code class="o-syntax-highlight--scss">@import 'o-grid/main';</code></pre>
+<pre><code class="o-syntax-highlight--scss">$system-code: 'test';
+@import 'o-grid/main';</code></pre>
 
 By default Origami components do not output any CSS when you import them. This is so your project can granularly include only the CSS it needs from each component. To output a components CSS use its mixins, which are documented in the component [README](https://registry.origami.ft.com/components/o-grid/readme#sass) and [Sassdoc](https://registry.origami.ft.com/components/o-grid/sassdoc). Most components include a primary mixin which matches the component name. These include all CSS by default and accept a map of options to include CSS for specific features. For the `o-grid` component this is a mixin named `oGrid`:
 
@@ -219,11 +215,11 @@ $o-grid-is-silent: false;
 You may see this in existing projects but this method of including CSS is deprecated. We recommend using the component's mixins instead.
 </aside>
 
-If we open our `index.html` in a browser window, we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning.
+If we open our page in a browser window (visit `http://localhost:3000` after running the origami-workshop command discussed above), we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning.
 
 We added an <a href="https://registry.origami.ft.com/components/o-typography">o-typography</a> class to our inner div at the beginning of the tutorial, as well. It will apply styling just as the grid did, so the next—unguided—step, is for you to implement `o-typography` in the same way we implemented `o-grid` above.
 
-Look at your `index.html` in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
+Look at your page in the browser when you're done - your headings and paragraphs should have received font families and styling of their own.
 
 ### Output Component Styles Granularly
 
@@ -248,7 +244,7 @@ body {
 	background-color: oColorsByUsecase('page', 'background');
 }</code></pre>
 
-As soon as your build has completed, visit your `index.html` again. You should have the pink that is characteristic of the FT as a background colour.
+As soon as your build has completed, visit your page again in the browser. You should have the pink that is characteristic of the FT as a background colour.
 
 <aside>If you'd like to double check your work, we've put our <code>main.scss</code> up <a href="https://codepen.io/ft-origami/pen/VBgwwJ" class="o-typography-link--external">on CodePen</a>.</aside>
 
@@ -282,7 +278,7 @@ Origami components listen for a custom event named `o.DOMContentLoaded` in order
 
 We'll need to add this to our file:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--js">require('o-table');
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--js">import 'o-table';
 
 // Wait until the page has loaded
 if (document.readyState === 'interactive' || document.readyState === 'complete') {
