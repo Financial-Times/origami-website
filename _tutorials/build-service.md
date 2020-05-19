@@ -127,7 +127,7 @@ So our final step involves providing our table with the ability to sort its cont
 
 For now though, let's add the following to our `<head>`:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^{{site.data.components.o-table.version}}">&lt;/script></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^{{site.data.components.o-table.version}}" defer>&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
