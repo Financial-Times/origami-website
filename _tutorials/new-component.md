@@ -21,9 +21,7 @@ All Origami components **must** meet the requirements defined in the [Origami Co
 
 Origami components are developed using the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) (`obt`) command line interface. To work on our component, install Origami Build Tools (`obt`) on your machine:
 
-```
-npm install -g origami-build-tools
-```
+<pre><code class="o-syntax-highlight--bash">npm install -g origami-build-tools</code></pre>
 
 _This requires Node and npm, see the [Origami Build Tools readme](https://github.com/Financial-Times/origami-build-tools#installation) for more information._
 
@@ -70,10 +68,11 @@ After running the `obt init` command and answering the prompts you should see a 
 	</figcaption>
 </figure>
 
-The structure of our component now looks something like this. In the next section we will discuss what is in each directory.
+The structure of our component now looks something like this. In the next section we will start developing our component, and in the process discuss what is in each directory.
 
 ```
 o-example
+├── .eslintrc.js
 ├── .github
 │   ├── CODEOWNERS
 │   ├── ISSUE_TEMPLATE.md
@@ -84,9 +83,9 @@ o-example
 │       ├── sync-repo-labels.yml
 │       └── test-origami-component.yml
 ├── .gitignore
+├── .stylelintrc.js
 ├── README.md
 ├── bower.json
-├── package.json
 ├── demos
 │   └── src
 │       ├── demo.js
@@ -96,34 +95,105 @@ o-example
 ├── main.js
 ├── main.scss
 ├── origami.json
+├── package.json
 ├── src
 │   ├── js
-│   │   └── o-example.js
+│   │   └── example.js
 │   └── scss
 │       ├── _brand.scss
 │       └── _variables.scss
 └── test
     ├── js
-    │   ├── helpers
-    │   │   └── fixtures.js
-    │   └── o-example.test.js
+    │   ├── example.test.js
+    │   └── helpers
+    │       └── fixtures.js
     └── scss
         ├── _main.test.scss
         └── index.test.scss
 ```
 
+## Source Control
+
+All Origami components reside in a [git](https://git-scm.com/) repository and are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](https://origami.ft.com/spec/v1/components/#source-control).
+
+Create a new git repository by running `git init`, and commit the boilerplate as an initial commit. For example:
+
+<pre><code class="o-syntax-highlight--bash">git init
+git add --all
+git commit -m 'o-example component boilerplate'</code></pre>
+
+You may then push this to your remote github.com repository, under the `Financial-Times` organisation or another [supported Financial Times organisation](https://origami.ft.com/spec/v1/components/#source-control).
+
+_Note: we're assuming existing git knowledge here, so please feel free to contact the Origami team if you get stuck at any point._
+
+You might have noticed a `.github` directory. At the time of writing, the `.github` directory itself is not part of the [file structure specification](https://origami.ft.com/spec/v1/components/#files-and-folder-structure). If we deleted `.github` the component would still be an Origami component. But this directory gives us some nice features:
+- `ISSUE_TEMPLATE.md`: The contents of this file are used to provide a [template when opening a new Github issue](https://help.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates). It helps users report bugs or provide feedback by prompting for useful information.
+- `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
+- `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
+
+## Start Developing
+
+Now we have a basic component to work from we can start developing!
+
+First we need to install any component dependencies by running the Origami Build Tools `install` command:
+
+<pre><code class="o-syntax-highlight--bash">obt install</code></pre>
+
+Then we can use the `develop` (`dev`) command to start working on the component. The `dev` command creates a server for us to preview our component in the browser. And whenever we make any change to the source code the component will be rebuilt, which we will be able to see by refreshing our browser:
+
+<pre><code class="o-syntax-highlight--bash">obt dev</code></pre>
+
+Opening the link output by the develop command, for example `localhost:8999`, shows us the component demos (html files) and demo assets (js and css files) in the browser.
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/example-dev-output.png" />
+	<figcaption class="o-typography-caption">
+        Running the dev command builds our demos. We'll discuss demos more shortly.
+	</figcaption>
+</figure>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/example-demos-local.png" />
+	<figcaption class="o-typography-caption">
+        Opening the link output by the develop command, `localhost:8999` in this case, shows us the component demos (html files) and demo assets (js and css files) in the browser.
+	</figcaption>
+</figure>
+
+Clicking the `demo.html` to open that demo will show a blank page. In the next section we will update this demo with some content.
+
+## Demos
+
+To update our component demos see the `demos` directory. The demos help us preview out component locally for development, and are also used in [the origami registry](https://registry.origami.ft.com/) when the component is released.
+
+The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own Sass and JavaScript which is not part of the component itself.
+
+Note that demo code is only used for the component previews, and not by projects which depend on the component. There is a [demo section in the specification](https://origami.ft.com/spec/v1/components/#demos) with more details.
+
+For now, you should see an example `demos/src/demo.mustache` file which looks something like this (assuming a component name of `o-example`):
+
+<pre><code class="o-syntax-highlight--html">&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
+
+That `div` element is our component markup. We will discuss the classes and data attributes in more detail later. So we can see something in out demo, add some content within the `div` and hit refresh.
+
+<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">&lt;/div>
++&lt;div class="o-example" data-o-component="o-example">
++   Hello world, I am a component named o-example!
++&lt;/div></code></pre>
+
+The `obt dev` command which we run earlier will detect that you have updated `demos/src/demo.mustache` and compile it to `demos/local/demo.html`. Now if you refresh your browser you should see the content we just added to the demo.
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo.png" />
+	<figcaption class="o-typography-caption">
+        A "hello world" component demo with no styles.
+	</figcaption>
+</figure>
+
 ## Structure
 
 Now we have the code for a basic Origami component we can discuss the purpose of some key files and directories.
 
-### .github
 
-All Origami components reside in a Git repository and are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](https://origami.ft.com/spec/v1/components/#source-control).
-
-At the time of writing, the `.github` directory itself is not part of the [file structure specification](https://origami.ft.com/spec/v1/components/#files-and-folder-structure). If we deleted `.github` the component would still be an Origami component. But this directory gives us some nice features:
-- `ISSUE_TEMPLATE.md`: The contents of this file are used to provide a [template when opening a new Github issue](https://help.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates). It helps users report bugs or provide feedback by prompting for useful information.
-- `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
-- `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
 
 ### bower.json and package.json
 
@@ -132,11 +202,3 @@ At the time of writing, the `.github` directory itself is not part of the [file 
 Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
 
 Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
-
-### src
-
-
-
-### demos
-
-The demos directory holds code for the component previews which are displayed in [the origami registry](https://registry.origami.ft.com/). Component demos are also used to preview and develop a component locally. The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own Sass and JavaScript. Note that demo code is only used for the component previews, and not by projects which depend on the component. There is a [demo section in the specification](https://origami.ft.com/spec/v1/components/#demos) with more details, but we will discuss demos in more detail later.
