@@ -35,7 +35,7 @@ All Origami components **must** contain an `origami.json` file at the top of the
 
 ## Naming conventions
 
-Components **must** be named using a short descriptive term (hyphenated if necessary) and **should** be prefixed with `o-` (for Origami). The name **must** only contain lower-case letters and hyphens. This name **must** be used as the repository name, the `name` property in `origami.json`, and as a prefix for any default CSS class names.
+Components **must** be named using a short descriptive term (hyphenated if necessary) and **should** be prefixed with `o-` (for Origami). The name **must** only contain lower-case ASCII letters, and hyphens. This name **must** be used as the repository name, the `name` property in `origami.json`, and as a prefix for any default CSS class names.
 
 <aside>
 	Examples of good component names include <code>o-colors</code>, <code>o-grid</code>, <code>o-cookie-message</code>.
