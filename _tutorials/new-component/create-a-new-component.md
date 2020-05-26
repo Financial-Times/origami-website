@@ -9,13 +9,21 @@ cta: Learn how to create an Origami component
 
 Usually the Origami team will own an Origami component which is used by multiple teams or groups, but anybody can create and share an Origami component.
 
-In this tutorial we'll build and deploy an Origami component, which will be visible in the [Origami Registry](https://registry.origami.ft.com/components).
+In this tutorial we'll build an Origami component. Our example component will display a "hello world" message, be themed, and include a button which will count the number of times it was clicked. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
+
+Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
+
+In this tutorial we'll build an Origami component. Our example component will display a "hello world" message, be themed, and include a button which will count the number of times it was clicked. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
 
 Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
 
 ## The Origami Specification
 
 All Origami components **must** meet the requirements defined in the [Origami Component Specification](https://origami.ft.com/spec/v1/components/). The specification covers folder structure, code standards, documentation and more. We'll refer to this document throughout this tutorial.
+
+<aside>
+If this tutorial contradicts or misses anything required in the <a href="https://origami.ft.com/spec/v1/components/">Origami Component Specification</a>, the specification is correct and this tutorial is wrong. If you find a case like that please let the Origami team know so we can ensure this tutorial is always up to date.
+</aside>
 
 ## Build Tools
 
@@ -35,13 +43,15 @@ Before we run `obt init`, let's discuss some of those questions.
 
 The first thing we are asked is to decide a component name. Usually Origami components start with `o-`, and only contain lowercase letters or hyphens. See the [component naming convention](https://origami.ft.com/spec/v1/components/#naming-conventions) for more details.
 
+For this tutorial we will name our component `o-example`.
+
 ### Component Category
 
-Origami components are categorised, and different rules of the specification may apply to different categories. Examples of categories include `utilities`, `components`, and `layouts`. See the full list and description in the [component category specification](https://origami.ft.com/spec/v1/manifest/#origamicategory). For this example we will use the most common `components` category.
+Origami components are categorised, and different rules of the specification may apply to different categories. Examples of categories include `utilities`, `components`, and `layouts`. See the full list and description in the [component category specification](https://origami.ft.com/spec/v1/manifest/#origamicategory). For this tutorial we will use the most common `components` category.
 
 ### Supported Brands
 
-Component brands facilitate [component customisation](https://origami.ft.com/spec/v1/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master` and `internal` brand when prompted by `obt init`.
+Component brands facilitate [component customisation](https://origami.ft.com/spec/v1/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master`, `internal`, and `internal` brand when prompted by `obt init`.
 
 ### Support Status
 
@@ -159,21 +169,19 @@ Opening the link output by the develop command, for example `localhost:8999`, sh
 	</figcaption>
 </figure>
 
-Clicking the `demo.html` to open that demo will show a blank page. In the next section we will update this demo with some content.
+Clicking the `demo.html` to open that demo will show a blank page. In the next section we will update this demo with markup and content for our component.
 
-## Demos
+## Markup
 
-To update our component demos see the `demos` directory. The demos help us preview out component locally for development, and are also used in [the origami registry](https://registry.origami.ft.com/) when the component is released.
+So Origami components can be used with any backend language or framework users of Origami components copy and paste HTML from the README or demos in the [Origami registry](https://registry.origami.ft.com/components/) (although templates may be provided in some cases [according to the markup section of the component specification](https://origami.ft.com/spec/v1/markup/#templates)). To update the markup in our component demos see the `demos` directory.
 
-The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own Sass and JavaScript which is not part of the component itself.
+The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own Sass and JavaScript which is not part of the component itself. Note that demo code is not used by projects which depend on the component.
 
-Note that demo code is only used for the component previews, and not by projects which depend on the component. There is a [demo section in the specification](https://origami.ft.com/spec/v1/components/#demos) with more details.
-
-For now, you should see an example `demos/src/demo.mustache` file which looks something like this (assuming a component name of `o-example`):
+In the demos directory, you should see an example demo `demos/src/demo.mustache` (we'll revisit the other files later). Open `demos/src/demo.mustache` in your editor and you should see something which looks like this (assuming a component name of `o-example`):
 
 <pre><code class="o-syntax-highlight--html">&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
 
-That `div` element is our component markup. We will discuss the classes and data attributes in more detail later. So we can see something in out demo, add some content within the `div` and hit refresh.
+That `div` element is our component markup. So we can see something in out demo, add some content within the `div` and hit refresh.
 
 <pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">&lt;/div>
 +&lt;div class="o-example" data-o-component="o-example">
@@ -189,16 +197,17 @@ The `obt dev` command which we run earlier will detect that you have updated `de
 	</figcaption>
 </figure>
 
-## Structure
+The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](https://origami.ft.com/spec/v1/markup/#owned-dom). A component may act on a DOM element using JavaScript if it, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](https://origami.ft.com/spec/v1/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
 
-Now we have the code for a basic Origami component we can discuss the purpose of some key files and directories.
+## Part Two: Styles
 
+In part one we learnt:
+- The [Origami component specification](https://origami.ft.com/spec/v1/components/) tells us what standards we must meet to create an Origami component.
+- The [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) command line interface is used to help us develop and test components.
+- Specifically, we learnt about the Origami Build Tools `init` command to generate a basic component to work from when developing a new component.
+- Origami components use git source control and are stored remotely on Github.
+- Origami components HTML markup is usually copied by users from component demos rather than from templates.
+- And finally we learnt how to update the markup in one of those demos.
 
+Now we know how to update our component markup, in part two we will style our component. [Continue to part two](/docs/tutorials/create-a-new-component-part-2).
 
-### bower.json and package.json
-
-[Bower](https://bower.io/) is a package manager used to install Origami component dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
-
-Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
-
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
