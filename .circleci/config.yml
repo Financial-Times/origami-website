@@ -10,11 +10,8 @@ commands:
       - install-dependencies
       - cache-dependencies
       - run:
-          name: Build the site
-          command: make build
-      - run:
           name: Run the site
-          command: bundle exec jekyll serve --skip-initial-build
+          command: bundle exec jekyll serve --port 4000 --host localhost
           background: true
       - run:
           name: Wait for site to be ready
