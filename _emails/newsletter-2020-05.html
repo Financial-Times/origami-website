@@ -1,22 +1,24 @@
 ---
 title: Origami Newsletter, May 2020
-description: This issue features a big Fastly cost saving, new font formats, and a major release of Origami Build Tools.
-author: Lee Moody
-tags:
-  - Newsletter
+companion_post_url: https://origami.ft.com/blog/2020/06/01/newsletter/
 ---
 
-<abbr title="Too long; didn't read">
-	<strong>
-	TL;DR:
-	</strong>
-</abbr> {{page.description}}
+<!-- TL;DR -->
+{% capture text %}
+This issue features a big Fastly cost saving, new font formats, and a major release of Origami Build Tools.
+{% endcapture %}
 
-## Top Things
+{% include email/tldr.html content=text %}
 
-These are some of the bigger things we've done over the last month.
+<!-- Top things -->
+{% include email/h2.html content="Top Things" %}
 
-### Fastly Cost Saving
+{% capture text %}These are some of the bigger things we've done over the last month.{% endcapture %}
+{% include email/markdown.html content=text %}
+
+<!-- Thing 1 -->
+{% include email/h3.html content="Fastly Cost Saving" %}
+{% capture text %}
 
 This month we updated our Fastly configuration for the Origami Build Service and Origami Image Service. Our new Fastly contract meant that our previous architecture was no longer good from a cost perspective (it used to be fine with our old contract).
 
@@ -24,7 +26,10 @@ With the update we're saving ~£5,000 per month.
 
 Thank you Sam Parkinson for calculating the cost saving and helping this work get prioritised.
 
-### A New Font Format
+{% endcapture %} {% include email/markdown.html content=text %}
+
+<!-- Thing 2 -->
+{% include email/h3.html content="A New Font Format" %} {% capture text %}
 
 We made all our fonts available in the `woff2` format, which has a [much smaller file size compared to the original](https://github.com/Financial-Times/o-fonts-assets/pull/19#issue-422025287) `woff` format.
 
@@ -38,14 +43,19 @@ As we helped fix a [double font loading bug on ft.com](https://github.com/Financ
 
 Big thanks to Nick Colley for making the suggestion that we include `woff2`; and for helping us deploy the updates quickly to Customer Products projects!
 
-### Origami Build Tools v10
+{% endcapture %} {% include email/markdown.html content=text %}
 
+<!-- Thing 3 -->
+{% include email/h3.html content="Origami Build Tools v10" %}
+
+{% capture text %}
 We released another major of Origami Build Tools. This release includes some significant maintenance work updating a number of outdated or deprecated dependencies. But more excitingly we've made improvements to the workflow for component maintainers too 🎉
 
 _If you contribute to Origami components or your team actively maintains one we recommend upgrading to v10. Please let us know if you have any issues or feedback._
+{% endcapture %} {% include email/markdown.html content=text %}
 
-#### Simplified Interface
-
+{% include email/h4.html content="Simplified Interface" %}
+{% capture text %}
 To help engineers new to Origami components get up and running with component development we simplified the most common command. To start working on a component with Origami Build Tools it was common to run the following command:
 
 ```
@@ -59,9 +69,10 @@ obt develop
 ```
 
 If you've never used Origami Build Tools before and would like to understand what this command does, [see the Origami Build Tools readme](https://github.com/Financial-Times/origami-build-tools#usage).
+{% endcapture %} {% include email/markdown.html content=text %}
 
-#### Speed Improvements
-
+{% include email/h4.html content="Speed Improvements" %}
+{% capture text %}
 Origami Build Tools now compiles component code faster. It's an important metric for Origami Build Tools as it helps keep the feedback loop short between an engineer making a code change and seeing the result of that change.
 
 As an unscientific example on an FT MacBook Pro laptop: the quickest of three [o-table](https://github.com/Financial-Times/o-table) demo builds is 2.18 seconds over 4.11 seconds -- around a 53% improvement.
@@ -70,13 +81,26 @@ We improved the performance of Origami Build Tools by creating two new packages:
 - [Financial-Times/scrumple](https://github.com/Financial-Times/scrumple#scrumple): a fast (and scrappy) JavaScript bundler for developing Origami components, based on a now-deleted tool called Pax.
 - [Financial-Times/sass](https://github.com/Financial-Times/sass): Prebuilt [dart-sass](https://github.com/sass/dart-sass) binaries available via NPM.
 
-## Special Thanks
+{% endcapture %} {% include email/markdown.html content=text %}
+
+<!-- Special thanks -->
+{% include email/h2.html content="Special Thanks" %}
+
+{% capture text %}
 
 This month our special thanks goes to Rowan Manning! In case you missed the news, at the start of May Rowan moved from the Origami team (O&R) to Customer Products. So a big thank you to Rowan for all their work on and leading Origami over the years 😃. Jake Champion is the stand-in Tech Lead, if you have questions about Origami please contact them instead of Rowan.
 
-## Broader Update
+{% endcapture %}
+{% include email/markdown.html content=text %}
 
-A digest of other things that have happened since our last update:
+
+<!-- Broader update -->
+{% include email/h2.html content="Broader Update" %}
+
+{% capture text %}A digest list of other things that have happened this month:{% endcapture %}
+{% include email/markdown.html content=text %}
+
+{% capture text %}
 
 - MAJOR: [Financial-Times/origami-bower-registry](https://github.com/Financial-Times/origami-bower-registry). Upgrade to node 12, drop support for previous versions.
 - NEW: [Financial-Times/origami-workshop](https://github.com/Financial-Times/origami-workshop): We created a small tool to help attendees of the Intro to Origami workshop complete [the manual build tutorial](https://origami.ft.com/docs/tutorials/manual-build/). The tool helps attendees focus on building projects with Origami components, instead of setting up build tools which may differ depending on their team.
@@ -103,3 +127,6 @@ A digest of other things that have happened since our last update:
 - All Components: We added our new stylelint configuration to each Origami component, so engineers may get immediate feedback in their editor when authoring component Sass instead of having to run the Origami Build Tools verify command.
 - All Components: We configured all our components to automatically approve and merge development dependency updates when made by Dependabot (during work hours). This saves us manually doing this work for ~90 repositories so we can focus on more important tasks.
 - All Components: We added a Github Action to apply the Origami type label to new issues, to help us manage incoming work for components, services, and other project types.
+
+{% endcapture %}
+{% include email/markdown-list.html content=text %}

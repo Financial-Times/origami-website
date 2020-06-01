@@ -37,7 +37,7 @@ The process:
     - `_posts/YYYY-MM-DD-newsletter.md`: for the blog post on the website
     - `_emails/newsletter-YYYY-MM.html`: for the email we distribute
 
-  2. Write the newsletter. This is best done in the blog post, as this is standard Markdown. The email newsletter relies on some pretty gross Liquid templating to ensure that we avoid copy/paste errors in the HTML. Sorry. The email also has required front-matter: a `title` which becomes the subject of the email, and `companion_post_url` which is used to link to the blog post and should be the full URL.
+  2. Write the newsletter. This is best done in the blog post, as this is standard Markdown. The email newsletter relies on some pretty gross Liquid templating to ensure that we avoid copy/paste errors in the HTML. Sorry. The email also has required front-matter: a `title` which becomes the subject of the email, and `companion_post_url` which is used to link to the blog post and should be the full URL. (when writing the newsletter, see the script `./scripts/project-board-summary.js` to help fill out the broader update section of the newsletter).
 
   3. Open a pull-request on this repo, and get it approved by another member of the team. Once approved, merge into master. This must be done _on_ or _after_ the publish date indicated by the post file name. The blog post is now published, check it on the live site.
 
