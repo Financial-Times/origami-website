@@ -12,6 +12,7 @@ commands:
       - run:
           name: Run the site
           command: make serve
+          background: true
       - run:
           name: Wait for site to be ready
           command: sleep 5
