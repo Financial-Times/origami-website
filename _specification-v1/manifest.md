@@ -52,7 +52,7 @@ nav_order: 25
 </table>
 
 Defines the type of Origami project that the manifest belongs to. **Must** be set to one of:
-- `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
+- `"component"` or `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
 - `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
 - `"cli"`: 	A command line tool
@@ -64,7 +64,7 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 - `null`: An Origami project that does not fit any of the named categories
 
 <aside>
-	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
+	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to be deprecated or removed in a later version of the spec.
 </aside>
 
 <pre><code class="o-syntax-highlight--json">{
@@ -136,7 +136,7 @@ Expects keywords related to the project to help discover it in the registry. The
 	</tr>
 </table>
 
-*Applies to `{ "origamiType": "module" }` only.
+*Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`.
 
 Describes the organisational category the component belongs to. **Must** be one of:
 - `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
@@ -256,13 +256,13 @@ circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/r
 	</tr>
 </table>
 
-Applies to `{ "origamiType": "module" }` only. Outlines the browser features required for the component's functionality.
+Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`. Outlines the browser features required for the component's functionality.
 The object accepts two properties:
 - `required`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component assumes exists. If these features do not exist, the component may error.
 - `optional`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
 
 <pre><code class="o-syntax-highlight--json">{
-	"origamiType": "module",
+	"origamiType": "component",
 	"browserFeatures": {
 		"required": [
 		"customEvent"
@@ -395,7 +395,7 @@ This example joins all of the property snippets outlined above:
 
 <pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables",
-	"origamiType": "module",
+	"origamiType": "component",
 	"origamiVersion": 1,
 	"keywords": ["table", "rows", "columns"],
 	"origamiCategory": "components",
