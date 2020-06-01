@@ -14,7 +14,7 @@ commands:
           command: make build
       - run:
           name: Run the site
-          command: bundle exec jekyll serve
+          command: bundle exec jekyll serve --detach --skip-initial-build
           background: true
       - run:
           name: Wait for site to be ready
