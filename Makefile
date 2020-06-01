@@ -1,5 +1,4 @@
-
-SITEMAP = "http://localhost:4000/sitemap.xml"
+SITEMAP:=http://localhost:4000/sitemap.xml
 
 # Install dependencies
 install: install-ruby-gems install-node-modules

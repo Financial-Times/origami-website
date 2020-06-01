@@ -10,12 +10,12 @@ commands:
       - install-dependencies
       - cache-dependencies
       - run:
-          name: Run the site
-          command: bundle exec jekyll serve --port 4000 --host localhost
-          background: true
+          name: Build the site
+          command: bundle exec jekyll build
       - run:
-          name: Wait for site to be ready
-          command: sleep 5
+          name: Serve the site
+          command: npx serve _site -l 4000
+          background: true
       - run:
           name: Run Pa11y tests
           command: make test
