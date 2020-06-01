@@ -22,7 +22,7 @@ This month we updated our Fastly configuration for the Origami Build Service and
 
 With the update we're saving ~£5,000 per month.
 
-Shout out to Sam Parkinson for his help with this.
+Thank you Sam Parkinson for calculating the cost saving and helping this work get prioritised.
 
 ### A New Font Format
 
