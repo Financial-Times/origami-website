@@ -72,7 +72,7 @@ We improved the performance of Origami Build Tools by creating two new packages:
 
 ## Special Thanks
 
-This month our special thanks goes to Rowan Manning! In case you missed the news, at the start of May Rowan moved from the Origami team (O&R) to Customer Products. So a big thank you to Rowan for all their work on and leading Origami over the years 😃. Jake Champion is the stand-in Tech Lead, if you have questions about Origami please contact them instead of Rowan :-)
+This month our special thanks goes to Rowan Manning! In case you missed the news, at the start of May Rowan moved from the Origami team (O&R) to Customer Products. So a big thank you to Rowan for all their work on and leading Origami over the years 😃. Jake Champion is the stand-in Tech Lead, if you have questions about Origami please contact them instead of Rowan.
 
 ## Broader Update
 
