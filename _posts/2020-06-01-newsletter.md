@@ -64,7 +64,7 @@ If you've never used Origami Build Tools before and would like to understand wha
 
 Origami Build Tools now compiles component code faster. It's an important metric for Origami Build Tools as it helps keep the feedback loop short between an engineer making a code change and seeing the result of that change.
 
-As an unscientific example on my work laptop: the quickest of three [o-table](https://github.com/Financial-Times/o-table) demo builds is 2.18 seconds over 4.11 seconds -- around a 53% improvement.
+As an unscientific example on an FT MacBook Pro laptop: the quickest of three [o-table](https://github.com/Financial-Times/o-table) demo builds is 2.18 seconds over 4.11 seconds -- around a 53% improvement.
 
 We improved the performance of Origami Build Tools by creating two new packages:
 - [Financial-Times/scrumple](https://github.com/Financial-Times/scrumple#scrumple): a fast (and scrappy) JavaScript bundler for developing Origami components, based on a now-deleted tool called Pax.
