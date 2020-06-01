@@ -10,8 +10,11 @@ commands:
       - install-dependencies
       - cache-dependencies
       - run:
+          name: Build the site
+          command: make build
+      - run:
           name: Run the site
-          command: make serve
+          command: bundle exec jekyll serve
           background: true
       - run:
           name: Wait for site to be ready
