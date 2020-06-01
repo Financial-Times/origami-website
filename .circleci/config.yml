@@ -6,9 +6,7 @@ commands:
   test:
     steps:
       - checkout
-      - restore-dependencies
       - install-dependencies
-      - cache-dependencies
       - run:
           name: Run the site
           command: make serve
