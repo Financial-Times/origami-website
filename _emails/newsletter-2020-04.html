@@ -5,8 +5,7 @@ companion_post_url: https://origami.ft.com/blog/2020/05/01/newsletter/
 
 <!-- TL;DR -->
 {% capture text %}
-This issue features the Origami Component Survey, Automating Visual Testing of Origami Components and moving from CircleCI to GitHub Actions
-{% endcapture %}
+This issue features the Origami Component Survey, Automating Visual Testing of Origami Components and moving from CircleCI to GitHub Actions{% endcapture %}
 
 {% include email/tldr.html content=text %}
 
@@ -23,7 +22,6 @@ This issue features the Origami Component Survey, Automating Visual Testing of O
 This quarter we are aiming to find out what our users know about Origami, how much of Origami they use and how we can improve our products for all of our users.
 
 Our first survey has already gone out, it was to find out how we can help teams build their own Origami Components. You can read more about the survey results [on our blog](https://origami.ft.com/blog/2020/04/20/origami-survey-results/).
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Thing 2 -->
@@ -36,7 +34,6 @@ We've automated all of that manual work now. Now when a change is made to an Ori
 This work has already proved to be useful by immediately finding a visual regression for a change in o-teaser, which we were able to fix before it went live on any website.
 
 <img width="980" alt="Screenshot which shows the visual regression tooling working on the o-teaser component" src="https://user-images.githubusercontent.com/1569131/80602987-bc8df900-8a27-11ea-84b2-1329c45a3d3b.png">
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Thing 3 -->
@@ -49,7 +46,6 @@ We've moved all of our automated tooling which was on CircleCI to GitHub Actions
 Moving to GitHub Actions has helped us manage all our repositories by making it simple to automate types of work such as releasing changes and adding tickets to our project board.
 
 As part of this work we've also made a [GitHub Action for the Operations & Reliability Change API](https://github.com/Financial-Times/change-api-action/).
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Special thanks -->
@@ -58,7 +54,6 @@ As part of this work we've also made a [GitHub Action for the Operations & Relia
 {% capture text %}
 
 This months special thanks goes to all the people who filled in our first survey. You all are helping to improve Origami, thank you.
-
 {% endcapture %}
 {% include email/markdown.html content=text %}
 
@@ -91,7 +86,6 @@ polyfill-library also added `Object.fromEntries` support in Internet Explorer
 polyfill-library fixed a bug in `HTMLCanvasElement.prototype.toBlob` for Edge
 
 polyfill-library added `URLSearchParams.sort` and `CSS.Supports` support for all browsers
-
 
 {% endcapture %}
 {% include email/markdown-list.html content=text %}
