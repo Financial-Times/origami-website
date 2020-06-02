@@ -5,8 +5,7 @@ companion_post_url: https://origami.ft.com/blog/2020/04/01/newsletter/
 
 <!-- TL;DR -->
 {% capture text %}
-This issue features remote first working, deep spring cleaning, and an improved release workflow.
-{% endcapture %}
+This issue features remote first working, deep spring cleaning, and an improved release workflow.{% endcapture %}
 
 {% include email/tldr.html content=text %}
 
@@ -31,7 +30,6 @@ Find us on Slack here:
 Email us here: origami.support@ft.com
 
 Or join our recurring open meeting: Origami Office Hours, every Friday at 3pm ([https://meet.google.com/vpi-zszo-avx](https://meet.google.com/vpi-zszo-avx)).
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Thing 2 -->
@@ -46,7 +44,6 @@ In response to _these times_, we've been doing more spring cleaning of the Origa
 - We recently renamed our support slack channel and have found out remaining outdated references so you always know how to find us.
 - We updated the support status for a host of older components, with recommendations for modern alternatives.
 - Many stale issues which were never prioritised have been actioned. Such as using dummy data in [o-header](https://registry.origami.ft.com/components/o-header) demos, and pointing users to the [Navigation Service](https://www.ft.com/__origami/service/navigation/) instead; tweaking the Origami Registry UI, for example to make sure the "copy to html" button does not obscure demo HTML and works consistently; and we fixed a few [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) issues which highlighted a performance bug ([o-buttons](https://registry.origami.ft.com/components/o-buttons), which has a lot of demos, builds around 7-8 times faster! 🎉) — watch this space, we have more [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) improvements to come.
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Thing 3 -->
@@ -65,7 +62,6 @@ The benefits of this approach are:
 - It makes new releases of previous major versions "just work". Our former approach was time consuming and easy to make a mistake. Now we're able to support users who haven't been able to upgrade to the latest version of Origami components easier.
 - Releasing happens faster (we had some projects which had many minor changes which had not been released yet).
 - In the future we can add extra features/protections to versioning, such as enforcing a migration guide exists for a major release.
-
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Special thanks -->
@@ -74,7 +70,6 @@ The benefits of this approach are:
 {% capture text %}
 
 This months special thanks goes to you all! You're all doing a great job. Treat yourselves kindly. We miss your faces. ❤️
-
 {% endcapture %}
 {% include email/markdown.html content=text %}
 
@@ -117,6 +112,5 @@ the project.
 - PATCH: [origami-image-service](https://github.com/Financial-Times/origami-image-service), adds tests for SVG purification.
 - [origami-registry-ui](https://github.com/Financial-Times/origami-registry-ui), we removed a US Heroku backend to save a little extra money. As a Fastly backed bronze service we realised a US backend was surplus. We also improved a number of UI elements as described previously, including ensuring the "copy to html" button does not obscure demo HTML and works consistently.
 - [origami-website](https://github.com/Financial-Times/origami-website), [documents the need for a major cascade](https://origami.ft.com/docs/components/major-cascade/) and adds [a new guide for using Origami via npm](https://origami.ft.com/docs/tutorials/npm/).
-
 {% endcapture %}
 {% include email/markdown-list.html content=text %}
