@@ -1,4 +1,4 @@
-ruby '~> 2.4.0'
+ruby '~> 2.7.1'
 source 'https://rubygems.org'
-gem 'github-pages', '>= 204', group: :jekyll_plugins
-gem "rake", ">= 12.3.3"
+gem 'github-pages', '>= 206', group: :jekyll_plugins
+gem "rake", ">= 13.0.1"

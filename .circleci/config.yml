@@ -67,14 +67,14 @@ jobs:
   # Verify code then run unit and integration tests
   test:
     docker:
-      - image: circleci/ruby:2.4-node-browsers
+      - image: circleci/ruby:2.7.1-node-browsers
     steps:
       - test
 
   # Fetch and commit component changes
   autocommit:
     docker:
-      - image: circleci/ruby:2.4-node-browsers
+      - image: circleci/ruby:2.7.1-node-browsers
     steps:
       - autocommit
 
