@@ -1,5 +1,5 @@
 ---
-title: Create A New Origami Component - Part 2 Styles
+title: Create A New Origami Component - Part 2 Base Styles
 description: A step-by-step tutorial which teaches you how to build and deploy a new Origami component.
 cta: Learn how to create an Origami component
 collection_listing_display: false
@@ -8,9 +8,9 @@ collection_listing_display: false
 
 # {{page.title}}
 
-In part two we will build on our work in [part one](/docs/tutorials/create-a-new-component) and learn how to add styles to our new component.
+In part two we will build on our work in [part one](/docs/tutorials/create-a-new-component) by learning how to add styles to our new component.
 
-## Styles
+## Sass
 
 Origami component styles are written in [Sass](https://sass-lang.com/). According to the [Sass Documentation](https://sass-lang.com/documentation):
 >Sass is a stylesheet language that’s compiled to CSS. It allows you to use variables, nested rules, mixins, functions, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized and makes it easy to share design within and across projects.
@@ -33,8 +33,6 @@ Within `main.scss` you will see something like this:
 	// content of primary mixin
 	.o-example {
 		display: block;
-		border: 1px solid red;
-		padding: 16px;
 	}
 }
 
@@ -48,8 +46,12 @@ Within `main.scss` you will see something like this:
 
 Let's break this down a little.
 
-The first line imports Sass from `src/scss/_variables.scss`. Note the underscore and extension is not needed on the import. All Origami Sass files except `main.scss` should start with an underscore to indicate they are [Sass partials](https://sass-lang.com/documentation/at-rules/import#partials) for import and should not be compiled on their own.
+## Imports
+
+The first line imports Sass from `src/scss/_variables.scss`. Note the underscore and extension is not needed in the `@import` statement. All Origami Sass files except `main.scss` should start with an underscore to indicate they are [Sass partials](https://sass-lang.com/documentation/at-rules/import#partials) for import and should not be compiled on their own.
 <pre><code class="o-syntax-highlight--scss">@import 'src/scss/variables';</code></pre>
+
+## Primary Mixin
 
 Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/documentation/at-rules/mixin) with the same name as the component, in this case `oExample`. There are [Sass comments](https://sass-lang.com/documentation/syntax/comments) which describe the mixin using the [SassDoc format](http://sassdoc.com/). We use SassDoc to document Sass in the registry for users of Origami components to reference. For example see the [o-forms Sassdoc](https://registry.origami.ft.com/components/o-forms/sassdoc).
 
@@ -60,11 +62,19 @@ Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/docu
 ///		@include oExample($opts: (
 ///			// your opts here
 ///		))
+@mixin oExample ($opts: ()) {
+	// content of primary mixin
+	.o-example {
+		display: block;
+	}
+}
 </code></pre>
 
-We call the mixin which shares the component name (`oExample`) the ["primary mixin"](https://origami.ft.com/spec/v1/sass/#primary-mixin). By default the primary mixin includes all styles for the component if included by the user. It will also accept an `$opts` argument so users may specify which features of a component to include. For example a user of [o-forms](https://registry.origami.ft.com/components/o-forms) could pass an `$opts` argument to the [`oForms` mixin](https://registry.origami.ft.com/components/o-forms/sassdoc?brand=master#mixin-oforms) to only output styles for text inputs, if their project does not need other input types. This helps keep the CSS bundle of the project small.
+We call the mixin which shares the component name (`oExample`) the ["primary mixin"](https://origami.ft.com/spec/v1/sass/#primary-mixin). By default the primary mixin includes all styles for the component if included by the user. It will also accept an `$opts` argument so users may specify which features of a component to include. For example a user of [o-forms](https://registry.origami.ft.com/components/o-forms) could pass an `$opts` argument to the [`oForms` mixin](https://registry.origami.ft.com/components/o-forms/sassdoc?brand=master#mixin-oforms) to only output styles for text inputs, if their project does not need other form input types. This helps keep the CSS bundle of the project small.
 
-After the primary mixin there is a [Sass variable](https://sass-lang.com/documentation/variables) named `$o-example-is-silent`. By default this is set to `false` but may be set to `true` to include the primary mixin and output all the components CSS.
+## Silent Mode
+
+After the primary mixin our component references a [Sass variable](https://sass-lang.com/documentation/variables) named `$o-example-is-silent`. This is set in `src/scss/_variables.scss`, where Origami components define global variables.
 
 <pre><code class="o-syntax-highlight--scss">
 @if ($o-example-is-silent == false) {
@@ -75,83 +85,145 @@ After the primary mixin there is a [Sass variable](https://sass-lang.com/documen
 }
 </code></pre>
 
-This [silent mode pattern](https://origami.ft.com/spec/v1/sass/#sass-silent-mode) is deprecated but required by all Origami components to support the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). We'll discuss the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/), which may be used to bundle Origami components, in more detail later.
+By default the silent mode variable is set to `false` so no CSS is output when a component is included in a project, until a mixin is called. But a project may set the silent mode variable to `true` before including the component, as an alternative to calling the primary mixin. This [silent mode pattern](https://origami.ft.com/spec/v1/sass/#sass-silent-mode) is deprecated but required by all Origami components to support the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/). We'll discuss the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/), which may be used to bundle Origami components, in more detail later.
 
-Let's style our component by adding a border and padding to the primary mixin. Note that the mixin is used by the demo and will output the CSS class in the body of the mixin, in our case `.o-example`.
+## Naming Conventions
+
+The most important naming convention is prefixing CSS selectors and Sass with the component name. Doing so makes sure a component only applies styles to itself, does not unexpectedly style other parts of a project, and does not clash with Sass from other components.
+
+Other naming conventions to keep in mind include:
+- Origami CSS follows the [BEM naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
+- Sass variables are hyphen separated and lowercase.
+- Sass mixins and functions are camel-case.
+
+See the [Sass naming convention part of the specification](https://origami.ft.com/spec/v1/sass/#naming-conventions) for full details and more examples.
+
+## Basic Styles
+
+Let's style our component by adding a border and padding to the `.o-example` CSS class.
 
 <pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
 	// content of primary mixin
 	.o-example {
 -		display: block;
 +		border: 1px solid red;
-+		padding: 16px;
-+		margin: 4px;
++		padding: 1rem;
++		margin: 0.25rem;
 	}
 }
 </code></pre>
 
+As the demo uses the primary mixin already, refreshing your demo page will show the new styles (provided the `obt dev` command is still running from [part one](/docs/tutorials/create-a-new-component)).
+
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-2-sass.png" />
 	<figcaption class="o-typography-caption">
-        The "hello world" component demo with a red border, some margin, and some padding.
+        Our "o-example" "hello world" component demo with a red border, some margin, and some padding.
 	</figcaption>
 </figure>
 
-A component may style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component, in the case of this tutorial `o-example`. As Origami components follow the [BEM naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+## Use Other Component Sass
 
+The styles we've added so far use arbitrary colours and spacing (padding/margin) sizes. To improve consistency across projects we can build our component using existing Origami components. To demonstrate lets introduce some existing Origami components to our demo.
 
-## Structure
+First we will update our border colour using [o-colors](https://registry.origami.ft.com/components/o-colors), then we will update our margin/padding to use [o-spacing](https://registry.origami.ft.com/components/o-spacing), we'll style the text content of our component using [o-typography](https://registry.origami.ft.com/components/o-typography), and finally we will add a button using [o-buttons](https://registry.origami.ft.com/components/o-buttons).
 
-Now we have the code for a basic Origami component we can discuss the purpose of some key files and directories.
+### Install Component Dependencies
 
+The first step is to install each component we want to use via [Bower](https://bower.io/). In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file. We recommend adding it to your home directory `~/.bowerrc`:
+<pre><code class="o-syntax-highlight--json">{
+	"registry": {
+		"search": [
+			"https://origami-bower-registry.ft.com",
+			"https://registry.bower.io"
+		]
+	}
+}</code></pre>
 
+With Bower configured, we can now run:
+<pre><code class="o-syntax-highlight--bash">bower install o-colors o-spacing o-typography o-buttons</code></pre>
 
-### pa11y
-The pa11y demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we use to highlight any accessibility issues against the pa11y demo. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. As it's used to automate some accessibility tests, the pa11y demo is hidden from users in the [component registry](https://registry.origami.ft.com/components).
+You should now have a `bower_components` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 
+<pre><code class="o-syntax-highlight--diff">+@import 'o-colors/main';
++@import 'o-spacing/main';
++@import 'o-typography/main';
++@import 'o-buttons/main';
+@import 'src/scss/variables';
+</code></pre>
 
-### bower.json and package.json
+All [`@import` statements in Origami components](http://localhost:4000/spec/v1/sass/#sass-includes) should be in `main.scss`, before any other Sass.
 
-[Bower](https://bower.io/) is a package manager used to install Origami component dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
+As Origami component Sass does not output CSS by default, these imports do nothing except allow us to use Sass mixins, functions, and variables from these components. How to use a component's Sass is documented in the component readme (see the [o-colors readme](https://registry.origami.ft.com/components/o-colors/readme) as an example) and its SassDoc may also be referenced in the component registry (see the [o-colors SassDoc](https://registry.origami.ft.com/components/o-colors/sassdoc) as an example).
 
-Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
+### o-colors
 
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
+So lets change our red boarder to the standard slate colour from `o-colors` using the [oColorsByName](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#default-palette-colours) Sass function.
 
-### Renaming And Adding A New Demo
+As well as include a colour by name, we can also get a colour for a [specific usecase](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#usecases) such as a page background. To demonstrate, set the background colour of our component using the `box` colour usecase (the `box` colour is used to highlight an area of content such as an aside).
 
-At the time of writing, the boilerplate demo generated by `obt init` is named `demo`. However components may have multiple demos. A name `demo` is not very helpful as it does not describe what the demo shows.
+<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+	// content of primary mixin
+	.o-example {
+-		border: 1px solid red;
++		border: 1px solid oColorsByName('slate');
++		background: oColorsByUsecase('box', 'background');
+		padding: 1rem;
+		margin: 0.25rem;
+	}
+}
+</code></pre>
 
-To update the demo name or add a new demo edit the `origami.json` file. `origami.json` is a JSON file that is responsible for describing various aspects of an Origami project, including components. There is a [specification for the full `origami.json` manifest](https://origami.ft.com/spec/v1/manifest/), but for now we are interested in only the `demosDefaults` and `demos` keys.
+### o-spacing
 
-[`demosDefaults`](https://origami.ft.com/spec/v1/manifest/#demosdefaults) describes default options to be applied to all demos. Among other settings, we can specify the demo Mustache template, Sass, and JavaScript file. We can also set a `data` attribute to pass JSON data to our Mustache template.
+Then we can use one of the recommended space values from `o-spacing` using its [oSpacingByName](https://registry.origami.ft.com/components/o-spacing@2.0.4/readme?brand=master#named-space) Sass function.
+<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+	// content of primary mixin
+	.o-example {
+		border: 1px solid oColorsByName('slate');
+-		padding: 1rem;
++		padding: oSpacingByName('s4');
+-		margin: 0.25rem;
++		margin: oSpacingByName('s1');
+	}
+}
+</code></pre>
 
-[`demos`](https://origami.ft.com/spec/v1/manifest/#demos) is an array of individual demos. Here we set the `name` of the demo, which will be used as the name of the outputted html file; a title and description to display when the component demo is published to the Origami Registry; as well as other options such as to override `demosDefaults` per demo.
+### o-typography
 
-In our example `o-example` component we will have an option to inverse the colours for use on a dark background. Let's call that variant `inverse` and create a new demo to
+The next thing we wanted to do was style our component text using `o-typography`. We can do that a number of ways depending on how we want our typography to look. For now let's use the [`oTypographyBody`](https://registry.origami.ft.com/components/o-typography@6.4.1/readme?brand=master#otypographybody) mixin. Unlike a function which returns a value, a Sass mixin sets a number of CSS properties; in this case the font family, font size, etc.
 
-```diff
-	"demos": [
-		{
--			"title": "A Useful Demo",
-+			"title": "Standard",
-			"name": "demo",
-			"template": "demos/src/demo.mustache",
--			"description": "Description of the demo"
-+			"description": "The standard variant of o-example is best on on light backgrounds."
-		},
-+		{
-+			"title": "Inverse",
-+			"name": "demo-2",
-+			"template": "demos/src/demo.mustache",
-+			"description": "The inverse variant of o-example is best on on dark backgrounds."
-+		},
-		{
-			"title": "Pa11y",
-			"name": "pa11y",
-			"template": "demos/src/pa11y.mustache",
-			"description": "Accessibility test will be run against this demo",
-			"hidden": true
-		}
-	]
-```
+<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+	// content of primary mixin
+	.o-example {
++		@include oTypographyBody();
+		border: 1px solid oColorsByName('slate');
+		padding: oSpacingByName('s4');
+		margin: oSpacingByName('s1');
+	}
+}
+</code></pre>
+
+Run `obt dev`, if not already, and preview the component demo as in [part one](/docs/tutorials/create-a-new-component). You should see the styles have been updated
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-sass.png" />
+	<figcaption class="o-typography-caption">
+        Our "o-example" "hello world" component now as a slate boarder, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
+	</figcaption>
+</figure>
+
+### o-buttons
+
+@todo add a button, explain that we can't include all button css and must use a "content" mixin
+
+## Part Three: Themes And Branding
+
+To style our components we covered many topics in this part of the tutorial. We learnt:
+- Origami component CSS is written with [Sass](https://sass-lang.com/documentation)
+- Component Sass includes [SassDoc](http://sassdoc.com/) comments for Sass documentation.
+- Conventional Origami Sass patterns such as the ["primary mixin"](https://origami.ft.com/spec/v1/sass/#primary-mixin) and ["silent mode"](https://origami.ft.com/spec/v1/sass/#sass-silent-mode).
+- How to install Origami component dependencies from the [Origami Bower Registry](https://github.com/Financial-Times/origami-bower-registry).
+- And finally how to include and use Sass from o-colors, o-spacing, o-typography, and o-buttons.
+
+Now we know how to add styles our components, in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will optionally modify the appearance of `o-example` to look better on a dark background. We will also brand our component to change its appearance depending on whether it is used within a master brand ft.com product, internal product, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).

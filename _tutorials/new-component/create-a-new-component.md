@@ -51,7 +51,7 @@ Origami components are categorised, and different rules of the specification may
 
 ### Supported Brands
 
-Component brands facilitate [component customisation](https://origami.ft.com/spec/v1/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master`, `internal`, and `internal` brand when prompted by `obt init`.
+Component brands facilitate [component customisation](https://origami.ft.com/spec/v1/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master`, `internal`, and `whitelabel` brand when prompted by `obt init`.
 
 ### Support Status
 
@@ -83,6 +83,8 @@ The structure of our component now looks something like this. In the next sectio
 ```
 o-example
 ├── .eslintrc.js
+├── .dependabot
+│   └── config.yml
 ├── .github
 │   ├── CODEOWNERS
 │   ├── ISSUE_TEMPLATE.md
@@ -91,6 +93,8 @@ o-example
 │       ├── automatic-tag-and-release.yml
 │       ├── release-origami-component.yml
 │       ├── sync-repo-labels.yml
+│       ├── apply-labels.yml
+│       ├── auto-approve.yml
 │       └── test-origami-component.yml
 ├── .gitignore
 ├── .stylelintrc.js
@@ -124,7 +128,7 @@ o-example
 
 ## Source Control
 
-All Origami components reside in a [git](https://git-scm.com/) repository and are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](https://origami.ft.com/spec/v1/components/#source-control).
+All Origami components reside in a [git](https://git-scm.com/) repository with the same name as the component. It's required that component repositories are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](https://origami.ft.com/spec/v1/components/#source-control).
 
 Create a new git repository by running `git init`, and commit the boilerplate as an initial commit. For example:
 
@@ -136,7 +140,7 @@ You may then push this to your remote github.com repository, under the `Financia
 
 _Note: we're assuming existing git knowledge here, so please feel free to contact the Origami team if you get stuck at any point._
 
-You might have noticed a `.github` directory. At the time of writing, the `.github` directory itself is not part of the [file structure specification](https://origami.ft.com/spec/v1/components/#files-and-folder-structure). If we deleted `.github` the component would still be an Origami component. But this directory gives us some nice features:
+You might have noticed a `.github` directory. At the time of writing, the `.github` directory itself is not part of the [file structure specification](https://origami.ft.com/spec/v1/components/#files-and-folder-structure). If we deleted `.github` the component would still be an Origami component. But this directory gives us some nice features including:
 - `ISSUE_TEMPLATE.md`: The contents of this file are used to provide a [template when opening a new Github issue](https://help.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates). It helps users report bugs or provide feedback by prompting for useful information.
 - `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
 - `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
@@ -169,7 +173,7 @@ Opening the link output by the develop command, for example `localhost:8999`, sh
 	</figcaption>
 </figure>
 
-Clicking the `demo.html` to open that demo will show a blank page. In the next section we will update this demo with markup and content for our component.
+Clicking `demo.html` to open that demo will show a blank page. In the next section we will update this demo with markup and content for our component.
 
 ## Markup
 
@@ -181,7 +185,7 @@ In the demos directory, you should see an example demo `demos/src/demo.mustache`
 
 <pre><code class="o-syntax-highlight--html">&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
 
-That `div` element is our component markup. So we can see something in out demo, add some content within the `div` and hit refresh.
+That `div` element is our component markup. So we can see something in out demo, add some content within the `div`.
 
 <pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">&lt;/div>
 +&lt;div class="o-example" data-o-component="o-example">
@@ -199,12 +203,12 @@ The `obt dev` command which we run earlier will detect that you have updated `de
 
 The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](https://origami.ft.com/spec/v1/markup/#owned-dom). A component may act on a DOM element using JavaScript if it, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](https://origami.ft.com/spec/v1/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
 
-## Part Two: Styles
+## Part Two: Base Styles
 
 In part one we learnt:
 - The [Origami component specification](https://origami.ft.com/spec/v1/components/) tells us what standards we must meet to create an Origami component.
 - The [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) command line interface is used to help us develop and test components.
-- Specifically, we learnt about the Origami Build Tools `init` command to generate a basic component to work from when developing a new component.
+- Specifically, we learnt about the Origami Build Tools `init` command to generate a component to work from when developing a new component.
 - Origami components use git source control and are stored remotely on Github.
 - Origami components HTML markup is usually copied by users from component demos rather than from templates.
 - And finally we learnt how to update the markup in one of those demos.
