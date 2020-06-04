@@ -141,7 +141,7 @@ The first step is to install each component we want to use via [Bower](https://b
 }</code></pre>
 
 With Bower configured, we can now run:
-<pre><code class="o-syntax-highlight--bash">bower install o-colors o-spacing o-typography o-buttons</code></pre>
+<pre><code class="o-syntax-highlight--bash">bower install o-colors o-spacing o-typography o-buttons --save</code></pre>
 
 You should now have a `bower_components` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 
