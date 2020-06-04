@@ -209,13 +209,41 @@ Run `obt dev`, if not already, and preview the component demo as in [part one](/
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-sass.png" />
 	<figcaption class="o-typography-caption">
-        Our "o-example" "hello world" component now as a slate boarder, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
+        Our "o-example" "hello world" component now has a slate boarder, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
 	</figcaption>
 </figure>
 
 ### o-buttons
 
-@todo add a button, explain that we can't include all button css and must use a "content" mixin
+In this tutorial we're aiming to build a component that includes a button which will count the number of times it was clicked, so next we will add a button to our component.
+
+If we were adding buttons to a project we might include the primary Sass mixin [`oButtons`](https://registry.origami.ft.com/components/o-buttons@6.0.14/sassdoc?brand=master#mixin-obuttons) to output CSS for the buttons we want to use. However the primary mixin will output button classes like `.o-buttons` and we learnt in a previous section that Origami components must prefix their CSS selectors with the component name. What we want is a class that starts with our component name such as `.o-example__button`.
+
+Fortunately, `o-buttons` allows us to output a button with a custom class name using the Sass mixin [`oButtonsContent`](https://registry.origami.ft.com/components/o-buttons@6.0.14/sassdoc?brand=master#mixin-obuttonscontent). There are a number of options we could pass to `oButtonsContent` for different types of buttons. We'll choose a "primary" button type for this tutorial. In `main.scss` define a new CSS class `.o-example__button` and include the button CSS with `oButtonsContent`:
+
+<pre><code class="o-syntax-highlight--scss">.o-example {
+	// [previously discussed css here]
+}
+
+.o-example__button {
+	@include oButtonsContent($opts: ('type': 'primary'));
+}</code></pre>
+
+We need to update our demo markup  `demos/src/demo.mustache` with the new button markup, similar to how we added text to the demo in [part one](/docs/tutorials/create-a-new-component):
+
+<pre><code class="o-syntax-highlight--diff">&lt;div class="o-example" data-o-component="o-example">
+	Hello world, I am a component named o-example!
++	&lt;button class="o-example__button">count&lt;/button>
+&lt;/div></code></pre>
+
+_Note: the double underscore in `.o-example__button` is part of the [BEM naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) mentioned earlier._
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-4-sass.png" />
+	<figcaption class="o-typography-caption">
+        Our "o-example" component now has a button.
+	</figcaption>
+</figure>
 
 ## Part Three: Themes And Branding
 
@@ -226,4 +254,4 @@ To style our components we covered many topics in this part of the tutorial. We 
 - How to install Origami component dependencies from the [Origami Bower Registry](https://github.com/Financial-Times/origami-bower-registry).
 - And finally how to include and use Sass from o-colors, o-spacing, o-typography, and o-buttons.
 
-Now we know how to add styles our components, in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will optionally modify the appearance of `o-example` to look better on a dark background. We will also brand our component to change its appearance depending on whether it is used within a master brand ft.com product, internal product, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).
+Now we know how to add styles, in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will optionally modify the appearance of `o-example` to look better on a dark background. We will also brand our component to change its appearance depending on whether it is used within a master brand ft.com product, internal product, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).
