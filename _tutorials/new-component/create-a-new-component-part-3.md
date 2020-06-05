@@ -27,14 +27,216 @@ When promoted by `obt init` in [part one](/docs/tutorials/create-a-new-component
 
 @todo show the brand obt flag at this point. Show how the colour of the background changes automatically because we used o-colors usecases (later we will remove the usecase, so show it in use at this point)
 
+### Switching Brands In Development
+
+When developing a branding Origami component pass the `--brand` flag to the `obt dev` command to switch brand.
+
+For example, build the `internal` version of our component by running `obt dev --brand internal`. You should see in our demo the background colour has changed from a wheat colour to a light slate colour. That's because wheat is not part of the [internal brand colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=internal#demo-primary-palette). As we used a colour usecase `oColorsByUsecase('box', 'background')` in [part two](/docs/tutorials/create-a-new-component-part-2), rather than specify a specific colour, it was updated automatically for the internal brand.
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-5-sass.png" />
+	<figcaption class="o-typography-caption">
+        Our example component for the internal brand no longer has a wheat background, because the background was set using a colour usecase.
+	</figcaption>
+</figure>
+
+Do the same for the whitelabel brand by running `obt dev --brand whitelabel`. You should see a Sass error `Error: 'The color "slate" does not exist.`. This error is because we set a border colour by name `oColorsByName('slate')` in [part two](/docs/tutorials/create-a-new-component-part-2), but slate is not in the limited [whitelabel colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=whitelabel#demo-primary-palette).
+
+To fix this error, we need to set the border colour of our component differently depending on which brand is being used.
+
 ### Configuring Brand Variables
 
-To brand our component we need to include [o-brand](https://registry.origami.ft.com/components/o-brand@/readme) as a dependency. Install `o-brand` by running `bower install o-brand --save` and importing its Sass file in `main.scss`, as we did for other dependencies in [part two](/docs/tutorials/create-a-new-component-part-2).
+To style our component according to the current brand we need to include [o-brand](https://registry.origami.ft.com/components/o-brand@/readme) as a dependency. Install `o-brand` by running `bower install o-brand --save` and importing its Sass file in `main.scss`, as we did for other dependencies in [part two](/docs/tutorials/create-a-new-component-part-2).
 
-Now `o-brand` Sass is available for us to use you should see a file `src/scss/_brand.scss`. The brand Sass file is where all our brand configuration will go. It will look something like this:
+Now `o-brand` Sass is available for us to use. We will use `o-brand` to define a brand variable `border-color` in `src/scss/_brand.scss`, which is where all our brand configuration will go.
+
+You should see in `src/scss/_brand.scss` two Sass functions which we will discuss later, for now add the following Sass at the bottom of the file.
+
+<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate')
+		),
+		'supports-variants': ()
+	));
+}</code></pre>
+
+Lets break down what this is doing.
+
+First we check if the current brand is the `master` brand using the `o-brand` function `oBrandGetCurrentBrand` and a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). We do this to ensure the Sass within the `if` statement is only evaluated when the brand is the `master` brand:
+<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+	//...
+}</code></pre>
+
+Second we call the mixin `oBrandDefine`, which will let us set component configuration for a given brand. In this case we are configuring our `o-example` component for the `master` brand.
+
+<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+        // brand configuration for the master brand here..
+    ));
+}</code></pre>
+
+Third we pass configuration to `oBrandDefine` for the brand. We set a brand variable `border-color` within a `variables` map, to the value of the slate colour `oColorsByName('slate')`. We also set a property `supports-variants`, which we will discuss more shortly.
+<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate')
+		),
+		'supports-variants': ()
+	));
+}</code></pre>
+
+Now repeat this block for the `internal` and `whitelabel` brand, but change `border-color` to `oColorsByName('black')` for the `whitelabel` brand (as `slate` is not part of the [whitelabel colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=whitelabel#demo-primary-palette)):
+
+<pre><code class="o-syntax-highlight--scss">// Add master brand configuration.
+@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate')
+		),
+		'supports-variants': ()
+	));
+}
+
+// Add internal brand configuration.
+@if oBrandGetCurrentBrand() == 'internal' {
+	@include oBrandDefine('o-example', 'internal', (
+		'variables': (
+			'border-color': oColorsByName('slate')
+		),
+		'supports-variants': ()
+	));
+}
+
+// Add whitelabel brand configuration.
+@if oBrandGetCurrentBrand() == 'whitelabel' {
+	@include oBrandDefine('o-example', 'whitelabel', (
+		'variables': (
+			'border-color': oColorsByName('black')
+		),
+		'supports-variants': ()
+	));
+}</code></pre>
+
+Now we have defined `border-color` for each brand, with a different colour set for the whitelabel brand, we can use `border-color` within our Sass. Return your focus to the Sass function `_oExampleGet` at the top of `src/scss/_brand.scss`:
+
+<pre><code class="o-syntax-highlight--scss">/// Helper for `o-brand` function.
+/// @access private
+@function _oExampleGet($variables, $from: null) {
+	@return oBrandGet($component: 'o-example', $variables: $variables, $from: $from);
+}</code></pre>
+
+The `_oExampleGet` function is a component specific function which wraps a `o-brand` function `oBrandGet`. `oBrandGet` is used to retrieve a brand variable depending on the current brand. Wrapping this in `_oExampleGet` is useful to avoid passing the `$component` argument repeatedly.
+
+Update `main.scss` to set our border color with `_oExampleGet('border-color')`:
+<pre><code class="o-syntax-highlight--diff">.o-example {
+		@include oTypographyBody();
+-		border: 1px solid oColorsByName('slate');
++		border: 1px solid _oExampleGet('border-color');
+		background: oColorsByUsecase('box', 'background');
+		padding: oSpacingByName('s4');
+		margin: oSpacingByName('s1');
+	}</code></pre>
+
+Now when we run `obt dev --brand whitelabel` we get a different error! The error is `Could not find a colour for the "box" "background" usecase.`. That's because the whitelabel brand does not support the [box colour usecase](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#usecases) we used to set a background. Unlike the master and internal brand, the whitelabel brand is not opinionated and provides a limited set of colour usescases. Instead of using the usecase lets add a new brand variable `background-color` so we can support the whitelabel brand as well:
+
+<pre><code class="o-syntax-highlight--diff">// Add master brand configuration.
+@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
++			'background-color': oColorsByName('wheat')
+		),
+		'supports-variants': ()
+	));
+}
+
+// Add internal brand configuration.
+@if oBrandGetCurrentBrand() == 'internal' {
+	@include oBrandDefine('o-example', 'internal', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
++			'background-color': oColorsByName('slate-white-5')
+		),
+		'supports-variants': ()
+	));
+}
+
+// Add whitelabel brand configuration.
+@if oBrandGetCurrentBrand() == 'whitelabel' {
+	@include oBrandDefine('o-example', 'whitelabel', (
+		'variables': (
+			'border-color': oColorsByName('black'),
++			'background-color': oColorsByName('white')
+		),
+		'supports-variants': ()
+	));
+}</code></pre>
+
+And update `main.scss` again:
+<pre><code class="o-syntax-highlight--diff">.o-example {
+		@include oTypographyBody();
+		border: 1px solid _oExampleGet('border-color');
+-		background: oColorsByUsecase('box', 'background');
++		background: _oExampleGet('background-color');
+		padding: oSpacingByName('s4');
+		margin: oSpacingByName('s1');
+	}</code></pre>
+
+Our now component supports all three brands, with a unique appearance for each.
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-6-sass.png" />
+	<figcaption class="o-typography-caption">
+        The whitelabel brand version of our component is not very opinionated. It's black and white and uses a system font.
+	</figcaption>
+</figure>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-7-sass.png" />
+	<figcaption class="o-typography-caption">
+        The internal brand version of our component uses Financial Times fonts, and has a subtle background.
+	</figcaption>
+</figure>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-8-sass.png" />
+	<figcaption class="o-typography-caption">
+        The master brand version of our component uses Financial Times fonts and a wheat background.
+	</figcaption>
+</figure>
+
+There is more documentation about [`oBrandGet` in the `o-brand` readme](https://registry.origami.ft.com/components/o-brand/readme#obrandget).
+
+You may have noticed we haven't returned to the `supports-variants` configuration yet or the `_oExampleSupports` function. We'll discuss those next as part of the themes section. If you would like to find out more about `o-brand` features, see the [`o-brand` readme](https://registry.origami.ft.com/components/o-brand/readme).
+
+## Component Themes
+
+A component may also support themes within a brand, to allow for variations of the component. Further, some components include a Sass interface for users of the component to generate a custom theme.
+
+Unlike brands, which are set at a global level, a project could include many themes of a component at the same time. For example the [o-message](https://registry.origami.ft.com/components/o-message@4.1.3) component has success, error, and inform themes for notices.
+
+Now let's add themes to our `o-example` component. For reference there is a [theme section in the component specification](https://origami.ft.com/spec/v1/sass/#themes).
+
+Our example component will have two themes: an `inverse` theme that should be used when our component is on a dark background; and a `b2c` (business to consumer) theme just for the master brand. We will also make our component flexible and allow a user to generate a custom theme.
+
+We will add a new mixin called `oExampleAddTheme`, following the [theme convention in the specification](https://origami.ft.com/spec/v1/sass/#themes), to a new file `src/scss/_mixins.scss`. Don't forget to import your new `src/scss/_mixins.scss` in `main.scss`, in the same way `src/scss/_variables_.scss` is imported.
+
+Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-example--[theme-name]` which can be added to our component markup to change the theme ([this is a BEM modifier class](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)).
 
 ```scss
-/// Helper for `o-brand` function.
+@mixin oExampleAddTheme($name) {
+	.o-example--#{name} {
+		// update border-color and background
+		// for the given theme
+	}
+}
+```
+
+@todo continue here
+
+
+<pre><code class="o-syntax-highlight--scss">/// Helper for `o-brand` function.
 /// @access private
 @function _oExampleGet($variables, $from: null) {
 	@return oBrandGet($component: 'o-example', $variables: $variables, $from: $from);
@@ -43,26 +245,8 @@ Now `o-brand` Sass is available for us to use you should see a file `src/scss/_b
 /// @access private
 @function _oExampleSupports($variant) {
 	@return oBrandSupportsVariant($component: 'o-example', $variant: $variant);
-}
-```
+}</code></pre>
 
-Here we wrap two `o-brand` functions `oBrandGet` and `oBrandSupportsVariant` in a new function, so we do not have to pass the `$component` argument to the brand functions each time we use them. Our component specific functions start with an underscore `_` to indicate they are private. No user of our `o-example` component should use these functions. As private Sass, they may be changed or removed at any time.
-
-_(It's a good idea to mark all Sass as private with an underscore by default, so components may be refactored flexibly. It's easy to add new public features for component users but more difficult to remove them.)_
-
-In brief the `_oExampleGet` function will allow us to retrieve the value of a variable which changes according to the brand; the `_oExampleSupports` function will let us check if the current brand supports a variant of the component (a variant could be a theme, size, or other component modifier). We'll learn more about these functions do shorty. First we need to set brand variables.
-
-@todo define brand variables, use them. Use a master brand b2c variant to demonstrate supports.
-
-If you would like to find out more about `o-brand` features, see the [`o-brand` readme](https://registry.origami.ft.com/components/o-brand/readme).
-
-## Component Themes
-
-A component may also support themes within a brand, to allow for variations of the component. Further, some components include a Sass interface for users of the component to generate a custom theme.
-
-Unlike brands, which are set at a global level, a project could include many themes of a component at the same time. For example the [o-message](https://registry.origami.ft.com/components/o-message@4.1.3) component has success, error, and inform themes for notices.
-
-We will add themes as part of this tutorial, but for reference there is a [theme section in the component specification](https://origami.ft.com/spec/v1/sass/#themes).
 
 ## @todo: put this stashed content somewhere
 
@@ -90,8 +274,7 @@ To update the demo name or add a new demo edit the `origami.json` file. `origami
 
 In our example `o-example` component we will have an option to inverse the colours for use on a dark background. Let's call that variant `inverse` and create a new demo to
 
-```diff
-	"demos": [
+<pre><code class="o-syntax-highlight--diff">"demos": [
 		{
 -			"title": "A Useful Demo",
 +			"title": "Standard",
@@ -113,6 +296,5 @@ In our example `o-example` component we will have an option to inverse the colou
 			"description": "Accessibility test will be run against this demo",
 			"hidden": true
 		}
-	]
-```
+	]</code></pre>
 
