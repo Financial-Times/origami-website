@@ -183,7 +183,7 @@ And update `main.scss` again:
 		margin: oSpacingByName('s1');
 	}</code></pre>
 
-Our now component supports all three brands, with a unique appearance for each.
+Now our component supports all three brands, with a unique appearance for each.
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-6-sass.png" />
@@ -220,81 +220,269 @@ Now let's add themes to our `o-example` component. For reference there is a [the
 
 Our example component will have two themes: an `inverse` theme that should be used when our component is on a dark background; and a `b2c` (business to consumer) theme just for the master brand. We will also make our component flexible and allow a user to generate a custom theme.
 
+### Theme Mixin
+
 We will add a new mixin called `oExampleAddTheme`, following the [theme convention in the specification](https://origami.ft.com/spec/v1/sass/#themes), to a new file `src/scss/_mixins.scss`. Don't forget to import your new `src/scss/_mixins.scss` in `main.scss`, in the same way `src/scss/_variables_.scss` is imported.
 
-Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-example--[theme-name]` which can be added to our component markup to change the theme ([this is a BEM modifier class](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)).
+Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-example--[theme-name]` which can be added to our component markup to change the theme. The double dash in the theme name is part of the [BEM modifier naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
-```scss
-@mixin oExampleAddTheme($name) {
+<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name) {
 	.o-example--#{name} {
 		// update border-color and background
 		// for the given theme
 	}
-}
-```
-
-@todo continue here
-
-
-<pre><code class="o-syntax-highlight--scss">/// Helper for `o-brand` function.
-/// @access private
-@function _oExampleGet($variables, $from: null) {
-	@return oBrandGet($component: 'o-example', $variables: $variables, $from: $from);
-}
-/// Helper for `o-brand` function.
-/// @access private
-@function _oExampleSupports($variant) {
-	@return oBrandSupportsVariant($component: 'o-example', $variant: $variant);
 }</code></pre>
 
+Our mixin `oExampleAddTheme` could use the `$name` argument to create a new CSS class `.o-example--#{name}` ([see Sass interpolation](https://sass-lang.com/documentation/style-rules#interpolation)). Using them `$name` variable it is possible to output different CSS conditionally with a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). However this would be quite verbose Sass, especially as we need to support multiple themes which might differ in style per brand. Instead we can configure themes per brand where we called `oBrandDefine` earlier.
 
-## @todo: put this stashed content somewhere
+### Variant Variables
 
-### pa11y
-The pa11y demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we use to highlight any accessibility issues against the pa11y demo. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. As it's used to automate some accessibility tests, the pa11y demo is hidden from users in the [component registry](https://registry.origami.ft.com/components).
+A variant of a component is any visual modification. For example if we were to add a class `o-example--big` which increased the font size of our component, that would be a variant of `o-example`. In the same way a theme like `o-example--inverse` is also a variant.
 
+To define variables for a component variant by brand, set a map within the `variables` configuration of `oBrandDefine`.
 
-### bower.json and package.json
+<pre><code class="o-syntax-highlight--diff">// Add master brand configuration.
+@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
+			'background-color': oColorsByName('wheat'),
++			'inverse': (
++				'text-color': oColorsByName('white'),
++				'background-color': oColorsByName('slate')
++			),
++			'b2c': (
++				'background-color': oColorsByName('org-b2c-light')
++			)
+		),
+		'supports-variants': ()
+	));
+}
 
-[Bower](https://bower.io/) is a package manager used to install Origami component dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
+// Add internal brand configuration.
+@if oBrandGetCurrentBrand() == 'internal' {
+	@include oBrandDefine('o-example', 'internal', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
+			'background-color': oColorsByName('slate-white-5'),
++			'inverse': (
++				'text-color': oColorsByName('white'),
++				'background-color': oColorsByName('slate')
++			)
+		),
+		'supports-variants': ()
+	));
+}
 
-Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
+// Add whitelabel brand configuration.
+@if oBrandGetCurrentBrand() == 'whitelabel' {
+	@include oBrandDefine('o-example', 'whitelabel', (
+		'variables': (
+			'border-color': oColorsByName('black'),
+			'background-color': oColorsByName('white'),
++			'inverse': (
++				'text-color': oColorsByName('white'),
++				'background-color': oColorsByName('black')
++			)
+		),
+		'supports-variants': ()
+	));
+}</code></pre>
 
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
+Notice that the background colour we set for the inverse variant is different for the `whitelabel` brand than the other brands. And the `master` brand is the only one with `b2c` variables, as the `b2c` variant is specific to the master brand.
 
-### Renaming And Adding A New Demo
+We can now use the `$from` argument of our function `_oExampleGet` to fetch a brand variable from one of our variants. For example `_oExampleGet('background-color', $from: 'b2c')` will return the `org-b2c-light` colour when the current brand is the `master` brand, or `null` otherwise.
 
-At the time of writing, the boilerplate demo generated by `obt init` is named `demo`. However components may have multiple demos. A name `demo` is not very helpful as it does not describe what the demo shows.
+### Variant Support
 
-To update the demo name or add a new demo edit the `origami.json` file. `origami.json` is a JSON file that is responsible for describing various aspects of an Origami project, including components. There is a [specification for the full `origami.json` manifest](https://origami.ft.com/spec/v1/manifest/), but for now we are interested in only the `demosDefaults` and `demos` keys.
+To allow us to check if the theme name given to our `oExampleAddTheme` mixin is supported by the current brand, add the theme name to the `supports-variant` list of `oBrandDefine` configuration. Our final configuration looks like this:
 
-[`demosDefaults`](https://origami.ft.com/spec/v1/manifest/#demosdefaults) describes default options to be applied to all demos. Among other settings, we can specify the demo Mustache template, Sass, and JavaScript file. We can also set a `data` attribute to pass JSON data to our Mustache template.
+<pre><code class="o-syntax-highlight--scss">// Add master brand configuration.
+@if oBrandGetCurrentBrand() == 'master' {
+	@include oBrandDefine('o-example', 'master', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
+			'background-color': oColorsByName('wheat')
+			'inverse': (
+				'text-color': oColorsByName('white'),
+				'background-color': oColorsByName('slate')
+			),
+			'b2c': (
+				'background-color': oColorsByName('org-b2c-light')
+			)
+		),
+		'supports-variants': (
+			'inverse',
+			'b2c'
+		)
+	));
+}
 
-[`demos`](https://origami.ft.com/spec/v1/manifest/#demos) is an array of individual demos. Here we set the `name` of the demo, which will be used as the name of the outputted html file; a title and description to display when the component demo is published to the Origami Registry; as well as other options such as to override `demosDefaults` per demo.
+// Add internal brand configuration.
+@if oBrandGetCurrentBrand() == 'internal' {
+	@include oBrandDefine('o-example', 'internal', (
+		'variables': (
+			'border-color': oColorsByName('slate'),
+			'background-color': oColorsByName('slate-white-5'),
+			'inverse': (
+				'text-color': oColorsByName('white'),
+				'background-color': oColorsByName('slate')
+			)
+		),
+		'supports-variants': ('inverse')
+	));
+}
 
-In our example `o-example` component we will have an option to inverse the colours for use on a dark background. Let's call that variant `inverse` and create a new demo to
+// Add whitelabel brand configuration.
+@if oBrandGetCurrentBrand() == 'whitelabel' {
+	@include oBrandDefine('o-example', 'whitelabel', (
+		'variables': (
+			'border-color': oColorsByName('black'),
+			'background-color': oColorsByName('white'),
+			'inverse': (
+				'text-color': oColorsByName('white'),
+				'background-color': oColorsByName('black')
+			)
+		),
+		'supports-variants': ('inverse')
+	));
+}</code></pre>
 
-<pre><code class="o-syntax-highlight--diff">"demos": [
-		{
--			"title": "A Useful Demo",
-+			"title": "Standard",
-			"name": "demo",
-			"template": "demos/src/demo.mustache",
--			"description": "Description of the demo"
-+			"description": "The standard variant of o-example is best on on light backgrounds."
-		},
-+		{
-+			"title": "Inverse",
-+			"name": "demo-2",
-+			"template": "demos/src/demo.mustache",
-+			"description": "The inverse variant of o-example is best on on dark backgrounds."
-+		},
-		{
-			"title": "Pa11y",
-			"name": "pa11y",
-			"template": "demos/src/pa11y.mustache",
-			"description": "Accessibility test will be run against this demo",
-			"hidden": true
+The `_oExampleSupports` function we briefly mentioned earlier will return `true` if a given variant name is supported by the current brand, based on the `supports-variants` configuration we just set. For example only the `master` brand has the `b2c` theme listed under `supports-variants` so `_oExampleSupports('b2c')` will only return true when the current brand is the `master` brand.
+
+### Output Theme CSS
+
+We can now complete our theme mixin:
+- Use `_oExampleSupports` with [the Sass `@error` at-rule](https://sass-lang.com/documentation/at-rules/error) to throw an error if the theme name given is not supported by the current brand.
+- Use `_oExampleGet` to get theme values.
+
+<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name) {
+	// Error if an unsupported theme name is given.
+	@if not _oExampleSupports($name) {
+		@error 'The name "#{$name}" is not a supported "#{oBrandGetCurrentBrand()}" brand theme';
+	}
+
+	// Output theme css.
+	.o-example--#{$name} {
+		background: _oExampleGet('background-color', $from: $name);
+		color: _oExampleGet('text-color', $from: $name);
+	}
+}</code></pre>
+
+Now output the themes in the primary mixin `oExample`. We use the Sass [`@each` at-rule](https://sass-lang.com/documentation/at-rules/control/each) to loop over each theme and call `oExampleAddTheme` if `_oExampleSupports` returns `true`:
+
+<pre><code class="o-syntax-highlight--scss">@mixin oExample ($opts: ()) {
+	.o-example {
+		// ... base styles as previously discussed
+	}
+
+	.o-example__button {
+		// ... button styles as previously discussed
+	}
+
+	// call the `oExampleAddTheme` mixin to output css
+	// for each theme if the current brand supports it
+	@each $name in ('inverse', 'b2c') {
+		@if _oExampleSupports($name) {
+			@include oExampleAddTheme($name);
 		}
-	]</code></pre>
+	}
+}</code></pre>
 
+Currently users of the `oExample` mixin are forced to output all themes. This will increase the size of users CSS bundle unnecessarily if they are not using them all. We can improve `oExample` by adding the list of themes to the `$opts` parameter. Using the `$opts` parameter means we can output all themes by default but also allow users to choose what themes to output.
+
+<pre><code class="o-syntax-highlight--scss">@mixin oExample ($opts: (
+	'themes': ('inverse', 'b2c')
+)) {
+	// Get the themes to output from the `$opts` argument.
+	// If the user has passed an `$opts` map without a
+	// `themes` key, default to an empty list.
+	$themes: map-get($opts, 'themes');
+	$themes: if($themes, $themes, ());
+
+	.o-example {
+		@include oTypographyBody();
+		border: 1px solid _oExampleGet('border-color');
+		background: _oExampleGet('background-color');
+		padding: oSpacingByName('s4');
+		margin: oSpacingByName('s1');
+	}
+
+	.o-example__button {
+		@include oButtonsContent($opts: ('type': 'primary'));
+	}
+
+	// Call the `oExampleAddTheme` mixin to output css
+	// for each theme if the current brand supports it.
+	@each $name in $themes {
+		@if _oExampleSupports($name) {
+			@include oExampleAddTheme($name);
+		}
+	}
+}</code></pre>
+
+### Custom Theme
+
+We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme.
+<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name, $opts: null) {
+	// Error if an unsupported theme name is given without
+	// `$opts` options. If `$opts` are given we are adding
+	// a new custom theme.
+	@if not $opts and not _oExampleSupports($name) {
+		@error 'The name "#{$name}" is not a supported "#{oBrandGetCurrentBrand()}" brand theme';
+	}
+
+	// If options are given use them to create a custom theme,
+	// otherwise use the predefined variables.
+	$theme: if($opts, $opts, $name);
+
+	// Output theme css.
+	.o-example--#{$name} {
+		background: _oExampleGet('background-color', $from: $theme);
+		color: _oExampleGet('text-color', $from: $theme);
+	}
+}</code></pre>
+
+From a users point of view, this is how a custom theme will be created using our `oExampleAddTheme` mixin:
+<pre><code class="o-syntax-highlight--scss">// Create a custom theme `.o-example--my-custom-theme`
+@include oExampleAddTheme('my-custom-theme', (
+	'background-color': oColorsByName('white'),
+	'text-color': oColorsByName('crimson')
+));</code></pre>
+
+### Theme Markup
+
+Update your demo markup  `demos/src/demo.mustache` with a theme class name to preview what we have done. For example to see the inverse theme update the component class to `o-example o-example--inverse`:
+
+<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
++&lt;div class="o-example o-example--inverse" data-o-component="o-example">
+	Hello world, I am a component named o-example!
+	&lt;button class="o-example__button">count&lt;/button>
+</div></code></pre>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-9-sass.png" />
+	<figcaption class="o-typography-caption">
+        A master brand view of our "o-example" component with the `o-example--inverse` theme class applied.
+	</figcaption>
+</figure>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-10-sass.png" />
+	<figcaption class="o-typography-caption">
+        A master brand view of our "o-example" component with the `o-example--b2c` theme class applied.
+	</figcaption>
+</figure>
+
+For this tutorial, we aren't too worried that our button style does not match each theme. But if you would like to build on what we have covered, you could add a new variable such as `button-color` to the brand configuration and use [`oButtonsContent`](https://registry.origami.ft.com/components/o-buttons@6.0.14/readme?brand=master#custom-markup) in the theme mixin to change the button colour for each theme.
+
+## Part Four: Demos
+
+In part three we learnt:
+- Origami components may offer a distinct appearance for different brands: master, internal, or whitelabel.
+- How to use `o-brand` to set and retrieve brand variables in Sass.
+- How to switch brands locally using the `obt dev` `--brand` flag.
+- Origami components may be themed within a brand.
+- Some components allow custom themes to be created by the user.
+
+Now our component has multiple variants in the way of themes, we need multiple demos to present them to potential users in the [Origami registry](https://registry.origami.ft.com/components). In the next part we will add multiple demos and also look at other demo options in more detail. [Continue to part four](/docs/tutorials/create-a-new-component-part-4).
