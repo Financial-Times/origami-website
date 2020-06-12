@@ -8,7 +8,61 @@ collection_listing_display: false
 
 # {{page.title}}
 
-In part four we will create new demos to showcase the themes we created in [part three](/docs/tutorials/create-a-new-component-part-3). We will also review revisit demo boilerplate, including the purpose of the `pa11y` demo you may have already noticed.
+In part four we will create new demos to showcase the themes we created in [part three](/docs/tutorials/create-a-new-component-part-3). We will also revisit demo boilerplate, including the purpose of the `pa11y` demo you may have already noticed.
+
+## Add More Demos
+
+In [part three](/docs/tutorials/create-a-new-component-part-3) we added an `inverse` theme for each brand and a `b2c` theme for the master brand but no demos for these. That means there is no visual preview for potential users of our component, and no ability to copy the html for these themes from the [Origami component registry](https://registry.origami.ft.com/components/).
+
+To add new demos we will update `origami.json`. This file contains lots of information about our components, including its name, description, demos, and more — see the [Origami Manifest specification](https://origami.ft.com/spec/v1/manifest/) for full details.
+
+`demos/src/demo.mustache`
+
+We'll add a new object to the [demos array](https://origami.ft.com/spec/v1/manifest/#demos) which will represent our new demo. Demos must have at least the following properties:
+- `title`: A descriptive title for the [component registry](https://registry.origami.ft.com/components).
+- `name`: The outputted html file name.
+- `template`: The path to the demo mustache template.
+- `description`: A descriptive for the [component registry](https://registry.origami.ft.com/components).
+
+We could create a new mustache template for our new theme demo, but as our theme demo uses almost the same markup as our current demo we will reuse our current template `demos/src/demo.mustache`. But we will pass the theme name to the template using the demo `data` property as shown below:
+
+```diff
+"demos": [
+	{
+-		"title": "A Useful Demo",
++		"title": "Basic Example",
+		"name": "demo",
+		"template": "demos/src/demo.mustache",
+-		"description": "Description of the demo"
++		"description": "This demo shows a basic o-example component."
+	},
++	{
++		"title": "Inverse Example",
++		"name": "demo-inverse",
++		"template": "demos/src/demo.mustache",
++		"data": { "theme": "inverse" },
++		"description": "This demo shows an o-example component with the inverse theme."
++	},
+	{
+		"title": "Pa11y",
+		"name": "pa11y",
+		"template": "demos/src/pa11y.mustache",
+		"description": "Accessibility test will be run against this demo",
+		"hidden": true
+	}
+]
+```
+
+Now the `obt dev` command will build our new demo and create `demo-inverse.html`. To actually show the inverse theme we need to update the template `demos/src/demo.mustache` to use the data `{ "theme": "inverse" }` we have passed to it. In the code snippet below, we output the theme modifier class if a theme variable is found (see the [mustache documentation](https://mustache.github.io/mustache.5.html))
+
+```diff
+-<div class="o-example" data-o-component="o-example">
++<div class="o-example {{#theme}}o-example--{{theme}}{{/theme}}" data-o-component="o-example">
+    Hello world, I am a component named o-example!
+    <button class="o-example__button">count</button>
+</div>
+```
+
 
 ## @todo: put this stashed content somewhere
 
