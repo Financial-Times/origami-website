@@ -512,7 +512,9 @@ Update your demo markup  `demos/src/demo.mustache` with a theme class name to pr
 
 ## Part Four: Demos
 
-In part three we learnt:
+In total we've created 7 visual variants of our component across 3 brands and 2 themes, and created a Sass <abbr title="application programming interface">api</abbr> for users of the component to create custom themes. Many components don't need to support so many variants but building a complex example has allowed us to explore all aspects of branding and themes.
+
+In summary, in part three we learnt:
 - Origami components may offer a distinct appearance for different brands: master, internal, or whitelabel.
 - How to use `o-brand` to set and retrieve brand variables in Sass.
 - How to switch brands locally using the `obt dev` `--brand` flag.
