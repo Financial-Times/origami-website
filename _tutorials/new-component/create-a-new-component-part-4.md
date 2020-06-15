@@ -24,8 +24,7 @@ We'll add a new object to the [demos array](https://origami.ft.com/spec/v1/manif
 
 We could create a new mustache template for our new theme demo, but as our theme demo uses almost the same markup as our current demo we will reuse our current template `demos/src/demo.mustache`. To do that, we will pass the theme name to the template using the demo `data` property as shown below:
 
-```diff
-"demos": [
+<pre><code class="o-syntax-highlight--diff">"demos": [
 	{
 -		"title": "A Useful Demo",
 +		"title": "Basic Example",
@@ -49,17 +48,16 @@ We could create a new mustache template for our new theme demo, but as our theme
 		"hidden": true
 	}
 ]
-```
+</code></pre>
 
 Now the `obt dev` command will build our new demo and create `demo-inverse.html`. To actually show the inverse theme we need to update the template `demos/src/demo.mustache` to use the data `{ "theme": "inverse" }` we have passed to it. In the code snippet below, we output the theme modifier class if a theme variable is found (see the [mustache documentation](https://mustache.github.io/mustache.5.html))
 
-```diff
--<div class="o-example" data-o-component="o-example">
-+<div class="o-example {{#theme}}o-example--{{theme}}{{/theme}}" data-o-component="o-example">
+<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
++&lt;div class="o-example &#123;&#123;#theme}}o-example--&#123;&#123;theme}}&#123;&#123;/theme}}" data-o-component="o-example">
     Hello world, I am a component named o-example!
-    <button class="o-example__button">count</button>
-</div>
-```
+    &lt;button class="o-example__button">count&lt;/button>
+&lt;/div>
+</code></pre>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-11-sass.png" />
@@ -71,8 +69,7 @@ Now the `obt dev` command will build our new demo and create `demo-inverse.html`
 
 We also need to create a demo for the `b2c` theme. However the `b2c` theme we created only supports the `master` brand. It should not be displayed in the [Origami registry](https://registry.origami.ft.com/components) for the `internal` or `whitelabel` brands. To avoid that, we will set the [`brands` demo property](https://origami.ft.com/spec/v1/manifest/#demos).
 
-```diff
-"demos": [
+<pre><code class="o-syntax-highlight--diff">"demos": [
 	{
 		"title": "Basic Example",
 		"name": "demo",
@@ -102,7 +99,7 @@ We also need to create a demo for the `b2c` theme. However the `b2c` theme we cr
 		"hidden": true
 	}
 ]
-```
+</code></pre>
 
 ## Pa11y Demo
 
