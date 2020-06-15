@@ -16,15 +16,13 @@ In [part three](/docs/tutorials/create-a-new-component-part-3) we added an `inve
 
 To add new demos we will update `origami.json`. This file contains lots of information about our components, including its name, description, demos, and more — see the [Origami Manifest specification](https://origami.ft.com/spec/v1/manifest/) for full details.
 
-`demos/src/demo.mustache`
-
 We'll add a new object to the [demos array](https://origami.ft.com/spec/v1/manifest/#demos) which will represent our new demo. Demos must have at least the following properties:
 - `title`: A descriptive title for the [component registry](https://registry.origami.ft.com/components).
 - `name`: The outputted html file name.
 - `template`: The path to the demo mustache template.
 - `description`: A descriptive for the [component registry](https://registry.origami.ft.com/components).
 
-We could create a new mustache template for our new theme demo, but as our theme demo uses almost the same markup as our current demo we will reuse our current template `demos/src/demo.mustache`. But we will pass the theme name to the template using the demo `data` property as shown below:
+We could create a new mustache template for our new theme demo, but as our theme demo uses almost the same markup as our current demo we will reuse our current template `demos/src/demo.mustache`. To do that, we will pass the theme name to the template using the demo `data` property as shown below:
 
 ```diff
 "demos": [
@@ -63,54 +61,57 @@ Now the `obt dev` command will build our new demo and create `demo-inverse.html`
 </div>
 ```
 
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-11-sass.png" />
+	<figcaption class="o-typography-caption">
+        A list of demos and demo assets, served from `localhost` using the `obt dev` command. There is now `demo-inverse.html`.
+	</figcaption>
+</figure>
 
-## @todo: put this stashed content somewhere
 
-### pa11y
-The pa11y demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we use to highlight any accessibility issues against the pa11y demo. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. As it's used to automate some accessibility tests, the pa11y demo is hidden from users in the [component registry](https://registry.origami.ft.com/components).
+We also need to create a demo for the `b2c` theme. However the `b2c` theme we created only supports the `master` brand. It should not be displayed in the [Origami registry](https://registry.origami.ft.com/components) for the `internal` or `whitelabel` brands. To avoid that, we will set the [`brands` demo property](https://origami.ft.com/spec/v1/manifest/#demos).
 
+```diff
+"demos": [
+	{
+		"title": "Basic Example",
+		"name": "demo",
+		"template": "demos/src/demo.mustache",
+		"description": "This demo shows a basic o-example component."
+	},
+	{
+		"title": "Inverse Example",
+		"name": "demo-inverse",
+		"template": "demos/src/demo.mustache",
+		"data": { "theme": "inverse" },
+		"description": "This demo shows an o-example component with the inverse theme."
+	},
++	{
++		"title": "B2C Example",
++		"name": "demo-b2c",
++		"template": "demos/src/demo.mustache",
++		"data": { "theme": "b2c" },
++		"brands": ["master"],
++		"description": "This demo shows an o-example component with the b2c theme."
++	},
+	{
+		"title": "Pa11y",
+		"name": "pa11y",
+		"template": "demos/src/pa11y.mustache",
+		"description": "Accessibility test will be run against this demo",
+		"hidden": true
+	}
+]
+```
 
-### bower.json and package.json
+## Pa11y Demo
 
-[Bower](https://bower.io/) is a package manager used to install Origami component dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
+You may have noticed another demo `pa11y` has already been configured. The `pa11y` demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we use to highlight any accessibility issues against the pa11y demo. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. As it's used to automate some accessibility tests, the pa11y demo is hidden from users in the [component registry](https://registry.origami.ft.com/components).
 
-Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
+## Other Demo Options
 
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
+There are other demo options we haven't covered so far. For example as well as the `demos` array `origami.json` may include [`demosDefaults`](https://origami.ft.com/spec/v1/manifest/#demosdefaults), which describe options to be applied to all demos. Among other settings, we can specify the demo Mustache template, Sass, and JavaScript file. To learn more, see the [Origami Manifest specification](https://origami.ft.com/spec/v1/manifest/) which has a full list of all demo options.
 
-### Renaming And Adding A New Demo
+## Part Five: JavaScript
 
-At the time of writing, the boilerplate demo generated by `obt init` is named `demo`. However components may have multiple demos. A name `demo` is not very helpful as it does not describe what the demo shows.
-
-To update the demo name or add a new demo edit the `origami.json` file. `origami.json` is a JSON file that is responsible for describing various aspects of an Origami project, including components. There is a [specification for the full `origami.json` manifest](https://origami.ft.com/spec/v1/manifest/), but for now we are interested in only the `demosDefaults` and `demos` keys.
-
-[`demosDefaults`](https://origami.ft.com/spec/v1/manifest/#demosdefaults) describes default options to be applied to all demos. Among other settings, we can specify the demo Mustache template, Sass, and JavaScript file. We can also set a `data` attribute to pass JSON data to our Mustache template.
-
-[`demos`](https://origami.ft.com/spec/v1/manifest/#demos) is an array of individual demos. Here we set the `name` of the demo, which will be used as the name of the outputted html file; a title and description to display when the component demo is published to the Origami Registry; as well as other options such as to override `demosDefaults` per demo.
-
-In our example `o-example` component we will have an option to inverse the colours for use on a dark background. Let's call that variant `inverse` and create a new demo to
-
-<pre><code class="o-syntax-highlight--diff">"demos": [
-		{
--			"title": "A Useful Demo",
-+			"title": "Standard",
-			"name": "demo",
-			"template": "demos/src/demo.mustache",
--			"description": "Description of the demo"
-+			"description": "The standard variant of o-example is best on on light backgrounds."
-		},
-+		{
-+			"title": "Inverse",
-+			"name": "demo-2",
-+			"template": "demos/src/demo.mustache",
-+			"description": "The inverse variant of o-example is best on on dark backgrounds."
-+		},
-		{
-			"title": "Pa11y",
-			"name": "pa11y",
-			"template": "demos/src/pa11y.mustache",
-			"description": "Accessibility test will be run against this demo",
-			"hidden": true
-		}
-	]</code></pre>
-
+In part four we learnt how to add new demos to present the themes we created previously to users. Although our component is starting to look good, it has a button which doesn't do anything. So next we'll learn how to add interactivity to our component with JavaScript. [Continue to part five](/docs/tutorials/create-a-new-component-part-5).
