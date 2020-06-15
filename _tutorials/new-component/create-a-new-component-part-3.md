@@ -355,6 +355,7 @@ The `_oExampleSupports` function we briefly mentioned earlier will return `true`
 We can now complete our theme mixin:
 - Use `_oExampleSupports` with [the Sass `@error` at-rule](https://sass-lang.com/documentation/at-rules/error) to throw an error if the theme name given is not supported by the current brand.
 - Use `_oExampleGet` to get theme values.
+- Use `oButtonsContent` to update the button styles if there is a matching [o-buttons theme](https://registry.origami.ft.com/components/o-buttons@6.0.14/readme?brand=master#themes).
 
 <pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name) {
 	// Error if an unsupported theme name is given.
@@ -366,6 +367,24 @@ We can now complete our theme mixin:
 	.o-example--#{$name} {
 		background: _oExampleGet('background-color', $from: $name);
 		color: _oExampleGet('text-color', $from: $name);
+	}
+
+	// Output theme css.
+	.o-example--#{$name} {
+		background: _oExampleGet('background-color', $from: $theme);
+		color: _oExampleGet('text-color', $from: $theme);
+		// Theme the o-example button using o-buttons.
+		// Only output button styles to change the theme,
+		// don't repeat styles shared by all buttons.
+		$matching-button-theme: $name == 'inverse' or $name == 'b2c';
+		@if $matching-button-theme {
+			.o-example__button {
+				@include oButtonsContent($opts: (
+					'type': 'primary',
+					'theme': $matching-button-theme
+				), $include-base-styles: false);
+			}
+		}
 	}
 }</code></pre>
 
@@ -423,7 +442,7 @@ Currently users of the `oExample` mixin are forced to output all themes. This wi
 
 ### Custom Theme
 
-We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme.
+We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme. We'll add support for one new option `button-color`, which we will forward to the `oButtonsContent` mixin, so custom `o-example` themes can change the colour of the button also.
 <pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name, $opts: null) {
 	// Error if an unsupported theme name is given without
 	// `$opts` options. If `$opts` are given we are adding
@@ -440,6 +459,22 @@ We can make our `o-example` component more flexible by allowing users to create 
 	.o-example--#{$name} {
 		background: _oExampleGet('background-color', $from: $theme);
 		color: _oExampleGet('text-color', $from: $theme);
+		// Theme the o-example button using o-buttons.
+		// Only output button styles to change the theme,
+		// don't repeat styles shared by all buttons.
+		$matching-button-theme: $name == 'inverse' or $name == 'b2c';
+		// Theme the button with the `button-color` option if the theme
+		// name does not match inverse or b2c, existing o-buttons theme.
+		// https://registry.origami.ft.com/components/o-buttons@6.0.14/readme?brand=master#themes
+		$custom-button-color: _oExampleGet('button-color', $from: $theme);
+		@if $matching-button-theme or $custom-button-color {
+			.o-example__button {
+				@include oButtonsContent($opts: (
+					'type': 'primary',
+					'theme': if($matching-button-theme, $name, ('color': $custom-button-color))
+				), $include-base-styles: false);
+			}
+		}
 	}
 }</code></pre>
 
@@ -447,7 +482,8 @@ From a users point of view, this is how a custom theme will be created using our
 <pre><code class="o-syntax-highlight--scss">// Create a custom theme `.o-example--my-custom-theme`
 @include oExampleAddTheme('my-custom-theme', (
 	'background-color': oColorsByName('white'),
-	'text-color': oColorsByName('crimson')
+	'text-color': oColorsByName('crimson'),
+	'button-color': oColorsByName('white')
 ));</code></pre>
 
 ### Theme Markup
@@ -473,8 +509,6 @@ Update your demo markup  `demos/src/demo.mustache` with a theme class name to pr
         A master brand view of our "o-example" component with the `o-example--b2c` theme class applied.
 	</figcaption>
 </figure>
-
-For this tutorial, we aren't too worried that our button style does not match each theme. But if you would like to build on what we have covered, you could add a new variable such as `button-color` to the brand configuration and use [`oButtonsContent`](https://registry.origami.ft.com/components/o-buttons@6.0.14/readme?brand=master#custom-markup) in the theme mixin to change the button colour for each theme.
 
 ## Part Four: Demos
 
