@@ -116,7 +116,7 @@ Let's style our component by adding a border and padding to the `.o-example` CSS
 As the demo uses the primary mixin already, refreshing your demo page will show the new styles (provided the `obt dev` command is still running from [part one](/docs/tutorials/create-a-new-component)).
 
 <figure>
-	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-2-sass.png" />
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-2-basic-styles.png" />
 	<figcaption class="o-typography-caption">
         Our "o-example" "hello world" component demo with a red border, some margin, and some padding.
 	</figcaption>
@@ -207,7 +207,7 @@ The next thing we wanted to do was style our component text using `o-typography`
 Run `obt dev`, if not already, and preview the component demo as in [part one](/docs/tutorials/create-a-new-component). You should see the styles have been updated
 
 <figure>
-	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-sass.png" />
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-basic-styles.png" />
 	<figcaption class="o-typography-caption">
         Our "o-example" "hello world" component now has a slate boarder, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
 	</figcaption>
@@ -239,7 +239,7 @@ We need to update our demo markup  `demos/src/demo.mustache` with the new button
 _Note: the double underscore in `.o-example__button` is part of the [BEM naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) mentioned earlier._
 
 <figure>
-	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-4-sass.png" />
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-4-basic-styles.png" />
 	<figcaption class="o-typography-caption">
         Our "o-example" component now has a button.
 	</figcaption>

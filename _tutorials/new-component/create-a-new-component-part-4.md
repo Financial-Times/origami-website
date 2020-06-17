@@ -60,7 +60,7 @@ Now the `obt dev` command will build our new demo and create `demo-inverse.html`
 </code></pre>
 
 <figure>
-	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-11-sass.png" />
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-11-demo.png" />
 	<figcaption class="o-typography-caption">
         A list of demos and demo assets, served from `localhost` using the `obt dev` command. There is now `demo-inverse.html`.
 	</figcaption>
