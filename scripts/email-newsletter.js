@@ -5,7 +5,7 @@ const fs = require('fs-extra');
 const htmlToText = require('html-to-text');
 const {JSDOM} = require('jsdom');
 const path = require('path');
-const request = require('request-promise-native');
+const axios = require('axios');
 
 sendNewsletter({
 	recipients: (
@@ -32,9 +32,8 @@ async function sendNewsletter(options) {
 	// Fetch the HTML content from the live URL
 	let htmlContent;
 	try {
-		htmlContent = await request({
-			uri: htmlUri
-		});
+		const response = await axios.get(htmlUri);
+		htmlContent = response.data;
 	} catch (error) {
 		console.error('');
 		console.error('There was an issue downloading the newsletter HTML at');
@@ -132,18 +131,18 @@ async function sendNewsletter(options) {
 	console.log('');
 
 	// Actually send the email
-	const response = await request({
-		method: 'POST',
-		uri: 'https://ep.ft.com/send-by-address',
+	const response = await axios.post('https://ep.ft.com/send-by-address', body, {
 		headers: {
 			authorization: options.accessKey
-		},
-		json: true,
-		body
+		}
 	});
 
 	console.log('JSON response from service:');
-	console.log(JSON.stringify(response, null, 2));
+	console.log({
+		status: response.status,
+		statusText: response.statusText,
+		data: response.data,
+	});
 
 }
 
