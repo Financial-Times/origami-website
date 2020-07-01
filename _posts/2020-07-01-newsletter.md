@@ -74,12 +74,6 @@ A digest of other things that have happened since our last update:
 
    - Add missing migration guide (opened by: notlee, closed by: notlee)
 
-- [Financial-Times/origami-navigation-data](https://github.com/repos/Financial-Times/origami-navigation-data)
-
-   - chore: update privacy link label (ACC-107) (opened by: alexnaish, closed by: alexnaish)
-
-   - Change How to Spend It URL (opened by: kavanagh, closed by: kavanagh)
-
 - [Financial-Times/origami-website](https://github.com/repos/Financial-Times/origami-website)
 
    - Replace `request-promise-native` with `axios`. (opened by: notlee, closed by: JakeChampion)
