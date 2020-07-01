@@ -50,6 +50,9 @@ Thanks for the work so far on this goes to Kevin Wilson, Luke Griffiths, Dave Ed
 
 {% capture text %}
 Last month we released version 10 of our tooling for Origami Components, which brought about speed and workflow improvements. This month we've made a new release to the tooling to improve the process of reviewing changes made to Origami Components. Contributors no longer need to try and find the issue within a confusing build log on Circle CI or GitHub. Now when/if a pull-request to a component has an issue such as failing an automated test or an accessibility check, the pull-request will have a comment added to the specific file and line where the issue occurred. This should hopefully make it easier for contributors to find out why their change is not in a state to be approved/merged.
+
+<image src="https://user-images.githubusercontent.com/1569131/86256449-3f5e3c00-bbb0-11ea-9b53-4d09c4b4802e.png" alt="Screenshot of a GitHub Annotation on the line in a pull-request which has is a failing test. The Annotation explains that the test failed because it expected the table to be sorted in ascending order but it was in descending order" />
+
 {% endcapture %} {% include email/markdown.html content=text %}
 
 <!-- Special thanks -->
