@@ -46,7 +46,7 @@ Last month we released version 10 of our tooling for Origami Components, which b
 
 ## Special Thanks
 
-TODO
+Special thanks goes to everyone who has helped out with the Digital Accessibility Certificate work for ft.com.
 
 ## Broader Update
 
