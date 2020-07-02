@@ -10,7 +10,7 @@ collection_listing_display: false
 
 In part six we will add tests to our component. Including tests for Sass, JavaScript, and common accessibility issues.
 
-Run `obt test` to run component tests. RUn `obt verify` to lint code style and check the validity of `origami.json`.
+Run `obt test` to run component tests. Run `obt verify` to lint code style and check the validity of `origami.json`.
 
 ## JavaScript Tests
 
@@ -114,3 +114,17 @@ This tutorial won't cover Oddbird True in detail, for that see the [Oddbird True
 
 Again running `obt test` should so our new tests have run and passed.
 
+## Accessibility Tests
+
+`obt test` also runs some accessibility checks against the `pa11y` demo, as we [discussed in part four](/docs/tutorials/create-a-new-component-part-4#pa11y-demo). Whilst this will catch some common causes of accessibility issues, such as invalid html or low contrast between text and background, it is not a comprehensive test of component accessibility. For help testing the accessibility of your component see the [Origami's accessibility principles](/docs/principles/accessibility/) page, or reach out to the Financial Times [#accessibility](https://app.slack.com/client/T025C95MN/C2LMEKC6S) channel.
+
+
+## Part Seven: Documentation
+
+Our component is working well and is almost complete. In this tutorial we learned:
+- That `obt test` runs Sass, JavaScript, and limited accessibility tests.
+- That `obt verify` analyses our component for potential errors.
+- How to write Sass tests for the `obt test` command.
+- How to write and run JavaScript tests for the `obt test` command.
+
+So far we have missed a crucial part of creating a component: documentation. Without documentation our component will be difficult for users to include in projects and may hinder future development. In part seven we'll document our component in a way that is familiar to users and maintainers of other Origami components. [Continue to part seven](/docs/tutorials/create-a-new-component-part-7).
