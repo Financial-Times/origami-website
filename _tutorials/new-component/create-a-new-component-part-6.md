@@ -21,24 +21,22 @@ To demonstrate how these projects are used to test components we will add a new 
 JavaScript tests are located under the `tests/js` directory. The file `example.test.js` already has boilerplate tests, which use component markup defined in `tests/js/helpers/fixtures.js` to confirm the `init` method works as expected.
 
 Our first step will be to update the `htmlCode` method in `tests/js/helpers/fixtures.js` with our latest component markup. We'll add an id `id="element"` which we can use in our tests:
-```js
-function htmlCode () {
+<pre><code class="o-syntax-highlight--js">function htmlCode () {
 	const html = `
-        <div id="element" class="o-example" data-o-component="o-example">
+        &lt;div id="element" class="o-example" data-o-component="o-example">
             Hello world, I am a component named o-example!
-            <span class="o--if-js">
-                You have clicked this lovely button <span data-o-example-current-count>0</span> times.
-                <button class="o-example__button">count</button>
-            <span>
-        </div>
+            &lt;span class="o--if-js">
+                You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
+                &lt;button class="o-example__button">count&lt;/button>
+            &lt;span>
+        &lt;/div>
 	`;
 	insert(html);
 }
-```
+</code></pre>
 
 Next we can append our new tests within the main `describe("Example", () => {})` block:
-```js
-describe("with a button", () => {
+<pre><code class="o-syntax-highlight--js">describe("with a button", () => {
 
     beforeEach(() => {
         // Add our component markup to the DOM
@@ -79,7 +77,7 @@ describe("with a button", () => {
         );
     });
 });
-```
+</code></pre>
 
 Now run `obt test`. You should see our new tests are run and pass.
 
