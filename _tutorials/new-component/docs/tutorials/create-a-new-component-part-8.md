@@ -20,3 +20,7 @@ In part eight we will learn how to publish our component to the Origami registry
 Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
 
 Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)). We'll discuss how components are published to NPM later.
+
+@todo add a table of contents
+@todo check the intro and outro of each part flows
+@todo setout expectations of prior knowledge and check they are correct
