@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@octokit/rest": "^18.0.0",
-    "pa11y-ci": "^2.1.1"
+    "pa11y-ci": "^2.3.0"
   },
   "scripts": {
     "snyk-protect": "snyk protect",
