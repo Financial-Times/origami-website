@@ -104,7 +104,7 @@ static init (rootEl, opts) {
 	// init js here
 }</code></pre>
 
-Similar to SassDoc, JSDoc uses annotations such as `@param` to document parameters. For more annotations see the [JSDoc documentation](https://jsdoc.app). As with Sass, the [`@access`](https://jsdoc.app/tags-access.html) annotation may be used but Origami components consider JavaScript methods with begin with an underscore as private, and those without as a public for consumers of the component to use.
+Similar to SassDoc, JSDoc uses annotations such as `@param` to document parameters. For more annotations see the [JSDoc documentation](https://jsdoc.app). As with Sass, the [`@access`](https://jsdoc.app/tags-access.html) annotation may be used but Origami components consider JavaScript methods which begin with an underscore as private, and those without as public.
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-18-docs.png" />
