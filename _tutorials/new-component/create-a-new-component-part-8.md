@@ -24,3 +24,4 @@ Although Origami components are authored using Bower, components are published t
 @todo add a table of contents
 @todo check the intro and outro of each part flows
 @todo setout expectations of prior knowledge and check they are correct
+@todo add percy test note
