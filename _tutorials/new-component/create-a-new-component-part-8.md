@@ -76,9 +76,9 @@ The [semver specification](https://semver.org/) documents what constitutes a maj
 
 As other teams may depend on Origami components its important to follow the [semver specification](https://semver.org/) when versioning components as discussed previously. It is also important to communicate upcoming changes. The Origami specification includes a section on the [component lifecycle](/spec/v1/components/#component-lifecycle) which includes guidance on how to manage existing components as they mature. The guidance includes how to communicate new releases, the deprecation of component features, and the deprecation of components which are no longer needed.
 
-## @todo: put this stashed content somewhere
+## @todo
 
-@todo add a table of contents
-@todo check the intro and outro of each part flows
-@todo setout expectations of prior knowledge and check they are correct
-@todo add percy test note
+- @todo add a table of contents
+- @todo check the intro and outro of each part flows
+- @todo setout expectations of prior knowledge and check they are correct
+- @todo add percy test note
