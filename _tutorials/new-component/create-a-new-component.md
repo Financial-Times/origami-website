@@ -145,6 +145,16 @@ You might have noticed a `.github` directory. At the time of writing, the `.gith
 - `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
 - `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
 
+### Package Management
+
+Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
+
+Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](https://origami.ft.com/spec/v1/components/#package-management).
+
+Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)).
+
+Don't worry if this sounds a little confusing for now. Later in this tutorial we will install dependencies using Bower for our component to use. We will also see how Origami components are automatically published to NPM.
+
 ## Start Developing
 
 Now we have a basic component to work from we can start developing!
