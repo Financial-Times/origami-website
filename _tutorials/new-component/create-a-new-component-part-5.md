@@ -30,7 +30,7 @@ All Origami components provide [an `init` method](/spec/v1/javascript/#initialis
 
 By default the `init` method will initialise any elements on the page which have the `data-o-component="o-example"` attribute. If a `HTMLElement` object or valid [`querySelector` expression](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) is given the `init` method will initialise the element given, or any children, with the `data-o-component="o-example"` attribute.
 
-`main.js` has some standard code to automatically run the component's `init` method when the `o.DOMContentLoaded` Origami event is fired (see [o-autoinit](https://registry.origami.ft.com/components/o-autoinit@2.0.4/readme)). It also passes on the component in an export, so users may alternatively import `main.js` and directly run `init` with relevant options for themselves.
+`main.js` has some standard code to automatically run the component's `init` method when the `o.DOMContentLoaded` Origami event is fired (see [o-autoinit](https://registry.origami.ft.com/components/o-autoinit@2.0.4/readme)). It also exports the component so users may alternatively import `main.js` and directly run `init` with relevant options for themselves.
 
 For example a user could initialise all `o-example` elements on the page by including `o-autoinit`, which will fire the `o.DOMContentLoaded` event when the page is ready:
 
@@ -76,7 +76,7 @@ We'll add configuration options later to demonstrate. For full details see the [
 
 Lets start work on making our example component interactive.
 
-We'll start by adding a `count` property, and listening for clicks on `o-example` buttons using the [`handleEvent`](https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38) method and increment the count property.
+We'll start by adding a `count` property, and listen for clicks on `o-example` buttons using the [`handleEvent`](https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38) method to increment the count property.
 
 Origami components use browser apis directly for [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) manipulation. For instance [`Document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to get an element and [`HTMLElement.innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) to set an elements text content.
 
@@ -219,7 +219,20 @@ So we know when our component JavaScript is initiated successfully lets add a da
 +		this.rootEl.setAttribute('data-o-example-js', '');
 	}</code></pre>
 
-We can then add CSS to `main.scss` to hide the count button until the data attribute `data-o-example-js` has been added:
+Next lets wrap any the counter specific part of `o-example` markup in a `span` element with the class `o-example__counter`:
+
+<pre><code class="o-syntax-highlight--html">
+&lt;div id="element" class="o-example" data-o-component="o-example">
+	Hello world, I am a component named o-example!
+	&lt;span class="o-example__counter">
+		You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
+		&lt;button class="o-example__button">count&lt;/button>
+	&lt;span>
+&lt;/div>
+}
+</code></pre>
+
+We can then then add CSS to `main.scss` to hide the counter element `o-example__counter` until the data attribute `data-o-example-js` has been added:
 
 <pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: (
 	'themes': ('inverse', 'b2c')
@@ -238,16 +251,19 @@ We can then add CSS to `main.scss` to hide the count button until the data attri
 		margin: oSpacingByName('s1');
 	}
 
-	.o-example__button {
-		@include oButtonsContent($opts: ('type': 'primary'));
-+		display: none; // Hide the button by default.
++	.o-example__counter {
++		display: none;
 +	}
 +
-+	.o-example[data-o-example-js] .o-example__button {
-+		// Show the button when the javascript is initiated
++	.o-example[data-o-example-js] .o-example__counter {
++		// Show the counter content when the javascript is initiated
 +		// and the data attribute is added to the parent element
-+		display: inline-block;
++		display: inline;
 +	}
+
+	.o-example__button {
+		@include oButtonsContent($opts: ('type': 'primary'));
+	}
 
 	// Call the `oExampleAddTheme` mixin to output css
 	// for each theme if the current brand supports it.
@@ -267,11 +283,11 @@ We can then add CSS to `main.scss` to hide the count button until the data attri
 
 ### PolyFills
 
-The core and enhanced experience cover an all or nothing approach. In some cases two browsers which receive the enhanced experience may not offer the same set of JavaScript features. In these cases [polyfill.io](https://polyfill.io/) may be used to add missing or broken JavaScript features to browsers we need to support ([Financial Times browser support police](https://docs.google.com/document/d/1z6kecy_o9qHYIznTmqQ-IJqre72jhfd0nVa4JMsS7Q4/)).
+The core and enhanced experience cover an all or nothing approach. In some cases two browsers which receive the enhanced experience may not offer the same set of JavaScript features. In these cases [polyfill.io](https://polyfill.io/) may be used to add missing or broken JavaScript features to browsers we need to support ([Financial Times browser support policy](https://docs.google.com/document/d/1z6kecy_o9qHYIznTmqQ-IJqre72jhfd0nVa4JMsS7Q4/)).
 
-For example IE11 does not have the `Array.from` method, but support may be added with [polyfill.io](https://polyfill.io/). Any feature [polyfill.io](https://polyfill.io/) provides may be used by components but must be [specified as a required feature in origami.json](https://origami.ft.com/spec/v1/manifest/#browserfeatures). Listing features in `origami.json` means users can find out what polyfills they need to include in their project, and also allows the `obt dev` command to include polyfills in the demo.
+For example IE11 does not have the `Array.from` method, but support may be added with [polyfill.io](https://polyfill.io/). Any feature [polyfill.io](https://polyfill.io/) provides may be used by components but must be [specified as a required feature in origami.json](/spec/v1/manifest/#browserfeatures). Listing features in `origami.json` means users can find out what polyfills they need to include in their project, and also allows the `obt dev` command to include polyfills in the demo.
 
-See the [Feature Stability And Polyfills section of the component specification](https://origami.ft.com/spec/v1/javascript/#feature-stability-and-polyfills) for more details.
+See the [Feature Stability And Polyfills section of the component specification](/spec/v1/javascript/#feature-stability-and-polyfills) for more details.
 
 ## Part Six: Testing
 

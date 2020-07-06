@@ -24,9 +24,9 @@ Run `obt test` to run component tests. Run `obt verify` to lint code style and c
 
 ## JavaScript Tests
 
-Origami components JavaScript tests use [mocha](https://mochajs.org/) as a test runner; [sinon](https://sinonjs.org/) for stubs, spies, and mocks; and [proclaim](https://github.com/rowanmanning/proclaim) to make assertions.
+Component JavaScript tests use [mocha](https://mochajs.org/) as a test runner; [sinon](https://sinonjs.org/) for stubs, spies, and mocks; and [proclaim](https://github.com/rowanmanning/proclaim) to make assertions.
 
-To demonstrate how these projects are used to test components we will add a new test to confirm that clicking button in our component increments the count.
+To demonstrate how these projects are used to test components we will add a new test to confirm that clicking a button in our component increments the count.
 
 JavaScript tests are located under the `tests/js` directory. The file `example.test.js` already has boilerplate tests, which use component markup defined in `tests/js/helpers/fixtures.js` to confirm the `init` method works as expected.
 
@@ -35,7 +35,7 @@ Our first step will be to update the `htmlCode` method in `tests/js/helpers/fixt
 	const html = `
         &lt;div id="element" class="o-example" data-o-component="o-example">
             Hello world, I am a component named o-example!
-            &lt;span class="o--if-js">
+            &lt;span class="o-example__counter">
                 You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
                 &lt;button class="o-example__button">count&lt;/button>
             &lt;span>
@@ -91,7 +91,7 @@ Next we can append our new tests within the main `describe("Example", () => {})`
 
 Now run `obt test`. You should see our new tests are run and pass.
 
-The `obt test --debug` is a useful command to write or debug JavaScript tests. It allows you to run tests in the browser and get feedback in the browsers developer console. The `--browserstack` flag also enables tests to run against multiple browsers at once in [BrowserStack](browserstack.com/). See the [Origami Build Tools documentation](https://github.com/Financial-Times/origami-build-tools) for more details.
+The debug flag `obt test --debug` is useful whilst actively working on or debugging JavaScript tests. It allows you to run tests in the browser and get feedback in the browsers developer console. The `--browserstack` flag also enables tests to run against multiple browsers at once in [BrowserStack](browserstack.com/). See the [Origami Build Tools documentation](https://github.com/Financial-Times/origami-build-tools) for more details.
 
 ## Sass Tests
 
@@ -120,15 +120,15 @@ This tutorial won't cover Oddbird True in detail, for that see the [Oddbird True
 	}
 }</code></pre>
 
-Again running `obt test` should so our new tests have run and passed.
+Again running the `obt test` command should show our new tests have run and passed.
 
 ## Accessibility Tests
 
-`obt test` also runs some accessibility checks against the `pa11y` demo, as we [discussed in part four](/docs/tutorials/create-a-new-component-part-4#pa11y-demo). Whilst this will catch some common causes of accessibility issues, such as invalid html or low contrast between text and background, it is not a comprehensive test of component accessibility. For help testing the accessibility of your component see the [Origami's accessibility principles](/docs/principles/accessibility/) page, or reach out to the Financial Times [#accessibility](https://app.slack.com/client/T025C95MN/C2LMEKC6S) channel.
+`obt test` also runs some accessibility checks against the `pa11y` demo, as we [discussed in part four](/docs/tutorials/create-a-new-component-part-4#pa11y-demo). Whilst this will catch some common causes of accessibility issues, such as invalid html or low contrast between text and background, it is not a comprehensive test of component accessibility. For help testing the accessibility of your component see the [Origami's accessibility principles](/docs/principles/accessibility/) page, or reach out to the Financial Times [#accessibility Slack channel](https://app.slack.com/client/T025C95MN/C2LMEKC6S).
 
 ## Visual Regression Tests
 
-To check all component demos for any visual bugs that may have been introduced accidentally as part of a change may be rather taxing as a manual piece of work. To help, demos may be run through [percy.io](https://percy.io/) to highlight visual differences between two versions of a component automatically.
+To check all component demos for any visual bugs that may have been introduced accidentally as part of a change may be rather taxing as a manual piece of work. To help demos may be run through [percy.io](https://percy.io/) to highlight visual differences between two versions of a component automatically.
 
 We can't run Percy yet as we haven't released a version of our component to compare changes against. But later, when we have released our component, you will be able to run [percy.io](https://percy.io/) by adding a `percy` label to Github pull requests. When Percy has run a comment is added to the pull request, and the demo comparisons are ready for review at [percy.io/Financial-Times](https://percy.io/Financial-Times/).
 
@@ -157,4 +157,4 @@ Our component is working well and is almost complete. In this tutorial we learne
 - How to write and run JavaScript tests for the `obt test` command.
 - How to highlight visual differences a change has introduced with [percy.io](https://percy.io/).
 
-So far we have missed a crucial part of creating a component: documentation. Without documentation our component will be difficult for users to include in projects and may hinder future development. In part seven we'll document our component in a way that is familiar to users and maintainers of other Origami components. [Continue to part seven](/docs/tutorials/create-a-new-component-part-7).
+So far we have missed a crucial part of creating a component: documentation. Without documentation our component will be difficult for users to include in projects and future development may be hindered. In part seven we'll document our component in a way that is familiar to users and maintainers of other Origami components. [Continue to part seven](/docs/tutorials/create-a-new-component-part-7).

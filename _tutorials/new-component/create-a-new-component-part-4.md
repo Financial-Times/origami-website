@@ -24,9 +24,9 @@ In part four we will create new demos to showcase the themes we created in [part
 
 In [part three](/docs/tutorials/create-a-new-component-part-3) we added an `inverse` theme for each brand and a `b2c` theme for the master brand but no demos for these. That means there is no visual preview for potential users of our component, and no ability to copy the html for these themes from the [Origami component registry](https://registry.origami.ft.com/components/).
 
-To add new demos we will update `origami.json`. This file contains lots of information about our components, including its name, description, demos, and more — see the [Origami Manifest specification](https://origami.ft.com/spec/v1/manifest/) for full details.
+To add new demos we will update `origami.json`. This file contains lots of information about our components, including its name, description, demos, and more — see the [Origami Manifest specification](/spec/v1/manifest/) for full details.
 
-We'll add a new object to the [demos array](https://origami.ft.com/spec/v1/manifest/#demos) which will represent our new demo. Demos must have at least the following properties:
+We'll add a new object to the [demos array](/spec/v1/manifest/#demos) which will represent our new demo. Demos must have at least the following properties:
 - `title`: A descriptive title for the [component registry](https://registry.origami.ft.com/components).
 - `name`: The outputted html file name.
 - `template`: The path to the demo mustache template.
@@ -77,7 +77,7 @@ Now the `obt dev` command will build our new demo and create `demo-inverse.html`
 </figure>
 
 
-We also need to create a demo for the `b2c` theme. However the `b2c` theme we created only supports the `master` brand. It should not be displayed in the [Origami registry](https://registry.origami.ft.com/components) for the `internal` or `whitelabel` brands. To avoid that, we will set the [`brands` demo property](https://origami.ft.com/spec/v1/manifest/#demos).
+We also need to create a demo for the `b2c` theme. However the `b2c` theme we created only supports the `master` brand. It should not be displayed in the [Origami registry](https://registry.origami.ft.com/components) for the `internal` or `whitelabel` brands. To avoid that, we will set the [`brands` demo property](/spec/v1/manifest/#demos).
 
 <pre><code class="o-syntax-highlight--diff">"demos": [
 	{
@@ -113,11 +113,11 @@ We also need to create a demo for the `b2c` theme. However the `b2c` theme we cr
 
 ## Pa11y Demo
 
-You may have noticed another demo `pa11y` has already been configured. The `pa11y` demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we use to highlight any accessibility issues against the pa11y demo. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. As it's used to automate some accessibility tests, the pa11y demo is hidden from users in the [component registry](https://registry.origami.ft.com/components).
+You may have noticed another demo `pa11y` has already been configured. The `pa11y` demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we run against the pa11y demo to find some common accessibility issues. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. The pa11y demo is for testing purposes only and is hidden from users in the [Origami Registry](https://registry.origami.ft.com/components).
 
 ## Other Demo Options
 
-There are other demo options we haven't covered so far. For example as well as the `demos` array `origami.json` may include [`demosDefaults`](https://origami.ft.com/spec/v1/manifest/#demosdefaults), which describe options to be applied to all demos. Among other settings, we can specify the demo Mustache template, Sass, and JavaScript file. To learn more, see the [Origami Manifest specification](https://origami.ft.com/spec/v1/manifest/) which has a full list of all demo options.
+There are other demo options we haven't covered so far. For example as well as the `demos` array `origami.json` may include [`demosDefaults`](/spec/v1/manifest/#demosdefaults), which describe options to be applied to all demos. Among other settings we can specify the demo Mustache template, Sass, and JavaScript file. To learn more see the [Origami Manifest specification](/spec/v1/manifest/) which has a full list of all demo options.
 
 ## Part Five: JavaScript
 
@@ -127,4 +127,4 @@ In part four we learnt:
 - What the `pa11y` demo is used for.
 - How to use `origami.json` properties to make it easier to configure multiple demos.
 
-Although our component is starting to look good, it has a button which doesn't do anything. So next we'll learn how to add interactivity to our component with JavaScript. [Continue to part five](/docs/tutorials/create-a-new-component-part-5).
+Although our component is starting to look good it has a button which doesn't do anything. So next we'll learn how to add interactivity to our component with JavaScript. [Continue to part five](/docs/tutorials/create-a-new-component-part-5).

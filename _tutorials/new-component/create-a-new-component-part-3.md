@@ -18,28 +18,28 @@ The "Create A New Origami Component" tutorial is split into eight parts and is i
 - [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
 - [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
 
-In part three we will build on our work in [part two](/docs/tutorials/create-a-new-component-part-2) by learning how to modify the style to our new component for different themes and brands.
+In part three we will build on our work in [part two](/docs/tutorials/create-a-new-component-part-2) by learning how to modify the style of our new component for different contexts.
 
 ## Component Brands
 
-Origami components are used by products across the Financial Times Group, and some groups require a distinct appearance from others; internal tools have a distinct style from ft.com products for example. To cater for these broad usecases, the appearance of Origami components included in a project may be changed by choosing a "brand":
+Origami components are used by products across the Financial Times Group, and some groups require a distinct appearance from others; internal tools have a distinct style from ft.com products for example. To cater for these broad usecases, the appearance of Origami components may be changed within a project by choosing a "brand":
 - master: FT branding for public ft.com sites and affiliates.
 - internal: Style suitable for internal products, tools, and documentation.
 - whitelabel: Base, structural styles only to build on and customise.
 
-A project chooses a brand globally, meaning all components included in a project must use the same brand. See [component brand documentation](https://origami.ft.com/docs/components/branding/) for examples on how a project may use brands. For reference, when it comes to building branding components, there is also a [section on component brands in the specification](https://origami.ft.com/spec/v1/sass/#brands).
+A project chooses a brand globally, meaning all components included in a project must use the same brand. See [component brand documentation](/docs/components/branding/) for examples on how a project may use brands. For reference, when it comes to building branding components, there is also a [section on component brands in the specification](/spec/v1/sass/#brands).
 
 ### Supported Brands
 
-Origami components may support one or more brand. Which brands the component support are defined along with other component details in [`origami.json`](https://origami.ft.com/spec/v1/manifest/#brands), by the `brands` property. If `brands` is not set the component is "unbranded" and implicitly only supports the "master" brand.
+Origami components may support one or more brand. The brands a component supports are defined along with other component details in [`origami.json`](/spec/v1/manifest/#brands), by the `brands` property. If `brands` is not set the component is "unbranded" and implicitly only supports the "master" brand.
 
-When promoted by `obt init` in [part one](/docs/tutorials/create-a-new-component) we select all brands, so the `origami.json` file of our component should include an array of each brand `"brands": ["master","internal","whitelabel"],`. If not, update your `origami.json` now.
+When promoted by `obt init` in [part one](/docs/tutorials/create-a-new-component-part-1) we select all brands, so the `origami.json` file of our component should include an array of each brand `"brands": ["master","internal","whitelabel"],`. If not, update your `origami.json` now.
 
 ### Switching Brands In Development
 
-When developing a branding Origami component pass the `--brand` flag to the `obt dev` command to switch brand.
+When developing a branded Origami component pass the `--brand` flag to the `obt dev` command to switch brand.
 
-For example, build the `internal` version of our component by running `obt dev --brand internal`. You should see in our demo the background colour has changed from a wheat colour to a light slate colour. That's because wheat is not part of the [internal brand colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=internal#demo-primary-palette). As we used a colour usecase `oColorsByUsecase('box', 'background')` in [part two](/docs/tutorials/create-a-new-component-part-2), rather than specify a specific colour, it was updated automatically for the internal brand.
+For example to build the `internal` version of our component run the command `obt dev --brand internal`. You should see in our demo the background colour has changed from a wheat colour to a light slate colour. That's because wheat is not part of the [internal brand colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=internal#demo-primary-palette). As we used a colour usecase `oColorsByUsecase('box', 'background')` in [part two](/docs/tutorials/create-a-new-component-part-2), rather than specify a specific colour, it was updated automatically for the internal brand.
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-5-sass.png" />
@@ -50,7 +50,7 @@ For example, build the `internal` version of our component by running `obt dev -
 
 Do the same for the whitelabel brand by running `obt dev --brand whitelabel`. You should see a Sass error `Error: 'The color "slate" does not exist.`. This error is because we set a border colour by name `oColorsByName('slate')` in [part two](/docs/tutorials/create-a-new-component-part-2), but slate is not in the limited [whitelabel colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=whitelabel#demo-primary-palette).
 
-To fix this error, we need to set the border colour of our component differently depending on which brand is being used.
+To fix this error we need to set the border colour of our component differently depending on which brand is being used.
 
 ### Configuring Brand Variables
 
@@ -224,13 +224,13 @@ A component may also support themes within a brand, to allow for variations of t
 
 Unlike brands, which are set at a global level, a project could include many themes of a component at the same time. For example the [o-message](https://registry.origami.ft.com/components/o-message@4.1.3) component has success, error, and inform themes for notices.
 
-Now let's add themes to our `o-example` component. For reference there is a [theme section in the component specification](https://origami.ft.com/spec/v1/sass/#themes).
+Now let's add themes to our `o-example` component. For reference there is a [theme section in the component specification](/spec/v1/sass/#themes).
 
 Our example component will have two themes: an `inverse` theme that should be used when our component is on a dark background; and a `b2c` (business to consumer) theme just for the master brand. We will also make our component flexible and allow a user to generate a custom theme.
 
 ### Theme Mixin
 
-We will add a new mixin called `oExampleAddTheme`, following the [theme convention in the specification](https://origami.ft.com/spec/v1/sass/#themes), to a new file `src/scss/_mixins.scss`. Don't forget to import your new `src/scss/_mixins.scss` in `main.scss`, in the same way `src/scss/_variables_.scss` is imported.
+We will add a new mixin called `oExampleAddTheme`, following the [theme convention in the specification](/spec/v1/sass/#themes), to a new file `src/scss/_mixins.scss`. Don't forget to import your new `src/scss/_mixins.scss` in `main.scss`, in the same way `src/scss/_variables_.scss` is imported.
 
 Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-example--[theme-name]` which can be added to our component markup to change the theme. The double dash in the theme name is part of the [BEM modifier naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
@@ -241,13 +241,13 @@ Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-
 	}
 }</code></pre>
 
-Our mixin `oExampleAddTheme` could use the `$name` argument to create a new CSS class `.o-example--#{name}` ([see Sass interpolation](https://sass-lang.com/documentation/style-rules#interpolation)). Using them `$name` variable it is possible to output different CSS conditionally with a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). However this would be quite verbose Sass, especially as we need to support multiple themes which might differ in style per brand. Instead we can configure themes per brand where we called `oBrandDefine` earlier.
+Our mixin `oExampleAddTheme` uses the `$name` argument to create a new CSS class `.o-example--#{name}` ([see Sass interpolation](https://sass-lang.com/documentation/style-rules#interpolation)). Using them `$name` variable it is possible to output different CSS conditionally with a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). However this would be quite verbose Sass, especially as we need to support multiple themes which might differ in style per brand. Instead we can configure themes per brand where we called `oBrandDefine` earlier.
 
 ### Variant Variables
 
 A variant of a component is any visual modification. For example if we were to add a class `o-example--big` which increased the font size of our component, that would be a variant of `o-example`. In the same way a theme like `o-example--inverse` is also a variant.
 
-To define variables for a component variant by brand, set a map within the `variables` configuration of `oBrandDefine`.
+To define variables for a variant within a brand add a map to the `variables` configuration of `oBrandDefine`, where the key is the variant name.
 
 <pre><code class="o-syntax-highlight--diff">// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
@@ -496,7 +496,7 @@ From a users point of view, this is how a custom theme will be created using our
 
 ### Theme Markup
 
-Update your demo markup  `demos/src/demo.mustache` with a theme class name to preview what we have done. For example to see the inverse theme update the component class to `o-example o-example--inverse`:
+Update your demo markup `demos/src/demo.mustache` with a theme class to preview what we have done. For example to see the inverse theme update the component class to `o-example o-example--inverse`:
 
 <pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
 +&lt;div class="o-example o-example--inverse" data-o-component="o-example">
