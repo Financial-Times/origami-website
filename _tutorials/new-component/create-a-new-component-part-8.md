@@ -44,7 +44,7 @@ To see these Github Actions in practise let's release our component.
 
 ## Initial Release
 
-Lets release the first version our new component. This will display our component in the Origami Registry and send a Slack notification to `#origami-support`.
+Lets release the first version our new component. This will display our component in the Origami Registry and send a Slack notification to `{{site.data.contact.slack}}`.
 
 Our first release will be `1.0.0` following the [semver specification](https://semver.org/). Origami components [do not release versions lower than 1.0.0](https://origami.ft.com/spec/v1/components/#component-release) but you may choose to release a beta `1.0.0-beta.1` again following the [semver specification](https://semver.org/).
 
@@ -80,4 +80,3 @@ As other teams may depend on Origami components its important to follow the [sem
 
 - @todo add a table of contents
 - @todo check the intro and outro of each part flows
-- @todo setout expectations of prior knowledge and check they are correct

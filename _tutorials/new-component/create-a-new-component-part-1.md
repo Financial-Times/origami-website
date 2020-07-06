@@ -9,13 +9,15 @@ cta: Learn how to create an Origami component
 
 Usually the Origami team will own an Origami component which is used by multiple teams or groups, but anybody can create and share an Origami component.
 
-In this tutorial we'll build an Origami component. Our example component will display a "hello world" message, be themed, and include a button which will count the number of times it was clicked. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
+In this tutorial we'll build an Origami component. Our example component will display a "hello world" message and include a button which will count the number of times it was clicked. Visually the component will include multiple variations to suit reader facing and internal projects. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
+
+## Prerequisites
 
 Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
 
-In this tutorial we'll build an Origami component. Our example component will display a "hello world" message, be themed, and include a button which will count the number of times it was clicked. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
+In this tutorial we use a number of tools and libraries such as [git](https://git-scm.com/), [Sass](https://sass-lang.com/), [sinon.js](https://sinonjs.org/), etc. We do not cover these in depth but attempt to include brief descriptions and links to relevant documentation so that you may learn separately about the parts which are new to you.
 
-Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
+If you have any questions please contact the Origami team to help make this tutorial better &#x1F603;. You can find the team on Slack in <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}" class="o-typography-link--external" target="_blank">#{{site.data.contact.slack}}</a>.
 
 ## The Origami Specification
 
