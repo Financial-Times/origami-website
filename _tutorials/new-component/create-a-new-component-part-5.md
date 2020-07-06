@@ -243,7 +243,7 @@ We can then add CSS to `main.scss` to hide the count button until the data attri
 +		display: none; // Hide the button by default.
 +	}
 +
-+	[data-o-example-js] .o-example__button {
++	.o-example[data-o-example-js] .o-example__button {
 +		// Show the button when the javascript is initiated
 +		// and the data attribute is added to the parent element
 +		display: inline-block;
