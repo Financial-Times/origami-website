@@ -116,6 +116,27 @@ Again running `obt test` should so our new tests have run and passed.
 
 `obt test` also runs some accessibility checks against the `pa11y` demo, as we [discussed in part four](/docs/tutorials/create-a-new-component-part-4#pa11y-demo). Whilst this will catch some common causes of accessibility issues, such as invalid html or low contrast between text and background, it is not a comprehensive test of component accessibility. For help testing the accessibility of your component see the [Origami's accessibility principles](/docs/principles/accessibility/) page, or reach out to the Financial Times [#accessibility](https://app.slack.com/client/T025C95MN/C2LMEKC6S) channel.
 
+## Visual Regression Tests
+
+To check all component demos for any visual bugs that may have been introduced accidentally as part of a change may be rather taxing as a manual piece of work. To help, demos may be run through [percy.io](https://percy.io/) to highlight visual differences between two versions of a component automatically.
+
+We can't run Percy yet as we haven't released a version of our component to compare changes against. But later, when we have released our component, you will be able to run [percy.io](https://percy.io/) by adding a `percy` label to Github pull requests. When Percy has run a comment is added to the pull request, and the demo comparisons are ready for review at [percy.io/Financial-Times](https://percy.io/Financial-Times/).
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-21-tests.png" />
+	<figcaption class="o-typography-caption">
+        This image show a Github pull request where the `percy` label had been added. Percy then ran to visually compare the component demos in the pull request against the last release, and removed the `percy` label when done.
+	</figcaption>
+</figure>
+
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-22-tests.png" />
+	<figcaption class="o-typography-caption">
+        This image shows an example of the Percy interface. To the left is an image of a component demo, to the right the updated demo with visual changes highlighted in red.
+	</figcaption>
+</figure>
+
+_Don't worry if you are unfamiliar with Github and pull request labels. Later, when releasing our component, we will discuss other available labels and link to helpful Github documentation. For now its useful to know that visual regression tests can be run, even if you're not sure yet how they work._
 
 ## Part Seven: Documentation
 
@@ -124,5 +145,6 @@ Our component is working well and is almost complete. In this tutorial we learne
 - That `obt verify` analyses our component for potential errors.
 - How to write Sass tests for the `obt test` command.
 - How to write and run JavaScript tests for the `obt test` command.
+- How to highlight visual differences a change has introduced with [percy.io](https://percy.io/).
 
 So far we have missed a crucial part of creating a component: documentation. Without documentation our component will be difficult for users to include in projects and may hinder future development. In part seven we'll document our component in a way that is familiar to users and maintainers of other Origami components. [Continue to part seven](/docs/tutorials/create-a-new-component-part-7).

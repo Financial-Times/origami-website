@@ -81,4 +81,3 @@ As other teams may depend on Origami components its important to follow the [sem
 - @todo add a table of contents
 - @todo check the intro and outro of each part flows
 - @todo setout expectations of prior knowledge and check they are correct
-- @todo add percy test note
