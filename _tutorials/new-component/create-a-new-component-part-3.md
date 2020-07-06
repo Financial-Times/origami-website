@@ -35,8 +35,6 @@ Origami components may support one or more brand. Which brands the component sup
 
 When promoted by `obt init` in [part one](/docs/tutorials/create-a-new-component) we select all brands, so the `origami.json` file of our component should include an array of each brand `"brands": ["master","internal","whitelabel"],`. If not, update your `origami.json` now.
 
-@todo show the brand obt flag at this point. Show how the colour of the background changes automatically because we used o-colors usecases (later we will remove the usecase, so show it in use at this point)
-
 ### Switching Brands In Development
 
 When developing a branding Origami component pass the `--brand` flag to the `obt dev` command to switch brand.
