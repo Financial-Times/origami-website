@@ -8,6 +8,16 @@ collection_listing_display: false
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- part four: Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+
 In part four we will create new demos to showcase the themes we created in [part three](/docs/tutorials/create-a-new-component-part-3). We will also revisit demo boilerplate, including the purpose of the `pa11y` demo you may have already noticed.
 
 ## Add More Demos
@@ -111,4 +121,10 @@ There are other demo options we haven't covered so far. For example as well as t
 
 ## Part Five: JavaScript
 
-In part four we learnt how to add new demos to present the themes we created previously to users. Although our component is starting to look good, it has a button which doesn't do anything. So next we'll learn how to add interactivity to our component with JavaScript. [Continue to part five](/docs/tutorials/create-a-new-component-part-5).
+In part four we learnt:
+
+- How to add or update demos to a component.
+- What the `pa11y` demo is used for.
+- How to use `origami.json` properties to make it easier to configure multiple demos.
+
+Although our component is starting to look good, it has a button which doesn't do anything. So next we'll learn how to add interactivity to our component with JavaScript. [Continue to part five](/docs/tutorials/create-a-new-component-part-5).

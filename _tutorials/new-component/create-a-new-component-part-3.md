@@ -1,5 +1,5 @@
 ---
-title: Create A New Origami Component - Part 3 Themes And Brands
+title: Create A New Origami Component - Part 3 Themes & Brands
 description: A step-by-step tutorial which teaches you how to build and deploy a new Origami component.
 cta: Learn how to create an Origami component
 collection_listing_display: false
@@ -7,6 +7,16 @@ collection_listing_display: false
 ---
 
 # {{page.title}}
+
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- part three: Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
 
 In part three we will build on our work in [part two](/docs/tutorials/create-a-new-component-part-2) by learning how to modify the style to our new component for different themes and brands.
 

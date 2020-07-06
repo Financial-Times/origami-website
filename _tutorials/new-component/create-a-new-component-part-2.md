@@ -8,6 +8,16 @@ collection_listing_display: false
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- part two: Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+
 In part two we will build on our work in [part one](/docs/tutorials/create-a-new-component) by learning how to add styles to our new component.
 
 ## Sass

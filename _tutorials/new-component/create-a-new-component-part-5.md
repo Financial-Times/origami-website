@@ -8,6 +8,16 @@ collection_listing_display: false
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- part five: JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+
 In part five we will add interactivity to our component using JavaScript. For reference, there is a [JavaScript part of the component specification](/spec/v1/javascript/) which we will be conforming to.
 
 We'll increment a counter within the component which will update every time the button is clicked. The counter will have an option to display a customisable message after a given count e.g. after 10 clicks display the word "lots" instead.

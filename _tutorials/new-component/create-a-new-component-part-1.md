@@ -7,6 +7,18 @@ cta: Learn how to create an Origami component
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- part one: Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+
+## Introduction
+
 Usually the Origami team will own an Origami component which is used by multiple teams or groups, but anybody can create and share an Origami component.
 
 In this tutorial we'll build an Origami component. Our example component will display a "hello world" message and include a button which will count the number of times it was clicked. Visually the component will include multiple variations to suit reader facing and internal projects. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
@@ -147,7 +159,7 @@ You might have noticed a `.github` directory. At the time of writing, the `.gith
 - `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
 - `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
 
-### Package Management
+## Package Management
 
 Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
 
@@ -155,7 +167,7 @@ Although Origami components use Bower to install dependencies, developer depende
 
 Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](https://origami.ft.com/docs/tutorials/npm/)).
 
-Don't worry if this sounds a little confusing for now. Later in this tutorial we will install dependencies using Bower for our component to use. We will also see how Origami components are automatically published to NPM.
+Don't worry if this sounds a little confusing at the moment. Later in this tutorial we will install dependencies using Bower for our component to use. We will also see how Origami components are automatically published to NPM.
 
 ## Start Developing
 

@@ -8,6 +8,16 @@ collection_listing_display: false
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
+- part eight: Component Lifecycle
+
 In part eight we will learn how to publish our component to the Origami registry 🎉, and discuss the lifecycle of a published component.
 
 _We don't actually want to publish an example component `o-example`. If you have been following along so far using `o-example`, rather than working on your own component that should actually be published, read this part of the tutorial as a reference only until you're ready to publish a new component for real._
@@ -52,10 +62,8 @@ Before we release this is a good time to update the components [support status](
 
 To release an Origami component create a git tag named after the semver version but beginning with a `v` e.g. `v1.0.0`. Add the tag either through the [Github release interface](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) or through the command line:
 
-```
-git tag v1.0.0
-git push origin v1.0.0
-```
+<pre><code class="o-syntax-highlight--bash">git tag v1.0.0
+git push origin v1.0.0</code></pre>
 
 Within a couple of minutes at most, your component should be visible in the [Origami Registry](https://registry.origami.ft.com/components?module=true&imageset=true&active=true&maintained=true&experimental=true) and should be published to the [npm registry](https://www.npmjs.com/~the-ft) 🎉. If not you may want to confirm that the `obt test` and `obt verify` commands pass without error, check the output of the Github Actions under the 'Actions" tab, or contact the Origami team for support.
 
@@ -76,7 +84,10 @@ The [semver specification](https://semver.org/) documents what constitutes a maj
 
 As other teams may depend on Origami components its important to follow the [semver specification](https://semver.org/) when versioning components as discussed previously. It is also important to communicate upcoming changes. The Origami specification includes a section on the [component lifecycle](/spec/v1/components/#component-lifecycle) which includes guidance on how to manage existing components as they mature. The guidance includes how to communicate new releases, the deprecation of component features, and the deprecation of components which are no longer needed.
 
-## @todo
+## Wrapping Up
 
-- @todo add a table of contents
-- @todo check the intro and outro of each part flows
+If you have followed along this far congratulations! Going forward the [Origami specification](/spec/v1/) is the most comprehensive resource to reference when working on Origami projects.
+
+We hope this step-by-step tutorial has helped make you feel more able to contribute to Origami. Both in terms of creating new components, maintaining existing components, and influencing the direction of Origami as a whole.
+
+If you have any questions, bug reports, or feature requests please contact the Origami team &#x1F603;. You can find the team on Slack in <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}" class="o-typography-link--external" target="_blank">#{{site.data.contact.slack}}</a>.

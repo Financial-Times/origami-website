@@ -8,6 +8,16 @@ collection_listing_display: false
 
 # {{page.title}}
 
+The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
+- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
+- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
+- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
+- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
+- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
+- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
+- part seven: Documentation
+- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+
 In part seven we will add documentation to our component. With good documentation we can save people time and frustration by making our component as easy to use as possible. Thorough documentation will also help future contributors to our new component.
 
 ## Tone & language
