@@ -202,19 +202,61 @@ Most projects which use Origami components serve a reduced "core" experience to 
 
 A good component to demonstrate this is [o-table](https://registry.origami.ft.com/components/o-table@8.0.11). With JavaScript available `o-table` has client-side sortable columns. When JavaScript is unavailable client side sorting is not possible, and sort buttons are not displayed in table headings. Users without JavaScript have fewer features available but are not left with confusing sort buttons which do nothing, a kind of [graceful degradation](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation). `o-table` also has a responsive variant which allows the table to scroll horizontally on small devices. The scrolling table works for core experience users but is enhanced with JavaScript to include arrows for a more clear indication of when scrolling is possible, a kind of [progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement).
 
-At present our component displays a useless button for core experience users, or when JavaScript [fails for some other reason](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). We can update our `o-example` component to hide the count button for core experience users and just display the hello message we have written.
+At present our component displays a useless button for core experience users and when JavaScript [fails for some other reason](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). We can update our `o-example` component to hide the count button for core experience users and just display the hello message we have written.
 
-Projects should follow these [instructions to implement a core experience](https://origami.ft.com/docs/components/compatibility/#core--enhanced-experiences). This means we can use the CSS class `o--if-js` to hide elements of our page when JavaScript is disabled, and `o--if-no-js` to hide elements of our page when JavaScript is enabled.
+So we know when our component JavaScript is initiated successfully lets add a data attribute `data-o-example-js` to our component as part of the constructor:
 
-<pre><code class="o-syntax-highlight--diff">&lt;div class="o-example {{#theme}}o-example--{{theme}}{{/theme}}" data-o-component="o-example">
--    Hello world, I am a component named o-example! You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
--    &lt;button class="o-example__button">count&lt;/button>
-    Hello world, I am a component named o-example!
-+    &lt;span class="o--if-js">
-+        You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
-+        &lt;button class="o-example__button">count&lt;/button>
-+    &lt;span>
-&lt;/div></code></pre>
+<pre><code class="o-syntax-highlight--diff">constructor (exampleEl, opts) {
+		this.exampleEl = exampleEl;
+		this.options = Object.assign({}, {
+		}, opts || Example.getDataAttributes(exampleEl));
+		// A property to store the current count.
+		this.count = 0;
+		// Listen to all click events on the o-example instance.
+		this.exampleEl.addEventListener('click', this);
++		// Set a data attribute so we know the component is initiated successfully.
++		// The attribute may be used in CSS to style our component conditionally.
++		this.rootEl.setAttribute('data-o-example-js', '');
+	}</code></pre>
+
+We can then add CSS to `main.scss` to hide the count button until the data attribute `data-o-example-js` has been added:
+
+<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: (
+	'themes': ('inverse', 'b2c')
+)) {
+	// Get the themes to output from the `$opts` argument.
+	// If the user has passed an `$opts` map without a
+	// `themes` key, default to an empty list.
+	$themes: map-get($opts, 'themes');
+	$themes: if($themes, $themes, ());
+
+	.o-example {
+		@include oTypographyBody();
+		border: 1px solid _oExampleGet('border-color');
+		background: _oExampleGet('background-color');
+		padding: oSpacingByName('s4');
+		margin: oSpacingByName('s1');
+	}
+
+	.o-example__button {
+		@include oButtonsContent($opts: ('type': 'primary'));
++		display: none; // Hide the button by default.
++	}
++
++	[data-o-example-js] .o-example__button {
++		// Show the button when the javascript is initiated
++		// and the data attribute is added to the parent element
++		display: inline-block;
++	}
+
+	// Call the `oExampleAddTheme` mixin to output css
+	// for each theme if the current brand supports it.
+	@each $name in $themes {
+		@if _oExampleSupports($name) {
+			@include oExampleAddTheme($name);
+		}
+	}
+}</code></pre>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-15-js.png" />
@@ -222,8 +264,6 @@ Projects should follow these [instructions to implement a core experience](https
         With JavaScript unavailable our component falls back to its "Hello World" without the count feature.
 	</figcaption>
 </figure>
-
-@todo - This is a lie. Component demos do not provide core/enhanced CSS like `o--if-js`. It's not clear if these classes were intended for use just within projects or within components too. Decide if the core/enhanced classes must be added by all Origami users so they may be used in components. If so, update obt and obs to add the core/enhanced css to all demos. If these classes should only be used by projects, document as such and update this section. See also: https://github.com/Financial-Times/origami-build-tools/pull/814
 
 ### PolyFills
 
