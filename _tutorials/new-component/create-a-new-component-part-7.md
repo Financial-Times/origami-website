@@ -102,7 +102,7 @@ Above we give a [description](http://sassdoc.com/annotations/#description) of th
 
 ## JSDoc
 
-To document JavaScript Origami components use [JSDoc comments](https://jsdoc.app/about-getting-started.html). For example see the existing JSDoc for the `init` method of our `o-example` component, which was generated for us by the `obt init` command:
+Origami components use [JSDoc comments](https://jsdoc.app/about-getting-started.html) to document JavaScript. For example see the existing JSDoc for the `init` method of our `o-example` component, which was generated for us by the `obt init` command:
 
 <pre><code class="o-syntax-highlight--js">/**
  * Initialise o-example component.
