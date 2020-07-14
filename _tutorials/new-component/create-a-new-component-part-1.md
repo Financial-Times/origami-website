@@ -141,25 +141,6 @@ o-example
         └── index.test.scss
 ```
 
-## Source Control
-
-All Origami components reside in a [git](https://git-scm.com/) repository with the same name as the component. It's required that component repositories are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](/spec/v1/components/#source-control).
-
-Create a new git repository by running `git init`, and commit the boilerplate as an initial commit. For example:
-
-<pre><code class="o-syntax-highlight--bash">git init
-git add --all
-git commit -m 'o-example component boilerplate'</code></pre>
-
-You may then push this to your remote github.com repository, under the `Financial-Times` organisation or another [supported Financial Times organisation](/spec/v1/components/#source-control).
-
-_Note: we're assuming existing git knowledge here, so please feel free to contact the Origami team if you get stuck at any point._
-
-You might have noticed a `.github` directory. At the time of writing, the `.github` directory itself is not part of the [file structure specification](/spec/v1/components/#files-and-folder-structure). If we deleted `.github` the component would still be an Origami component. But this directory gives us some nice features including:
-- `ISSUE_TEMPLATE.md`: The contents of this file are used to provide a [template when opening a new Github issue](https://help.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates). It helps users report bugs or provide feedback by prompting for useful information.
-- `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
-- `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these later.
-
 ## Package Management
 
 Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so multiple versions of the same component are not installed at once.
