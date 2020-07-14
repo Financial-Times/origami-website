@@ -9,14 +9,14 @@ collection_listing_display: false
 # {{page.title}}
 
 The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
-- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
-- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
-- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
-- part four: Demos
-- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
-- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
-- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
-- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+1. [Intro & Boilerplate](/docs/tutorials/create-a-new-component-part-1/)
+2. [Base Styles](/docs/tutorials/create-a-new-component-part-2/)
+3. [Themes & Brands](/docs/tutorials/create-a-new-component-part-3/)
+4. Demos
+5. [JavaScript](/docs/tutorials/create-a-new-component-part-5/)
+6. [Testing](/docs/tutorials/create-a-new-component-part-6/)
+7. [Documentation](/docs/tutorials/create-a-new-component-part-7/)
+8. [Component Lifecycle](/docs/tutorials/create-a-new-component-part-8/)
 
 In part four we will create new demos to showcase the themes we created in [part three](/docs/tutorials/create-a-new-component-part-3). We will also revisit demo boilerplate, including the purpose of the `pa11y` demo you may have already noticed.
 

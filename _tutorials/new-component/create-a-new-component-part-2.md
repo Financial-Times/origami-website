@@ -9,14 +9,14 @@ collection_listing_display: false
 # {{page.title}}
 
 The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
-- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
-- part two: Base Styles
-- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
-- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
-- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
-- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
-- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
-- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+1. [Intro & Boilerplate](/docs/tutorials/create-a-new-component-part-1/)
+2. Base Styles
+3. [Themes & Brands](/docs/tutorials/create-a-new-component-part-3/)
+4. [Demos](/docs/tutorials/create-a-new-component-part-4/)
+5. [JavaScript](/docs/tutorials/create-a-new-component-part-5/)
+6. [Testing](/docs/tutorials/create-a-new-component-part-6/)
+7. [Documentation](/docs/tutorials/create-a-new-component-part-7/)
+8. [Component Lifecycle](/docs/tutorials/create-a-new-component-part-8/)
 
 In part two we will build on our work in [part one](/docs/tutorials/create-a-new-component-part-1) by learning how to add styles to our new component.
 
@@ -152,7 +152,7 @@ The first step is to install each component we want to use via [Bower](https://b
 }</code></pre>
 
 With Bower configured, we can now run:
-<pre><code class="o-syntax-highlight--bash">bower install o-colors o-spacing o-typography o-buttons --save</code></pre>
+<pre><code class="o-syntax-highlight--bash">bower install o-colors@^5.0.0 o-spacing@^2.0.0 o-typography@^6.0.0 o-buttons@^6.0.0 --save</code></pre>
 
 You should now have a `bower_components` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 

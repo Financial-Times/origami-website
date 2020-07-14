@@ -9,14 +9,14 @@ collection_listing_display: false
 # {{page.title}}
 
 The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
-- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
-- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
-- part three: Themes & Brands
-- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
-- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
-- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
-- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
-- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+1. [Intro & Boilerplate](/docs/tutorials/create-a-new-component-part-1/)
+2. [Base Styles](/docs/tutorials/create-a-new-component-part-2/)
+3. Themes & Brands
+4. [Demos](/docs/tutorials/create-a-new-component-part-4/)
+5. [JavaScript](/docs/tutorials/create-a-new-component-part-5/)
+6. [Testing](/docs/tutorials/create-a-new-component-part-6/)
+7. [Documentation](/docs/tutorials/create-a-new-component-part-7/)
+8. [Component Lifecycle](/docs/tutorials/create-a-new-component-part-8/)
 
 In part three we will build on our work in [part two](/docs/tutorials/create-a-new-component-part-2) by learning how to modify the style of our new component for different contexts.
 
@@ -54,9 +54,9 @@ To fix this error we need to set the border colour of our component differently 
 
 ### Configuring Brand Variables
 
-To style our component according to the current brand we need to include [o-brand](https://registry.origami.ft.com/components/o-brand@/readme) as a dependency. Install `o-brand` by running `bower install o-brand --save` and importing its Sass file in `main.scss`, as we did for other dependencies in [part two](/docs/tutorials/create-a-new-component-part-2).
+To style our component according to the current brand we need to use [o-brand](https://registry.origami.ft.com/components/o-brand@/readme), which `obt init` has already added as a dependency.
 
-Now `o-brand` Sass is available for us to use. We will use `o-brand` to define a brand variable `border-color` in `src/scss/_brand.scss`, which is where all our brand configuration will go.
+We will use `o-brand` to define a brand variable `border-color` in `src/scss/_brand.scss`, which is where all our brand configuration will go.
 
 You should see in `src/scss/_brand.scss` two Sass functions which we will discuss later, for now add the following Sass at the bottom of the file.
 
@@ -496,7 +496,7 @@ Update your demo markup `demos/src/demo.mustache` with a theme class to preview 
 +&lt;div class="o-example o-example--inverse" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 	&lt;button class="o-example__button">count&lt;/button>
-</div></code></pre>
+&lt;/div></code></pre>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-9-sass.png" />

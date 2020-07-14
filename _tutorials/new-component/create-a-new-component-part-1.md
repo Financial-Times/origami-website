@@ -8,26 +8,31 @@ cta: Learn how to create an Origami component
 # {{page.title}}
 
 The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
-- part one: Intro & Boilerplate
-- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
-- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
-- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
-- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
-- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
-- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
-- [part eight](/docs/tutorials/create-a-new-component-part-8/): Component Lifecycle
+1. Intro & Boilerplate
+2. [Base Styles](/docs/tutorials/create-a-new-component-part-2/)
+3. [Themes & Brands](/docs/tutorials/create-a-new-component-part-3/)
+4. [Demos](/docs/tutorials/create-a-new-component-part-4/)
+5. [JavaScript](/docs/tutorials/create-a-new-component-part-5/)
+6. [Testing](/docs/tutorials/create-a-new-component-part-6/)
+7. [Documentation](/docs/tutorials/create-a-new-component-part-7/)
+8. [Component Lifecycle](/docs/tutorials/create-a-new-component-part-8/)
 
 ## Introduction
 
 Usually the Origami team will own an Origami component which is used by multiple teams or groups, but anybody can create and share an Origami component.
 
-In this tutorial we'll build an Origami component. Our example component will display a "hello world" message and include a button which will count the number of times it was clicked. Visually the component will include multiple variations to suit reader facing and internal projects. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
+In this tutorial we'll build an Origami component. Our example component will display a "hello world" message and include a button which will count the number of times it was clicked. Visually the component will include multiple variations to suit reader facing (master brand) and internal (internal brand) projects. We'll also discuss how to document and publish an Origami component so it is visible in the [Origami Registry](https://registry.origami.ft.com/components).
 
 ## Prerequisites
 
 Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
 
-In this tutorial we use a number of tools and libraries such as [git](https://git-scm.com/), [Sass](https://sass-lang.com/), [sinon.js](https://sinonjs.org/), etc. We do not cover these in depth but attempt to include brief descriptions and links to relevant documentation so that you may learn separately about the parts which are new to you.
+To follow this tutorial ensure the following software is install on your machine:
+- [NodeJS](https://nodejs.org/en/) (Version 10 or higher)
+- NPM](https://www.npmjs.com/get-npm) (Version 5 or higher)
+- [Bower](https://bower.io/)
+
+In addition this tutorial introduces a number of tools and libraries such as [git](https://git-scm.com/), [Sass](https://sass-lang.com/), [sinon.js](https://sinonjs.org/), etc. We do not cover these in depth but attempt to include brief descriptions and links to relevant documentation so that you may learn separately about the parts which are new to you.
 
 If you have any questions please contact the Origami team to help make this tutorial better &#x1F603;. You can find the team on Slack in <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}" class="o-typography-link--external" target="_blank">#{{site.data.contact.slack}}</a>.
 
@@ -197,7 +202,7 @@ Clicking `demo.html` to open that demo will show a blank page. In the next secti
 
 ## Markup
 
-So Origami components can be used with any backend language or framework users of Origami components copy and paste HTML from the readme `README.md` or demos in the [Origami registry](https://registry.origami.ft.com/components/) (although templates may be provided in some cases [according to the markup section of the component specification](/spec/v1/markup/#templates)). To update the markup in our component demos see the `demos` directory.
+Origami components are not built to work with any particular framework in mind. This is because product developers may choose to use any technology stack to build their application, and it’s important that they not be forced to choose a particular one in order to use Origami components. With that in mind Origami components are not written in a templating language or a framework but in plain <abbr title="Hyper Text Markup Language">HTML</abbr> and users of Origami components copy and paste the HTML from the readme `README.md` or demos in the [Origami registry](https://registry.origami.ft.com/components/). To update the markup in our component demos see the `demos` directory.
 
 The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own styles ([Sass](https://sass-lang.com/)) and JavaScript which is not part of the component itself. Note that demo code is not used by projects which depend on the component.
 

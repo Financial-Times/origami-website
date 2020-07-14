@@ -9,14 +9,14 @@ collection_listing_display: false
 # {{page.title}}
 
 The "Create A New Origami Component" tutorial is split into eight parts and is intended to be followed sequentially from start to finish:
-- [part one](/docs/tutorials/create-a-new-component-part-1/): Intro & Boilerplate
-- [part two](/docs/tutorials/create-a-new-component-part-2/): Base Styles
-- [part three](/docs/tutorials/create-a-new-component-part-3/): Themes & Brands
-- [part four](/docs/tutorials/create-a-new-component-part-4/): Demos
-- [part five](/docs/tutorials/create-a-new-component-part-5/): JavaScript
-- [part six](/docs/tutorials/create-a-new-component-part-6/): Testing
-- [part seven](/docs/tutorials/create-a-new-component-part-7/): Documentation
-- part eight: Component Lifecycle
+1. [Intro & Boilerplate](/docs/tutorials/create-a-new-component-part-1/)
+2. [Base Styles](/docs/tutorials/create-a-new-component-part-2/)
+3. [Themes & Brands](/docs/tutorials/create-a-new-component-part-3/)
+4. [Demos](/docs/tutorials/create-a-new-component-part-4/)
+5. [JavaScript](/docs/tutorials/create-a-new-component-part-5/)
+6. [Testing](/docs/tutorials/create-a-new-component-part-6/)
+7. [Documentation](/docs/tutorials/create-a-new-component-part-7/)
+8. Component Lifecycle
 
 In part eight we will learn how to publish our component to the Origami registry 🎉, and discuss the lifecycle of a published component.
 
@@ -65,7 +65,7 @@ To release an Origami component create a git tag named after the semver version 
 <pre><code class="o-syntax-highlight--bash">git tag v1.0.0
 git push origin v1.0.0</code></pre>
 
-Within a couple of minutes at most, your component should be visible in the [Origami Registry](https://registry.origami.ft.com/components?module=true&imageset=true&active=true&maintained=true&experimental=true) and should be published to the [npm registry](https://www.npmjs.com/~the-ft) 🎉. If not you may want to confirm that the `obt test` and `obt verify` commands pass without error, check the output of the Github Actions under the 'Actions" tab, or contact the Origami team for support in the `#{{site.data.contact.slack}}` Slack channel.
+Within a couple of minutes at most, your component should be visible in the [Origami Registry](https://registry.origami.ft.com/components?module=true&imageset=true&active=true&maintained=true&experimental=true) and should be published to the NPM registry](https://www.npmjs.com/~the-ft) 🎉. If not you may want to confirm that the `obt test` and `obt verify` commands pass without error, check the output of the Github Actions under the 'Actions" tab, or contact the Origami team for support in the `#{{site.data.contact.slack}}` Slack channel.
 
 ## Subsequent Releases
 
