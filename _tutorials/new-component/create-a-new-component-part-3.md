@@ -33,7 +33,7 @@ A project chooses a brand globally, meaning all components included in a project
 
 Origami components may support one or more brand. The brands a component supports are defined along with other component details in [`origami.json`](/spec/v1/manifest/#brands), by the `brands` property. If `brands` is not set the component is "unbranded" and implicitly only supports the "master" brand.
 
-When promoted by `obt init` in [part one](/docs/tutorials/create-a-new-component-part-1) we select all brands, so the `origami.json` file of our component should include an array of each brand `"brands": ["master","internal","whitelabel"],`. If not, update your `origami.json` now.
+When prompted by `obt init` in [part one](/docs/tutorials/create-a-new-component-part-1) we select all brands, so the `origami.json` file of our component should include an array of each brand `"brands": ["master","internal","whitelabel"],`. If not, update your `origami.json` now.
 
 ### Switching Brands In Development
 
@@ -71,12 +71,12 @@ You should see in `src/scss/_brand.scss` two Sass functions which we will discus
 
 Lets break down what this is doing.
 
-First we check if the current brand is the `master` brand using the `o-brand` function `oBrandGetCurrentBrand` and a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). We do this to ensure the Sass within the `if` statement is only evaluated when the brand is the `master` brand:
+First, we check if the current brand is the `master` brand using the `o-brand` function `oBrandGetCurrentBrand` and a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). We do this to ensure the Sass within the `if` statement is only evaluated when the brand is the `master` brand:
 <pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
 	//...
 }</code></pre>
 
-Second we call the mixin `oBrandDefine`, which will let us set component configuration for a given brand. In this case we are configuring our `o-example` component for the `master` brand.
+Second, we call the mixin `oBrandDefine`, which will let us set component configuration for a given brand. In this case we are configuring our `o-example` component for the `master` brand.
 
 <pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
@@ -84,7 +84,7 @@ Second we call the mixin `oBrandDefine`, which will let us set component configu
     ));
 }</code></pre>
 
-Third we pass configuration to `oBrandDefine` for the brand. We set a brand variable `border-color` within a `variables` map, to the value of the slate colour `oColorsByName('slate')`. We also set a property `supports-variants`, which we will discuss more shortly.
+Third, we pass configuration to `oBrandDefine` for the brand. We set a brand variable `border-color` within a `variables` map, to the value of the slate colour `oColorsByName('slate')`. We also set a property `supports-variants`, which we will discuss more shortly.
 <pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
@@ -303,7 +303,7 @@ We can now use the `$from` argument of our function `_oExampleGet` to fetch a br
 
 ### Variant Support
 
-To allow us to check if the theme name given to our `oExampleAddTheme` mixin is supported by the current brand, add the theme name to the `supports-variant` list of `oBrandDefine` configuration. Our final configuration looks like this:
+To allow us to check if the theme name given to our `oExampleAddTheme` mixin is supported by the current brand, add the theme name to the `supports-variants` list of `oBrandDefine` configuration. Our final configuration looks like this:
 
 <pre><code class="o-syntax-highlight--scss">// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
@@ -369,12 +369,6 @@ We can now complete our theme mixin:
 	// Error if an unsupported theme name is given.
 	@if not _oExampleSupports($name) {
 		@error 'The name "#{$name}" is not a supported "#{oBrandGetCurrentBrand()}" brand theme';
-	}
-
-	// Output theme css.
-	.o-example--#{$name} {
-		background: _oExampleGet('background-color', $from: $name);
-		color: _oExampleGet('text-color', $from: $name);
 	}
 
 	// Output theme css.
@@ -450,7 +444,7 @@ Currently users of the `oExample` mixin are forced to output all themes. This wi
 
 ### Custom Theme
 
-We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme. We'll add support for one new option `button-color`, which we will forward to the `oButtonsContent` mixin, so custom `o-example` themes can change the colour of the button also.
+We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme. We'll add support for one new option, `button-color`, which we will forward to the `oButtonsContent` mixin, so custom `o-example` themes can change the colour of the button also.
 <pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name, $opts: null) {
 	// Error if an unsupported theme name is given without
 	// `$opts` options. If `$opts` are given we are adding
@@ -511,6 +505,13 @@ Update your demo markup `demos/src/demo.mustache` with a theme class to preview 
 	</figcaption>
 </figure>
 
+To see the b2c theme, update the component class to `o-example o-example--b2c`:
+
+<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
++&lt;div class="o-example o-example--inverse" data-o-component="o-example">
+	Hello world, I am a component named o-example!
+	&lt;button class="o-example__button">count&lt;/button>
+</div></code></pre>
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-10-sass.png" />
 	<figcaption class="o-typography-caption">

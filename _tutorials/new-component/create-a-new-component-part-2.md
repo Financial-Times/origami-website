@@ -63,7 +63,7 @@ The first line imports Sass from `src/scss/_variables.scss`. Note the underscore
 
 ## Primary Mixin
 
-Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/documentation/at-rules/mixin) with the same name as the component, in this case `oExample`. There are [Sass comments](https://sass-lang.com/documentation/syntax/comments) which describe the mixin using the [SassDoc format](http://sassdoc.com/). We use SassDoc comments to document Sass in the registry for users of Origami components to reference, and will discuss this in more details later.
+Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/documentation/at-rules/mixin) with the same name as the component, in this case `oExample`. There are [Sass comments](https://sass-lang.com/documentation/syntax/comments) which describe the mixin using the [SassDoc format](http://sassdoc.com/). We use SassDoc comments to document Sass in the registry for users of Origami components to reference, and will discuss this in more detail later.
 
 <pre><code class="o-syntax-highlight--scss">/// Output all oExample features
 /// @param {Map} $opts [()] - A map of options to configure the output
@@ -169,7 +169,7 @@ As Origami component Sass does not output CSS by default these imports do nothin
 
 ### o-colors
 
-So lets change our red boarder to the standard slate colour from `o-colors` using the [oColorsByName](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#default-palette-colours) Sass function.
+So lets change our red border to the standard slate colour from `o-colors` using the [oColorsByName](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#default-palette-colours) Sass function.
 
 As well as include a colour by name, we can also get a colour for a [specific usecase](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#usecases) such as a page background. To demonstrate, set the background colour of our component using the `box` colour usecase (the `box` colour is used to highlight an area of content such as an aside).
 
@@ -220,7 +220,7 @@ Run `obt dev`, if not already, and preview the component demo as in [part one](/
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-basic-styles.png" />
 	<figcaption class="o-typography-caption">
-        Our "o-example" "hello world" component now has a slate boarder, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
+        Our "o-example" "hello world" component now has a slate border, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
 	</figcaption>
 </figure>
 
@@ -265,4 +265,4 @@ To style our components we covered many topics in this part of the tutorial. We 
 - How to install Origami component dependencies from the [Origami Bower Registry](https://github.com/Financial-Times/origami-bower-registry).
 - And finally how to include and use Sass from `o-colors`, `o-spacing`, `o-typography`, and `o-buttons`.
 
-Now we know how to add styles in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will optionally modify the appearance of `o-example` to look better on a dark background. We will also "brand" our component to change its appearance depending on whether it is used within a reader facing ft.com project, internal project, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).
+Now we know how to add styles, in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will modify the appearance of `o-example` to look better on a dark background. We will also "brand" our component to change its appearance depending on whether it is used within a reader facing ft.com project, internal project, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).

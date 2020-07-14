@@ -128,7 +128,7 @@ Again running the `obt test` command should show our new tests have run and pass
 
 ## Visual Regression Tests
 
-To check all component demos for any visual bugs that may have been introduced accidentally as part of a change may be rather taxing as a manual piece of work. To help demos may be run through [percy.io](https://percy.io/) to highlight visual differences between two versions of a component automatically.
+To check all component demos for any visual bugs that may have been introduced accidentally as part of a change may be rather taxing as a manual piece of work. To help, demos may be run through [percy.io](https://percy.io/) to highlight visual differences between two versions of a component automatically.
 
 We can't run Percy yet as we haven't released a version of our component to compare changes against. But later, when we have released our component, you will be able to run [percy.io](https://percy.io/) by adding a `percy` label to Github pull requests. When Percy has run a comment is added to the pull request, and the demo comparisons are ready for review at [percy.io/Financial-Times](https://percy.io/Financial-Times/).
 

@@ -78,7 +78,7 @@ Lets start work on making our example component interactive.
 
 We'll start by adding a `count` property, and listen for clicks on `o-example` buttons using the [`handleEvent`](https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38) method to increment the count property.
 
-Origami components use browser apis directly for [Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) manipulation. For instance [`Document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to get an element and [`HTMLElement.innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) to set an elements text content.
+Origami components use browser apis directly for [<abbr title="Document Object Model">DOM</abbr>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) manipulation. For instance [`Document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to get an element and [`HTMLElement.innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) to set an elements text content.
 
 <pre><code class="o-syntax-highlight--js">	/**
 	 * Class constructor.
@@ -99,7 +99,8 @@ Origami components use browser apis directly for [Document Object Model](https:/
 	 * A method to handle event listeners.
 	 * https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38
 	 * https://dom.spec.whatwg.org/#dom-eventlistener-handleevent
-	 * @param {Event} event
+	 * @param {Event} event - The browser event which was triggered.
+	 * @returns {void}
 	 */
 	handleEvent(event) {
 		// When any button within the `o-example` component is clicked
@@ -139,7 +140,9 @@ Now in our JavaScript we can get any current count element and update it when ou
         // the attribute data-o-example-current-count.
         const countElements = this.exampleEl.querySelectorAll('[data-o-example-current-count]');
         // For each count element found, update the count.
-        countElements.forEach(e => e.innerText = this.count);
+		for (const element of countElements) {
+			element.innerText = this.count;
+		}
     }
 }</code></pre>
 
@@ -198,11 +201,11 @@ And in the event handler update the counter element with the text "lots and lots
 
 ### Core Experience
 
-Most projects which use Origami components serve a reduced "core" experience to older browsers, per the [Financial Times browser support police](https://docs.google.com/document/d/1z6kecy_o9qHYIznTmqQ-IJqre72jhfd0nVa4JMsS7Q4/). The core experience at a minimum supports key and fundamental features without JavaScript. Origami components need to maintain these standards as a minimum.
+Most projects which use Origami components serve a reduced "core" experience to older browsers, per the [Financial Times browser support policy](https://docs.google.com/document/d/1z6kecy_o9qHYIznTmqQ-IJqre72jhfd0nVa4JMsS7Q4/). The core experience at a minimum supports key and fundamental features without JavaScript. Origami components need to maintain these standards as a minimum.
 
 A good component to demonstrate this is [o-table](https://registry.origami.ft.com/components/o-table@8.0.11). With JavaScript available `o-table` has client-side sortable columns. When JavaScript is unavailable client side sorting is not possible, and sort buttons are not displayed in table headings. Users without JavaScript have fewer features available but are not left with confusing sort buttons which do nothing, a kind of [graceful degradation](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation). `o-table` also has a responsive variant which allows the table to scroll horizontally on small devices. The scrolling table works for core experience users but is enhanced with JavaScript to include arrows for a more clear indication of when scrolling is possible, a kind of [progressive enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement).
 
-At present our component displays a useless button for core experience users and when JavaScript [fails for some other reason](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). We can update our `o-example` component to hide the count button for core experience users and just display the hello message we have written.
+At present our component displays a useless button for core experience users and when JavaScript [fails for some other reason](https://gds.blog.gov.uk/2013/10/21/how-many-people-are-missing-out-on-javascript-enhancement/). We can update our `o-example` component to hide the count button for core experience users and only display the message we have written.
 
 So we know when our component JavaScript is initiated successfully lets add a data attribute `data-o-example-js` to our component as part of the constructor:
 
@@ -216,7 +219,7 @@ So we know when our component JavaScript is initiated successfully lets add a da
 		this.exampleEl.addEventListener('click', this);
 +		// Set a data attribute so we know the component is initiated successfully.
 +		// The attribute may be used in CSS to style our component conditionally.
-+		this.rootEl.setAttribute('data-o-example-js', '');
++		this.exampleEl.setAttribute('data-o-example-js', '');
 	}</code></pre>
 
 Next lets wrap any the counter specific part of `o-example` markup in a `span` element with the class `o-example__counter`:
@@ -281,7 +284,7 @@ We can then then add CSS to `main.scss` to hide the counter element `o-example__
 	</figcaption>
 </figure>
 
-### PolyFills
+### Polyfills
 
 The core and enhanced experience cover an all or nothing approach. In some cases two browsers which receive the enhanced experience may not offer the same set of JavaScript features. In these cases [polyfill.io](https://polyfill.io/) may be used to add missing or broken JavaScript features to browsers we need to support ([Financial Times browser support policy](https://docs.google.com/document/d/1z6kecy_o9qHYIznTmqQ-IJqre72jhfd0nVa4JMsS7Q4/)).
 

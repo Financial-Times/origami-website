@@ -113,7 +113,7 @@ We also need to create a demo for the `b2c` theme. However the `b2c` theme we cr
 
 ## Pa11y Demo
 
-You may have noticed another demo `pa11y` has already been configured. The `pa11y` demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we run against the pa11y demo to find some common accessibility issues. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. The pa11y demo is for testing purposes only and is hidden from users in the [Origami Registry](https://registry.origami.ft.com/components).
+You may have noticed another demo named `pa11y` has already been configured. The `pa11y` demo is used by Origami Build Tools to run [Pa11y](https://pa11y.org/). Pa11y is a command-line tool which we run against the pa11y demo to find some common accessibility issues. When building components its important to add any variations to the pa11y demo to test for accessibility issues, such as low contrast or incorrect markup. The pa11y demo is for testing purposes only and is hidden from users in the [Origami Registry](https://registry.origami.ft.com/components).
 
 ## Other Demo Options
 

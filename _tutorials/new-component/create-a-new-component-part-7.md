@@ -71,7 +71,7 @@ The readme of a component is thorough but risks becoming verbose so Origami comp
 
 ## SassDoc
 
-To document Sass functions, mixins, and variables Origami uses [SassDoc](http://sassdoc.com/). A SassDoc comment comes before the Sass to document. It uses three forward slashes and has a number of [annotations](sassdoc.com/annotations/). Its easier to see with an example. Let's add SassDoc comments to our undocumented `oExampleAddTheme` mixin we created earlier:
+To document Sass functions, mixins, and variables, Origami uses [SassDoc](http://sassdoc.com/). A SassDoc comment comes before the Sass to document. It uses three forward slashes and has a number of [annotations](sassdoc.com/annotations/). Its easier to see with an example. Let's add SassDoc comments to our undocumented `oExampleAddTheme` mixin we created earlier:
 
 <pre><code class="o-syntax-highlight--scss">/// Output a css modifier class for an o-example theme.
 /// This may be an existing theme, or a new custom them.
@@ -91,7 +91,7 @@ To document Sass functions, mixins, and variables Origami uses [SassDoc](http://
 }
 </code></pre>
 
-Above we give a [description](http://sassdoc.com/annotations/#description) of the mixins usecase. We use the [`@param`](http://sassdoc.com/annotations/#parameter) annotation to document the parameters of our mixin. Note that SassDoc does not provide a way to document each property of the `$opts` map. Instead we use the [`@example`](http://sassdoc.com/annotations/#example) annotation and readme to compensate. Finally we use the [`@access`](http://sassdoc.com/annotations/#access) annotation to indicate the mixin is public and can be included by component users. Although our use of `@access` is superfluous, as [only Sass which begins with an underscore is considered private](/spec/v1/sass/#private-sass).
+Above we give a [description](http://sassdoc.com/annotations/#description) of the mixins usecase. We use the [`@param`](http://sassdoc.com/annotations/#parameter) annotation to document the parameters of our mixin. Note that SassDoc does not provide a way to document each property of the `$opts` map. Instead we use the [`@example`](http://sassdoc.com/annotations/#example) annotation and readme to compensate. Finally we use the [`@access`](http://sassdoc.com/annotations/#access) annotation to indicate the mixin is public and can be included by component users.
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-17-docs.png" />
