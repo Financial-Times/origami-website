@@ -141,16 +141,6 @@ o-example
         └── index.test.scss
 ```
 
-## Package Management
-
-Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so multiple versions of the same component are not installed at once.
-
-Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](/spec/v1/components/#package-management).
-
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommend Bower for now](/docs/tutorials/npm/)).
-
-Don't worry if this sounds a little confusing at the moment. Later in this tutorial we will install dependencies using Bower for our component to use. We will also see how Origami components are automatically published to NPM.
-
 ## Start Developing
 
 Now we have a basic component to work from we can start developing!

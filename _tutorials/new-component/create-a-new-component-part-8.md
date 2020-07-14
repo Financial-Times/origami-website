@@ -43,7 +43,7 @@ You may then push this to your remote github.com repository, under the `Financia
 You might have noticed a `.github` directory already. This directory configures Github to give us some nice features including:
 - `ISSUE_TEMPLATE.md`: The contents of this file are used to provide a [template when opening a new Github issue](https://help.github.com/en/github/building-a-strong-community/about-issue-and-pull-request-templates). It helps users report bugs or provide feedback by prompting for useful information.
 - `CODEOWNERS`: defines individuals or teams to automatically assign to new Github issues or pull requests ([see the Github code owners documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners)).
-- `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release, set useful Github labels, and more. We'll look at some of these shortly.
+- `workflows/*`: the workflows directory configures a number of [Github Actions](https://github.com/features/actions) which will automate component testing and release. We'll look at some of these shortly.
 
 There is also some manual Github configuration left to do. When your new component is pushed to Github [update access in the Github settings of your repository](https://docs.github.com/en/github/getting-started-with-github/access-permissions-on-github). Grant these teams the following permissions:
 - `@origami-read-only`: **read** - required, for a team of helpful Origami bots
@@ -68,6 +68,10 @@ Origami components use Github Actions for a number of helpful functions includin
 - Run component tests when new commits are made to a pull request.
 - Add a [semver](https://semver.org/) git tag to release a component when a pull request with a [release label](https://github.com/Financial-Times/origami-labels#continuous-delivery-labels) is merged.
 - Build and publish an [NPM](https://www.npmjs.com/) package when a release is made with a git tag, so Origami components may be included via [Bower](https://bower.io/) or [NPM](https://www.npmjs.com/)
+
+<aside>
+Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower (<a href="/docs/tutorials/npm/">but we still recommend Bower for now</a>).
+</aside>
 
 To see these Github Actions in practise let's release our component.
 
