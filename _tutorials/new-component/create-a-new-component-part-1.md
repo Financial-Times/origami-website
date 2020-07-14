@@ -153,31 +153,40 @@ Then we can use the `develop` (`dev`) command to start working on the component.
 
 <pre><code class="o-syntax-highlight--bash">obt dev</code></pre>
 
-Opening the link output by the develop command, for example `localhost:8999`, shows us the component demos (html files) and demo assets (built js and css files) in the browser.
+Opening the link output by the develop command, for example `localhost:8999`, lists the built component assets in the browser (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="JavaScript">JS</abbr>, and <abbr title="Cascading Style Sheets ">CSS</abbr> files).
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-dev-output.png" />
 	<figcaption class="o-typography-caption">
-        Running the dev command builds our demos. We'll discuss demos more shortly.
+        Running the dev command builds our component assets (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="JavaScript">JS</abbr>, and <abbr title="Cascading Style Sheets ">CSS</abbr> files).
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-demos-local.png" />
 	<figcaption class="o-typography-caption">
-        Opening the link output by the develop command, `localhost:8999` in this case, shows us the component demos (html files) and demo assets (js and css files) in the browser.
+        Opening the link output by the develop command, `localhost:8999` in this case, shows us the component assets in the browser (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="JavaScript">JS</abbr>, and <abbr title="Cascading Style Sheets ">CSS</abbr> files).
 	</figcaption>
 </figure>
 
-Clicking `demo.html` to open that demo will show a blank page. In the next section we will update this demo with markup and content for our component.
+Clicking the <abbr title="Hyper Text Markup Language">HTML</abbr> file `demo.html` will show a blank page. In the next section we will update our component with new <abbr title="Hyper Text Markup Language">HTML</abbr> and content.
 
 ## Markup
 
-Origami components are not built to work with any particular framework in mind. This is because product developers may choose to use any technology stack to build their application, and it’s important that they not be forced to choose a particular one in order to use Origami components. With that in mind Origami components are not written in a templating language or a framework but in plain <abbr title="Hyper Text Markup Language">HTML</abbr> and users of Origami components copy and paste the HTML from the readme `README.md` or demos in the [Origami registry](https://registry.origami.ft.com/components/). To update the markup in our component demos see the `demos` directory.
+Origami components are not built to work with any particular framework in mind. This is because product developers may choose to use any technology stack to build their application, and it’s important that they not be forced to choose a particular one in order to use Origami components. With that in mind Origami components are not written in a templating language or a framework but in plain <abbr title="Hyper Text Markup Language">HTML</abbr>.
 
-The templates for demos are written in [mustache](https://mustache.github.io/), and demos may include their own styles ([Sass](https://sass-lang.com/)) and JavaScript which is not part of the component itself. Note that demo code is not used by projects which depend on the component.
+Therefore to include component HTML Origami users copy and paste component HTML from the readme `README.md` or interactive component demos which are presented in the [Origami registry](https://registry.origami.ft.com/components/).
 
-In the demos directory, you should see an example demo `demos/src/demo.mustache` (we'll revisit the other files later). Open `demos/src/demo.mustache` in your editor and you should see something which looks like this (assuming a component name of `o-example`):
+<figure>
+	<img alt="" src="/assets/images/tutorial-new-component/example-demo-registry.png" />
+	<figcaption class="o-typography-caption">
+        A live demo of o-labels presented in the registry with <abbr title="Hyper Text Markup Language">HTML</abbr> to copy and paste.
+	</figcaption>
+</figure>
+
+We will use the demos as previews for local development as well as presenting to users in the [Origami registry](https://registry.origami.ft.com/components/).
+
+The templates for demos are in the `demos` directory and written in [mustache](https://mustache.github.io/). In the demos directory, you should see an example demo `demos/src/demo.mustache` (we'll revisit the other files later). Open `demos/src/demo.mustache` in your editor and you should see something which looks like this (assuming a component name of `o-example`):
 
 <pre><code class="o-syntax-highlight--html">&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
 

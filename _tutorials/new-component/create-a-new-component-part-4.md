@@ -119,6 +119,10 @@ You may have noticed another demo named `pa11y` has already been configured. The
 
 There are other demo options we haven't covered so far. For example as well as the `demos` array `origami.json` may include [`demosDefaults`](/spec/v1/manifest/#demosdefaults), which describe options to be applied to all demos. Among other settings we can specify the demo Mustache template, Sass, and JavaScript file. To learn more see the [Origami Manifest specification](/spec/v1/manifest/) which has a full list of all demo options.
 
+<aside>
+Demos may include their own Sass and JavaScript which are not part of the component itself.
+</aside>
+
 ## Part Five: JavaScript
 
 In part four we learnt:
