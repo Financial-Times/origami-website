@@ -41,7 +41,7 @@ If this tutorial contradicts or misses anything required in the <a href="/spec/v
 
 ## Build Tools
 
-Origami components are developed using the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) (`obt`) command line interface. To work on our component, install Origami Build Tools (`obt`) on your machine:
+Origami components are developed using the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) (`obt`) command line interface. To work on our component, install Origami Build Tools (`obt`) on your machine by running this command in your terminal:
 
 <pre><code class="o-syntax-highlight--bash">npm install -g origami-build-tools</code></pre>
 
@@ -157,11 +157,11 @@ You might have noticed a `.github` directory. At the time of writing, the `.gith
 
 ## Package Management
 
-Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so two versions of the same component are not install at once.
+Origami components use [Bower](https://bower.io/), a package manager like [NPM](https://www.npmjs.com/), to manage dependencies. The `bower.json` file lists the components dependencies, and points to the main Sass and JavaScript files of the component. One benefit of using Bower is it ensures a flat dependency tree, so multiple versions of the same component are not installed at once.
 
 Although Origami components use Bower to install dependencies, developer dependencies may be installed using the [NPM](https://www.npmjs.com/) package manager, as seen in `package.json`. Rules for package management are defined in the [package management section of the specification](/spec/v1/components/#package-management).
 
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommended Bower for now](/docs/tutorials/npm/)).
+Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower ([but we still recommend Bower for now](/docs/tutorials/npm/)).
 
 Don't worry if this sounds a little confusing at the moment. Later in this tutorial we will install dependencies using Bower for our component to use. We will also see how Origami components are automatically published to NPM.
 
@@ -221,7 +221,7 @@ The `obt dev` command which we run earlier will detect that you have updated `de
 	</figcaption>
 </figure>
 
-The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](/spec/v1/markup/#owned-dom). A component may act on a DOM element using JavaScript if it, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](/spec/v1/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
+The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](/spec/v1/markup/#owned-dom). A component may act on a DOM element using JavaScript if the DOM element, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](/spec/v1/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
 
 ## Part Two: Base Styles
 
@@ -234,4 +234,3 @@ In part one we learnt:
 - And finally we learnt how to update the markup in one of those demos.
 
 Now we know how to update our component markup, in part two we will style our component. [Continue to part two](/docs/tutorials/create-a-new-component-part-2).
-
