@@ -31,7 +31,9 @@ To demonstrate how these projects are used to test components we will add a new 
 JavaScript tests are located under the `tests/js` directory. The file `example.test.js` already has boilerplate tests, which use component markup defined in `tests/js/helpers/fixtures.js` to confirm the `init` method works as expected.
 
 Our first step will be to update the `htmlCode` method in `tests/js/helpers/fixtures.js` with our latest component markup. We'll add an id `id="element"` which we can use in our tests:
-<pre><code class="o-syntax-highlight--js">function htmlCode () {
+<pre><code class="o-syntax-highlight--js">// tests/js/helpers/fixtures.js
+
+function htmlCode () {
 	const html = `
         &lt;div id="element" class="o-example" data-o-component="o-example">
             Hello world, I am a component named o-example!
@@ -46,7 +48,9 @@ Our first step will be to update the `htmlCode` method in `tests/js/helpers/fixt
 </code></pre>
 
 Next we can append our new tests within the main `describe("Example", () => {})` block:
-<pre><code class="o-syntax-highlight--js">describe("with a button", () => {
+<pre><code class="o-syntax-highlight--js">// tests/js/example.test.js
+
+describe("with a button", () => {
 
     beforeEach(() => {
         // Add our component markup to the DOM
@@ -99,7 +103,9 @@ Component Sass tests are run using the [Oddbird True](https://www.oddbird.net/tr
 
 This tutorial won't cover Oddbird True in detail, for that see the [Oddbird True documentation](https://www.oddbird.net/true/docs/). However to demonstrate we will update the boilerplate test (`tests/scss/_main.test.scss`) to confirm the `oExample` mixin outputs CSS for the inverse theme by default:
 
-<pre><code class="o-syntax-highlight--scss">@include describe('oExample mixins') {
+<pre><code class="o-syntax-highlight--scss">// tests/scss/_main.test.scss
+
+@include describe('oExample mixins') {
     // tests for the primary mixin oExample
 	@include describe('oExample') {
 		@include it('outputs the inverse theme by default') {

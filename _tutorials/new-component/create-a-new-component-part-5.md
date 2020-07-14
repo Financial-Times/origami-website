@@ -80,7 +80,9 @@ We'll start by adding a `count` property, and listen for clicks on `o-example` b
 
 Origami components use browser apis directly for [<abbr title="Document Object Model">DOM</abbr>](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) manipulation. For instance [`Document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to get an element and [`HTMLElement.innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) to set an elements text content.
 
-<pre><code class="o-syntax-highlight--js">	/**
+<pre><code class="o-syntax-highlight--js">// src/js/example.js
+
+	/**
 	 * Class constructor.
 	 * @param {HTMLElement} [exampleEl] - The component element in the DOM
 	 * @param {Object} [options={}] - An options object for configuring the component
@@ -121,7 +123,8 @@ Origami components use browser apis directly for [<abbr title="Document Object M
 
 Next we want to update our component to display the current count instead of logging the count to the browsers developer console. One way we could do that is my adding a `<span>` element to contain the current count and update its text content when the button is clicked. We'll identify the current count span with a namespaced data attribute `data-o-example-current-count`.
 
-<pre><code class="o-syntax-highlight--diff">
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
 &lt;div class="o-example &#123;&#123;#theme}}o-example--&#123;&#123;theme}}&#123;&#123;/theme}}" data-o-component="o-example">
 -    Hello world, I am a component named o-example!
 +    Hello world, I am a component named o-example! You have clicked this lovely button &lt;span data-o-example-current-count>0&lt;/span> times.
@@ -131,7 +134,9 @@ Next we want to update our component to display the current count instead of log
 
 Now in our JavaScript we can get any current count element and update it when our click count is incremented.
 
-<pre><code class="o-syntax-highlight--js">handleEvent(event) {
+<pre><code class="o-syntax-highlight--js">// src/js/example.js
+
+handleEvent(event) {
     // When any button within the `o-example` component is clicked
     // increment the count.
     if (event.target.tagName === 'BUTTON') {
@@ -157,7 +162,9 @@ Our example component now displays the click count. In the example above the but
 
 To do that add an option `highCount` in the constructor, with a default value of `100`:
 
-<pre><code class="o-syntax-highlight--js">constructor (exampleEl, opts) {
+<pre><code class="o-syntax-highlight--js">// src/js/example.js
+
+constructor (exampleEl, opts) {
         this.exampleEl = exampleEl;
         // Get the `highCount` option from the `opts` argument or
         // from a `data-o-example-high-count` data attribute, or
@@ -173,7 +180,9 @@ To do that add an option `highCount` in the constructor, with a default value of
 
 And in the event handler update the counter element with the text "lots and lots of" after the button has been clicked the high count or more:
 
-<pre><code class="o-syntax-highlight--js">handleEvent(event) {
+<pre><code class="o-syntax-highlight--js">// src/js/example.js
+
+handleEvent(event) {
     // When any button within the `o-example` component is clicked
     // increment the count.
     if (event.target.tagName === 'BUTTON') {
@@ -209,7 +218,9 @@ At present our component displays a useless button for core experience users and
 
 So we know when our component JavaScript is initiated successfully lets add a data attribute `data-o-example-js` to our component as part of the constructor:
 
-<pre><code class="o-syntax-highlight--diff">constructor (exampleEl, opts) {
+<pre><code class="o-syntax-highlight--diff">// src/js/example.js
+
+constructor (exampleEl, opts) {
 		this.exampleEl = exampleEl;
 		this.options = Object.assign({}, {
 		}, opts || Example.getDataAttributes(exampleEl));
@@ -224,7 +235,8 @@ So we know when our component JavaScript is initiated successfully lets add a da
 
 Next lets wrap any the counter specific part of `o-example` markup in a `span` element with the class `o-example__counter`:
 
-<pre><code class="o-syntax-highlight--html">
+<pre><code class="o-syntax-highlight--html">&lt;!-- demos/src/demo.mustache  -->
+
 &lt;div id="element" class="o-example" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 	&lt;span class="o-example__counter">
@@ -237,7 +249,9 @@ Next lets wrap any the counter specific part of `o-example` markup in a `span` e
 
 We can then then add CSS to `main.scss` to hide the counter element `o-example__counter` until the data attribute `data-o-example-js` has been added:
 
-<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: (
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+@mixin oExample ($opts: (
 	'themes': ('inverse', 'b2c')
 )) {
 	// Get the themes to output from the `$opts` argument.

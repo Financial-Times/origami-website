@@ -30,7 +30,9 @@ We won't cover Sass in depth in this tutorial but will briefly describe the Sass
 Components have an entry Sass file `main.scss`, which may [import Sass from the `src/scss` directory](/spec/v1/sass/#sass-includes).
 
 Within `main.scss` you will see something like this:
-<pre><code class="o-syntax-highlight--scss">@import 'src/scss/variables';
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
+@import 'src/scss/variables';
 
 /// Output all oExample features
 /// @param {Map} $opts [()] - A map of options to configure the output
@@ -59,13 +61,17 @@ Let's break this down a little.
 ## Imports
 
 The first line imports Sass from `src/scss/_variables.scss`. Note the underscore and extension is not needed in the `@import` statement. All Origami Sass files except `main.scss` should start with an underscore to indicate they are [Sass partials](https://sass-lang.com/documentation/at-rules/import#partials) for import and should not be compiled on their own.
-<pre><code class="o-syntax-highlight--scss">@import 'src/scss/variables';</code></pre>
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
+@import 'src/scss/variables';</code></pre>
 
 ## Primary Mixin
 
 Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/documentation/at-rules/mixin) with the same name as the component, in this case `oExample`. There are [Sass comments](https://sass-lang.com/documentation/syntax/comments) which describe the mixin using the [SassDoc format](http://sassdoc.com/). We use SassDoc comments to document Sass in the registry for users of Origami components to reference, and will discuss this in more detail later.
 
-<pre><code class="o-syntax-highlight--scss">/// Output all oExample features
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
+/// Output all oExample features
 /// @param {Map} $opts [()] - A map of options to configure the output
 /// @access public
 /// @example scss
@@ -86,7 +92,8 @@ We call the mixin which shares the component name (`oExample`) the ["primary mix
 
 After the primary mixin our component references a [Sass variable](https://sass-lang.com/documentation/variables) named `$o-example-is-silent`. This is set in `src/scss/_variables.scss`, where Origami components define global variables.
 
-<pre><code class="o-syntax-highlight--scss">
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
 @if ($o-example-is-silent == false) {
 	@include oExample();
 
@@ -113,7 +120,9 @@ See the [Sass naming convention part of the specification](/spec/v1/sass/#naming
 
 Let's style our component by adding a border and padding to the `.o-example` CSS class.
 
-<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+@mixin oExample ($opts: ()) {
 	// content of primary mixin
 	.o-example {
 -		display: block;
@@ -156,7 +165,9 @@ With Bower configured, we can now run:
 
 You should now have a `bower_components` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 
-<pre><code class="o-syntax-highlight--diff">+@import 'o-colors/main';
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
++@import 'o-colors/main';
 +@import 'o-spacing/main';
 +@import 'o-typography/main';
 +@import 'o-buttons/main';
@@ -173,7 +184,9 @@ So lets change our red border to the standard slate colour from `o-colors` using
 
 As well as include a colour by name, we can also get a colour for a [specific usecase](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#usecases) such as a page background. To demonstrate, set the background colour of our component using the `box` colour usecase (the `box` colour is used to highlight an area of content such as an aside).
 
-<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+@mixin oExample ($opts: ()) {
 	// content of primary mixin
 	.o-example {
 -		border: 1px solid red;
@@ -188,7 +201,9 @@ As well as include a colour by name, we can also get a colour for a [specific us
 ### o-spacing
 
 Then we can use one of the recommended space values from `o-spacing` using its [oSpacingByName](https://registry.origami.ft.com/components/o-spacing@2.0.4/readme?brand=master#named-space) Sass function.
-<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+@mixin oExample ($opts: ()) {
 	// content of primary mixin
 	.o-example {
 		border: 1px solid oColorsByName('slate');
@@ -204,7 +219,9 @@ Then we can use one of the recommended space values from `o-spacing` using its [
 
 The next thing we wanted to do was style our component text using `o-typography`. We can do that a number of ways depending on how we want our typography to look. For now let's use the [`oTypographyBody`](https://registry.origami.ft.com/components/o-typography@6.4.1/readme?brand=master#otypographybody) mixin. Unlike a function which returns a value, a Sass mixin sets a number of CSS properties; in this case the font family, font size, etc.
 
-<pre><code class="o-syntax-highlight--diff">@mixin oExample ($opts: ()) {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+@mixin oExample ($opts: ()) {
 	// content of primary mixin
 	.o-example {
 +		@include oTypographyBody();
@@ -232,7 +249,8 @@ If we were adding buttons to a project we might include the primary Sass mixin [
 
 Fortunately, `o-buttons` allows us to output a button with a custom class name using the Sass mixin [`oButtonsContent`](https://registry.origami.ft.com/components/o-buttons@6.0.14/sassdoc?brand=master#mixin-obuttonscontent). There are a number of options we could pass to `oButtonsContent` for different types of buttons. We'll choose a "primary" button type for this tutorial. In `main.scss` define a new CSS class `.o-example__button` and include the button CSS with `oButtonsContent`:
 
-<pre><code class="o-syntax-highlight--scss">.o-example {
+<pre><code class="o-syntax-highlight--scss">// main.scss
+.o-example {
 	// [previously discussed css here]
 }
 
@@ -242,7 +260,9 @@ Fortunately, `o-buttons` allows us to output a button with a custom class name u
 
 We need to update our demo markup  `demos/src/demo.mustache` with the new button markup, similar to how we added text to the demo in [part one](/docs/tutorials/create-a-new-component-part-1):
 
-<pre><code class="o-syntax-highlight--diff">&lt;div class="o-example" data-o-component="o-example">
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
+&lt;div class="o-example" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 +	&lt;button class="o-example__button">count&lt;/button>
 &lt;/div></code></pre>

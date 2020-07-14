@@ -73,7 +73,9 @@ The readme of a component is thorough but risks becoming verbose so Origami comp
 
 To document Sass functions, mixins, and variables, Origami uses [SassDoc](http://sassdoc.com/). A SassDoc comment comes before the Sass to document. It uses three forward slashes and has a number of [annotations](sassdoc.com/annotations/). Its easier to see with an example. Let's add SassDoc comments to our undocumented `oExampleAddTheme` mixin we created earlier:
 
-<pre><code class="o-syntax-highlight--scss">/// Output a css modifier class for an o-example theme.
+<pre><code class="o-syntax-highlight--scss">// src/scss/_mixins.scss
+
+/// Output a css modifier class for an o-example theme.
 /// This may be an existing theme, or a new custom them.
 /// @param {String} $name - The name of the theme to output.
 /// @param {Map} $opts [null] - A map of theme options to create a custom theme. See the examples and README for full details.
@@ -104,7 +106,9 @@ Above we give a [description](http://sassdoc.com/annotations/#description) of th
 
 Origami components use [JSDoc comments](https://jsdoc.app/about-getting-started.html) to document JavaScript. For example see the existing JSDoc for the `init` method of our `o-example` component, which was generated for us by the `obt init` command:
 
-<pre><code class="o-syntax-highlight--js">/**
+<pre><code class="o-syntax-highlight--js">// src/js/example.js
+
+/**
  * Initialise o-example component.
  * @param {(HTMLElement|String)} rootElement - The root element to intialise the component in, or a CSS selector for the root element
  * @param {Object} [options={}] - An options object for configuring the component

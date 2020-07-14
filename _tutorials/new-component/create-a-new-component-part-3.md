@@ -60,7 +60,9 @@ We will use `o-brand` to define a brand variable `border-color` in `src/scss/_br
 
 You should see in `src/scss/_brand.scss` two Sass functions which we will discuss later, for now add the following Sass at the bottom of the file.
 
-<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+@if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
 			'border-color': oColorsByName('slate')
@@ -72,20 +74,26 @@ You should see in `src/scss/_brand.scss` two Sass functions which we will discus
 Lets break down what this is doing.
 
 First, we check if the current brand is the `master` brand using the `o-brand` function `oBrandGetCurrentBrand` and a [Sass if statement](https://sass-lang.com/documentation/at-rules/control/if). We do this to ensure the Sass within the `if` statement is only evaluated when the brand is the `master` brand:
-<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+@if oBrandGetCurrentBrand() == 'master' {
 	//...
 }</code></pre>
 
 Second, we call the mixin `oBrandDefine`, which will let us set component configuration for a given brand. In this case we are configuring our `o-example` component for the `master` brand.
 
-<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+@if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
         // brand configuration for the master brand here..
     ));
 }</code></pre>
 
 Third, we pass configuration to `oBrandDefine` for the brand. We set a brand variable `border-color` within a `variables` map, to the value of the slate colour `oColorsByName('slate')`. We also set a property `supports-variants`, which we will discuss more shortly.
-<pre><code class="o-syntax-highlight--scss">@if oBrandGetCurrentBrand() == 'master' {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+@if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
 			'border-color': oColorsByName('slate')
@@ -96,7 +104,9 @@ Third, we pass configuration to `oBrandDefine` for the brand. We set a brand var
 
 Now repeat this block for the `internal` and `whitelabel` brand, but change `border-color` to `oColorsByName('black')` for the `whitelabel` brand (as `slate` is not part of the [whitelabel colour palette](https://registry.origami.ft.com/components/o-colors@5.2.5/?brand=whitelabel#demo-primary-palette)):
 
-<pre><code class="o-syntax-highlight--scss">// Add master brand configuration.
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
@@ -128,7 +138,9 @@ Now repeat this block for the `internal` and `whitelabel` brand, but change `bor
 
 Now we have defined `border-color` for each brand, with a different colour set for the whitelabel brand, we can use `border-color` within our Sass. Return your focus to the Sass function `_oExampleGet` at the top of `src/scss/_brand.scss`:
 
-<pre><code class="o-syntax-highlight--scss">/// Helper for `o-brand` function.
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+/// Helper for `o-brand` function.
 /// @access private
 @function _oExampleGet($variables, $from: null) {
 	@return oBrandGet($component: 'o-example', $variables: $variables, $from: $from);
@@ -137,7 +149,9 @@ Now we have defined `border-color` for each brand, with a different colour set f
 The `_oExampleGet` function is a component specific function which wraps a `o-brand` function `oBrandGet`. `oBrandGet` is used to retrieve a brand variable depending on the current brand. Wrapping this in `_oExampleGet` is useful to avoid passing the `$component` argument repeatedly.
 
 Update `main.scss` to set our border color with `_oExampleGet('border-color')`:
-<pre><code class="o-syntax-highlight--diff">.o-example {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+.o-example {
 		@include oTypographyBody();
 -		border: 1px solid oColorsByName('slate');
 +		border: 1px solid _oExampleGet('border-color');
@@ -148,7 +162,9 @@ Update `main.scss` to set our border color with `_oExampleGet('border-color')`:
 
 Now when we run `obt dev --brand whitelabel` we get a different error! The error is `Could not find a colour for the "box" "background" usecase.`. That's because the whitelabel brand does not support the [box colour usecase](https://registry.origami.ft.com/components/o-colors@5.2.4/readme?brand=master#usecases) we used to set a background. Unlike the master and internal brand, the whitelabel brand is not opinionated and provides a limited set of colour usescases. Instead of using the usecase lets add a new brand variable `background-color` so we can support the whitelabel brand as well:
 
-<pre><code class="o-syntax-highlight--diff">// Add master brand configuration.
+<pre><code class="o-syntax-highlight--diff">// src/scss/_brand.scss
+
+// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
@@ -182,7 +198,9 @@ Now when we run `obt dev --brand whitelabel` we get a different error! The error
 }</code></pre>
 
 And update `main.scss` again:
-<pre><code class="o-syntax-highlight--diff">.o-example {
+<pre><code class="o-syntax-highlight--diff">// main.scss
+
+.o-example {
 		@include oTypographyBody();
 		border: 1px solid _oExampleGet('border-color');
 -		background: oColorsByUsecase('box', 'background');
@@ -234,7 +252,9 @@ We will add a new mixin called `oExampleAddTheme`, following the [theme conventi
 
 Our `oExampleAddTheme` mixin will accept a theme name and output a CSS class `o-example--[theme-name]` which can be added to our component markup to change the theme. The double dash in the theme name is part of the [BEM modifier naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 
-<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name) {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_mixins.scss
+
+@mixin oExampleAddTheme($name) {
 	.o-example--#{name} {
 		// update border-color and background
 		// for the given theme
@@ -249,7 +269,9 @@ A variant of a component is any visual modification. For example if we were to a
 
 To define variables for a variant within a brand add a map to the `variables` configuration of `oBrandDefine`, where the key is the variant name.
 
-<pre><code class="o-syntax-highlight--diff">// Add master brand configuration.
+<pre><code class="o-syntax-highlight--diff">// src/scss/_brand.scss
+
+// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
@@ -305,7 +327,9 @@ We can now use the `$from` argument of our function `_oExampleGet` to fetch a br
 
 To allow us to check if the theme name given to our `oExampleAddTheme` mixin is supported by the current brand, add the theme name to the `supports-variants` list of `oBrandDefine` configuration. Our final configuration looks like this:
 
-<pre><code class="o-syntax-highlight--scss">// Add master brand configuration.
+<pre><code class="o-syntax-highlight--scss">// src/scss/_brand.scss
+
+// Add master brand configuration.
 @if oBrandGetCurrentBrand() == 'master' {
 	@include oBrandDefine('o-example', 'master', (
 		'variables': (
@@ -365,7 +389,9 @@ We can now complete our theme mixin:
 - Use `_oExampleGet` to get theme values.
 - Use `oButtonsContent` to update the button styles if there is a matching [o-buttons theme](https://registry.origami.ft.com/components/o-buttons@6.0.14/readme?brand=master#themes).
 
-<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name) {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_mixins.scss
+
+@mixin oExampleAddTheme($name) {
 	// Error if an unsupported theme name is given.
 	@if not _oExampleSupports($name) {
 		@error 'The name "#{$name}" is not a supported "#{oBrandGetCurrentBrand()}" brand theme';
@@ -392,7 +418,9 @@ We can now complete our theme mixin:
 
 Now output the themes in the primary mixin `oExample`. We use the Sass [`@each` at-rule](https://sass-lang.com/documentation/at-rules/control/each) to loop over each theme and call `oExampleAddTheme` if `_oExampleSupports` returns `true`:
 
-<pre><code class="o-syntax-highlight--scss">@mixin oExample ($opts: ()) {
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
+@mixin oExample ($opts: ()) {
 	.o-example {
 		// ... base styles as previously discussed
 	}
@@ -412,7 +440,9 @@ Now output the themes in the primary mixin `oExample`. We use the Sass [`@each` 
 
 Currently users of the `oExample` mixin are forced to output all themes. This will increase the size of users CSS bundle unnecessarily if they are not using them all. We can improve `oExample` by adding the list of themes to the `$opts` parameter. Using the `$opts` parameter means we can output all themes by default but also allow users to choose what themes to output.
 
-<pre><code class="o-syntax-highlight--scss">@mixin oExample ($opts: (
+<pre><code class="o-syntax-highlight--scss">// main.scss
+
+@mixin oExample ($opts: (
 	'themes': ('inverse', 'b2c')
 )) {
 	// Get the themes to output from the `$opts` argument.
@@ -445,7 +475,9 @@ Currently users of the `oExample` mixin are forced to output all themes. This wi
 ### Custom Theme
 
 We can make our `o-example` component more flexible by allowing users to create their own theme. To achieve that we will add an optional `$opts` argument to `oExampleAddTheme`. The `$opts` argument will accept a map of variables (like those we defined in `src/scss/_brand.scss`), and pass them to `_oExampleGet` to create a custom theme. We'll add support for one new option, `button-color`, which we will forward to the `oButtonsContent` mixin, so custom `o-example` themes can change the colour of the button also.
-<pre><code class="o-syntax-highlight--scss">@mixin oExampleAddTheme($name, $opts: null) {
+<pre><code class="o-syntax-highlight--scss">// src/scss/_mixins.scss
+
+@mixin oExampleAddTheme($name, $opts: null) {
 	// Error if an unsupported theme name is given without
 	// `$opts` options. If `$opts` are given we are adding
 	// a new custom theme.
@@ -481,7 +513,9 @@ We can make our `o-example` component more flexible by allowing users to create 
 }</code></pre>
 
 From a users point of view, this is how a custom theme will be created using our `oExampleAddTheme` mixin:
-<pre><code class="o-syntax-highlight--scss">// Create a custom theme `.o-example--my-custom-theme`
+<pre><code class="o-syntax-highlight--scss">// src/scss/_mixins.scss
+
+// Create a custom theme `.o-example--my-custom-theme`
 @include oExampleAddTheme('my-custom-theme', (
 	'background-color': oColorsByName('white'),
 	'text-color': oColorsByName('crimson'),
@@ -492,7 +526,9 @@ From a users point of view, this is how a custom theme will be created using our
 
 Update your demo markup `demos/src/demo.mustache` with a theme class to preview what we have done. For example to see the inverse theme update the component class to `o-example o-example--inverse`:
 
-<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
+-&lt;div class="o-example" data-o-component="o-example">
 +&lt;div class="o-example o-example--inverse" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 	&lt;button class="o-example__button">count&lt;/button>
@@ -507,7 +543,9 @@ Update your demo markup `demos/src/demo.mustache` with a theme class to preview 
 
 To see the b2c theme, update the component class to `o-example o-example--b2c`:
 
-<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
+-&lt;div class="o-example" data-o-component="o-example">
 +&lt;div class="o-example o-example--inverse" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 	&lt;button class="o-example__button">count&lt;/button>

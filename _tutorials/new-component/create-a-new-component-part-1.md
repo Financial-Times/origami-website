@@ -188,11 +188,15 @@ We will use the demos as previews for local development as well as presenting to
 
 The templates for demos are in the `demos` directory and written in [mustache](https://mustache.github.io/). In the demos directory, you should see an example demo `demos/src/demo.mustache` (we'll revisit the other files later). Open `demos/src/demo.mustache` in your editor and you should see something which looks like this (assuming a component name of `o-example`):
 
-<pre><code class="o-syntax-highlight--html">&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
+&lt;div class="o-example" data-o-component="o-example">&lt;/div></code></pre>
 
 That `div` element is our component markup. So we can see something in out demo, add some content within the `div`.
 
-<pre><code class="o-syntax-highlight--diff">-&lt;div class="o-example" data-o-component="o-example">&lt;/div>
+<pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
+
+-&lt;div class="o-example" data-o-component="o-example">&lt;/div>
 +&lt;div class="o-example" data-o-component="o-example">
 +   Hello world, I am a component named o-example!
 +&lt;/div></code></pre>
