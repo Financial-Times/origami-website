@@ -71,7 +71,9 @@ redirect_from:
 			{% assign documents = site.tutorials | sort: 'nav_order', 'last' %}
 			<ul>
 				{% for item in documents %}
+					{% if item.collection_listing_display != false %}
 					<li><a href="{{item.url}}">{{item.title}}</a></li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
