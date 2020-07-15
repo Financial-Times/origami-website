@@ -409,7 +409,7 @@ We can now complete our theme mixin:
 			.o-example__button {
 				@include oButtonsContent($opts: (
 					'type': 'primary',
-					'theme': $matching-button-theme
+					'theme': $name
 				), $include-base-styles: false);
 			}
 		}
