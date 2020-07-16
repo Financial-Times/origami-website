@@ -209,7 +209,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "4.0.6"
+		"version": "4.0.7"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -377,7 +377,7 @@
 	},
 	"o-video": {
 		"name": "o-video",
-		"version": "6.0.8"
+		"version": "6.0.9"
 	},
 	"o-viewport": {
 		"name": "o-viewport",
