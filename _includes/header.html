@@ -21,12 +21,12 @@
 				</a>
 			</li>
 			<li>
-				<a href="/docs/" {% if page.url contains '/docs/' %}aria-current="true"{% endif %}>
+				<a href="/docs/" {% if page.url == '/docs/' %}aria-current="true"{% endif %}>
 					Docs
 				</a>
 			</li>
 			<li>
-				<a href="/spec/" {% if page.url contains '/spec/' %}aria-current="true"{% endif %}>
+				<a href="/spec/" {% if page.url == '/spec/' %}aria-current="true"{% endif %}>
 					Specs
 				</a>
 			</li>
@@ -34,7 +34,7 @@
 				<a href="https://registry.origami.ft.com/components"> Registry</a>
 			</li>
 			<li>
-				<a href="/blog/" {% if page.url contains '/blog/' %}aria-current="true"{% endif %}>
+				<a href="/blog/" {% if page.url == '/blog/' %}aria-current="true"{% endif %}>
 					Blog
 				</a>
 			</li>
