@@ -546,7 +546,7 @@ To see the b2c theme, update the component class to `o-example o-example--b2c`:
 <pre><code class="o-syntax-highlight--diff">&lt;!-- demos/src/demo.mustache -->
 
 -&lt;div class="o-example" data-o-component="o-example">
-+&lt;div class="o-example o-example--inverse" data-o-component="o-example">
++&lt;div class="o-example o-example--b2c" data-o-component="o-example">
 	Hello world, I am a component named o-example!
 	&lt;button class="o-example__button">count&lt;/button>
 </div></code></pre>
