@@ -1,11 +1,13 @@
 ---
 title: Markup Specification
 description: An overview of how the Origami team writes markup.
+permalink: /spec/v1/components/markup/
 
 # Redirect from legacy URLs
 redirect_from:
   - /docs/syntax/html/
   - /docs/syntax/mustache/
+  - /spec/v1/markup/
 
 # Navigation config
 nav_display: false
@@ -67,13 +69,13 @@ Component authors are encouraged to provide assistive accessibility information 
 
 ## Conditional Comments
 
-Conditional comments **must not** be used within components. To target styles for a specifc browser or feature set, see [feature flags in the Sass spec](/spec/v1/sass/#feature-flags).
+Conditional comments **must not** be used within components. To target styles for a specifc browser or feature set, see [feature flags in the Sass spec](/spec/v1/components/sass/#feature-flags).
 
 ## Owned DOM
 
 "Owned DOM" is the DOM a component **may** act on with JavaScript or style with CSS.
 
-A component **may** act on a DOM element using JavaScript if it, or any ancestor, has a data attribute containing the component's name `data-o-componentname`. It **must not** act on other DOM, [with two exceptions](/spec/v1/javascript/#encapsulation).
+A component **may** act on a DOM element using JavaScript if it, or any ancestor, has a data attribute containing the component's name `data-o-componentname`. It **must not** act on other DOM, [with two exceptions](/spec/v1/components/javascript/#encapsulation).
 
 A component **may** style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component `o-componentname`. It **must not** style other DOM.
 

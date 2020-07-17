@@ -178,17 +178,17 @@ Commit messages **should** describe the change that they introduce to a componen
 
 ### Markup
 
-See [the Origami Markup Specification](/spec/v1/markup).
+See [the Origami Markup Specification](/spec/v1/components/markup).
 
 ### Styles
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax.
 
-See [the Origami Sass Specification](/spec/v1/sass).
+See [the Origami Sass Specification](/spec/v1/components/sass).
 
 ### Behaviour
 
-See the [Origami javascript specification](/spec/v1/javascript).
+See the [Origami javascript specification](/spec/v1/components/javascript).
 
 ### Subresources
 

@@ -72,7 +72,7 @@ For this tutorial we will select the most common `components` category.
 
 ### Supported Brands
 
-Component brands facilitate [component customisation](/spec/v1/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master`, `internal`, and `whitelabel` brand when prompted by `obt init`.
+Component brands facilitate [component customisation](/spec/v1/components/sass/#customisation). Brands change the appearance of component elements globally, e.g. change the appearance of all “primary” buttons, including where they are used by other components. Brands include `master` (think, ft.com pink), `internal` for internal tools and products, and `whitelabel` for a striped-back un-opinionated style. Origami components may support one or more brands. We'll discuss brands more later, for now select the `master`, `internal`, and `whitelabel` brand when prompted by `obt init`.
 
 ### Support Status
 
@@ -210,7 +210,7 @@ The `obt dev` command which we run earlier will detect that you have updated `de
 	</figcaption>
 </figure>
 
-The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](/spec/v1/markup/#owned-dom). A component may act on a DOM element using JavaScript if the DOM element, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](/spec/v1/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
+The `div` tag in our demo may be any HTML tag provided there is a `data-o-component` attribute. The `data-o-component` attribute identifies the root of our component and its [owned dom](/spec/v1/components/markup/#owned-dom). A component may act on a DOM element using JavaScript if the DOM element, or any ancestor, has a data attribute containing the component’s name. There is also a CSS class `o-example` in our demo. Origami components may only style a DOM element with CSS if it, or any ancestor, has a class which starts with the name of the component. There are more details in the [markup section of the component specification](/spec/v1/components/markup/) but we'll revisit this when adding CSS styles and JavaScript to our component.
 
 ## Part Two: Base Styles
 
