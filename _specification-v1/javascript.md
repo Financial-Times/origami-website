@@ -1,10 +1,12 @@
 ---
 title: JavaScript Specification
 description: An overview of how the Origami team writes JavaScript.
+permalink: /spec/v1/components/javascript/
 
 # Redirect from legacy URLs
 redirect_from:
   - /docs/syntax/js/
+  - /spec/v1/javascript/
 
 # Navigation config
 nav_display: false
@@ -27,7 +29,7 @@ In addition, 0bject properties **must not** be named after reserved words in the
 
 - Components **should not** add to the global scope.
 - Components **should not** assume the existence of globals except those defined as part of ECMAScript 5 and the DOM features listed in the `browserFeatures.required` section of `origami.json`.
-- Components **must not** modify the DOM outside of [owned DOM](/spec/v1/markup/#owned-dom) areas, except:
+- Components **must not** modify the DOM outside of [owned DOM](/spec/v1/components/markup/#owned-dom) areas, except:
 	- To add [CSS feature flags](/v1/sass/#feature-flags) to the `documentElement`.
 	- Where passed a DOM element explicitly by the host application using the component.
 

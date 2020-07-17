@@ -27,7 +27,7 @@ Origami component styles are written in [Sass](https://sass-lang.com/). Accordin
 
 We won't cover Sass in depth in this tutorial but will briefly describe the Sass syntax we use. If you're not familiar with Sass we recommend referencing the [Sass documentation](https://sass-lang.com/documentation).
 
-Components have an entry Sass file `main.scss`, which may [import Sass from the `src/scss` directory](/spec/v1/sass/#sass-includes).
+Components have an entry Sass file `main.scss`, which may [import Sass from the `src/scss` directory](/spec/v1/components/sass/#sass-includes).
 
 Within `main.scss` you will see something like this:
 <pre><code class="o-syntax-highlight--scss">// main.scss
@@ -86,7 +86,7 @@ Next within `main.scss` you should see a [Sass mixin](https://sass-lang.com/docu
 }
 </code></pre>
 
-We call the mixin which shares the component name (`oExample`) the ["primary mixin"](/spec/v1/sass/#primary-mixin). When called with no arguments the primary mixin includes all styles for the component. It will also accept an `$opts` argument so users may selectively specify which features of a component to include. For example a user of [o-forms](https://registry.origami.ft.com/components/o-forms) could pass an `$opts` argument to the [`oForms` mixin](https://registry.origami.ft.com/components/o-forms/sassdoc?brand=master#mixin-oforms) to only output styles for text inputs, if their project does not need other form input types. This helps keep the CSS bundle of the project small.
+We call the mixin which shares the component name (`oExample`) the ["primary mixin"](/spec/v1/components/sass/#primary-mixin). When called with no arguments the primary mixin includes all styles for the component. It will also accept an `$opts` argument so users may selectively specify which features of a component to include. For example a user of [o-forms](https://registry.origami.ft.com/components/o-forms) could pass an `$opts` argument to the [`oForms` mixin](https://registry.origami.ft.com/components/o-forms/sassdoc?brand=master#mixin-oforms) to only output styles for text inputs, if their project does not need other form input types. This helps keep the CSS bundle of the project small.
 
 ## Silent Mode
 
@@ -102,7 +102,7 @@ After the primary mixin our component references a [Sass variable](https://sass-
 }
 </code></pre>
 
-By default the silent mode variable is set to `false` so no CSS is output when a component is included in a project until a mixin is called. But a project may set the silent mode variable to `true` before including the component, as an alternative to calling the primary mixin. This [silent mode pattern](/spec/v1/sass/#sass-silent-mode) is deprecated but required by all Origami components to support the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/).
+By default the silent mode variable is set to `false` so no CSS is output when a component is included in a project until a mixin is called. But a project may set the silent mode variable to `true` before including the component, as an alternative to calling the primary mixin. This [silent mode pattern](/spec/v1/components/sass/#sass-silent-mode) is deprecated but required by all Origami components to support the [Origami Build Service](https://www.ft.com/__origami/service/build/v2/).
 
 ## Naming Conventions
 
@@ -112,9 +112,9 @@ Other naming conventions to keep in mind include:
 - Origami CSS follows the [BEM naming convention](https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/).
 - Sass variables are hyphen separated and lowercase.
 - Sass mixins and functions are camel-case.
-- An underscore is used to indicate a [private Sass interface](/spec/v1/sass/#private-sass) which may change at any time and must not be used outside the component.
+- An underscore is used to indicate a [private Sass interface](/spec/v1/components/sass/#private-sass) which may change at any time and must not be used outside the component.
 
-See the [Sass naming convention part of the specification](/spec/v1/sass/#naming-conventions) for full details and more examples.
+See the [Sass naming convention part of the specification](/spec/v1/components/sass/#naming-conventions) for full details and more examples.
 
 ## Basic Styles
 
@@ -174,7 +174,7 @@ You should now have a `bower_components` directory with all the components we ju
 @import 'src/scss/variables';
 </code></pre>
 
-All [`@import` statements in Origami components](/spec/v1/sass/#sass-includes) should be in `main.scss`, before any other Sass.
+All [`@import` statements in Origami components](/spec/v1/components/sass/#sass-includes) should be in `main.scss`, before any other Sass.
 
 As Origami component Sass does not output CSS by default these imports do nothing except allow us to use Sass mixins, functions, and variables from these components. How to use a component's Sass is documented in the component readme (see the [o-colors readme](https://registry.origami.ft.com/components/o-colors/readme) as an example) and its SassDoc may also be referenced in the component registry (see the [o-colors SassDoc](https://registry.origami.ft.com/components/o-colors/sassdoc) as an example).
 
@@ -281,7 +281,7 @@ _Note: the double underscore in `.o-example__button` is part of the [BEM naming 
 To style our components we covered many topics in this part of the tutorial. We learnt:
 - Origami component CSS is written with [Sass](https://sass-lang.com/documentation).
 - Component Sass includes [SassDoc](http://sassdoc.com/) comments for Sass documentation.
-- Conventional Origami Sass patterns such as the ["primary mixin"](/spec/v1/sass/#primary-mixin) and ["silent mode"](/spec/v1/sass/#sass-silent-mode).
+- Conventional Origami Sass patterns such as the ["primary mixin"](/spec/v1/components/sass/#primary-mixin) and ["silent mode"](/spec/v1/components/sass/#sass-silent-mode).
 - How to install Origami component dependencies from the [Origami Bower Registry](https://github.com/Financial-Times/origami-bower-registry).
 - And finally how to include and use Sass from `o-colors`, `o-spacing`, `o-typography`, and `o-buttons`.
 

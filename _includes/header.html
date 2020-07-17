@@ -85,6 +85,14 @@
 					</a>
 				</li>
 			{% endif %}
+
+			{% if page.url contains '/spec/v1/components/' %}
+				<li>
+					<a href="/spec/v1/components/" {% if page.url == '/spec/v1/components/' %}aria-current="true"{% endif %}>
+						Components
+					</a>
+				</li>
+			{% endif %}
 			</ol>
 
 			<ul class="o-header-services__secondary-nav-list o-header-services__secondary-nav-list--children" aria-label="Child sections">
@@ -108,6 +116,24 @@
 				<li>
 					<a href="/docs/tutorials/" {% if page.url contains '/docs/tutorials/' %}aria-current="true"{% endif %}>
 						Tutorials
+					</a>
+				</li>
+
+			{% elsif page.url contains '/spec/v1/components/' %}
+
+				<li>
+					<a href="/spec/v1/components/markup/" {% if page.url contains '/spec/v1/components/markup/' %}aria-current="true"{% endif %}>
+						Markup
+					</a>
+				</li>
+				<li>
+					<a href="/spec/v1/components/javascript/" {% if page.url contains '/spec/v1/components/javascript/' %}aria-current="true"{% endif %}>
+						JavaScript
+					</a>
+				</li>
+				<li>
+					<a href="/spec/v1/components/sass/" {% if page.url contains '/spec/v1/components/sass/' %}aria-current="true"{% endif %}>
+						Sass
 					</a>
 				</li>
 

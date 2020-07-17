@@ -1,10 +1,12 @@
 ---
 title: Sass Specification
 description: An overview of how the Origami team writes Sass.
+permalink: /spec/v1/components/sass/
 
 # Redirect from legacy URLs
 redirect_from:
   - /docs/syntax/scss/
+  - /spec/v1/sass/
 
 # Navigation config
 nav_display: false
@@ -47,7 +49,7 @@ Sass mixins and functions **must** also be prefixed with the component name, and
 
 ## CSS Selectors
 
-A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v1/sass/#naming-conventions)).
+A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v1/components/sass/#naming-conventions)).
 
 - Good: `.o-thing {}`
 - Bad: `body {}`
