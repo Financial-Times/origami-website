@@ -40,7 +40,7 @@ Any issues are also flagged directly within Github.
 
 ### Indicator Labels
 
-Working with the Content Innovation team we added new indicator labels such as the "live" and "new" story labels to the `o-labels` component. Previously the labels were implemented separately in multiple projects such as for teasers and the live blogs page. Maintaining two implementations may cause future design inconsistency or require duplicate effort to fix bugs. Now all projects can include `o-labels` instead of reinvent the indicator labels.
+Working with the Content Innovation team we added new indicator labels such as the "live" and "new" story labels to the `o-labels` component. Previously the labels were implemented separately in multiple projects such as for teasers and the live blogs page. Maintaining two implementations may cause future design inconsistency or require duplicate effort to fix bugs. Now all projects can include `o-labels` instead of reinventing the indicator labels.
 
 <img alt="Live, new, updated, and closed indicator labels. The live label has an outline as it pulses." src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/indocator-labels-1.png?source=origami" />
 
