@@ -36,15 +36,15 @@ Another change we've made to help Origami contributors and Origami users is to v
 
 Any issues are also flagged directly within Github.
 
-<img alt="A Github code diff with annotations warning of an incorrect table of contents in a component readme." src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/github-annotations.png?source=origami" />
+<img alt="A Github code diff with annotations warning of an incorrect table of contents in a component readme." src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/github-annotations.png?source=origami&quality=high" />
 
 ### Indicator Labels
 
 Working with the Content Innovation team we added new indicator labels such as the "live" and "new" story labels to the `o-labels` component. Previously the labels were implemented separately in multiple projects such as for teasers and the live blogs page. Maintaining two implementations may cause future design inconsistency or require duplicate effort to fix bugs. Now all projects can include `o-labels` instead of reinventing the indicator labels.
 
-<img alt="Live, new, updated, and closed indicator labels. The live label has an outline as it pulses." src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/indocator-labels-1.png?source=origami" />
+<img alt="Live, new, updated, and closed indicator labels. The live label has an outline as it pulses." src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/indocator-labels-1.png?source=origami&quality=high" />
 
-<img alt="The indicator labels in white for use on a dark background" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/indocator-labels-2.png?source=origami" />
+<img alt="The indicator labels in white for use on a dark background" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-08-01-newsletter/indocator-labels-2.png?source=origami&quality=high" />
 
 ## Special Thanks
 
