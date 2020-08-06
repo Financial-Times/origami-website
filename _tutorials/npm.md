@@ -7,7 +7,7 @@ cta: Learn how to Origami via npm
 # {{page.title}}
 
 
-If migrating from Bower to npm, [please refer to our migration guide](https://origami.ft.com/docs/tutorials/bower-to-npm/).
+If migrating from Bower to npm, [please refer to our migration guide](/docs/tutorials/bower-to-npm/).
 
 ## Benefits
 

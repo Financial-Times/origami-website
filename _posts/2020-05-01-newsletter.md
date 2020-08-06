@@ -20,7 +20,7 @@ These are some of the bigger things we've done over the last month.
 
 This quarter we are aiming to find out what our users know about Origami, how much of Origami they use and how we can improve our products for all of our users.
 
-Our first survey has already gone out, it was to find out how we can help teams build their own Origami Components. You can read more about the survey results [on our blog](https://origami.ft.com/blog/2020/04/20/origami-survey-results/).
+Our first survey has already gone out, it was to find out how we can help teams build their own Origami Components. You can read more about the survey results [on our blog](/blog/2020/04/20/origami-survey-results/).
 
 ### Automated Visual Regression Testing
 
