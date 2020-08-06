@@ -80,11 +80,11 @@ Once you can run `npm install` and it completes a full installation, you can mov
 Origami components on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> have their JavaScript code namespaced onto `@financial-times`. This means that in your code you will need to update all `require`/`import` calls to include this namespace.
 
 E.G.
-`const Layout = require("o-layout");` would become `import Layout from "@financial-times/o-layout";`
+`import Layout from "o-layout";` would become `import Layout from "@financial-times/o-layout";`
 
 If you are doing any `require`/`import` calls to files within the `src` folder, they would also need to be updated to use the `dist` folder instead.
 E.G.
-`const Layout = require("o-layout/src/js/layout");` would become `import Layout from "@financial-times/o-layout/dist/js/layout";`
+`import Layout from "o-layout/src/js/layout";` would become `import Layout from "@financial-times/o-layout/dist/js/layout";`
 
 If using Sass from Origami, you do not need to change the `@import` or `@include` however you will need to update the Sass-compiler's IncludePath to have `node_modules` and `node_modules/@financial-times`, instead of `bower_components`.
 
