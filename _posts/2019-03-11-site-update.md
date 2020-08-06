@@ -4,11 +4,11 @@ description: We re-launched the Origami website and Origami component registry.
 author: Lee Moody
 ---
 
-**TL;DR:** We re-launched the [Origami website](https://origami.ft.com/) and [Origami component registry](https://registry.origami.ft.com/components) with a unified design; overhauled documentation; refined specifications; and a new site structure to bring it all together.
+**TL;DR:** We re-launched the [Origami website](/) and [Origami component registry](https://registry.origami.ft.com/components) with a unified design; overhauled documentation; refined specifications; and a new site structure to bring it all together.
 
 ## Motivation &amp; Goals
 
-Our main site [origami.ft.com](https://origami.ft.com/) introduces the Origami team, components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
+Our main site [origami.ft.com](/) introduces the Origami team, components, and services. It hosts our documentation, which helps people use Origami in their projects; our specifications, which helps teams contribute to Origami; and links out to our [component registry](https://registry.origami.ft.com/components), which hosts documentation and demos specific to each Origami compatible component, service, and imageset available.
 
 Our component registry and main site were presented as separate sites, which made moving between the documentation and a specific component or service a clunky experience. This has been especially the case recently, as our component registry has adopted new FT styles whilst our main site has not been updated.
 

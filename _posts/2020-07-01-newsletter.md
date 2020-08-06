@@ -32,7 +32,7 @@ https://github.com/Financial-Times/o-comments/pull/170 - Glynn
 
 ### Another New Font Format
 
-Last month we announced a [new font format (woff2)](https://origami.ft.com/blog/2020/06/01/newsletter/#a-new-font-format). This month we have another font format, we've worked with the Design team and the Klim type foundry and got a Variable Font commissioned for Financier Display and Text!
+Last month we announced a [new font format (woff2)](/blog/2020/06/01/newsletter/#a-new-font-format). This month we have another font format, we've worked with the Design team and the Klim type foundry and got a Variable Font commissioned for Financier Display and Text!
 
 These new fonts were commissioned for an experiment between Design and Origami to see whether the website and app can have more typographic design choices available to use without hindering on the performance. In a future newsletter and blog post we will write about how the experiment has gone and whether a future with Variable Fonts is possible for the website and app.
 

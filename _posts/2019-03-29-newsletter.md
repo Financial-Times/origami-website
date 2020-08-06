@@ -14,9 +14,9 @@ These are some of the bigger things we've worked on or released over the last mo
 
 ### Origami Website Launch
 
-This month we've successfully launched the [new Origami website](https://origamit.ft.com). It is officially out of beta, and implements all of the new features of o-layout, which has unified the design across our documentation and our registry. 
+This month we've successfully launched the [new Origami website](https://origamit.ft.com). It is officially out of beta, and implements all of the new features of o-layout, which has unified the design across our documentation and our registry.
 
-In addition to the visual changes, this launch is packed full of new documentation and a more digestible specification. You can find more detailed information about the launch in [this blog post](https://origami.ft.com/blog/2019/03/11/site-update)
+In addition to the visual changes, this launch is packed full of new documentation and a more digestible specification. You can find more detailed information about the launch in [this blog post](/blog/2019/03/11/site-update)
 
 As always, we welcome any feedback or questions you might have about the new website's content and UI.
 

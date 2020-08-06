@@ -39,7 +39,7 @@ We'll be setting up invites soon and hope to see some of you there! Keep an eye 
 
 ### Major Cascade
 
-At the end of last year a lot of Origami's time was spent working in Customer Products on the Major Cascade. This is where Origami release new major versions for each of our components, and it has an impact on teams using these components (for those interested in what a Major Cascade is and why we were doing it, [Lee wrote a blog post](https://origami.ft.com/blog/2019/10/31/major-cascade/)).
+At the end of last year a lot of Origami's time was spent working in Customer Products on the Major Cascade. This is where Origami release new major versions for each of our components, and it has an impact on teams using these components (for those interested in what a Major Cascade is and why we were doing it, [Lee wrote a blog post](/blog/2019/10/31/major-cascade/)).
 
 Now that the work to migrate Customer Products is largely finished, we're available to help out in other areas of Product and Tech for anyone who needs it. If you're having difficulty migrating, then please give us a shout and we'll arrange something.
 
@@ -60,6 +60,6 @@ A digest list of other things that have happened:
   - NEW: [polyfill-library-node](https://github.com/Financial-Times/polyfill-library-node). An FT alternative to core-js for nodeJS environments. Loads all ECMAScript-262 (excluding annex-B) polyfills into nodeJS.
   - MAJOR: [polyfill-service-url-builder](https://github.com/Financial-Times/polyfill-service-url-builder) now works with browserslist configuration.
   - MINOR: [polyfill.io](https://polyfill.io/) polyfill targeting was updated for Edge and other browsers so our users can all expect slightly faster load times.
-  - MAJOR: All Origami maintained components have been updated as part of the [major cascade](https://origami.ft.com/blog/2019/10/31/major-cascade/)), with some follow up releases to fix bugs or improve documentation &#8212; thanks to everyone who contributed.
+  - MAJOR: All Origami maintained components have been updated as part of the [major cascade](/blog/2019/10/31/major-cascade/)), with some follow up releases to fix bugs or improve documentation &#8212; thanks to everyone who contributed.
 
 *[TL;DR]: too long; didn't read

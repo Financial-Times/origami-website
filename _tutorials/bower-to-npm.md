@@ -6,7 +6,7 @@ cta: Learn how to migrate to npm
 
 # {{page.title}}
 
-Want to know npm best practices for Origami? [Refer to our Origami on npm guide](https://origami.ft.com/docs/tutorials/npm/).
+Want to know npm best practices for Origami? [Refer to our Origami on npm guide](/docs/tutorials/npm/).
 
 ## TLDR
 - package-names now begin with @financial-times.

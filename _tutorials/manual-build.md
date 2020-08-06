@@ -96,7 +96,7 @@ Now that we have set up the scaffolding for our page, we need to install those c
 
 All [Origami-compliant components](/spec/v1/components) are available for installation via Bower or NPM. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
 
-For this tutorial we will use Bower instead of NPM. Using bower ensures a flat dependency tree by default, so we don't accidentally include multiple conflicting versions of a component (there is a separate [Bower to NPM tutorial](https://origami.ft.com/docs/tutorials/bower-to-npm/), which builds on this tutorial).
+For this tutorial we will use Bower instead of NPM. Using bower ensures a flat dependency tree by default, so we don't accidentally include multiple conflicting versions of a component (there is a separate [Bower to NPM tutorial](/docs/tutorials/bower-to-npm/), which builds on this tutorial).
 
 In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
 

@@ -19,7 +19,7 @@ Here's the big stuff we've done this month:
 
 ### Origami Project Board
 
-In our [continued](https://origami.ft.com/blog/2020/01/31/newsletter/) efforts
+In our [continued](/blog/2020/01/31/newsletter/) efforts
 towards openness we've created a [GitHub project
 board](https://github.com/orgs/Financial-Times/projects/83?fullscreen=true) that
 has a card for everything we're currently working on.
@@ -41,7 +41,7 @@ fast and got it fixed, and Lee wrote a great breakdown on how it happened and
 what we changed.
 
 Read it here: [CSS Grid in Chrome
-80](https://origami.ft.com/blog/2020/02/17/o-layout-chrome-80/)
+80](/blog/2020/02/17/o-layout-chrome-80/)
 
 ### Meter component
 
@@ -71,7 +71,7 @@ A remarkable level of contribution for two weeks on the team! Thanks, Olga! 😊
 A digest list of other things that have happened:
 
 - Most of the team got one year older 🎂
-- We created a [JSON schema representation](https://github.com/Financial-Times/origami-manifest-specification-schema) of [the manifest specification](https://origami.ft.com/spec/v1/manifest/)
+- We created a [JSON schema representation](https://github.com/Financial-Times/origami-manifest-specification-schema) of [the manifest specification](/spec/v1/manifest/)
 - We added `origami.json` to many more of our repos, so they'll be provided in repo data
 - Jake merged a billion pull requests and there are fewer than 10 on polyfill-library and polyfill-service combined!
 - The polyfill.io library tests [now](https://github.com/Financial-Times/polyfill-library/pull/455) complete in a fraction of the time they used to, thanks to a new custom runner
