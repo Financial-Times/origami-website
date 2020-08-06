@@ -24,9 +24,13 @@ This will give you more control over the configuration of a component, and it al
 ## Initialise all components
 
 Every Origami component that uses JavaScript listens for a custom event called `o.DOMContentLoaded`, which will trigger its initialisation.
-The following example will indiscriminately action _all_ of the components on a page:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">if (document.readyState === 'interactive' || document.readyState === 'complete') {
+The following example will initialise all `o-message` and `o-table` components on a page:
+
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">import 'o-message';
+import 'o-table';
+
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
 	document.dispatchEvent(new CustomEvent('o.DOMContentLoaded'));
 }
 
@@ -34,13 +38,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	document.dispatchEvent(new CustomEvent('o.DOMContentLoaded'));
 });</code></pre>
 
+Which could be rewritten using `o-autoinit`:
+
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--javascript">import 'o-message';
+import 'o-table';
+import 'o-autoinit';
+</code></pre>
+
 ## Initialise every instance of one Origami component
 
 If your page has many instances of a single Origami component on your page, say multiple <a href="https://registry.origami.ft.com/components/o-message#demo-notice-inform">informative messages</a> for example, you can initialise them all in one go by using the built-in `init()` function, which every JavaScript-supporting component has.
 
 The `init()` function accepts two optional arguments, an `HTMLElement` and an options object. What constitutes as 'options' is detailed in each components' README.
 
-<pre><code class="o-syntax-highlight--javascript">const oMessage = require('o-message');
+<pre><code class="o-syntax-highlight--javascript">import oMessage from 'o-message';
 
 // Initialise all the oMessages
 
@@ -57,7 +68,7 @@ oMessage.init(HTMLElement);</code></pre>
 
 You can tell a single component to initialise with some specific configuration, at a particular time or in a significant sequence. You'll have most control over the components on your page in this scenario.
 
-<pre><code class="o-syntax-highlight--javascript">const oMessage = require('o-message');
+<pre><code class="o-syntax-highlight--javascript">import oMessage from 'o-message';
 
 // Initialise an o-message for the passed in DOM element
 // This will initialise exactly 1 o-message, even if the
