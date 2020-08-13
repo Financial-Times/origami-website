@@ -53,7 +53,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "6.0.17"
+		"version": "6.0.19"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -129,7 +129,7 @@
 	},
 	"o-expander": {
 		"name": "o-expander",
-		"version": "5.0.8"
+		"version": "5.0.9"
 	},
 	"o-fetch-jsonp": {
 		"name": "o-fetch-jsonp",
@@ -189,7 +189,7 @@
 	},
 	"ftdomdelegate": {
 		"name": "ftdomdelegate",
-		"version": "4.0.4"
+		"version": "4.0.5"
 	},
 	"o-gallery": {
 		"name": "o-gallery",
@@ -209,7 +209,7 @@
 	},
 	"o-header-services": {
 		"name": "o-header-services",
-		"version": "4.0.9"
+		"version": "4.0.10"
 	},
 	"o-hierarchical-nav": {
 		"name": "o-hierarchical-nav",
@@ -225,7 +225,7 @@
 	},
 	"o-labels": {
 		"name": "o-labels",
-		"version": "5.1.1"
+		"version": "5.1.2"
 	},
 	"o-layers": {
 		"name": "o-layers",
@@ -253,7 +253,7 @@
 	},
 	"o-message": {
 		"name": "o-message",
-		"version": "4.1.6"
+		"version": "4.1.7"
 	},
 	"o-meter": {
 		"name": "o-meter",
@@ -325,7 +325,7 @@
 	},
 	"o-tabs": {
 		"name": "o-tabs",
-		"version": "5.0.7"
+		"version": "5.0.8"
 	},
 	"o-teaser": {
 		"name": "o-teaser",
