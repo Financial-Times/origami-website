@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - uses: actions/setup-ruby@v1
+    with:
+      ruby-version: '2.7'
+    - run: make install
+    - run: npm run build --if-present
+    - run: npm test
+    - name: Serve the site and run the Pa11y tests
+      run: make serve & sleep 5 && make test
+      env:
+        CI: true
