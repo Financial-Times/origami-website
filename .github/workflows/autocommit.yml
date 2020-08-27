@@ -1,10 +1,8 @@
 name: Autocommit
-
 on:
   push:
     branches:
-      -: master
-
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,8 +13,8 @@ jobs:
       with:
         node-version: 14.x
     - uses: actions/setup-ruby@v1
-    with:
-      ruby-version: '2.7'
+      with:
+        ruby-version: '2.7'
     - run: make install
     - run: npm run build --if-present
     - name: Fetch component changes
