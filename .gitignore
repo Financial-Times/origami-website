@@ -4,3 +4,5 @@ _site
 node_modules
 .email-review
 .DS_Store
+.bundle/
+vendor/
