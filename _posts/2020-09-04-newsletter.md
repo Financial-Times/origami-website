@@ -62,4 +62,3 @@ A digest of other things that have happened since our last update:
 - PATCH: All components, remove the circleci badge and references.
 - PATCH: All projects, add missing Github workflow files.
 - PATCH: All projects, move to Github's native Dependabot over Dependabot preview.
-- PATH: [origami-image-service](https://github.com/Financial-Times/origami-image-service) use cloudinary's v2 api
