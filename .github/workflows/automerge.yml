@@ -23,14 +23,14 @@ jobs:
     steps:
       - name: 'Wait for status checks'
         id: waitforstatuschecks
-        uses: "WyriHaximus/github-action-wait-for-status@v1.1.2"
+        uses: "WyriHaximus/github-action-wait-for-status@v1.2"
         with:
           ignoreActions: automerge
           checkInterval: 13
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
       - name: automerge
-        uses: "pascalgn/automerge-action@v0.9.0"
+        uses: "pascalgn/automerge-action@v0.10.0"
         env:
           GITHUB_TOKEN: "${{ secrets.ORIGAMI_GITHUB_TOKEN }}"
           MERGE_LABELS: "dependencies"
