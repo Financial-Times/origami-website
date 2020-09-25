@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.3.12"
+		"version": "8.3.13"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -201,7 +201,7 @@
 	},
 	"o-header": {
 		"name": "o-header",
-		"version": "8.4.1"
+		"version": "8.5.3"
 	},
 	"o-header--theme-ic": {
 		"name": "o-header--theme-ic",
@@ -377,7 +377,7 @@
 	},
 	"o-video": {
 		"name": "o-video",
-		"version": "6.0.10"
+		"version": "6.0.11"
 	},
 	"o-viewport": {
 		"name": "o-viewport",
