@@ -4,30 +4,30 @@
 This is the source code for the Origami website as well as a place to open up issues on Origami as a whole. Please visit [origami.ft.com] if you're looking for the documentation.
 
 
-## Editing this site
+## Editing this site-
 
 This is a rough guide to editing this site, and where the content lives.
 
-### Static pages
+### Static pages-
 
 Single static pages live in the [`pages` folder](pages). These each have `permalink` frontmatter set to indicate where the rendered page will live on the site. We store them in this folder to avoid cluttering up the root path of the repo.
 
-### Technical documentation pages
+### Technical documentation pages-
 
 The actual documentation for Origami lives in the [`_components`](_components), [`_services`](_services), [`_principles`](_principles), and [`_tutorials`](_tutorials) folders. This should contain an easier-to-digest version of the Origami specification as well as in depth guides on how to use Origami.
 
-### Specification pages
+### Specification pages-
 
 The formal Origami specification lives in the [`_specification-v1` folder](_specification-v1).
 
-### Blog posts
+### Blog posts-
 
 Blog posts live in the [`_posts` folder](_posts) and the file names are prefixed with the post date. Posts can include an `author` frontmatter value to signify who wrote the post, and an array of `tags` which are displayed alongside the post. The `description` frontmatter is particularly important for blog posts as it is displayed as a preview on the blog listing.
 
 Newsletter blog posts must have an accompanying email, this is outlined in the section ["Authoring and sending a newsletter"](#authoring-and-sending-a-newsletter).
 
 
-## Authoring and sending a newsletter
+## Authoring and sending a newsletter-
 
 Writing the Origami monthly newsletter extends the instructions for blog posts, as we also publish an email to the FT's Product and Technology department. The guide here won't cover the content of the newsletter, [see the original proposal for that](https://docs.google.com/document/d/1qFXWl3xcx3MUL7FHGa7eA90TjGxDdLFTItizILKHZ2k/edit).
 
@@ -50,7 +50,7 @@ The process:
   7. The email is sent! Enjoy
 
 
-## Running locally
+## Running locally-
 
 You'll need [Ruby], [Bundler] and [Node.js] installed for this.
 
