@@ -6,7 +6,7 @@ This is the source code for the Origami website as well as a place to open up is
 
 ## Editing this site
 
-This is a rough guide to editing this site, and where the content lives.
+This is a sample that how to edit this site, and where the content lives.
 
 ### Static pages
 
