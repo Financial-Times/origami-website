@@ -1,5 +1,5 @@
 
-# Origami [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+# ORIGAMI [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 
 This is the source code for the Origami website as well as a place to open up issues on Origami as a whole. Please visit [origami.ft.com] if you're looking for the documentation.
 
