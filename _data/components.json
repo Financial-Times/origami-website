@@ -1,7 +1,7 @@
 {
 	"o-ads": {
 		"name": "o-ads",
-		"version": "18.3.0"
+		"version": "18.3.3"
 	},
 	"o-ads-embed": {
 		"name": "o-ads-embed",
@@ -221,7 +221,7 @@
 	},
 	"o-icons": {
 		"name": "o-icons",
-		"version": "6.0.6"
+		"version": "6.0.7"
 	},
 	"o-labels": {
 		"name": "o-labels",
@@ -329,7 +329,7 @@
 	},
 	"o-teaser": {
 		"name": "o-teaser",
-		"version": "5.1.5"
+		"version": "5.2.0"
 	},
 	"o-teaser-collection": {
 		"name": "o-teaser-collection",
@@ -353,7 +353,7 @@
 	},
 	"o-topper": {
 		"name": "o-topper",
-		"version": "3.0.6"
+		"version": "3.1.0"
 	},
 	"o-tracking": {
 		"name": "o-tracking",
