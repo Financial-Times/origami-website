@@ -4,9 +4,9 @@
 This is the source code for the Origami website as well as a place to open up issues on Origami as a whole. Please visit [origami.ft.com] if you're looking for the documentation.
 
 
-## Editing this site
+## Improving this site
 
-This is a rough guide to editing this site, and where the content lives.
+This is a rough guide to improve this site, and where the content lives.
 
 ### Static pages
 
