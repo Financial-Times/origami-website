@@ -77,6 +77,9 @@ Each object in the list accepts the following properties:
 - `hash`: type `String`. The SHA-512 hash value of the image
 - `url`: type `String`. The production [Origami Image Service](https://www.ft.com/__origami/service/image/v2/) url which points to the image
 
+**optional**:
+- `deprecated`: type `String`. A deprecation message for the image to indicate the image should no longer be used. The existence of the deprecated key with an empty string indicates the image is deprecated but has no specific deprecation message.
+
 
 <pre><code class="o-syntax-highlight--json">{
 	"images": [
