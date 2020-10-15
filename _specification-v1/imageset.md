@@ -72,7 +72,7 @@ Each object in the list accepts the following properties:
 - `extension`: type `String`. The extension for the file type of the image
 - `path`: type `String`. The relative path to the image within the imageset
 - `previousHash`: type `String` or `null` or `undefined`. The previous hash of the image, this will be `null` or `undefined` if the image has never been updated
-- `hash`: type `String`. The hash of the image
+- `hash`: type `String`. The SHA-512 hash value of the image
 - `url`: type `String`. The production [Origami Image Service](https://www.ft.com/__origami/service/image/v2/) url which points to the image
 
 
