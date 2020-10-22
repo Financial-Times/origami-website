@@ -26,6 +26,8 @@ If migrating from Bower to npm, [please refer to our migration guide](/docs/tuto
 
 ## How to avoid multiple versions of Origami in the dependency tree
 
+Use npm v7 and Origami specification version 2 components.
+
 There is a tool called [is-origami-flat](https://www.npmjs.com/package/is-origami-flat) which can be used to report about any Origami packages which are included with more than one version. E.G. Detecting that `@financial-times/o-table@6` and `@financial-times/o-table@7` are both in the dependency tree.
 
 Below we will set up [is-origami-flat](https://www.npmjs.com/package/is-origami-flat) to fail a project which has multiple versions of Origami dependencies.
