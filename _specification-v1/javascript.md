@@ -23,7 +23,7 @@ JavaScript **must** be linted with <a href="http://www.eslint.org/" class="o-typ
 
 Developers **should** stick to the <a href="https://github.com/Financial-Times/origami-build-tools/blob/master/config/.eslintrc.js" class="o-typography-link--external">Origami eslintrc config</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.eslintrc` file, or at the file level with a `/*eslint ... */` comment.
 
-In addition, 0bject properties **must not** be named after reserved words in the JavaScript language.
+In addition, Object properties **must not** be named after reserved words in the JavaScript language.
 
 ## Encapsulation
 
