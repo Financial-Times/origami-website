@@ -59,11 +59,7 @@ Origami components use Github Actions for a number of helpful functions includin
 - Run component tests when new commits are made to a pull request.
 - Automatically release minor and patch updates to developer dependencies given tests pass.
 - Add a [semver](https://semver.org/) git tag to release a component when a pull request with a [release label](https://github.com/Financial-Times/origami-labels#continuous-delivery-labels) is merged.
-- Build and publish an [NPM](https://www.npmjs.com/) package when a release is made with a git tag, so Origami components may be included via [Bower](https://bower.io/) or [NPM](https://www.npmjs.com/)
-
-<aside>
-Although Origami components are authored using Bower, components are published to NPM so projects which use Origami may choose to use NPM over Bower (<a href="/docs/tutorials/npm/">but we still recommend Bower for now</a>).
-</aside>
+- Build and publish an [npm](https://www.npmjs.com/) package when a release is made with a git tag, so Origami components may be included via [npm](https://www.npmjs.com/)
 
 To see these Github Actions in practise let's release our component.
 
@@ -80,7 +76,7 @@ To release an Origami component create a git tag named after the semver version 
 <pre><code class="o-syntax-highlight--bash">git tag v1.0.0
 git push origin v1.0.0</code></pre>
 
-Within a couple of minutes at most, your component should be visible in the [Origami Registry](https://registry.origami.ft.com/components?module=true&imageset=true&active=true&maintained=true&experimental=true) and should be published to the NPM registry](https://www.npmjs.com/~the-ft) 🎉. If not you may want to confirm that the `obt test` and `obt verify` commands pass without error, check the output of the Github Actions under the 'Actions" tab, or contact the Origami team for support in the `#{{site.data.contact.slack}}` Slack channel.
+Within a couple of minutes at most, your component should be visible in the [Origami Registry](https://registry.origami.ft.com/components?module=true&imageset=true&active=true&maintained=true&experimental=true) and should be published to the npm registry](https://www.npmjs.com/~the-ft) 🎉. If not you may want to confirm that the `obt test` and `obt verify` commands pass without error, check the output of the Github Actions under the 'Actions" tab, or contact the Origami team for support in the `#{{site.data.contact.slack}}` Slack channel.
 
 ## Subsequent Releases
 
