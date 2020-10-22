@@ -3,10 +3,6 @@ title: Origami.json Manifest Specification
 description: A specification which describes the required structure of an Origami.json manifest file.
 cta: Read the manifest spec
 
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/syntax/origamijson/
-
 # Navigation config
 nav_display: true
 nav_label: Manifest
@@ -52,9 +48,9 @@ nav_order: 25
 </table>
 
 Defines the type of Origami project that the manifest belongs to. **Must** be set to one of:
-- `"component"` or `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
+- `"component"` or `"module"`: A front-end component that follows [the component specification](/spec/v2/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
-- `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
+- `"service"`: An HTTP service that follows [the service specification](/spec/v2/services/)
 - `"cli"`: 	A command line tool
 - `"library"`: 	A library that is not a front-end component
 - `"website"`: Origami websites that aren't intended to be services
@@ -236,13 +232,13 @@ The object **requires** two properties:
 _This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a project does still use it_. Describes a set of one or more URLs where build information can be found.
 <pre><code class="o-syntax-highlight--json">{
 	"ci": {
-		"circle": "https://circleci.com/api/v1/project/owner/repo",
+		"circle": "https://circleci.com/api/v2/project/owner/repo",
 		"travis": "https://api.travis-ci.org/repos/owner/repo/builds.json",
 		"jenkins": "https://jenkins.example.com/job/"
 	}
 }</code></pre>
 
-circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/repo)
+circle:	A CircleCI build status URL (https://circleci.com/api/v2/project/owner/repo)
 
 ### browserFeatures
 
