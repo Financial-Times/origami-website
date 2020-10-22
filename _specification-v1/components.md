@@ -97,7 +97,7 @@ Origami components **must** be installable through the <a href="https://npmjs.co
 
 Components **should** have as few dependencies as possible. When a dependency is not required for use in production but is required for development or testing purposes, it **must** be listed as a development dependency.
 
-Dependencies used in a component **must** be added explicitly to the component's `package.json` manifest file. Components **must not** rely on code from sub-dependencies, also known as transitive-dependencies (see example).
+Dependencies used in a component **must** be added explicitly to the component's `package.json` manifest file. Components **must not** rely on code from sub-dependencies, also known as transitive-dependencies.
 
 <aside>
   Sub-dependency example: if <code>o-component-a</code> includes <code>o-component-b</code> as a dependency and a new component you're developing requires features from both, then both must be added as explicit dependencies – you must not depend on <code>o-component-a</code> alone.
