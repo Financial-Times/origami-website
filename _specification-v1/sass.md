@@ -1,12 +1,7 @@
 ---
 title: Sass Specification
 description: An overview of how the Origami team writes Sass.
-permalink: /spec/v1/components/sass/
-
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/syntax/scss/
-  - /spec/v1/sass/
+permalink: /spec/v2/components/sass/
 
 # Navigation config
 nav_display: false
@@ -49,7 +44,7 @@ Sass mixins and functions **must** also be prefixed with the component name, and
 
 ## CSS Selectors
 
-A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v1/components/sass/#naming-conventions)).
+A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v2/components/sass/#naming-conventions)).
 
 - Good: `.o-thing {}`
 - Bad: `body {}`
@@ -93,11 +88,11 @@ As Sass has limited encapsulation, any Sass (e.g. mixin, function, variable) tha
 
 ## Sass Includes
 
-If a component contains SCSS files other than the main file listed in `bower.json`:
+If a component contains SCSS files other than the root `main.scss` file:
 
 - Files for import **must** be prefixed with an underscore, to [indicate privacy](#private-sass).
 - All import statements **must** be imported before any other Sass.
-- All import statements **should** be in the components’s main file.
+- All import statements **should** be in the components’s `main.scss` file.
 - Sass variables, mixins, and functions **should** be in their own files.
 
 ## Sass Variables
@@ -178,7 +173,7 @@ See [component brand documentation](/docs/components/branding/) for more details
 
 ### Register Supported Brands
 
-If a component supports brands, it **must** register the brands it supports under the `brands` property in its [`origami.json`](/spec/v1/manifest/) file. E.g. to support all three Origami brands add:
+If a component supports brands, it **must** register the brands it supports under the `brands` property in its [`origami.json`](/spec/v2/manifest/) file. E.g. to support all three Origami brands add:
 
 ```json
 "brands" : [
