@@ -16,10 +16,7 @@ Origami component styles are authored in <a href="http://sass-lang.com/" class="
 
 ## Syntax Convention
 
-
-Sass **must** be linted with [Stylelint](https://stylelint.io/).
-
-Developers **should** stick to the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.stylelintrc.js` file, or at the file level with <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">Stylelint comments</a>.
+Sass **must** validate using the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, though exceptions **may** be enabled temporarily within a component <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">using Stylelint comments</a>.
 
 By default the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a> enforce a tab indentation style. However indentation style (tabs or spaces) is not standardised: developers **must** respect whatever indent type is already in use when editing existing components. To change indentation style update the component's [`.stylelintrc.js` configuration](https://stylelint.io/user-guide/configure).
 
@@ -188,8 +185,7 @@ If a component supports brands, it **must** register the brands it supports unde
 
 #### Include o-brand
 
-Components which support brands and have brand specific features/designs **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
-
+Components which support brands **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
 
 The `o-brand` component **must not** be used directly by projects, it is intended for use within Origami components.
 
