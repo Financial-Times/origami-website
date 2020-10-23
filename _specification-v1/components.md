@@ -86,6 +86,7 @@ Origami components **must** be installable through the <a href="https://npmjs.co
   - It **must** include a `main` property set to the component's main JavaScript file (`main.js`) **_if_** it exists.
   - It **must** include a `devDependencies` property set to an object **_if_** the component has any npm dependencies required for development or testing.
   - It **must** include a `peerDependencies` property set to an object **_if_** the component has any production dependencies.
+  - It **must** include an `engines` property set to an object which has an `npm` property set to a SemVer range which disallows anything below `v7.0.0`. E.G. `^7` would be valid as would `>= 7`.
   - It **must not** include any of the following properties: `bin`, `config`, `cpu`, `dependencies`, `os`, `preferGlobal`.
   - It **may** contain a `description` property set to a short description of the component.
 
