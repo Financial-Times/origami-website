@@ -14,6 +14,10 @@ collection_listing_display: false
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
 
+## Sass compiler
+
+Origami components **must** be able to be compiled with the <a href="https://sass-lang.com/dart-sass" class="o-typography-link--external">Dart-sass</a> compiler.
+
 ## Syntax Convention
 
 
