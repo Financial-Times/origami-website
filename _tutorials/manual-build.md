@@ -180,7 +180,7 @@ So we can monitor what projects component assets are being used, some components
 
 To include the components Sass use `@import`. For example this makes all `o-grid` Sass mixins, functions, and variables available:
 <pre><code class="o-syntax-highlight--scss">$system-code: 'test';
-@import 'o-grid';</code></pre>
+@import '@financial-times/o-grid';</code></pre>
 
 By default Origami components do not output any CSS when you import them. This is so your project can granularly include only the CSS it needs from each component. To output a components CSS use its mixins, which are documented in the component [README](https://registry.origami.ft.com/components/o-grid/readme#sass) and [Sassdoc](https://registry.origami.ft.com/components/o-grid/sassdoc). Most components include a primary mixin which matches the component name. These include all CSS by default and accept a map of options to include CSS for specific features. For the `o-grid` component this is a mixin named `oGrid`:
 
