@@ -16,9 +16,11 @@ collection_listing_display: false
 
 JavaScript **must** be linted with <a href="http://www.eslint.org/" class="o-typography-link--external">ESLint</a>.
 
-Developers **should** stick to the <a href="https://github.com/Financial-Times/origami-build-tools/blob/master/config/.eslintrc.js" class="o-typography-link--external">Origami eslintrc config</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.eslintrc` file, or at the file level with a `/*eslint ... */` comment.
+Developers **should** stick to the <a href="https://www.npmjs.com/package/eslint-config-origami-component" class="o-typography-link--external">Origami eslintrc config</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.eslintrc` file, or at the file level with a `/*eslint ... */` comment.
 
-In addition, Object properties **must not** be named after reserved words in the JavaScript language.
+The JavaScript **must** be valid <a href="https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar">ECMAScript syntax</a>.
+
+The JavaScript code **must** work directly in a browser, requiring no compilation steps.
 
 ## Encapsulation
 
