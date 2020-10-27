@@ -16,7 +16,7 @@ Origami component styles are authored in <a href="http://sass-lang.com/" class="
 
 ## Sass compiler
 
-Origami components **must** be able to be compiled with the primary implementation of Sass with a <a href="https://sass-lang.com/documentation/at-rules/use#load-paths" class="o-typography-link--external">load path</a> that only contains `node_modules`.
+Origami components **must** be able to be compiled with the <a href="https://sass-lang.com/dart-sass" class="o-typography-link--external">Dart-sass</a> compiler with a <a href="https://sass-lang.com/documentation/at-rules/use#load-paths" class="o-typography-link--external">load path</a> that only contains `node_modules`.
 
 
 ## Syntax Convention
