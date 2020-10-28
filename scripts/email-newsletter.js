@@ -127,7 +127,7 @@ async function sendNewsletter(options) {
 	console.log(`Recipients:    ${body.to.address.join(', ')}`);
 	console.log(`Subject line:  ${body.subject}`);
 	console.log('');
-	console.log('🙈');
+	console.log('🐵');
 	console.log('');
 
 	// Actually send the email
