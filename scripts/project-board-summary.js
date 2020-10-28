@@ -7,10 +7,15 @@
 //
 // `GIT_TOKEN=abc ./scripts/project-board-summary.js | tee  ~/Desktop/board-summary.md`
 //
+// A DATE environment variable can be used to include only cards which have been
+// updated on or since since the given date.
+// `DATE="29 September 2020" GIT_TOKEN=abc ./scripts/project-board-summary.js | tee  ~/Desktop/board-summary.md`
+//
 // // https://github.com/orgs/Financial-Times/projects/83
 
 const { Octokit } = require("@octokit/rest");
 const token = process.env['GIT_TOKEN'];
+const updatedFromDate = process.env['DATE'] || Date.now().toString();
 
 const octokit = new Octokit({
     auth: token
@@ -42,6 +47,7 @@ const ignoredContributorTypes = ['Bot'];
     console.log('- Getting details for cards...\n');
     const cardContentPromises = cards
         .filter(c => Boolean(c.content_url))
+        .filter(c => new Date(c.updated_at) >= new Date(updatedFromDate))
         .map(c => new Promise(async resolve => {
             try {
                 const content = await octokit.request(`GET ${c.content_url}`);
@@ -66,6 +72,7 @@ const ignoredContributorTypes = ['Bot'];
                 repository_url: c.repository_url,
                 author_association: c.author_association,
                 closed_at: c.closed_at,
+                updated_at: c.updated_at,
                 opened_by: c.user.login,
                 closed_by: c.closed_by.login,
                 is_pull_request: Boolean(c.pull_request),
@@ -100,7 +107,7 @@ const ignoredContributorTypes = ['Bot'];
         const repoId = repoUrl.replace('https://api.github.com/repos/', '');
         console.log(`- [${repoId}](${repoUrl})\n`);
         content.forEach(c => {
-            console.log(`   - ${c.title} (opened by: ${c.opened_by}, closed by: ${c.closed_by})\n`);
+            console.log(`   - ${c.title} (opened by: ${c.opened_by}, closed by: ${c.closed_by}, updated at ${c.updated_at})\n`);
         })
     }
     // Any issue/pr which shares a title with another issue/PR,
