@@ -24,28 +24,7 @@ You can find information about that process in the <a href="https://github.com/F
 After the team have reviewed and accepted the proposal, according to the project guidelines, we will take responsibility for this component and help build and maintain it.
 
 ### Build an independent component
-If would like to create a component that you don't expect the team to maintain, such as an experimental or product-specific component, there are minimum requirements that need to be adhered to. These requirements allow any component to be picked up by the registry and ensure consistency across all components' behaviour.
-
-You can use the <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools v9</a> for this, as it will provide a boilerplate with those requirements.
-
-```
-npm i -g origami-build-tools@9.0.13
-```
-_Note: This tutorial was written for Origami Build Tools v9 and will not work with the latest major release._
-
-The alias for this library is `obt`.
-
-Choose a sufficiently descriptive name for your component, and prefix it with `-o`.
-
-Once you've done that, run:
-
-```
-obt init o-new-component
-```
-<aside>The reasoning behind the folder structure and requirements is explained in detail in our <a href="/spec/v1/components" class="o-typography-link">Specification</a></aside>
-
-`obt init` will generate a new folder structure that meet the aforementioned requirements with the component name you've chosen, and will generate <abbr title="JavaScript">JS</abbr> and <abbr title="Syntactically Awesome Stylesheets">SASS</abbr> files with code bases that imitate other components.
-
+As mentioned, not all Origami components are maintained by the Origami team. Anybody can create and share an Origami component. If you would like to build your own component see the [Create A New Origami Component tutorial](https://origami.ft.com/docs/tutorials/create-a-new-component-part-1/). Before you get started, it’s a good idea to discuss your new component with the Origami team first. The team will be able to make sure there’s not an existing component or component proposal that fulfils the same purpose, and will be available to answer any questions.
 
 ## Updating existing components
 
@@ -53,16 +32,17 @@ If there is a new feature, a bug fix or anything else missing from a component t
 
 - open an issue on the components' repository
 - make the change the component yourself and open a PR
+- contact the team for support
 
 ### Opening an issue
 
-Issues are important for Origami, as they provide a place for us to track discussions about changes to components. They allow us to reference past discussions and inform future decisions, and help to stop us from talking about the same thing multiple times.
+Each component has its own Github repository with issues. For example see [o-table issues](https://github.com/Financial-Times/o-table/issues). Issues are important for Origami, as they provide a place for us to track discussions about changes to components. They allow us to reference past discussions and inform future decisions, and help to stop us from talking about the same thing multiple times.
 
-If there is a change you would like to see, we appreciate a detailed description of the problem and your reasoning. Our components have issue templates that help us get to the root of the problem, but feel free to be liberal in your explanations and examples when opening a new issue.
+If there is a change you would like to see but you are not familiar with Github please contact the Origami team to discuss, otherwise a Github issue is a good place to start. We appreciate a detailed description of the problem and your reasoning. Our components have Github issue templates that help us get to the root of the problem, but feel free to be liberal in your explanations and examples when opening a new issue.
 
 ### Working on a component
 
-If you've chosen to make changes to the component, you'll need the [Origami Build Tools](#build-an-independent-component). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more.
+If you've chosen to make changes to a component directly please feel free to contact the Origami team with any questions. To get started you'll need to use the [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools#readme). In addition to building the scaffolding for a component, these command-line tools enable us to install dependencies, build demos locally, test our work and more. The [Create A New Origami Component tutorial](https://origami.ft.com/docs/tutorials/create-a-new-component-part-1/) covers these topics.
 
 We provide details on what commands to use for `obt` in its <a href="https://github.com/Financial-Times/origami-build-tools#readme" class="o-typography-link--external">documentation</a>
 
