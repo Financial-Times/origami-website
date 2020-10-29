@@ -209,27 +209,6 @@ Component JavaScript **should** be documented using <a href="http://usejsdoc.org
 
 All components **must** be tested with all the browsers listed in the [FT browser support policy](/docs/components/compatibility/#browser-support). If a component includes JavaScript, it **must** be error free in all the browsers which fall under the "enhanced experience" in that policy.
 
-## Demos
-
-Component authors **should** provide component demos, which **must** be [defined in origami.json](/spec/v2/manifest/#demos) and built with <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>.
-
-When deciding what demos to create, demos:
-- **Must** be based on realistic use cases.
-- **Should** be visually different from one another.
-- **Should not** be used to explain configuration and implementation differences, these should be explained in the component’s README.
-
-When building demos, they:
-- **Must** have a description explaining what they show ([see origami.json](/spec/v2/manifest/#demos)).
-- **Should** be reproducable using the [Origami Build Service](/docs/services/#build-service) by copying the demo markup.
-- **Should not** include more than necessary to demonstrate the component, including: any headings, backgrounds, margins or other content that are not part of the component itself.
-
-Where styles need to be added specifically for a demo (e.g. to make the content of o-grid containers visible), they **must** be attached to classes with a `demo-` prefix, for example:
-```
-.demo-cell {
-  background-color: red;
-}
-```
-
 ## Build Step
 
 All components **must** be buildable by the <a href="https://www.ft.com/__origami/service/build/v2/" class="o-typography-link--external">Origami Build Service</a>.
