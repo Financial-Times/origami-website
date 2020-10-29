@@ -141,7 +141,11 @@ See [the Origami Sass Specification](/spec/v2/components/sass).
 
 ### Behaviour
 
-See the [Origami javascript specification](/spec/v2/components/javascript).
+See [the Origami javascript specification](/spec/v2/components/javascript).
+
+### Demos
+
+See [the Origami component demos specification](/spec/v1/components/demos).
 
 ### Subresources
 
