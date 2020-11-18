@@ -208,12 +208,6 @@ A component author **may** additionally test their component however they like, 
 
 <pre><code class="o-syntax-highlight--bash">npx origami-build-tools test</code></pre>
 
-### Linting
-
-Component JavaScript and Sass source code **should** be linted. A component author **may** use <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> to do this:
-
-<pre><code class="o-syntax-highlight--bash">npx origami-build-tools verify</code></pre>
-
 ### Continuous integration
 
 Components **should** implement CI. If a component does so then it **should** verify that the component can be built using <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>, as mentioned in [Automated tests](#automated-tests).
