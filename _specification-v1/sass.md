@@ -190,7 +190,8 @@ If a component supports brands, it **must** register the brands it supports unde
 
 #### Include o-brand
 
-Components which support brands **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
+Components which support brands and have brand specific features/designs **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
+
 
 The `o-brand` component **must not** be used directly by projects, it is intended for use within Origami components.
 
