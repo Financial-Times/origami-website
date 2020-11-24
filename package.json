@@ -5,7 +5,7 @@
     "html-to-text": "^6.0.0",
     "jsdom": "^16.4.0",
     "request": "^2.88.2",
-    "snyk": "^1.317.0"
+    "snyk": "^1.425.4"
   },
   "devDependencies": {
     "@octokit/rest": "^18.0.9",
