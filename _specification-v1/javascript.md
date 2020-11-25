@@ -25,6 +25,12 @@ Developers **should** stick to the <a href="https://github.com/Financial-Times/o
 
 In addition, Object properties **must not** be named after reserved words in the JavaScript language.
 
+## Definition
+
+An Origami component **must** be a JavaScript class which **should** be named for the component, with the `o-` prefix dropped.
+
+i.e. a component named `o-dear` **should** be defined in a class named `Dear`.
+
 ## Encapsulation
 
 - Components **should not** add to the global scope.
