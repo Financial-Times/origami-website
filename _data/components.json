@@ -53,7 +53,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "6.1.0"
+		"version": "6.1.1"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -89,7 +89,7 @@
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
-		"version": "5.0.9"
+		"version": "5.1.0"
 	},
 	"o-cookies": {
 		"name": "o-cookies",
@@ -193,7 +193,7 @@
 	},
 	"o-gallery": {
 		"name": "o-gallery",
-		"version": "4.0.8"
+		"version": "4.0.9"
 	},
 	"o-grid": {
 		"name": "o-grid",
@@ -221,7 +221,7 @@
 	},
 	"o-icons": {
 		"name": "o-icons",
-		"version": "6.0.7"
+		"version": "6.1.0"
 	},
 	"o-labels": {
 		"name": "o-labels",
