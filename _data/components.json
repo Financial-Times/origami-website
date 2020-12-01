@@ -53,7 +53,7 @@
 	},
 	"o-buttons": {
 		"name": "o-buttons",
-		"version": "6.1.1"
+		"version": "6.2.0"
 	},
 	"o-card": {
 		"name": "o-card",
@@ -85,7 +85,7 @@
 	},
 	"o-comments": {
 		"name": "o-comments",
-		"version": "7.7.3"
+		"version": "7.7.4"
 	},
 	"o-cookie-message": {
 		"name": "o-cookie-message",
@@ -293,7 +293,7 @@
 	},
 	"o-share": {
 		"name": "o-share",
-		"version": "7.4.7"
+		"version": "7.5.0"
 	},
 	"n-sliding-popup": {
 		"name": "n-sliding-popup",
