@@ -30,7 +30,7 @@ Work continues on our [proposal to drop Bower support in favour of NPM](https://
 
 This month we've tested out the proposed approach and... it works 🎉 We have also created a [draft Origami v2 specification](https://github.com/Financial-Times/origami-website/pull/273) with the changes required to drop Bower support.
 
-This proposal affects all projects which depend on Origami components. If you have any questions, thoughts, or feedback we'd love to here in the [#origami-chat](https://app.slack.com/client/T025C95MN/CSW6B2VAN) Slack channel or as a comment on [the proposal](https://github.com/Financial-Times/origami/pull/86).
+This proposal affects all projects which depend on Origami components. If you have any questions, thoughts, or feedback we'd love to hear in the [#origami-chat](https://app.slack.com/client/T025C95MN/CSW6B2VAN) Slack channel or as a comment on [the proposal](https://github.com/Financial-Times/origami/pull/86).
 
 We know this is one many of our engineers are excited about. Thanks to everyone who has given us feedback so far, it's much appreciated. 👏
 
