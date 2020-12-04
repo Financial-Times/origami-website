@@ -8,7 +8,7 @@
     "snyk": "^1.425.4"
   },
   "devDependencies": {
-    "@octokit/rest": "^18.0.10",
+    "@octokit/rest": "^18.0.11",
     "pa11y-ci": "^2.3.0"
   },
   "scripts": {
