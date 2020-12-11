@@ -153,7 +153,7 @@
 	},
 	"o-forms": {
 		"name": "o-forms",
-		"version": "8.4.0"
+		"version": "8.4.1"
 	},
 	"o-ft-affiliate-ribbon": {
 		"name": "o-ft-affiliate-ribbon",
@@ -269,7 +269,7 @@
 	},
 	"o-overlay": {
 		"name": "o-overlay",
-		"version": "3.0.10"
+		"version": "3.1.0"
 	},
 	"o-permutive": {
 		"name": "o-permutive",
@@ -353,7 +353,7 @@
 	},
 	"o-topper": {
 		"name": "o-topper",
-		"version": "3.1.0"
+		"version": "3.1.1"
 	},
 	"o-tracking": {
 		"name": "o-tracking",
@@ -377,7 +377,7 @@
 	},
 	"o-video": {
 		"name": "o-video",
-		"version": "6.0.11"
+		"version": "6.1.0"
 	},
 	"o-viewport": {
 		"name": "o-viewport",
