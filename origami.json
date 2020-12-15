@@ -1,6 +1,6 @@
 {
 	"description": "The Origami homepage",
-	"origamiType": null,
+	"origamiType": "website",
 	"origamiVersion": 1,
 	"keywords": [
 		"website",
