@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "fs-extra": "^9.0.1",
     "html-to-text": "^6.0.0",
     "jsdom": "^16.4.0",
