@@ -1,6 +1,6 @@
 ---
 title: Origami Newsletter, December 2020
-description: undefined
+description: false
 author: chee
 tags:
 - Newsletter
