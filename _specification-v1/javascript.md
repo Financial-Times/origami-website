@@ -153,12 +153,3 @@ Components that store data on the client via user-agent APIs **must** encapsulat
 ## Viewport Events
 
 For viewport events that may fire several times in quick succession (`scroll`, `resize` and `orientationchange`) it's good practice to throttle listeners to these. <a href="https://registry.origami.ft.com/components/o-viewport">o-viewport</a> provides pre-throttled abstractions of these events and **should** be used by components that need to listen for changes to the viewport.
-
-## Managing Layers (z-axis)
-
-A component e.g. `o-overlay`, may need to display some or all of its owned DOM outside of the normal content flow so that it obscures content outside its owned DOM. The component **must** bind to and fire `o-layers` events on its closest parent with the class `o-layers__context`, or `body` if no such element exists. The component **must** use the custom events defined in `o-layers` to:
-
-- Broadcast changes in its own state.
-- Listen for events fired in its `o-layers__context` by other components that make use of the z-axis.
-
-Any component **may** use the `o-layers__context` class to define a new region of the DOM that can handle new layers independently of other regions of the DOM (e.g. two graphs handling their own tooltips independently, a date-picker appearing within a modal dialog). To learn more <a href="https://github.com/Financial-Times/o-layers/" class="o-typography-link--external">see o-layers</a>.
