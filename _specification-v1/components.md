@@ -143,10 +143,6 @@ See [the Origami Sass Specification](/spec/v2/components/sass).
 
 See the [Origami javascript specification](/spec/v2/components/javascript).
 
-### Subresources
-
-Origami components **may** load additional files (fonts, JSON data, images etc).
-
 ## Testing
 
 ### Automated tests
