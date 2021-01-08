@@ -6,12 +6,6 @@ tags:
 - Newsletter
 ---
 
-<abbr title="Too long; didn't read">
-<strong>
-TL;DR:
-</strong>
-</abbr> {{page.description}}
-
 ## Top things
 
 Some of the bigger Origami news from the last month:
