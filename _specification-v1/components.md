@@ -87,6 +87,7 @@ As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/
 
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#name">`name`</a> property set to the package name, e.g. `@financial-times/o-typography`.
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property set to the component's main JavaScript file (`main.js`) **_if_** it exists.
+  - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#main">`main`</a> property.
   - It **must** include a <a href="https://nodejs.org/api/packages.html#packages_type">`type`</a> property set to `"module"`.
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#license">`license`</a> property set to the <a href="https://spdx.org/licenses/" class="o-typography-link--external">SPDX license identifier</a> for the license the Origami component is using, e.g. `"MIT"`.
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#devdependencies">`devDependencies`</a> property set to an object **_if_** the component has any npm dependencies required for development or testing.
@@ -95,11 +96,12 @@ As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#dependencies">`dependencies`</a> property set to an object **_if_** the component has any production javascript dependencies which are not also Origami components.
   - It **must** include an <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#engines">`engines`</a> property set to an object which has an `npm` property set to a SemVer range which disallows anything below `v7.0.0`. E.G. `^7` would be valid as would `>= 7`.
   - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#description">`description`</a> property set to a short description of the component.
+  - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#keywords">`keywords`</a> property in order to help users discover the right component.
   - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#bugs">`bugs`</a> property set to the url of the issue-tracker for the component.
   - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#repository">`repository`</a> property set to the url of the git repository for the component.
   - It **may** contain a <a href="https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package">`types`</a> property set to component's TypeScript declaration file.
   - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#homepage">`homepage`</a> property set to the url of the component on the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, e.g. `"https://registry.origami.ft.com/components/o-table"`
-  - It **may** include an <a href="https://nodejs.org/api/packages.html#packages_conditional_exports">`exports`</a> property set to an object which a `browser` field which is set to the component's main JavaScript file (`main.js`) **_if_** it exists. e.g. `"exports":{"browser": "main.js"}`.
+  - It **may** include an <a href="https://nodejs.org/api/packages.html#packages_conditional_exports">`exports`</a> property set to an object which a `browser` field which is set to the component's main JavaScript file (`main.js`) **_if_** it exists. e.g. `"exports": {".": {"browser": "./main.js"}},`.
   - It **must not** include any of the following properties: `bin`, `config`, `cpu`, `os`, `preferGlobal`.
 
 <aside>
