@@ -80,7 +80,10 @@ Origami components **must** be installable through the <a href="https://npmjs.co
 
 ### npm
 
-Origami components **must** be installable through the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>, and **must** include a `package.json` manifest file which configures the component. As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json" class="o-typography-link--external">`package.json` spec</a>, there are additional requirements to make the component's npm manifest conform to the Origami specification:
+Origami components **must** include a `package.json` manifest, **must** be installable through the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>, and **must** be published under one of the following <a href="https://docs.npmjs.com/cli/v7/using-npm/scope" class="o-typography-link--external">npm scopes</a>:
+  - `@financial-times`
+
+As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json" class="o-typography-link--external">`package.json` spec</a>, there are additional requirements to make the component's `package.json` manifest conform to the Origami specification:
 
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#name">`name`</a> property set to the package name, e.g. `@financial-times/o-typography`.
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property set to the component's main JavaScript file (`main.js`) **_if_** it exists.
