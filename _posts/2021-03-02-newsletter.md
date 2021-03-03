@@ -41,7 +41,7 @@ https://www.ft.com/__origami/service/image/v2/images/placeholder/?width=500&heig
 
 The [Origami Build Service](https://www.ft.com/__origami/service/build/) helps teams include [components](https://registry.origami.ft.com/components) in projects quickly, without having to worry about setting up potentially complicated build steps. However it can be tricky to know when a Build Service request is out of date, and including old versions of components which could be upgraded. Now the Build Service has a [URL updater page](https://www.ft.com/__origami/service/build/url-updater) which can check a Build Service URL and let you know which of your components are out of date.
 
-![The Build Service updater. For a given Build Service URL it displays a table of requested components which shows the requested version, the latest version, whether it is out of date or not, and where to find migration guides to upgrade as required.](/assets/images/2021-03-02-newsletter/build-service-updater.png)
+![The Build Service updater. For a given Build Service URL it displays a table of requested components which shows the requested version, the latest version, whether it is out of date or not, and where to find migration guides to upgrade as required.](https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2021-03-02-newsletter/build-service-updater.png?quality=highest&source=origami)
 
 ## Special Thanks
 
