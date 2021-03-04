@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 470">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 470" preserveAspectRatio="xMidYMin slice">
   <path fill="#d6d6d6" d="M0 42l108-23L83 0H0v42z">
     <animate attributeType="CSS" attributeName="fill" values="#d6d6d6;#cd5c5ccc;#ffd70080;#90ee9080;#7fffd480;#19197080;#483d8b80;#4b008280;#d6d6d6" begin="mouseenter" dur="1s"/>
   </path>
