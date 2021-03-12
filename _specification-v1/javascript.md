@@ -20,7 +20,7 @@ Developers **should** stick to the <a href="https://www.npmjs.com/package/eslint
 
 The JavaScript **must** be valid <a href="https://tc39.es/ecma262/#sec-ecmascript-language-lexical-grammar">ECMAScript syntax</a>.
 
-The JavaScript code **must** work directly in a browser, requiring no compilation steps.
+The packaged JavaScript code **must** work directly in a browser, requiring no compilation steps.
 
 ## Definition
 
