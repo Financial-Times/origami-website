@@ -88,7 +88,7 @@ After the first release Origami components may be released automatically by appl
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-20-github.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         This image shows a component pull request which has been merged and released. The `release:patch` label was first added to the pull request. It was then merged. A Github action responded to the release label on merge. It checked the latest release number `v8.1.1` and, as a patch release, calculated the next version should be `v8.1.2`. The Github action then created a new tag `v8.1.2` to release the new version and posted a comment on the pull request.
 	</figcaption>
 </figure>

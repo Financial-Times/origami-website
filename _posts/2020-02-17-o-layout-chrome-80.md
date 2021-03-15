@@ -25,7 +25,7 @@ The content of our layouts need to keep within the contained width of our header
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-1.png?width=1200&source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         A basic CSS Grid with a max width. There is a header on one row, a fixed width sidebar on the second row, and also a main content area with flexible size on the second row.
 	</figcaption>
 </figure>
@@ -36,14 +36,14 @@ But [o-header-services](https://registry.origami.ft.com/components/o-header-serv
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-2.png?width=1200&source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The grid container with its max width is still centred the same but the header now goes off the edge of the screen.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/firefox-3.png?width=1200&source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Now the header is positioned to the left and takes up the full screen width. The grid container is still centred in the same way, with the sidebar and main content area contained in its max width.
 	</figcaption>
 </figure>
@@ -53,14 +53,14 @@ Our sidebar has a fixed width and the main content area is flexible to fill the 
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/chrome-2.png?width=1200&source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         In Chrome 80 the main content area also expands beyond the edge of the screen. The page is now horizontally scrollable.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2020-02-17-o-layout-chrome-80/chrome-3.png?width=1200&source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         When the header is positioned to the left, and the page scrolled left, things are looking even worse in Chrome 80.
 	</figcaption>
 </figure>

@@ -26,11 +26,11 @@ On our homepage we've removed detail and instead focus on pointing people in the
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-before.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami homepage before. There's a lot of text.</figcaption>
+    <figcaption>The Origami homepage before. There's a lot of text.</figcaption>
 </figure>
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/home-after.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami homepage after. There's less text and more clear calls to action, such as to contact the team.</figcaption>
+    <figcaption>The Origami homepage after. There's less text and more clear calls to action, such as to contact the team.</figcaption>
 </figure>
 
 ## Documentation
@@ -41,11 +41,11 @@ Perhaps the most striking change is how we have restructured and presented the d
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-before.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami documentation before. Content types are not seperated very clearly, although the body of the page explains where to find what documentation.</figcaption>
+    <figcaption>The Origami documentation before. Content types are not seperated very clearly, although the body of the page explains where to find what documentation.</figcaption>
 </figure>
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/docs-after.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami documentation after. We use headings and lists to make the page more easy to scan.</figcaption>
+    <figcaption>The Origami documentation after. We use headings and lists to make the page more easy to scan.</figcaption>
 </figure>
 
 ## Specifications
@@ -54,11 +54,11 @@ As with our documentation, the Origami specifcation has also been reviewed and s
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-before.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami specification before. The navigation bar is larger than present, e.g. "Third party components" has been removed.</figcaption>
+    <figcaption>The Origami specification before. The navigation bar is larger than present, e.g. "Third party components" has been removed.</figcaption>
 </figure>
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/specs-after.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami specification after. The navigation bar more clearly points to our three specifications: component, service, and origami.json specification.</figcaption>
+    <figcaption>The Origami specification after. The navigation bar more clearly points to our three specifications: component, service, and origami.json specification.</figcaption>
 </figure>
 
 ## Registry
@@ -71,11 +71,11 @@ We maintained the link to GitHub as that is often used. The component version is
 
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-before.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami registry before. The style does not match our main site or other internal products from the FT, and there is a lot of detail which detracts from the main content of the page.</figcaption>
+    <figcaption>The Origami registry before. The style does not match our main site or other internal products from the FT, and there is a lot of detail which detracts from the main content of the page.</figcaption>
 </figure>
 <figure>
     <img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-03-11-site-update/registry-after.png?source=origami&width=1240" />
-    <figcaption class="o-typography-caption">The Origami registry after. The design matches our main site and other internal FT products, secondary content is less verbose, and our contact details are more discoverable.</figcaption>
+    <figcaption>The Origami registry after. The design matches our main site and other internal FT products, secondary content is less verbose, and our contact details are more discoverable.</figcaption>
 </figure>
 
 ## Conclusions
