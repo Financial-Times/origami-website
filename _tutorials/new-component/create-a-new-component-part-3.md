@@ -43,7 +43,7 @@ For example to build the `internal` version of our component run the command `ob
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-5-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Our example component for the internal brand no longer has a wheat background, because the background was set using a colour usecase.
 	</figcaption>
 </figure>
@@ -213,21 +213,21 @@ Now our component supports all three brands, with a unique appearance for each.
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-6-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The whitelabel brand version of our component is not very opinionated. It's black and white and uses a system font.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-7-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The internal brand version of our component uses Financial Times fonts, and has a subtle background.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-8-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The master brand version of our component uses Financial Times fonts and a wheat background.
 	</figcaption>
 </figure>
@@ -536,7 +536,7 @@ Update your demo markup `demos/src/demo.mustache` with a theme class to preview 
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-9-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         A master brand view of our "o-example" component with the `o-example--inverse` theme class applied.
 	</figcaption>
 </figure>
@@ -552,7 +552,7 @@ To see the b2c theme, update the component class to `o-example o-example--b2c`:
 </div></code></pre>
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-10-sass.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         A master brand view of our "o-example" component with the `o-example--b2c` theme class applied.
 	</figcaption>
 </figure>

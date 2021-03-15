@@ -137,7 +137,7 @@ As the demo uses the primary mixin already, refreshing your demo page will show 
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-2-basic-styles.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Our "o-example" "hello world" component demo with a red border, some margin, and some padding.
 	</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Run `obt dev`, if not already, and preview the component demo as in [part one](/
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-3-basic-styles.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Our "o-example" "hello world" component now has a slate border, uses Financial Times fonts, standardised space sizes for margin and padding, and has a background colour.
 	</figcaption>
 </figure>
@@ -271,7 +271,7 @@ _Note: the double underscore in `.o-example__button` is part of the [BEM naming 
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-4-basic-styles.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Our "o-example" component now has a button.
 	</figcaption>
 </figure>

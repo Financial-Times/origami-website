@@ -21,21 +21,21 @@ As low level components are used to build other components there are more projec
 
 <figure>
 	<img alt="" src="/assets/images/2019-10-31-major-cascade/all-graph.svg" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         An example graph of product dependencies. Low level components o-colors and o-typography branch out; they are included in final products directly and indirectly via other components including o-table. In reality the graph is much more complex because many projects comprise "ft.com".
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/2019-10-31-major-cascade/typography-graph.svg" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Dependencies on o-typography, a low level dependency, are a large portion of the overall graph. Components in-between including o-buttons and o-table must be upgraded before the end products can be upgraded.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/2019-10-31-major-cascade/table-graph.svg" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Dependencies on o-table, a high level dependency, are a small portion of the overall graph. If a major version of o-table is released the end products may be updated immediately.
 	</figcaption>
 </figure>
@@ -63,21 +63,21 @@ Along with the Product Design team we also audited existing users of editorial s
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-1.png?source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Unique blockquote-like style one.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-2.png?source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Unique blockquote-like style two.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/blockquote-3.png?source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Unique blockquote-like style three.
 	</figcaption>
 </figure>
@@ -92,7 +92,7 @@ With editorial styles moved, we also made a host of other changes to simplify o-
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/buttons-before.png?source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         o-buttons currently. In the right column "primary" buttons of different themes. In the left column "secondary" buttons. The rows show the different states of each button, for example when hovered, focused with the keyboard, or pressed. Each button has its own quirks, especially the final two rows.
 	</figcaption>
 </figure>
@@ -100,7 +100,7 @@ With editorial styles moved, we also made a host of other changes to simplify o-
 
 <figure>
 	<img alt="" src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-major-cascade/buttons-after.png?source=origami" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         o-buttons after. There is consistency between "primary" and "secondary" buttons, improved accessibility checks, and better contrast between each button state.
 	</figcaption>
 </figure>

@@ -140,14 +140,14 @@ We can't run Percy yet as we haven't released a version of our component to comp
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-21-tests.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         This image show a Github pull request where the `percy` label had been added. Percy then ran to visually compare the component demos in the pull request against the last release, and removed the `percy` label when done.
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-22-tests.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         This image shows an example of the Percy interface. To the left is an image of a component demo, to the right the updated demo with visual changes highlighted in red.
 	</figcaption>
 </figure>

@@ -42,7 +42,7 @@ With this new found power we made a little Origami Fox friend. Our little Origam
 		alt=""
 		src="https://www.ft.com/__origami/service/image/v2/images/raw/https://origami.ft.com/assets/images/2019-10-31-newsletter/fox-friend.png?source=origami&quality=highest"
 	/>
-	<figcaption class="o-typography-caption">
+	<figcaption>
 		A comment from Fox Friend on an o-comments pull request (a request to make changes to its codebase). The comments team have done a great job at reducing the bundle size of o-comments by over 130kb without compression.
 	</figcaption>
 </figure>

@@ -94,7 +94,7 @@ Now run `obt init` and answer the questions as above. You should see a directory
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-init-output.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Example output from the `obt init` command at the time of writing. It shows the questions asked and example responses, as discussed previously.
 	</figcaption>
 </figure>
@@ -157,14 +157,14 @@ Opening the link output by the develop command, for example `localhost:8999`, li
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-dev-output.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Running the dev command builds our component assets (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="JavaScript">JS</abbr>, and <abbr title="Cascading Style Sheets ">CSS</abbr> files).
 	</figcaption>
 </figure>
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-demos-local.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         Opening the link output by the develop command, `localhost:8999` in this case, shows us the component assets in the browser (<abbr title="Hyper Text Markup Language">HTML</abbr>, <abbr title="JavaScript">JS</abbr>, and <abbr title="Cascading Style Sheets ">CSS</abbr> files).
 	</figcaption>
 </figure>
@@ -179,7 +179,7 @@ Therefore to include component HTML Origami users copy and paste component HTML 
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/example-demo-registry.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         A live demo of o-labels presented in the registry with <abbr title="Hyper Text Markup Language">HTML</abbr> to copy and paste.
 	</figcaption>
 </figure>
@@ -205,7 +205,7 @@ The `obt dev` command which we run earlier will detect that you have updated `de
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         A "hello world" component demo with no styles.
 	</figcaption>
 </figure>

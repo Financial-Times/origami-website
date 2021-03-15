@@ -116,7 +116,7 @@ Origami components use browser apis directly for [<abbr title="Document Object M
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-12-js.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The `o-example` component with the browsers developer tools open. The numbers 1 to 5 have been logged as the button has been clicked five times.
 	</figcaption>
 </figure>
@@ -153,7 +153,7 @@ handleEvent(event) {
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-13-js.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The `o-example` component now displays how many times the button has been clicked. Here it has been clicked over 100 times.
 	</figcaption>
 </figure>
@@ -201,7 +201,7 @@ handleEvent(event) {
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-14-js.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         The `o-example` component now says it has been clicked "lots and lots of time" if the click count is 100 or greater.
 	</figcaption>
 </figure>
@@ -293,7 +293,7 @@ We can then then add CSS to `main.scss` to hide the counter element `o-example__
 
 <figure>
 	<img alt="" src="/assets/images/tutorial-new-component/hello-world-demo-15-js.png" />
-	<figcaption class="o-typography-caption">
+	<figcaption>
         With JavaScript unavailable our component falls back to its "Hello World" without the count feature.
 	</figcaption>
 </figure>
