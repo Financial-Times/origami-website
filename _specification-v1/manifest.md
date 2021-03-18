@@ -80,9 +80,9 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-**Must** be set to `2.0`. It is the version of Origami to which the project conforms.
+**Must** be set to the string `"2.0"`. It is the version of Origami to which the project conforms.
 <pre><code class="o-syntax-highlight--json">{
-	"origamiVersion": 2.0
+	"origamiVersion": "2.0"
 }</code></pre>
 
 ### brands
@@ -393,7 +393,7 @@ This example joins all of the property snippets outlined above:
 <pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables",
 	"origamiType": "component",
-	"origamiVersion": 2.0,
+	"origamiVersion": "2.0",
 	"keywords": ["table", "rows", "columns"],
 	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-table/issues",
