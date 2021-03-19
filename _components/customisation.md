@@ -196,7 +196,7 @@ In conclusion customising components with un-documented CSS overrides is not rec
 
 ## Summary
 
-Avoid customisation where possible. The core Origami team, along with the design team, can help identify any existing styles which could be reused, or, help update components to support your project without customisation — so your design is documented, demoed, and more teams can benefit from your work 🎉
+The core Origami team, along with the design team, can help identify any existing styles which could be reused, or, help update components to support your project without customisation — so your design is documented, demoed, and more teams can benefit from your work 🎉
 
 When customisation does make sense use a component's Sass API. Usually this means using Sass to create additional variants for use alongside existing component styles. Alternatively, you can customise your chosen brand to affect all instances of an existing component variant. Avoid CSS overrides as these are unsupported and likely to break.
 
