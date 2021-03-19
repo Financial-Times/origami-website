@@ -74,22 +74,6 @@ NotApplicable
 
 The Origami website is built using [Jekyll](http://jekyllrb.com/) and is hosted on [GitHub Pages](https://pages.github.com/). Commits on the `master` branch are automatically deployed.
 
-<!-- Placeholder - remove HTML comment markers to activate
-## More Information
-Enter descriptive text satisfying the following:
-Any additional information about this system.
-
-...or delete this placeholder if not applicable to this system
--->
-
-<!-- Placeholder - remove HTML comment markers to activate
-## Heroku Pipeline Name
-Enter descriptive text satisfying the following:
-This is the name of the Heroku pipeline for this system. If you don't have a pipeline, this is the name of the app in Heroku. A pipeline is a group of Heroku apps that share the same codebase where each app in a pipeline represents the different stages in a continuous delivery workflow, i.e. staging, production.
-
-...or delete this placeholder if not applicable to this system
--->
-
 ## First Line Troubleshooting
 
 As this is a bronze service which is likely only used in business hours, please send an email to the managing team and somebody will fix when we're in the office.
