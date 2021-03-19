@@ -33,13 +33,13 @@ TL;DR:
 
 The first step before customising an Origami component is to ask:
 1. Is there an existing style which could work already? After searching the [Origami Registry](https://registry.origami.ft.com/components) it's worth double checking in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel, to reduce duplicated effort and to help maintain a consistent user interface across FT Group projects.
-2. Would your customisation be useful for other teams/projects? Maybe a component should be updated or added to for your usecase, so other teams benefit from your work. A new component might be more appropriate if your design diverges significantly.
+2. Would your customisation be useful for other teams/projects? Maybe a component should be updated for your usecase, so other teams benefit from your work. A new component might be more appropriate if your design diverges significantly.
 
 A good place to start is to ask for feedback in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel. The core Origami team, along with the design team, can help identify similar existing styles or help make any relevant component updates to support your usecase without customisation.
 
 ## Brands
 
-Most Origami components are branded to provide a distinct appearance within different contexts. A brand may be thought of as a kind of theme, but applies to all components within a project.
+Most Origami components are branded to provide a distinct appearance within different contexts. A project sets its brand which applies to all the components which it includes.
 
 ### Supported brands
 
@@ -106,13 +106,13 @@ This is great to create a distinct brand, where a customisation should affect al
 
 If your project is based on the master or internal brand, however, it is more likely that you want to create new variants of a component to use alongside existing ones. For example to output an additional banner style to support a new marketing campaign.
 
-## Themes/Variants
+## Variants
 
 If your project has access to a component's Sass (see the [manual build tutorial](/docs/tutorials/manual-build/#selecting-a-brand)) your project may use Sass mixins to customise components by outputting a new variant of that component. A component variant is an instance of a component with modified appearance or functionality.
 
-For instance, at the time of writing, the `o-banner` component has an [`oBannerAddTheme` mixin](https://registry.origami.ft.com/components/o-banner@3.4.2/sassdoc?brand=master#mixin-obanneraddtheme) which provides options for creating a banner theme with customised colour and background image:
+For instance, at the time of writing, the `o-banner` component has an [`oBannerAddTheme` mixin](https://registry.origami.ft.com/components/o-banner@3.4.2/sassdoc?brand=master#mixin-obanneraddtheme) which provides options for creating a banner variant with customised colour and background image:
 
-<pre><code class="o-syntax-highlight--scss">@include oBannerAddTheme('my-pikachu-theme', (
+<pre><code class="o-syntax-highlight--scss">@include oBannerAddTheme('my-pikachu-variant', (
     background-image: url('https://example.org/pikachu.png'),
     background-color: oColorsByName('lemon'),
     text-color: oColorsByName('slate'),
@@ -124,13 +124,17 @@ For instance, at the time of writing, the `o-banner` component has an [`oBannerA
 <figure>
 	<img alt="" src="/assets/images/component-customisation/pikachu-banner.png" />
 	<figcaption>
-        A custom banner theme featuring a Pikachu background (this is a fun example but a bad one because Pikachu's ear obscures some text).
+        A custom banner variant featuring a Pikachu background (this is a fun example but a bad one because Pikachu's ear obscures some text).
 	</figcaption>
 </figure>
 
 ## Avoid CSS Overrides
 
-Another way to customise components is by applying additional CSS styles within your project. This is not recommended and should be avoided. Applying styles on top of a components style is unreliable and should be avoided as component CSS may change in future minor releases in a way that conflicts with your overrides.
+Another way to customise components is by applying additional CSS styles within your project. This is **not recommended** and should be avoided. Applying styles on top of a components style is unreliable and should be avoided as component CSS may change in future minor releases in a way that conflicts with your overrides.
+
+<aside>
+The Origami team are available to support you in removing CSS overrides, and reduce the complexity of your project (say hello in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel).
+</aside>
 
 For instance, given a component `o-example-component` with the following code:
 <pre><code class="o-syntax-highlight--html">&lt;!-- Component HTML (o-example-component) -->
@@ -194,6 +198,6 @@ In conclusion customising components with un-documented CSS overrides is not rec
 
 Avoid customisation where possible. The core Origami team, along with the design team, can help identify any existing styles which could be reused, or, help update components to support your project without customisation — so your design is documented, demoed, and more teams can benefit from your work 🎉
 
-When customisation does make sense use a component's Sass API. Usually this means using Sass to create additional themes/variants for use alongside existing component styles. Alternatively, you can customise your chosen brand to affect all instances of an existing component variant. Avoid CSS overrides as these are unsupported and likely to break.
+When customisation does make sense use a component's Sass API. Usually this means using Sass to create additional variants for use alongside existing component styles. Alternatively, you can customise your chosen brand to affect all instances of an existing component variant. Avoid CSS overrides as these are unsupported and likely to break.
 
 If you have any questions about customising components, or feature requests, ask them in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel, the core Origami team are here to help 😊
