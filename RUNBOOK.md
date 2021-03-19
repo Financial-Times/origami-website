@@ -1,6 +1,14 @@
+<!--
+    Written in the format prescribed by https://github.com/Financial-Times/runbook.md.
+    Any future edits should abide by this format.
+-->
 # Origami Documentation
 
 A site to document the Origami team, spec, components, and services.
+
+## Code
+
+origami
 
 ## Service Tier
 
@@ -14,33 +22,25 @@ Production
 
 https://origami.ft.com/
 
-## Replaces
-
-* origami-docs
-
 ## Host Platform
 
 GitHub Pages
 
 ## Contains Personal Data
 
-no
+No
 
 ## Contains Sensitive Data
 
-no
+No
 
-## Delivered By
+## Can Download Personal Data
 
-origami-team
+No
 
-## Supported By
+## Can Contact Individuals
 
-origami-team
-
-## Dependencies
-
-* github
+No
 
 ## Failover Architecture Type
 
@@ -74,6 +74,22 @@ NotApplicable
 
 The Origami website is built using [Jekyll](http://jekyllrb.com/) and is hosted on [GitHub Pages](https://pages.github.com/). Commits on the `master` branch are automatically deployed.
 
+<!-- Placeholder - remove HTML comment markers to activate
+## More Information
+Enter descriptive text satisfying the following:
+Any additional information about this system.
+
+...or delete this placeholder if not applicable to this system
+-->
+
+<!-- Placeholder - remove HTML comment markers to activate
+## Heroku Pipeline Name
+Enter descriptive text satisfying the following:
+This is the name of the Heroku pipeline for this system. If you don't have a pipeline, this is the name of the app in Heroku. A pipeline is a group of Heroku apps that share the same codebase where each app in a pipeline represents the different stages in a continuous delivery workflow, i.e. staging, production.
+
+...or delete this placeholder if not applicable to this system
+-->
+
 ## First Line Troubleshooting
 
 As this is a bronze service which is likely only used in business hours, please send an email to the managing team and somebody will fix when we're in the office.
@@ -105,4 +121,3 @@ The website is updated automatically when a new commit appears on the `master` b
 ## Key Management Details
 
 This application uses no keys.
-
