@@ -45,7 +45,7 @@ Most Origami components are branded to provide a distinct appearance within diff
 
 Origami maintained brands include:
 - master: FT branding for public ft.com sites and affiliates.
-- internal: Style suitable for internal products, tools, and documentation.
+- internal: Style suitable for tools, documentation, and internal products.
 - whitelabel: Base, structural styles only to build on and customise.
 
 Taking `o-table` as an example, the "master" brand version offers a "row stripes" feature, which uses "master" brand colours such as "paper" and "wheat":
@@ -68,10 +68,10 @@ To select a brand within your project, see the tutorial for your method of inclu
 
 ### Customise A Brand
 
-If your project has access to a component's Sass API (see the [manual build tutorial](/docs/tutorials/manual-build/#selecting-a-brand)) it is possible to customise your chosen brand. For example, at the time of writing, the [`oTypographySetFont`](https://registry.origami.ft.com/components/o-typography@6.4.5/sassdoc?brand=master#mixin-otypographysetfont) mixin can be used to customise component fonts. This customises the font used by all components including in your project.
+If your project has access to a component's Sass API (see the [manual build tutorial](/docs/tutorials/manual-build/#selecting-a-brand)) it is possible to customise your chosen brand. For example, at the time of writing, the [`oTypographySetFont`](https://registry.origami.ft.com/components/o-typography@6.4.5/sassdoc?brand=master#mixin-otypographysetfont) mixin can be used to customise component fonts. This customises the font used by all components included in your project.
 
 <aside>
-Not all components support brand customisation but the Origami team are happy to add support as needed. Ask the core Origami team for new features in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel.
+Not all components support brand customisation but the Origami team are happy for support to be added as needed. Ask the core Origami team about new features in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel.
 </aside>
 
 <pre><code class="o-syntax-highlight--scss">// Incomplete example for demo purposes only
@@ -81,7 +81,7 @@ $o-brand: 'whitelabel';
 
 // Customise: Tell the o-typography component to use our custom
 // font, it will affect all other components which
-// as they are built using o-typography.
+// are built using o-typography.
 @include oTypographySetFont(
     $type: 'sans',
     $family: 'Comic Sans MS', sans-serif
@@ -119,7 +119,7 @@ For instance, at the time of writing, the `o-banner` component has an [`oBannerA
     button-background-color: oColorsByName('crimson'),
 ));</code></pre>
 
-<aside>If your project is using the <a href="/docs/tutorials/build-service/">Origami Build Service</a>, and does not have access to the component's Sass API, it is not currently possible to create custom component variants. It may be possible in the future using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Custom CSS Properties (CSS Variables)</a>, when projects no longer support older browsers such as Internet Explorer.</aside>
+<aside>If your project is using the <a href="/docs/tutorials/build-service/">Origami Build Service</a>, you do not have access to the component's Sass API, as such it is not currently possible to create custom component variants. It may be possible in the future using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Custom CSS Properties (CSS Variables)</a>, when projects no longer support older browsers such as Internet Explorer.</aside>
 
 <figure>
 	<img alt="" src="/assets/images/component-customisation/pikachu-banner.png" />
