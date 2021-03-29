@@ -1,6 +1,14 @@
+<!--
+    Written in the format prescribed by https://github.com/Financial-Times/runbook.md.
+    Any future edits should abide by this format.
+-->
 # Origami Documentation
 
 A site to document the Origami team, spec, components, and services.
+
+## Code
+
+origami
 
 ## Service Tier
 
@@ -14,33 +22,25 @@ Production
 
 https://origami.ft.com/
 
-## Replaces
-
-* origami-docs
-
 ## Host Platform
 
 GitHub Pages
 
 ## Contains Personal Data
 
-no
+No
 
 ## Contains Sensitive Data
 
-no
+No
 
-## Delivered By
+## Can Download Personal Data
 
-origami-team
+No
 
-## Supported By
+## Can Contact Individuals
 
-origami-team
-
-## Dependencies
-
-* github
+No
 
 ## Failover Architecture Type
 
@@ -105,4 +105,3 @@ The website is updated automatically when a new commit appears on the `master` b
 ## Key Management Details
 
 This application uses no keys.
-
