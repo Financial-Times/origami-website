@@ -52,6 +52,7 @@ exclude:
   - Makefile
   - node_modules
   - README.md
+  - RUNBOOK.md
   - scripts
   - vendor/bundle/
   - vendor/cache/
