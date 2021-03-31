@@ -16,24 +16,6 @@ nav_order: 25
 
 ## Properties
 
-### description
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
-	</tr>
-</table>
-
-**Should** be a concise description of the purpose of the project.
-<pre><code class="o-syntax-highlight--json">{
-	"description": "Branded tables"
-}</code></pre>
-
 ### origamiType
 
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
@@ -100,25 +82,6 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 
 For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
 If the brands property does not exist, this means the component supports all the brands. 
-
-### keywords
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>Array</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
-	</tr>
-</table>
-
-Expects keywords related to the project to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
-
-<pre><code class="o-syntax-highlight--json">{
-	"keywords": ["table", "rows", "columns"]
-}</code></pre>
 
 ### origamiCategory
 
@@ -391,10 +354,8 @@ Each object in the list accepts the following properties:
 This example joins all of the property snippets outlined above:
 
 <pre><code class="o-syntax-highlight--json">{
-	"description": "Branded tables",
 	"origamiType": "component",
 	"origamiVersion": "2.0",
-	"keywords": ["table", "rows", "columns"],
 	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-table/issues",
 	"supportStatus": "active",
