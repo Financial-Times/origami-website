@@ -87,7 +87,7 @@ As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/
 
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#name">`name`</a> property set to the package name, e.g. `@financial-times/o-typography`.
   - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property set to the component's main JavaScript file (`main.js`) **_if_** it exists.
-  - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property set to the component's main JavaScript file (`main.js`) **_if_** it does not exist.
+  - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property **_if_** the component's main JavaScript file (`main.js`) does not exist.
   - It **must** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#description">`description`</a> property set to a short description of the component.
   - It **must** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#keywords">`keywords`</a> property in order to help users discover the right component.
   - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#main">`main`</a> property.
