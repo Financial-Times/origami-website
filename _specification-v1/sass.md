@@ -102,7 +102,6 @@ If a component contains SCSS files other than the root `main.scss` file:
 - All import statements **must** be imported before any other Sass.
 - All import statements **should** be in the components’s `main.scss` file.
 - Sass variables, mixins, and functions **should** be in their own files.
-- `_index.scss` **must** exist and only import the `main.scss` file.
 
 ## Sass Variables
 
@@ -122,7 +121,7 @@ Silent mode means a component's Sass will compile to an empty string, but provid
 
 Components that make use of styles defined in other components which support silent mode **must** use those styles silently, e.g. for a component `o-foo` which depends on `o-bar`:
 ```
-@import '@financial-times/o-bar';
+@import '@financial-times/o-bar/main';
 
 @mixin oFoo {
     .o-foo {
