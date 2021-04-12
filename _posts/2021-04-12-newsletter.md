@@ -33,7 +33,7 @@ As a reminder, below is a copy of our planned timeline to decommission the FT Bo
 
 
 
-### New "Introduction to Origami components" workshop dates announced
+### New “Introduction to Origami components”workshop dates announced
 
 This workshop is great for people who are new to Origami or want a refresher on how to build with Origami.
 
