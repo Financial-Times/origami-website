@@ -59,7 +59,7 @@ We recently had an uptick in the amount of security researchers wanting to submi
 
 A digest of other things that have happened this month:
 
-- [Financial-Times/origami-build-service](https://api.github.com/repos/Financial-Times/origami-build-service)
+- [Financial-Times/origami-build-service](https://github.com/Financial-Times/origami-build-service)
    - Deprecated the use of `modules` for anything that's not in the allow-list.
    - Error message "check your typos" updated to "check for typos".
    - Added autoprefixer for css and using the same browser config as origami-build-tools.
@@ -67,11 +67,11 @@ A digest of other things that have happened this month:
    - Renamed the modules and module query parameters to components and component in v3.
    - Implemented the /v3/demo and /v3/demo/html endpoints.
 
-- [Financial-Times/o-layout](https://api.github.com/repos/Financial-Times/o-layout)
+- [Financial-Times/o-layout](https://github.com/Financial-Times/o-layout)
    - Add master brand support for default, bleed, documentation layouts.
    - Support `figure` in the `o-layout-typography` wrapper.
 
-- [Financial-Times/origami-build-tools](https://api.github.com/repos/Financial-Times/origami-build-tools)
+- [Financial-Times/origami-build-tools](https://github.com/Financial-Times/origami-build-tools)
 
    - Add validation for package.json.browser field
    - Add validation for package.json.name field
@@ -81,11 +81,11 @@ A digest of other things that have happened this month:
    - Make `obt test --debug` watch for changes and rebuild tests.
    - expect origamiVersion to be the "2.0" string
 
-- [Financial-Times/o-tracking](https://api.github.com/repos/Financial-Times/o-tracking)
+- [Financial-Times/o-tracking](https://github.com/Financial-Times/o-tracking)
    - Duplicate click events from multiple browser contexts
    - Fix bug where loading spoor-id from the cookie would silently fail
 
-- [Financial-Times/origami-repo-data](https://api.github.com/repos/Financial-Times/origami-repo-data)
+- [Financial-Times/origami-repo-data](https://github.com/Financial-Times/origami-repo-data)
    - Only read `keywords` property from the package.json manifest and not origami.json or bower.json
    - Allow origami version to be the "2.0" string
    - spec v2 component `Version`s have no `languages`, when they do
@@ -93,37 +93,37 @@ A digest of other things that have happened this month:
    - Move `Version.createFromIngestion` logic.
    - use v3 of the build service for spec v2 components
 
-- [Financial-Times/o-fonts](https://api.github.com/repos/Financial-Times/o-fonts)
+- [Financial-Times/o-fonts](https://github.com/Financial-Times/o-fonts)
    - Add FinancierDisplayWeb Light/Semibold support.
 
-- [Financial-Times/create-origami-component](https://api.github.com/repos/Financial-Times/create-origami-component)
+- [Financial-Times/create-origami-component](https://github.com/Financial-Times/create-origami-component)
    - Move description and keywords to the package.json
    - Update v2 workflows to current impl
 
-- [Financial-Times/origami-image-service](https://api.github.com/repos/Financial-Times/origami-image-service)
+- [Financial-Times/origami-image-service](https://github.com/Financial-Times/origami-image-service)
    - mention the ECONNREFUSED error so it appears when grepping
 
-- [Financial-Times/polyfill-library](https://api.github.com/repos/Financial-Times/polyfill-library)
+- [Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
    - Update Intl.DateTimeFormat browser config to match MDN
    - Element.prototype.getAttributeNames
 
-- [Financial-Times/o-table](https://api.github.com/repos/Financial-Times/o-table)
+- [Financial-Times/o-table](https://github.com/Financial-Times/o-table)
    - Allow for multiple filters to be declared declaratively
 
-- [Financial-Times/o-message](https://api.github.com/repos/Financial-Times/o-message)
+- [Financial-Times/o-message](https://github.com/Financial-Times/o-message)
    - Match padding left and right given a close button and centred message
    - Align feedback notices centre when there is one line of copy.
 
-- [Financial-Times/o-forms](https://api.github.com/repos/Financial-Times/o-forms)
+- [Financial-Times/o-forms](https://github.com/Financial-Times/o-forms)
    - Allow multi-line box-style radio button copy, making them taller.
    - Transparent radio buttons can make them look inactive
    - Add a white background to internal brand radio inputs.
 
-- [Financial-Times/o-topper](https://api.github.com/repos/Financial-Times/o-topper)
+- [Financial-Times/o-topper](https://github.com/Financial-Times/o-topper)
    - Include default link style for toppers with colour
 
-- [Financial-Times/o-grid](https://api.github.com/repos/Financial-Times/o-grid)
+- [Financial-Times/o-grid](https://github.com/Financial-Times/o-grid)
    - Restore snappy mode (de-deprecate)
 
-- [Financial-Times/o-share](https://api.github.com/repos/Financial-Times/o-share)
+- [Financial-Times/o-share](https://github.com/Financial-Times/o-share)
    - Make the new corporate icon from fticons available in o-share
