@@ -21,7 +21,7 @@ Some of the bigger Origami news from the last month:
 
 During January we announced our plan to [decommission the FT Bower Registry and migrate to the public npm registry](https://origami.ft.com/blog/2021/01/18/deprecating-bower-and-origami-via-npm/#who-does-this-affect).
 
-Work has now started on migrating the Origami components onto npm, 8 out of 66 of our component are now ready to be migrated. We aim to have all components, including documentation/guidance for how to migrate your products, complete by the start of Q3.
+Work has now started on migrating the Origami components onto npm, 8 out of 66 of our component are now migrated, ready to be released. We aim to have all components, including documentation/guidance for how to migrate your products, complete by the start of Q3.
 
 As a reminder, below is a copy of our planned timeline to decommission the FT Bower Registry.
 
@@ -35,13 +35,25 @@ As a reminder, below is a copy of our planned timeline to decommission the FT Bo
 
 ### New “Introduction to Origami components”workshop dates announced
 
-This workshop is great for people who are new to Origami or want a refresher on how to build with Origami.
+Please join us on 26th April for updated Introduction to Origami sessions! ✨
 
-The workshop contents has had a revamp, it has been rewritten to be better suited for a remote audience and includes xyz and abc
+Part 1 is useful for anyone who works in Product and Technology – we cover things at a high level rather than diving into too many technical details, including:
 
-The dates we plan to run the workshop on are:
-- 42nd of borktober (include link to the Google Calendar entry)
-- 57th of Coffeeuary (include link to the Google Calendar entry)
+- Origami History
+- Origami Components
+- Origami Services
+- Origami Collaboration
+
+Part 2 will explore components in more depth, including some technical details. It will be of particular interest to engineers and designers, although anyone is welcome:
+
+- Documentation
+- Languages & Tools
+- Structure
+- Versioning
+- Origami Build Service / Manual Build
+- Practical Tutorial (optional)
+
+We'll be running these on the 26th April, at a time suitable for London and Sofia. We'll share a recording for those who can't make it, but it would be great to see you there! Please let us know if you or someone on your team would like an invite.
 
 
 ### Guidance on how to customise an Origami component
@@ -59,56 +71,50 @@ We recently had an uptick in the amount of security researchers wanting to submi
 
 A digest of other things that have happened this month:
 
-- [Financial-Times/origami-build-service](https://github.com/Financial-Times/origami-build-service)
-   - Deprecated the use of `modules` for anything that's not in the allow-list.
-   - Error message "check your typos" updated to "check for typos".
-   - Added autoprefixer for css and using the same browser config as origami-build-tools.
-   - Only allows @financial-times namespaced components to be requested in v3.
-   - Renamed the modules and module query parameters to components and component in v3.
-   - Implemented the /v3/demo and /v3/demo/html endpoints.
+- [Financial-Times/o-fonts](https://github.com/Financial-Times/o-fonts)
+   - FinancierDisplayWeb was added to support Specialist Titles
 
 - [Financial-Times/o-layout](https://github.com/Financial-Times/o-layout)
-   - Add master brand support for default, bleed, documentation layouts.
-   - Support `figure` in the `o-layout-typography` wrapper.
-
-- [Financial-Times/origami-build-tools](https://github.com/Financial-Times/origami-build-tools)
-
-   - Add validation for package.json.browser field
-   - Add validation for package.json.name field
-   - Improve tests for verify-package-json
-   - Remove unused component fixture
-   - Verify package.json manifest has description and keywords
-   - Make `obt test --debug` watch for changes and rebuild tests.
-   - expect origamiVersion to be the "2.0" string
+   - To support the ongoing microsite project, o-layout now support the master brand for default, bleed, documentation layouts.
+      - Support was also added for the `figure` element in the `o-layout-typography` wrapper.
 
 - [Financial-Times/o-tracking](https://github.com/Financial-Times/o-tracking)
-   - Duplicate click events from multiple browser contexts
-   - Fix bug where loading spoor-id from the cookie would silently fail
+   - A couple of bugs were found and fixed which were sending invalid or duplicate events to Spoor:
+      - Duplicate click events from multiple browser contexts
+      - Fix bug where loading spoor-id from the cookie would silently fail
+
+- [Financial-Times/origami-build-service](https://github.com/Financial-Times/origami-build-service)
+   - Several updates were made in preparation for origami components being on npm:
+      - Added autoprefixer for css and using the same browser config as origami-build-tools.
+      - Only allows @financial-times namespaced components to be requested in v3.
+      - Renamed the modules and module query parameters to components and component in v3.
+      - Implemented the /v3/demo and /v3/demo/html endpoints.
+   - A security vulnerability was found and fixed by the Origami team:
+      - Deprecated the use of `modules` for anything that's not in the allow-list.
+
+- [Financial-Times/origami-build-tools](https://github.com/Financial-Times/origami-build-tools)
+   - Make `obt test --debug` watch for changes and rebuild tests.
+   - Several updates were made in preparation for origami components being on npm:
+      - Add validation for package.json.browser field
+      - Add validation for package.json.name field
+      - Improve tests for verify-package-json
+      - Remove unused component fixture
+      - Verify package.json manifest has description and keywords
+      - expect origamiVersion to be the "2.0" string
 
 - [Financial-Times/origami-repo-data](https://github.com/Financial-Times/origami-repo-data)
-   - Only read `keywords` property from the package.json manifest and not origami.json or bower.json
-   - Allow origami version to be the "2.0" string
-   - spec v2 component `Version`s have no `languages`, when they do
-   - Correct the languages property of spec v2 component versions
-   - Move `Version.createFromIngestion` logic.
-   - use v3 of the build service for spec v2 components
-
-- [Financial-Times/o-fonts](https://github.com/Financial-Times/o-fonts)
-   - Add FinancierDisplayWeb Light/Semibold support.
+   - Several updates were made in preparation for origami components being on npm:
+      - Only read `keywords` property from the package.json manifest and not origami.json or bower.json
+      - Allow origami version to be the "2.0" string
+      - use v3 of the build service for spec v2 components
+      - Correct the languages property of spec v2 component versions
 
 - [Financial-Times/create-origami-component](https://github.com/Financial-Times/create-origami-component)
-   - Move description and keywords to the package.json
-   - Update v2 workflows to current impl
-
-- [Financial-Times/origami-image-service](https://github.com/Financial-Times/origami-image-service)
-   - mention the ECONNREFUSED error so it appears when grepping
+   - Several updates were made in preparation for origami components being on npm:
+      - Moved description and keywords to the package.json instead of origami.json
 
 - [Financial-Times/polyfill-library](https://github.com/Financial-Times/polyfill-library)
-   - Update Intl.DateTimeFormat browser config to match MDN
-   - Element.prototype.getAttributeNames
-
-- [Financial-Times/o-table](https://github.com/Financial-Times/o-table)
-   - Allow for multiple filters to be declared declaratively
+   - Added a polyfill for Element.prototype.getAttributeNames
 
 - [Financial-Times/o-message](https://github.com/Financial-Times/o-message)
    - Match padding left and right given a close button and centred message
@@ -121,9 +127,6 @@ A digest of other things that have happened this month:
 
 - [Financial-Times/o-topper](https://github.com/Financial-Times/o-topper)
    - Include default link style for toppers with colour
-
-- [Financial-Times/o-grid](https://github.com/Financial-Times/o-grid)
-   - Restore snappy mode (de-deprecate)
 
 - [Financial-Times/o-share](https://github.com/Financial-Times/o-share)
    - Make the new corporate icon from fticons available in o-share
