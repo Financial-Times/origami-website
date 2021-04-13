@@ -105,7 +105,8 @@ const ignoredContributorTypes = ['Bot'];
     console.log('\n### Per Repo\n');
     for (let [repoUrl, content] of Object.entries(singleProjectContent)) {
         const repoId = repoUrl.replace('https://api.github.com/repos/', '');
-        console.log(`- [${repoId}](${repoUrl})\n`);
+        const url = repoUrl.replace('https://api.github.com/repos/', 'https://github.com/');
+        console.log(`- [${repoId}](${url})\n`);
         content.forEach(c => {
             console.log(`   - ${c.title} (opened by: ${c.opened_by}, closed by: ${c.closed_by}, updated at ${c.updated_at})\n`);
         })
