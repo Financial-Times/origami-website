@@ -1,6 +1,6 @@
 ---
 title: Initialising a component
-description: Documentation on how to initialise Origami components when you're install a component with a package manager (Bower/npm).
+description: Documentation on how to initialise Origami components when you're installing a component with a package manager (Bower/npm).
 cta: Learn how to initialise a component
 
 # Redirect from legacy URLs
