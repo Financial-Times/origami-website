@@ -10,7 +10,7 @@ redirect_from:
 
 # {{page.title}}
 
-Installing Origami components with a package manager (manual build) gives you more granular control over their styling and their behaviour within your project. It requires more set up though, so we're providing an in-depth walkthrough for building a page for an article about fruit.
+Installing Origami components with a package manager (manual build) gives you more granular control over their styling and their behaviour within your project. It requires more set up though, compared to [using the Origami Build Service](/docs/tutorials/build-service/), so we're providing an in-depth walkthrough for building a page for an article about fruit.
 
 This tutorial assumes that:
 - You have not implemented a build step
