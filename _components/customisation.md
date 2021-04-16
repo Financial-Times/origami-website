@@ -63,12 +63,12 @@ The "master" brand is the default brand, but your project may use any of the pro
 
 To select a brand within your project, see the tutorial for your method of including Origami components:
 
-- [Build service tutorial](/docs/tutorials/build-service/#selecting-a-brand)
-- [Manual build tutorial](/docs/tutorials/manual-build/#selecting-a-brand)
+- [Origami Build Service tutorial](/docs/tutorials/build-service/#selecting-a-brand)
+- [Package manager (Bower/npm) tutorial](/docs/tutorials/manual-build/#selecting-a-brand)
 
 ### Customise A Brand
 
-If your project has access to a component's Sass API (see the [manual build tutorial](/docs/tutorials/manual-build/#selecting-a-brand)) it is possible to customise your chosen brand. For example, at the time of writing, the [`oTypographySetFont`](https://registry.origami.ft.com/components/o-typography@6.4.5/sassdoc?brand=master#mixin-otypographysetfont) mixin can be used to customise component fonts. This customises the font used by all components included in your project.
+If your project has access to a component's Sass API (see the [package manager (Bower/npm) tutorial](/docs/tutorials/manual-build/#selecting-a-brand)) it is possible to customise your chosen brand. For example, at the time of writing, the [`oTypographySetFont`](https://registry.origami.ft.com/components/o-typography@6.4.5/sassdoc?brand=master#mixin-otypographysetfont) mixin can be used to customise component fonts. This customises the font used by all components included in your project.
 
 <aside>
 Not all components support brand customisation but the Origami team are happy for support to be added as needed. Ask the core Origami team about new features in the <a href="https://financialtimes.slack.com/messages/{{site.data.contact.slack}}">#{{site.data.contact.slack}}</a> Slack channel.
