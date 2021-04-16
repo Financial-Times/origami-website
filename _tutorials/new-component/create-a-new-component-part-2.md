@@ -150,7 +150,7 @@ First we will update our border colour using [o-colors](https://registry.origami
 
 ### Install Component Dependencies
 
-The first step is to install each component we want to use via [Bower](https://bower.io/) (a package manager like [NPM](https://www.npmjs.com/)). In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file. We recommend adding it to your home directory `~/.bowerrc`:
+The first step is to install each component we want to use via [Bower](https://bower.io/) (a package manager like [npm](https://www.npmjs.com/)). In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file. We recommend adding it to your home directory `~/.bowerrc`:
 <pre><code class="o-syntax-highlight--json">{
 	"registry": {
 		"search": [

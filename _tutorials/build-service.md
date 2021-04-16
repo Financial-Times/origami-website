@@ -1,5 +1,5 @@
 ---
-title: The Build Service
+title: Include Components Using the Origami Build Service
 description: A step-by-step tutorial which teaches you how to use Origami components via the Origami Build Service.
 cta: Learn how to build web pages using the Build Service
 

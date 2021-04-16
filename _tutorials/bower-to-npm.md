@@ -1,5 +1,5 @@
 ---
-title: Migrate From Bower To NPM
+title: Migrate From Bower To npm
 description: An advanced tutorial which explains how to migrate from installing Origami components via Bower, to installing them via npm.
 cta: Learn how to migrate to npm
 ---
@@ -90,7 +90,7 @@ If using Sass from Origami, you do not need to change the `@import` or `@include
 
 ## Troubleshooting
 
-### NPM errors with ETARGET error
+### npm errors with ETARGET error
 This is due to the version of the package not being on npm, you will need to upgrade to the latest version of the package in order to use it via npm.
 
 ### Sass cannot build
