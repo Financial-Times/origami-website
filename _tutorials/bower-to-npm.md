@@ -1,21 +1,40 @@
 ---
-title: Migrate From Bower To npm
+title: Migrate from Bower to npm
 description: An advanced tutorial which explains how to migrate from installing Origami components via Bower, to installing them via npm.
 cta: Learn how to migrate to npm
+
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/tutorials/npm/
 ---
 
 # {{page.title}}
 
-Want to know npm best practices for Origami? [Refer to our Origami on npm guide](/docs/tutorials/npm/).
+Origami components may be installed using Bower or npm package managers, however npm is considered experimental. Before migrating to npm you may want to wait until new versions of components are released which drop bower support, in favour of npm only. [Origami components will be migrated to npm fully by Q3 2021](/blog/2021/01/18/deprecating-bower-and-origami-via-npm/).
 
-## TLDR
+## Current Benefits
+
+- Tooling such as Dependabot/Renovate/Greenkeeper/Snyk will work for the Origami dependencies you have.
+- Other tooling which by default only work with npm dependencies will now work without requiring any changes. I.E. Webpack.
+
+## Current Drawbacks
+
+- The Origami Team have not finalised how Origami components on npm should work, it is considered not stable and future major releases will change the interface of our npm packages.
+- Need to use extra tooling to ensure multiple versions of Origami are not included in the dependency tree.
+- Documentation for Origami assumes the Bower interface and not the npm interface. I.E. The package-names don't start with `@financial-times`.
+
+_Note: These [drawbacks will be addressed with component updates by Q3 2021](/blog/2021/01/18/deprecating-bower-and-origami-via-npm/)._
+
+## Migrating a project which uses Origami components from bower to npmjs
+
+### TLDR
 - package-names now begin with @financial-times.
 - JavaScript imports now require @financial-times at the start
 - Sass imports stay the same, they don't require @financial-times at the start
 - Sass needs to have an "includePaths" which contains "node_modules/@financial-times" and not "bower_components"
 
-## Migrating a project which uses Origami components from bower to npmjs
 
+### Replace bower.json
 
 Copy all Origami dependencies from bower.json.dependencies and place in package.json.dependencies and then prepend their names with @financial-times.
 
@@ -77,6 +96,8 @@ Run `npm install`, if it fails and says something similar to "code ETARGET No ma
 
 Once you can run `npm install` and it completes a full installation, you can move on to updating the code in your project to use the <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> version of Origami.
 
+### Update JavaScript imports
+
 Origami components on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> have their JavaScript code namespaced onto `@financial-times`. This means that in your code you will need to update all `require`/`import` calls to include this namespace.
 
 E.G.
@@ -86,7 +107,36 @@ If you are doing any `require`/`import` calls to files within the `src` folder, 
 E.G.
 `import Layout from "o-layout/src/js/layout";` would become `import Layout from "@financial-times/o-layout/dist/js/layout";`
 
-If using Sass from Origami, you do not need to change the `@import` or `@include` however you will need to update the Sass-compiler's IncludePath to have `node_modules` and `node_modules/@financial-times`, instead of `bower_components`.
+### Update Sass imports
+
+If using Sass from Origami, you do not need to change the `@import` or `@include` however you will need to update the Sass-compiler's `includePaths` option to list `node_modules` and `node_modules/@financial-times`, instead of `bower_components`.
+
+This can usually be done via the `.sassrc` file, like below:
+```json
+{
+	"includePaths": [
+        "node_modules",
+        "node_modules/@financial-times"
+    ]
+}
+```
+
+### Avoid multiple versions of Origami in the dependency tree
+
+There is a tool called [is-origami-flat](https://www.npmjs.com/package/is-origami-flat) which can be used to report about any Origami packages which are included with more than one version. E.G. Detecting that `@financial-times/o-table@6` and `@financial-times/o-table@7` are both in the dependency tree.
+
+Below we will set up [is-origami-flat](https://www.npmjs.com/package/is-origami-flat) to fail a project which has multiple versions of Origami dependencies.
+
+Here is how to use it with an npm/yarn/pnpm project:
+
+
+1. Run the package `is-origami-flat` before `npm pack`/`npm publish`/`npm install` by adding a `prepare` script to the `package.json`.
+
+``` json
+{
+    "prepare": "npx is-origami-flat"
+}
+```
 
 ## Troubleshooting
 
