@@ -331,7 +331,6 @@ This example joins all of the property snippets outlined above:
 <pre><code class="o-syntax-highlight--json">{
 	"origamiType": "component",
 	"origamiVersion": "2.0",
-	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-table/issues",
 	"supportStatus": "active",
 	"supportContact": {
