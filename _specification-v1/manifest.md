@@ -81,32 +81,7 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 </table>
 
 For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
-If the brands property does not exist, this means the component supports all the brands. 
-
-### origamiCategory
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code>*</td>
-	</tr>
-</table>
-
-*Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`.
-
-Describes the organisational category the component belongs to. **Must** be one of:
-- `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
-- `"primitives"`: Base components that provide minimal markup and are used by other components
-- `"components"`: Components built from primitives and utilities, which provide markup for a complete user interface
-- `"layouts"`: Complex components that provide styles for the whole page
-
-<pre><code class="o-syntax-highlight--json">{
-	"origamiCategory": "components"
-}</code></pre>
+If the brands property does not exist, this means the component supports all the brands.
 
 ### support
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
