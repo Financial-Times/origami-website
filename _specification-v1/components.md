@@ -51,7 +51,6 @@ Origami components **must** include the following files:
   - `main.js` **_if_** the component has JavaScript functionality
   - `main.scss` **_if_** the component has styles
   - `origami.json` as outlined in [Origami.json manifest](#origamijson-manifest) above
-  - `package.json` as to ensure the component is installable via the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>
 
 _The rest of this section is non-normative._
 

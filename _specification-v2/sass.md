@@ -14,6 +14,10 @@ collection_listing_display: false
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
 
+## Sass compiler
+
+Origami components **must** be able to be compiled with the <a href="https://sass-lang.com/dart-sass" class="o-typography-link--external">Dart-sass</a> compiler with a <a href="https://sass-lang.com/documentation/at-rules/use#load-paths" class="o-typography-link--external">load path</a> that only contains `node_modules`.
+
 ## Syntax Convention
 
 Sass **must** validate using the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, though exceptions **may** be enabled temporarily within a component <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">using Stylelint comments</a>.
@@ -113,7 +117,7 @@ Silent mode means a component's Sass will compile to an empty string, but provid
 
 Components that make use of styles defined in other components which support silent mode **must** use those styles silently, e.g. for a component `o-foo` which depends on `o-bar`:
 ```
-@import ‘o-bar/main’;
+ @import '@financial-times/o-bar/main';
 
 @mixin oFoo {
     .o-foo {
@@ -228,7 +232,7 @@ To support a [core and enhanced experience](/docs/components/compatibility/#core
 
 To detect other features, standardised feature detects **should** be used as a preference, such as the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" class="o-typography-link--external">@supports</a> at-rule. Otherwise a CSS class on the `documentElement` **may** be used to indicate feature support. The class name **should** be configurable, and default to the class name used by <a href="https://modernizr.com/" class="o-typography-link--external">Modernizr</a>:
 ```
-$o-thing-inline-svg-support: ‘.inlinesvg’ !default;
+$o-thing-inline-svg-support: '.inlinesvg' !default;
 $o-thing-inline-svg-support .o-thing__feature {
     // inline svg
 }
@@ -247,7 +251,7 @@ In order of preference, when targeting styles at a specific browser or user-agen
 - Use <a href="http://browserhacks.com/" class="o-typography-link--external">browser hacks</a>:
 ```
 .el {
-    background: url(‘data:image/png;base64,/* data */’) bottom right no-repeat;
+    background: url('data:image/png;base64,/* data */') bottom right no-repeat;
 
     // IE < 8 don't support data-uri, fallback to border bottom instead:
     *border-bottom: 1px solid #eeeeee;

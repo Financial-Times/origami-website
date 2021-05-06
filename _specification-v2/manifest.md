@@ -16,24 +16,6 @@ nav_order: 25
 
 ## Properties
 
-### description
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
-	</tr>
-</table>
-
-**Should** be a concise description of the purpose of the project.
-<pre><code class="o-syntax-highlight--json">{
-	"description": "Branded tables"
-}</code></pre>
-
 ### origamiType
 
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
@@ -80,9 +62,9 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-**Must** be set to `1`. It is the version of Origami to which the project conforms.
+**Must** be set to the string `"2.0"`. It is the version of Origami to which the project conforms.
 <pre><code class="o-syntax-highlight--json">{
-	"origamiVersion": 1
+	"origamiVersion": "2.0"
 }</code></pre>
 
 ### brands
@@ -99,50 +81,6 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 </table>
 
 For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
-
-### keywords
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>Array</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code></td>
-	</tr>
-</table>
-
-Expects keywords related to the project to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
-
-<pre><code class="o-syntax-highlight--json">{
-	"keywords": ["table", "rows", "columns"]
-}</code></pre>
-
-### origamiCategory
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>String</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>true</code>*</td>
-	</tr>
-</table>
-
-*Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`.
-
-Describes the organisational category the component belongs to. **Must** be one of:
-- `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
-- `"primitives"`: Base components that provide minimal markup and are used by other components
-- `"components"`: Components built from primitives and utilities, which provide markup for a complete user interface
-- `"layouts"`: Complex components that provide styles for the whole page
-
-<pre><code class="o-syntax-highlight--json">{
-	"origamiCategory": "components"
-}</code></pre>
 
 ### support
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
@@ -390,11 +328,8 @@ Each object in the list accepts the following properties:
 This example joins all of the property snippets outlined above:
 
 <pre><code class="o-syntax-highlight--json">{
-	"description": "Branded tables",
 	"origamiType": "component",
-	"origamiVersion": 1,
-	"keywords": ["table", "rows", "columns"],
-	"origamiCategory": "components",
+	"origamiVersion": "2.0",
 	"support": "https://github.com/Financial-Times/o-table/issues",
 	"supportStatus": "active",
 	"supportContact": {

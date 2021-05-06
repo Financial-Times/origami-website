@@ -19,11 +19,6 @@ collection_listing_display: false
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
 
-## Sass compiler
-
-Origami components **must** be able to be compiled with the <a href="https://sass-lang.com/dart-sass" class="o-typography-link--external">Dart-sass</a> compiler with a <a href="https://sass-lang.com/documentation/at-rules/use#load-paths" class="o-typography-link--external">load path</a> that only contains `node_modules`.
-
-
 ## Syntax Convention
 
 
@@ -126,7 +121,7 @@ Silent mode means a component's Sass will compile to an empty string, but provid
 
 Components that make use of styles defined in other components which support silent mode **must** use those styles silently, e.g. for a component `o-foo` which depends on `o-bar`:
 ```
-@import '@financial-times/o-bar/main';
+@import 'o-bar/main';
 
 @mixin oFoo {
     .o-foo {
