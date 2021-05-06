@@ -16,6 +16,7 @@ Want to know npm best practices for Origami? [Refer to our Origami on npm guide]
 
 ## Migrating a project which uses Origami components from bower to npmjs
 
+The first step is to update to the latest version of the Origami components on Bower, this is because only the latest version of Origami components are on npm.
 
 Copy all Origami dependencies from bower.json.dependencies and place in package.json.dependencies and then prepend their names with @financial-times.
 
