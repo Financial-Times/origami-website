@@ -3,10 +3,6 @@ title: Service Specification
 description: A specification which describes what is required when building Origami web services.
 cta: Read the service spec
 
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/component-spec/web-services/
-
 # Navigation config
 nav_display: true
 nav_label: Services
@@ -45,7 +41,7 @@ Services **must** also include a mandatory version number for all API endpoints.
 - `www.ft.com/__origami/service/most-popular/v2/<endpoint>`
 - `www.ft.com/__origami/service/jobs/v3/<endpoint>`
 
-The api endpoint which follows the service version **must** be RESTful, i.e. use the most appropriate HTTP verb and URLs that semantically describe the resource to be acted upon.
+The api endpoint which follows the serevice version **must** be RESTful, i.e. use the most appropriate HTTP verb and URLs that semantically describe the resource to be acted upon.
 
 The service's root path `/` **must** redirect to the latest API version.
 

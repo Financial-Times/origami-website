@@ -3,11 +3,6 @@ title: Component Specification
 description: A specification which describes what is required for a front-end component to be considered Origami-compatible, and included in our registry.
 cta: Read the component spec
 
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/component-spec/modules/
-  - /docs/background-linters/
-
 # Navigation config
 nav_display: true
 nav_label: Components
@@ -26,7 +21,7 @@ Origami components are repositories containing front end code which can be used 
 
 ## Origami.json manifest
 
-All Origami components **must** contain an `origami.json` file at the top of the repository's directory structure. The [`origami.json` manifest specification](/spec/v1/manifest/) covers the contents of this file. In addition to the rules outlined in the manifest specification, Origami components **must** set the `origamiType` property in the JSON to `"module"`.
+All Origami components **must** contain an `origami.json` file at the top of the repository's directory structure. The [`origami.json` manifest specification](/spec/v2/manifest/) covers the contents of this file. In addition to the rules outlined in the manifest specification, Origami components **must** set the `origamiType` property in the JSON to `"module"`.
 
 <aside>
 	The <code>origamiType</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to change in a later version of the spec.
@@ -51,7 +46,6 @@ Origami components **must** include the following files:
   - `main.js` **_if_** the component has JavaScript functionality
   - `main.scss` **_if_** the component has styles
   - `origami.json` as outlined in [Origami.json manifest](#origamijson-manifest) above
-  - `package.json` as to ensure the component is installable via the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>
 
 _The rest of this section is non-normative._
 
@@ -70,7 +64,6 @@ A component's folder structure **may** be organised as follows. The following is
 │   ├── js (containing JavaScript files)
 │   └── scss (containing SCSS files)
 ├── test (containing JavaScript and Sass tests)
-├── bower.json
 ├── README.md
 ├── main.js
 ├── main.scss
@@ -79,88 +72,53 @@ A component's folder structure **may** be organised as follows. The following is
 </pre>
 
 
+
 ## Package management
 
-Origami components **must** be installable through at least one package manager (individual package managers detailed below).
+Origami components **must** be installable through the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>.
 
-When a consumer attempts to use a component and finds that it is installable through a particular package manager, they **should** be able to assume that the same package manager can be used to install _any_ Origami component.
-
-### Bower
-
-Origami components **must** be installable through the <a href="https://bower.io/" class="o-typography-link--external">Bower package manager</a>, and **should** include a `bower.json` manifest file which configures the component. The component **should not** be published to the public Bower registry (through `bower register` or similar).
-
-<aside>
-  Origami components are not published to the public Bower registry because they can be accessed through the Origami Bower Registry.
-  <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Read the service documentation</a> for more information.
-</aside>
-
-As well as following the <a href="https://github.com/bower/spec/blob/master/json.md" class="o-typography-link--external">`bower.json` spec</a>, there are additional requirements to make the component's Bower manifest conform to the Origami specification:
-
-  - It **must** include a `name` property set to the repository name, e.g. `o-typography`
-  - It **must** include a `main` property set to an array which **must**:
-    - reference the component's main JavaScript file (`main.js`) **_if_** it exists
-    - reference the component's main Sass file (`main.scss`) **_if_** it exists
-  - It **must** include a `dependencies` property set to an object **_if_** the component has any Origami dependencies. Each key/value pair **must**:
-    - reference a semver range and **not** a Git repository or URL
-    - **not** reference an unstable or beta version of a dependency
-  - It **must** include an `ignore` property set to an array, which **must**:
-    - include all files and directories in the component that are not required by consumers (see [ignored files](#bower-ignored-files) for an example configuration)
-    - **not** contain the files: `origami.json`, `README.md`, and files required to build demos
-  - It **must not** include a `version` property. This is not needed and risks being out of sync with the repository's git tags
-  - It **may** contain a `description` property set to a short description of the component
-  - It **should not** contain any additional properties
-
-#### Bower ignored files
-
-_This section is non-normative._
-
-The following is the list of ignored files in most component Bower configurations. This **may** be used as a starting point for new components:
-
-<pre><code class="o-syntax-highlight--json">"ignore": [
-	"**/.*",
-	"node_modules",
-	"bower_components",
-	"test",
-	"build"
-]</code></pre>
 
 ### npm
 
-Origami components **may** include a `package.json` manifest. As well as following the <a href="https://docs.npmjs.com/files/package.json" class="o-typography-link--external">`package.json` spec</a>, there are additional requirements to make the component's npm manifest conform to the Origami specification:
+Origami components **must** include a `package.json` manifest, **must** be installable through the <a href="https://npmjs.com/" class="o-typography-link--external">npm package manager</a>, and **must** be published under one of the following <a href="https://docs.npmjs.com/cli/v7/using-npm/scope" class="o-typography-link--external">npm scopes</a>:
+  - `@financial-times`
 
-  - It **must not** include any of the following properties: `bin`, `bugs`, `config`, `cpu`, `dependencies` (as this would indicate that the manifest is required for consumption of the component), `engines`, `engineStrict`, `files`, `main`, `os`, `preferGlobal`, `publishConfig`
-  - It **must not** include a `version` property
-  - It **must** include a `devDependencies` property set to an object **_if_** the component has any npm dependencies required for development or testing
-  - It **should** include a `private` property set to `true`
-  - It **may** include any other standard npm-defined property
+As well as following the <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json" class="o-typography-link--external">`package.json` spec</a>, there are additional requirements to make the component's `package.json` manifest conform to the Origami specification:
+
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#name">`name`</a> property set to the package name, e.g. `@financial-times/o-typography`.
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property set to the component's main JavaScript file (`main.js`) **_if_** it exists.
+  - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser">`browser`</a> property **_if_** the component's main JavaScript file (`main.js`) does not exist.
+  - It **must** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#description">`description`</a> property set to a short description of the component.
+  - It **must** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#keywords">`keywords`</a> property in order to help users discover the right component.
+  - It **must not** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#main">`main`</a> property.
+  - It **must** include a <a href="https://nodejs.org/api/packages.html#packages_type">`type`</a> property set to `"module"`.
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#license">`license`</a> property set to the <a href="https://spdx.org/licenses/" class="o-typography-link--external">SPDX license identifier</a> for the license the Origami component is using, e.g. `"MIT"`.
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#devdependencies">`devDependencies`</a> property set to an object **_if_** the component has any npm dependencies required for development or testing.
+
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#peerdependencies">`peerDependencies`</a> property set to an object **_if_** the component has any production sass dependencies or production dependencies which are also Origami components.
+  - It **must** include a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#dependencies">`dependencies`</a> property set to an object **_if_** the component has any production javascript dependencies which are not also Origami components.
+  - It **must** include an <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#engines">`engines`</a> property set to an object which has an `npm` property set to a SemVer range which disallows anything below `v7.0.0`. E.G. `^7` would be valid as would `>= 7`.
+  - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#bugs">`bugs`</a> property set to the url of the issue-tracker for the component.
+  - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#repository">`repository`</a> property set to the url of the git repository for the component.
+  - It **may** contain a <a href="https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html#including-declarations-in-your-npm-package">`types`</a> property set to component's TypeScript declaration file.
+  - It **may** contain a <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#homepage">`homepage`</a> property set to the url of the component on the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, e.g. `"https://registry.origami.ft.com/components/o-table"`
+  - It **may** include an <a href="https://nodejs.org/api/packages.html#packages_conditional_exports">`exports`</a> property set to an object which a `browser` field which is set to the component's main JavaScript file (`main.js`) **_if_** it exists. e.g. `"exports": {".": {"browser": "./main.js"}},`.
+  - It **must not** include any of the following properties: `bin`, `config`, `cpu`, `os`, `preferGlobal`.
+
+<aside>
+  Origami components are published to the <a href="https://www.npmjs.com/" class="o-typography-link--external">public npm registry</a>.
+</aside>
 
 
 ### Specifying dependencies
 
-Components **should** have as few dependencies as possible. When a dependency is not required for use in production, it **should** be listed as a development dependency in whichever package manager you use.
+Components **should** have as few dependencies as possible. When a dependency is not required for use in production but is required for development or testing purposes, it **must** be listed as a development dependency.
 
-Dependencies used in a component **must** be added explicitly to the package manager config. Components **must not** rely on code from sub-dependencies (see example).
+Dependencies used in a component **must** be added explicitly to the component's `package.json` manifest file. Components **must not** rely on code from sub-dependencies, also known as transitive-dependencies (see example).
 
 <aside>
   Sub-dependency example: if <code>o-component-a</code> includes <code>o-component-b</code> as a dependency and a new component you're developing requires features from both, then both must be added as explicit dependencies – you must not depend on <code>o-component-a</code> alone.
 </aside>
-
-When listing dependencies in your `bower.json` manifest, the <a href="https://semver.org/" class="o-typography-link--external">SemVer</a> range that you specify:
-
-  - **must** be specified in a way that allows `MINOR` and `PATCH` to automatically update. This is normally achieved by using the caret (`^`) operator
-  - **must** be greater than or equal to `1.0.0`
-  - **must not** contain a SemVer prerelease suffix, e.g. `1.0.0-beta`
-
-(See the example for clarification).
-
-<aside>
-  <p>Examples of spec-compliant dependency versions: <code>^1.0.0</code>, <code>&lt;3</code></p>
-  <p>Examples of non-spec-compliant dependency versions: <code>^0.1.0</code>, <code>1.0.0</code>, <code>~1.0.0</code>, <code>^2.0.0-beta.4</code></p>
-</aside>
-
-When an Origami component is a dependency of many other Origami components, it **must** verify and assert the widest version compatibility possible, including maintaining compatibility with earlier versions of a dependency unless to do so would be impractical. E.g. specifying a broad version range like `"o-colors": ">=3.0.0 <5"`
-
-<aside>If you want to understand more about how a SemVer expression matches specific versions, try <a href="https://semver.npmjs.com/" class="o-typography-link--external">npm's SemVer calculator</a>.</aside>
 
 
 ## Source control
@@ -179,25 +137,17 @@ Commit messages **should** describe the change that they introduce to a componen
 
 ### Markup
 
-See [the Origami Markup Specification](/spec/v1/components/markup).
+See [the Origami Markup Specification](/spec/v2/components/markup).
 
 ### Styles
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax.
 
-See [the Origami Sass Specification](/spec/v1/components/sass).
+See [the Origami Sass Specification](/spec/v2/components/sass).
 
 ### Behaviour
 
-See the [Origami javascript specification](/spec/v1/components/javascript).
-
-### Subresources
-
-Origami components **may** load additional files (fonts, JSON data, images etc) from their own source. To do so safely, components **must** resolve file paths using the <a href="https://github.com/Financial-Times/o-assets" class="o-typography-link--external">Origami assets module</a>:
-
-Without any explicit configuration, `o-assets` will assume, as we do for sub-resources in Sass, that the components are installed publicly at a URL path of `/bower_components` on the current host, and will form URLs on that basis.  Product developers are advised to reconfigure `o-assets` to accommodate their own server-side URL routing architecture.
-
-Where external resources are not within Origami components, a <a href="https://www.paulirish.com/2010/the-protocol-relative-url/" class="o-typography-link--external">protocol-relative</a> URL **must** be used (see <a href="https://github.com/Financial-Times/ft-origami/issues/173" class="o-typography-link--external">issue 173</a>.
+See the [Origami javascript specification](/spec/v2/components/javascript).
 
 ## Testing
 
@@ -205,9 +155,15 @@ Where external resources are not within Origami components, a <a href="https://w
 
 Components **should** include automated tests which at least verify that the component can be built using <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>.
 
-A component author **may** additionally test their component however they like, providing that all test-related files **should** be in the `test` directory, and also ignored as outlined in [Bower ignored files](#bower-ignored-files). A component **may** use Origami Build tools to run the tests for consistency:
+A component author **may** additionally test their component however they like, providing that all test-related files **should** be in the `test` directory. A component **may** use Origami Build tools to run the tests for consistency:
 
 <pre><code class="o-syntax-highlight--bash">npx origami-build-tools test</code></pre>
+
+### Linting
+
+Component JavaScript and Sass source code **should** be linted. A component author **may** use <a href="https://github.com/Financial-Times/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a> to do this:
+
+<pre><code class="o-syntax-highlight--bash">npx origami-build-tools verify</code></pre>
 
 ### Continuous integration
 
@@ -249,7 +205,7 @@ All components **must** be tested with all the browsers listed in the [FT browse
 
 ## Demos
 
-Component authors **should** provide component demos, which **must** be [defined in origami.json](/spec/v1/manifest/#demos) and built with <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>.
+Component authors **should** provide component demos, which **must** be [defined in origami.json](/spec/v2/manifest/#demos) and built with <a href="https://www.npmjs.com/package/origami-build-tools" class="o-typography-link--external">Origami Build Tools</a>.
 
 When deciding what demos to create, demos:
 - **Must** be based on realistic use cases.
@@ -257,7 +213,7 @@ When deciding what demos to create, demos:
 - **Should not** be used to explain configuration and implementation differences, these should be explained in the component’s README.
 
 When building demos, they:
-- **Must** have a description explaining what they show ([see origami.json](/spec/v1/manifest/#demos)).
+- **Must** have a description explaining what they show ([see origami.json](/spec/v2/manifest/#demos)).
 - **Should** be reproducable using the [Origami Build Service](/docs/services/#build-service) by copying the demo markup.
 - **Should not** include more than necessary to demonstrate the component, including: any headings, backgrounds, margins or other content that are not part of the component itself.
 
@@ -306,7 +262,7 @@ When new versions of components are released, updates **may** be needed to other
 
 In the event of deprecating an Origami component, the following steps **must** be followed:
 
-1. Modify [origami.json](/spec/v1/manifest/) to change the `supportStatus` to `deprecated`.
+1. Modify [origami.json](/spec/v2/manifest/) to change the `supportStatus` to `deprecated`.
 2. Change the `README.md` to have a paragraph at the top outlining the deprecation status. If it has been replaced, it must point to the new replacement component from the deprecated component.
 3. Disable the Issues functionality from the deprecated component's repository, if the component is hosted on Github.
 4. Update the repository's description to "deprecated - please use <component> instead" if it has been replaced and change the URL to point towards the replacement's repository on GitHub.

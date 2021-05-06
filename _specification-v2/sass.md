@@ -1,12 +1,7 @@
 ---
 title: Sass Specification
 description: An overview of how the Origami team writes Sass.
-permalink: /spec/v1/components/sass/
-
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/syntax/scss/
-  - /spec/v1/sass/
+permalink: /spec/v2/components/sass/
 
 # Navigation config
 nav_display: false
@@ -19,17 +14,9 @@ collection_listing_display: false
 
 Origami component styles are authored in <a href="http://sass-lang.com/" class="o-typography-link--external">Sass</a>, specifically the SCSS syntax. Sass features **should** be used only where they result in increased clarity and reuse. Care should be taken that the resulting CSS is not compromised by unnecessary Sass nesting.
 
-## Sass compiler
-
-Origami components **must** be able to be compiled with the <a href="https://sass-lang.com/dart-sass" class="o-typography-link--external">Dart-sass</a> compiler with a <a href="https://sass-lang.com/documentation/at-rules/use#load-paths" class="o-typography-link--external">load path</a> that only contains `node_modules`.
-
-
 ## Syntax Convention
 
-
-Sass **must** be linted with [Stylelint](https://stylelint.io/).
-
-Developers **should** stick to the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, since this represents a common standard across FT teams. Custom linting **may** be defined at the component level with a `.stylelintrc.js` file, or at the file level with <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">Stylelint comments</a>.
+Sass **must** validate using the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a>, though exceptions **may** be enabled temporarily within a component <a href="https://stylelint.io/user-guide/rules/comment-empty-line-before#stylelint-commands" class="o-typography-link--external">using Stylelint comments</a>.
 
 By default the <a href="https://github.com/Financial-Times/stylelint-config-origami-component" class="o-typography-link--external">Origami Stylelint rules</a> enforce a tab indentation style. However indentation style (tabs or spaces) is not standardised: developers **must** respect whatever indent type is already in use when editing existing components. To change indentation style update the component's [`.stylelintrc.js` configuration](https://stylelint.io/user-guide/configure).
 
@@ -57,7 +44,7 @@ Sass mixins and functions **must** also be prefixed with the component name, and
 
 ## CSS Selectors
 
-A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v1/components/sass/#naming-conventions)).
+A component **must not** style an element unless it, or any ancestor element, has a CSS class which starts with the name of the component e.g. `o-componentname` (see [naming conventions](/spec/v2/components/sass/#naming-conventions)).
 
 - Good: `.o-thing {}`
 - Bad: `body {}`
@@ -101,11 +88,11 @@ As Sass has limited encapsulation, any Sass (e.g. mixin, function, variable) tha
 
 ## Sass Includes
 
-If a component contains SCSS files other than the main file listed in `bower.json`:
+If a component contains SCSS files other than the root `main.scss` file:
 
 - Files for import **must** be prefixed with an underscore, to [indicate privacy](#private-sass).
 - All import statements **must** be imported before any other Sass.
-- All import statements **should** be in the components’s main file.
+- All import statements **should** be in the components’s `main.scss` file.
 - Sass variables, mixins, and functions **should** be in their own files.
 
 ## Sass Variables
@@ -126,7 +113,7 @@ Silent mode means a component's Sass will compile to an empty string, but provid
 
 Components that make use of styles defined in other components which support silent mode **must** use those styles silently, e.g. for a component `o-foo` which depends on `o-bar`:
 ```
-@import '@financial-times/o-bar/main';
+@import ‘o-bar/main’;
 
 @mixin oFoo {
     .o-foo {
@@ -186,7 +173,7 @@ See [component brand documentation](/docs/components/branding/) for more details
 
 ### Register Supported Brands
 
-If a component supports brands, it **must** register the brands it supports under the `brands` property in its [`origami.json`](/spec/v1/manifest/) file. E.g. to support all three Origami brands add:
+If a component supports brands, it **must** register the brands it supports under the `brands` property in its [`origami.json`](/spec/v2/manifest/) file. E.g. to support all three Origami brands add:
 
 ```json
 "brands" : [
@@ -198,8 +185,7 @@ If a component supports brands, it **must** register the brands it supports unde
 
 #### Include o-brand
 
-Components which support brands and have brand specific features/designs **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
-
+Components which support brands **must** include the [o-brand](https://registry.origami.ft.com/components/o-brand/readme) component as a dependency, which provides functions and mixins to customise a component per brand.
 
 The `o-brand` component **must not** be used directly by projects, it is intended for use within Origami components.
 
@@ -242,7 +228,7 @@ To support a [core and enhanced experience](/docs/components/compatibility/#core
 
 To detect other features, standardised feature detects **should** be used as a preference, such as the CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports" class="o-typography-link--external">@supports</a> at-rule. Otherwise a CSS class on the `documentElement` **may** be used to indicate feature support. The class name **should** be configurable, and default to the class name used by <a href="https://modernizr.com/" class="o-typography-link--external">Modernizr</a>:
 ```
-$o-thing-inline-svg-support: '.inlinesvg' !default;
+$o-thing-inline-svg-support: ‘.inlinesvg’ !default;
 $o-thing-inline-svg-support .o-thing__feature {
     // inline svg
 }
@@ -261,7 +247,7 @@ In order of preference, when targeting styles at a specific browser or user-agen
 - Use <a href="http://browserhacks.com/" class="o-typography-link--external">browser hacks</a>:
 ```
 .el {
-    background: url('data:image/png;base64,/* data */') bottom right no-repeat;
+    background: url(‘data:image/png;base64,/* data */’) bottom right no-repeat;
 
     // IE < 8 don't support data-uri, fallback to border bottom instead:
     *border-bottom: 1px solid #eeeeee;

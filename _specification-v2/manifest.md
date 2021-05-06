@@ -3,10 +3,6 @@ title: Origami.json Manifest Specification
 description: A specification which describes the required structure of an Origami.json manifest file.
 cta: Read the manifest spec
 
-# Redirect from legacy URLs
-redirect_from:
-  - /docs/syntax/origamijson/
-
 # Navigation config
 nav_display: true
 nav_label: Manifest
@@ -19,6 +15,24 @@ nav_order: 25
 `origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami project.
 
 ## Properties
+
+### description
+
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
+	<tr>
+		<th scope="row" role="rowheader">Type</th>
+		<td><code>String</code></td>
+	</tr>
+	<tr>
+		<th scope="row" role="rowheader">Required</th>
+		<td><code>true</code></td>
+	</tr>
+</table>
+
+**Should** be a concise description of the purpose of the project.
+<pre><code class="o-syntax-highlight--json">{
+	"description": "Branded tables"
+}</code></pre>
 
 ### origamiType
 
@@ -34,9 +48,9 @@ nav_order: 25
 </table>
 
 Defines the type of Origami project that the manifest belongs to. **Must** be set to one of:
-- `"component"` or `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
+- `"component"`: A front-end component that follows [the component specification](/spec/v2/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
-- `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
+- `"service"`: An HTTP service that follows [the service specification](/spec/v2/services/)
 - `"cli"`: 	A command line tool
 - `"library"`: 	A library that is not a front-end component
 - `"website"`: Origami websites that aren't intended to be services
@@ -66,9 +80,9 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-**Must** be set to the string `"2.0"`. It is the version of Origami to which the project conforms.
+**Must** be set to `1`. It is the version of Origami to which the project conforms.
 <pre><code class="o-syntax-highlight--json">{
-	"origamiVersion": "2.0"
+	"origamiVersion": 1
 }</code></pre>
 
 ### brands
@@ -85,7 +99,50 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 </table>
 
 For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
-If the brands property does not exist, this means the component supports all the brands.
+
+### keywords
+
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
+	<tr>
+		<th scope="row" role="rowheader">Type</th>
+		<td><code>Array</code></td>
+	</tr>
+	<tr>
+		<th scope="row" role="rowheader">Required</th>
+		<td><code>true</code></td>
+	</tr>
+</table>
+
+Expects keywords related to the project to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
+
+<pre><code class="o-syntax-highlight--json">{
+	"keywords": ["table", "rows", "columns"]
+}</code></pre>
+
+### origamiCategory
+
+<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
+	<tr>
+		<th scope="row" role="rowheader">Type</th>
+		<td><code>String</code></td>
+	</tr>
+	<tr>
+		<th scope="row" role="rowheader">Required</th>
+		<td><code>true</code>*</td>
+	</tr>
+</table>
+
+*Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`.
+
+Describes the organisational category the component belongs to. **Must** be one of:
+- `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
+- `"primitives"`: Base components that provide minimal markup and are used by other components
+- `"components"`: Components built from primitives and utilities, which provide markup for a complete user interface
+- `"layouts"`: Complex components that provide styles for the whole page
+
+<pre><code class="o-syntax-highlight--json">{
+	"origamiCategory": "components"
+}</code></pre>
 
 ### support
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
@@ -174,13 +231,13 @@ The object **requires** two properties:
 _This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a project does still use it_. Describes a set of one or more URLs where build information can be found.
 <pre><code class="o-syntax-highlight--json">{
 	"ci": {
-		"circle": "https://circleci.com/api/v1/project/owner/repo",
+		"circle": "https://circleci.com/api/v2/project/owner/repo",
 		"travis": "https://api.travis-ci.org/repos/owner/repo/builds.json",
 		"jenkins": "https://jenkins.example.com/job/"
 	}
 }</code></pre>
 
-circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/repo)
+circle:	A CircleCI build status URL (https://circleci.com/api/v2/project/owner/repo)
 
 ### browserFeatures
 
@@ -333,8 +390,11 @@ Each object in the list accepts the following properties:
 This example joins all of the property snippets outlined above:
 
 <pre><code class="o-syntax-highlight--json">{
+	"description": "Branded tables",
 	"origamiType": "component",
-	"origamiVersion": "2.0",
+	"origamiVersion": 1,
+	"keywords": ["table", "rows", "columns"],
+	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-table/issues",
 	"supportStatus": "active",
 	"supportContact": {
