@@ -11,8 +11,8 @@ Want to know npm best practices for Origami? [Refer to our Origami on npm guide]
 ## TLDR
 - package-names now begin with @financial-times.
 - JavaScript imports now require @financial-times at the start
-- Sass imports stay the same, they don't require @financial-times at the start
-- Sass needs to have an "includePaths" which contains "node_modules/@financial-times" and not "bower_components"
+- Sass imports require @financial-times at the start
+- Sass needs to have an "includePaths" which contains "node_modules" and not "bower_components"
 
 ## Migrating a project which uses Origami components from bower to npmjs
 
