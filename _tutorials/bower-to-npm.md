@@ -72,7 +72,7 @@ Becomes a *package.json* that looks like this
 }
 ```
 
-If you have anything left in your bower.json.dependencies, you should see if they exist on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> and use that version instead. Migrating a project becomes much simpler when there are no bower.json dependencies at all.
+If you have anything left in your bower.json.dependencies, you should see if they exist on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> and use that version instead.
 
 Run `npm install`, if it fails and says something similar to "code ETARGET No matching version found for @financial-times/example", it means that you would also need to update to the latest version of that component. This is because we have not published all the historical versions of Origami components onto <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a>.
 
