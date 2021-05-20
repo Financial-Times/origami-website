@@ -98,7 +98,7 @@ Describes the status of the project. **Must** be one of:
 - `experimental`: the project is not ready for production use
 
 <pre><code class="o-syntax-highlight--json">{
-	"supportStatus": "active"
+	"status": "active"
 }</code></pre>
 
 ## Example
