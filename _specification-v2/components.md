@@ -62,6 +62,10 @@ to the Origami specification.
 - It **must not** include a
   [`"browser"`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)
   property if the component has no JavaScript.
+- It **must** include a `"sass"` property set to the component's main Sass
+  entry-point if the component has Sass.
+- It **must not** include a `"sass"` property if the component has no Sass.
+- It **must** contain a `"description"` property set to a short description of the
   component.
 - It **must** contain a `"keywords"` property in order to help users discover the right
   component.
