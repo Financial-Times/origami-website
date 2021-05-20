@@ -78,23 +78,6 @@ set to a string:
 	"type": "component"
 }</code></pre>
 
-### brands
-
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>Array&lt;String></code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td>when <code>type</code> is <code>"component"</code></td>
-	</tr>
-</table>
-
-This **must** be either:
-	- An array of one or more [brands](/docs/components/branding/)
-	- An empty array, indicating the component does not
-
 ### status
 
 <table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
