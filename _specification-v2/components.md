@@ -74,7 +74,7 @@ to the Origami specification.
   license of the component, e.g. "MIT".
 - It **must** list any production Sass or Origami component dependencies under
   `"peerDependencies"`.
-- It **must** include the bugs field as described in the package.json spec. The
+- It **must** include the `"bugs"` field as described in the [package.json](https://docs.npmjs.com/cli/v7/configuring-npm/package-json) spec. The
   bugs field **may** contain a `"slack"` property, indicating the support channel on
   the FT’s internal Slack workspace.
 
