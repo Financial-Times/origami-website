@@ -1,6 +1,6 @@
 ---
 title: Origami.json Manifest Specification
-description: A specification which describes the required structure of an Origami.json manifest file.
+description: A specification which describes the required structure of an origami.json manifest file.
 cta: Read the manifest spec
 
 # Redirect from legacy URLs
