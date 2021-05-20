@@ -80,7 +80,7 @@ to the Origami specification.
 
 ## Documentation
 
-A component **must** contain a README.md.
+A component **must** contain a README.md file at its root.
 
 When a new major version of a component is released a migration guide **must** be
 written to help users upgrade from the previous release. The migration guide
