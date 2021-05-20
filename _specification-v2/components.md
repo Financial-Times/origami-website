@@ -127,7 +127,7 @@ Components **must** only modify:
 	  children
 	- Elements with any other data-attribute in the component’s namespace, and
 	  their children
-- A component must not output CSS by default when Sass is loaded (i.e. `@use`, or
+- A component **must not** output CSS by default when Sass is loaded (i.e. `@use`, or
   `@import`)
 - If the component is consumed via the `@import` syntax:
 	- It **must** provide a primary mixin with a name that matches the component
