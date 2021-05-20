@@ -97,12 +97,12 @@ and **must** be linked to from the component's README.md.
 
 ## HTML
 
-- A component’s markup must be contained in a root element that must:
+- A component’s markup **must** be contained in a root element that **must**:
 	- Have a data-o-component attribute with value of the component’s name, or
 	- Be defined as a
 	  [customElement](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element)
 	  registered against the component’s class
-- All data attributes and IDs must be namespaced with the component’s name.
+- All data attributes and IDs **must** be namespaced with the component’s name.
 
 ## JavaScript
 
