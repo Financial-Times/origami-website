@@ -61,8 +61,7 @@ The version of Origami to which the project conforms.
 	</tr>
 </table>
 
-Defines the type of Origami project that the manifest belongs to. **Must** be
-set to a string:
+Defines the type of Origami project that the manifest belongs to. **Must** be set to a string, e.g.:
 - `"component"`: A front-end component that follows [the component specification](/spec/v2/components/)
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
 - `"service"`: An HTTP service
@@ -71,8 +70,8 @@ set to a string:
 - `"website"`: Origami websites that aren't intended to be services
 - `"config"`: Projects that are configuration for other projects
 - `"example"`: Example and boilerplate projects
+- `"action"`: A [GitHub Action](https://github.com/features/actions)
 - `"meta"`: Repository-only projects that relate to how Origami works
-- `null`: An Origami project that does not fit any of the named categories
 
 <pre><code class="o-syntax-highlight--json">{
 	"type": "component"
