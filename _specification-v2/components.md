@@ -29,7 +29,7 @@ All Origami components **must** contain an `origami.json` file at the top of the
 component's directory structure. The [`origami.json` manifest
 specification](/spec/v2/manifest/) covers the contents of this file. In addition
 to the rules outlined in the manifest specification, Origami components **must**
-set the `origamiType` property in the JSON to `"component"`.
+set the `type` property in the JSON to `"component"`.
 
 ## Naming conventions
 
