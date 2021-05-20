@@ -56,12 +56,12 @@ there are additional requirements to make the component's npm manifest conform
 to the Origami specification.
 
 - It **must** include a
-  [browser](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)
-  property set to the component's main JavaScript file (main.js) if it exists.
+[`"browser"`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)`
+  property set to the component's main JavaScript entry-point if the component
+  has JavaScript.
 - It **must not** include a
-  [browser](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)
-  property if the component's main JavaScript file (main.js) does not exist.
-- It **must** contain a description property set to a short description of the
+  [`"browser"`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)
+  property if the component has no JavaScript.
   component.
 - It **must** contain a keywords property in order to help users discover the right
   component.
