@@ -118,7 +118,7 @@ Components **must** only modify:
 
 ## Sass
 
-- CSS selectors **should** follow the BEM naming convention.
+- CSS selectors **should** follow the [BEM naming convention](https://en.bem.info/methodology/naming-convention/).
 - Sass functions, variables, mixins and placeholders defined in the global
   namespace **must** be prefixed with the component name
 - A component **must** only style:
