@@ -101,7 +101,7 @@ and **must** be linked to from the component's README.md.
 	- Have a data-o-component attribute with value of the component’s name, or
 	- Be defined as a
 	  [customElement](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-element)
-	  registered against the component’s class
+	  registered against the component’s JavaScript class
 - All data attributes and IDs **must** be namespaced with the component’s name.
 
 ## JavaScript
