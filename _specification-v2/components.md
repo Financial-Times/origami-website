@@ -63,15 +63,15 @@ to the Origami specification.
   [`"browser"`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#browser)
   property if the component has no JavaScript.
   component.
-- It **must** contain a keywords property in order to help users discover the right
+- It **must** contain a `"keywords"` property in order to help users discover the right
   component.
-- It **must** include a type property set to "module".
-- It **must** include a license property set to the SPDX license identifier for the
+- It **must** include a `"type"` property set to `"module"`.
+- It **must** include a `"license"` property set to the SPDX license identifier for the
   license of the component, e.g. "MIT".
 - It **must** list any production Sass or Origami component dependencies under
-  peerDependencies.
+  `"peerDependencies"`.
 - It **must** include the bugs field as described in the package.json spec. The
-  bugs field may contain a “slack” property, indicating the support channel on
+  bugs field may contain a `"slack"` property, indicating the support channel on
   the FT’s internal Slack workspace.
 
 ## Documentation
@@ -123,8 +123,8 @@ Components **must** only modify:
 	  children
 	- Elements with any other data-attribute in the component’s namespace, and
 	  their children
-- A component must not output CSS by default when Sass is loaded (i.e. @use, or
-  @import)
+- A component must not output CSS by default when Sass is loaded (i.e. `@use`, or
+  `@import`)
 - If the component is consumed via the `@import` syntax:
 	- It **must** provide a primary mixin with a name that matches the component
 	  name (e.g. `o-well` **must** provide `oWell`)
