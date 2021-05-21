@@ -1,4 +1,3 @@
-
 # Content collections
 collections:
   components:
@@ -19,6 +18,9 @@ collections:
   specification-v1:
     output: true
     permalink: /spec/v1/:name/
+  specification-v2:
+    output: true
+    permalink: /spec/v2/:name/
 
 # Default front-matter
 defaults:
