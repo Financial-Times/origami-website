@@ -106,15 +106,16 @@ and **must** be linked to from the component's README.md.
 
 ## JavaScript
 
-Components **must** only modify:
-- The component’s root element, and its children
-- Elements passed explicitly to the component via JavaScript, and their children
-- Elements with any other data attribute in the component’s namespace, and their
-  children
-- The component **must** be configurable using data attributes
-- Any events triggered by a component **must** be namespaced under the target
-  component’s name
-- Component JavaScript **should** be annotated (e.g. using JSDoc)
+- Components **must** only modify:
+	- The component’s root element, and its children
+	- Elements passed explicitly to the component via JavaScript, and their
+	  children
+	- Elements with any other data attribute in the component’s namespace,
+  	  and their children
+	- The component **must** be configurable using data attributes
+	- Any events triggered by a component **must** be namespaced under the
+  	  target component’s name
+	- Component JavaScript **should** be annotated (e.g. using JSDoc)
 
 ## Sass
 
