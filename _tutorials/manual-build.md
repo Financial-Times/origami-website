@@ -94,7 +94,7 @@ Let's head over to <a href="https://registry.origami.ft.com/components/o-table#d
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/spec/v1/components) are available for installation via npm. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are published to the <a href="https://npmjs.com/" class="o-typography-link--external">public npm registry</a>.
+All Origami components are available for installation via npm. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are published to the <a href="https://npmjs.com/" class="o-typography-link--external">public npm registry</a>.
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>

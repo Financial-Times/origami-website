@@ -31,7 +31,7 @@ Origami used to be versioned only with a major version (Origami 1), this made it
 
 We are looking for people's thoughts on what Origami is missing and/or how Origami could be reimagined to help better achieve it's aim to unify and document the style and experience across the digital products of every FT brand. Some of the parts of Origami we are wanting to improve are around how the documentation and demonstrations for the components are built. Currently they are built in isolation of one another, we would like to see if building them together would lead to a better documented and test set of components.
 
-# First Origami npm-only Origami Component
+# First npm-only Origami Component
 
 We've been working on an autocomplete Origami component, which has been requested by several different FT products. By making this an npm-only component, we've been able to benefit from autocomplete packages which already exist on NPM, such as the one made by Gov UK named [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete). This has greatly reduced the amount of code we would have had to write ourselves and meant we could create a prototype for products to trial in a shorter turnaround then previously possible.
 
