@@ -157,10 +157,10 @@ You should now have a `node_modules` directory with all the components we just i
 
 <pre><code class="o-syntax-highlight--diff">// main.scss
 
-+@import '@financial-times/o-colors';
-+@import '@financial-times/o-spacing';
-+@import '@financial-times/o-typography';
-+@import '@financial-times/o-buttons';
++@import '@financial-times/o-colors/main';
++@import '@financial-times/o-spacing/main';
++@import '@financial-times/o-typography/main';
++@import '@financial-times/o-buttons/main';
 @import 'src/scss/variables';
 </code></pre>
 
