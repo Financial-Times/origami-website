@@ -2,6 +2,11 @@
 title: Origami npm announcement and guides on how to migrate products
 description: We have released new versions of Origami components which bring full NPM support and drops support for Bower. This post explains the changes and how to migrate products to the new version.
 author: Origami
+
+# Redirect from legacy URLs
+redirect_from:
+  - /docs/tutorials/npm/
+  - /docs/tutorials/bower-to-npm/
 ---
 
 We are have completed our migration of Origami from Bower onto the [NPM registry](https://www.npmjs.com/). The current versions which are on Bower are now deprecated and we recommend all products migrate to the new implementation to keep up-to-date with future releases to Origami.
