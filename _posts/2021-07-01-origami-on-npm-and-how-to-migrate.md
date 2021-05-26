@@ -1,6 +1,6 @@
 ---
-title: Origami 2.0 announcement and guides on how to migrate products
-description: We have released Origami 2.0, which brings full NPM support and drops support for Bower. This post explains the changes and how to migrate products to the new version.
+title: Origami npm announcement and guides on how to migrate products
+description: We have released new versions of Origami components which bring full NPM support and drops support for Bower. This post explains the changes and how to migrate products to the new version.
 author: Origami
 ---
 
@@ -26,9 +26,9 @@ Origami used to be versioned only with a major version (Origami 1), this made it
 
 We are looking for people's thoughts on what Origami is missing and/or how Origami could be reimagined to help better achieve it's aim to unify and document the style and experience across the digital products of every FT brand. Some of the parts of Origami we are wanting to improve are around how the documentation and demonstrations for the components are built. Currently they are built in isolation of one another, we would like to see if building them together would lead to a better documented and test set of components.
 
-# First Origami 2.0 Component
+# First Origami npm-only Origami Component
 
-We've been working on an autocomplete Origami component, which has been requested by several different FT products. By making this an Origami 2.0 component, we've been able to benefit from autocomplete packages which already exist on NPM, such as the one made by Gov UK named [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete). This has greatly reduced the amount of code we would have had to write ourselves and meant we could create a prototype for products to trial in a shorter turnaround then previously possible.
+We've been working on an autocomplete Origami component, which has been requested by several different FT products. By making this an npm-only component, we've been able to benefit from autocomplete packages which already exist on NPM, such as the one made by Gov UK named [accessible-autocomplete](https://github.com/alphagov/accessible-autocomplete). This has greatly reduced the amount of code we would have had to write ourselves and meant we could create a prototype for products to trial in a shorter turnaround then previously possible.
 
 # Migration Guides
 
@@ -53,14 +53,14 @@ All Origami components are published to the `@financial-times` namespace of NPM.
 1. Update the Origami Sass imports to include the `@financial-times` namespace. E.G. `@import 'o-icons/main';` becomes `@import '@financial-times/o-icons/main';`
 1. Update your Origami JavaScript imports to include the `@financial-times` namespace. E.G. `import oTracking from 'o-tracking';` becomes `import oTracking from '@financial-times/o-tracking';` and `import 'o-layout';` becomes `import '@financial-times/o-layout';`
 1. Run the project locally and confirm it is still working correctly
-1. The migration to Origami 2.0 is finished! :tada:
+1. The migration to npm Origami components is finished! :tada:
 
 
 
 ## Using Origami via Origami Build Service
 
-Origami Build Service v3 is the version which supports Origami 2.0.
-There is an [Origami Build Service URL Updater](https://www.ft.com/__origami/service/build/url-updater) which should help projects migrate to Origami 2.0.
+Origami Build Service v3 is the version which supports Origami components on npm.
+There is an [Origami Build Service URL Updater](https://www.ft.com/__origami/service/build/url-updater) which will help projects migrate to Origami components on npm.
 For Origami Build Service projects, there requires no JavaScript or CSS changes to be made.
 
 1. Run the project locally in its current state and confirm the project is still working correctly
@@ -68,7 +68,7 @@ For Origami Build Service projects, there requires no JavaScript or CSS changes 
     1. Confirm the project is still working correctly
 1. Update the Origami Build Service urls to use v3 instead of v2, you can do this by using the [Origami Build Service URL Updater](https://www.ft.com/__origami/service/build/url-updater)
 1. Run the project locally and confirm it is still working correctly
-1. The migration to Origami 2.0 is finished! :tada:
+1. The migration to npm Origami components is finished! :tada:
 
 ## Using Origami via beta NPM
 
@@ -81,7 +81,7 @@ For Origami Build Service projects, there requires no JavaScript or CSS changes 
 1. Upgrade to the latest major versions of any Origami components you are using
 1. If using `lockspot` or `is-origami-flat`, these should be removed as they are no longer needed when using NPM version 7. `npm uninstall lockspot is-origami-flat`
 1. Run the project locally and confirm it is still working correctly
-1. The migration to Origami 2.0 is finished! :tada:
+1. The migration to npm-only Origami components is finished! :tada:
 
 
 # Tracking migrations
