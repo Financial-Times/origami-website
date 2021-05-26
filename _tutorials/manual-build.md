@@ -180,11 +180,11 @@ So we can monitor what projects component assets are being used, some components
 
 To include the components Sass use `@import`. For example this makes all `o-grid` Sass mixins, functions, and variables available:
 <pre><code class="o-syntax-highlight--scss">$system-code: 'test';
-@import '@financial-times/o-grid';</code></pre>
+@import '@financial-times/o-grid/main';</code></pre>
 
 By default Origami components do not output any CSS when you import them. This is so your project can granularly include only the CSS it needs from each component. To output a components CSS use its mixins, which are documented in the component [README](https://registry.origami.ft.com/components/o-grid/readme#sass) and [Sassdoc](https://registry.origami.ft.com/components/o-grid/sassdoc). Most components include a primary mixin which matches the component name. These include all CSS by default and accept a map of options to include CSS for specific features. For the `o-grid` component this is a mixin named `oGrid`:
 
-<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-grid';
+<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-grid/main';
 // output all o-grid css
 @include oGrid();</code></pre>
 
@@ -193,7 +193,7 @@ All Origami components have a <a href="/docs/components/silent-mode/">silent mod
 
 <pre><code class="o-syntax-highlight--scss">// deprecated: output all o-grid css using the silent mode variable
 $o-grid-is-silent: false;
-@import '@financial-times/o-grid';</code></pre>
+@import '@financial-times/o-grid/main';</code></pre>
 
 You may see this in existing projects but this method of including CSS is deprecated. We recommend using the component's mixins instead.
 </aside>
@@ -210,7 +210,7 @@ We're going to get a little more specific with <a href="https://registry.origami
 
 We only want the base styling of a table, and some stripes to tell each row apart, so pass an options map to the `oTable` mixin:
 
-<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-table';
+<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-table/main';
 @include oTable($opts: ('stripes'));</code></pre>
 
 Other options are [documented in the README](https://registry.origami.ft.com/components/o-table/readme#sass).
@@ -221,7 +221,7 @@ We'll be using <a href="https://registry.origami.ft.com/components/o-colors">o-c
 
 o-colors defines [colours by name](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours), e.g. "crimson", and [colours by usecase](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours) e.g. "page background". We can use the Sass functions `oColorsByName` and `oColorsByUsecase` to get a colours hex value from our palette.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import '@financial-times/o-colors';
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import '@financial-times/o-colors/main';
 
 body {
 	background-color: oColorsByUsecase('page', 'background');
