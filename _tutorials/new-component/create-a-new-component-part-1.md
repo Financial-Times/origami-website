@@ -37,10 +37,10 @@ If you have any questions please contact the Origami team to help make this tuto
 
 ## The Origami Specification
 
-All Origami components **must** meet the requirements defined in the [Origami Component Specification](/spec/v1/components/). The specification covers folder structure, code standards, documentation and more. We'll refer to this document throughout this tutorial.
+The [Origami Specification](/spec/v1/) is deprecated, new components may diverge from its rules. However, some Origami tools and services continue to depend on parts of the deprecated specification so we will refer to relevant sections of the specification throughout this tutorial. Including for folder structure, code standards, documentation and more.
 
 <aside>
-If this tutorial contradicts or misses anything required in the <a href="/spec/v1/components/">Origami Component Specification</a>, the specification is correct and this tutorial is wrong. If you find a case like that please let the Origami team know so we can ensure this tutorial is always up to date.
+See our [blogpost on why the Origami specification is deprecated](TODO-why-is-spec-deprecated).
 </aside>
 
 ## Build Tools
@@ -213,7 +213,7 @@ The `div` tag in our demo may be any HTML tag provided there is a `data-o-compon
 ## Part Two: Base Styles
 
 In part one we learnt:
-- The [Origami component specification](/spec/v1/components/) tells us what standards we must meet to create an Origami component.
+- The [Origami specification](/spec/v1/) is deprecated, but some sections provide a useful reference to create components compatible with Origami tools and services whilst they are updated.
 - The [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) command line interface is used to help us develop and test components.
 - Specifically, we learnt about the Origami Build Tools `init` command to generate a component to work from when developing a new component.
 - Origami components use `git` source control and are stored remotely on Github.

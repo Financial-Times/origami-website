@@ -27,6 +27,10 @@ defaults:
     values:
       layout: o-layout-docs
   - scope:
+      path: "_specification-v1"
+    values:
+      layout: spec-v1
+  - scope:
       path: ""
       type: posts
     values:

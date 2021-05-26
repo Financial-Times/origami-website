@@ -2,7 +2,7 @@
 title: Origami Specification
 description: The Origami Specification outlines the requirements for Origami-compatible components and services, helping others contribute back.
 permalink: /spec/v1/
-layout: collection
+layout: spec-v1
 collection_id: specification-v1
 
 # Redirect from legacy URLs

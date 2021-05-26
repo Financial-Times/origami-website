@@ -26,9 +26,7 @@ _We don't actually want to publish an example component `o-example`. If you have
 
 The first step of publishing our component is to introduce source control.
 
-All Origami components reside in a [git](https://git-scm.com/) repository with the same name as the component. It's required that component repositories are stored remotely in one of our [github.com](https://github.com/) organisations, for example the [Financial-Times](https://github.com/Financial-Times/) organisation. There are more details about [source control in the origami specification](/spec/v1/components/#source-control).
-
-Create a new git repository by running `git init`, and commit the boilerplate as an initial commit. For example:
+Origami components usually use [git](https://git-scm.com/) for source control. Create a new git repository by running `git init`, and commit the boilerplate as an initial commit. For example:
 
 <pre><code class="o-syntax-highlight--bash">git init
 git add --all
@@ -36,7 +34,7 @@ git commit -m 'my o-example component'</code></pre>
 
 ## Push To Github
 
-The second step of publishing our component to the [Origami Registry](https://registry.origami.ft.com/components/) is to commit our work and push to a new Github repository under the [Financial-Times](https://github.com/Financial-Times/) organisation (or other [supported Github organisation](/spec/v1/components/#source-control)). There is a [new Github repository tutorial](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) which might be helpful if you have never created a Github repository before. Note Origami repositories are usually public and open-source unless there is a reason not to be (for example [o-fonts-assets](https://github.com/Financial-Times/o-fonts-assets/) is private due to our font license).
+The second step of publishing our component to the [Origami Registry](https://registry.origami.ft.com/components/) is to commit our work and push to a new Github repository under the [Financial-Times](https://github.com/Financial-Times/) organisation. There is a [new Github repository tutorial](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) which might be helpful if you have never created a Github repository before. Note Origami repositories are usually public and open-source unless there is a reason not to be (for example [o-fonts-assets](https://github.com/Financial-Times/o-fonts-assets/) is private due to our font license).
 
 You may then push this to your remote github.com repository, under the `Financial-Times` organisation or another [supported Financial Times organisation](/spec/v1/components/#source-control).
 
@@ -97,7 +95,7 @@ As other teams may depend on Origami components its important to follow the [sem
 
 ## Wrapping Up
 
-If you have followed along this far congratulations! Going forward the [Origami specification](/spec/v1/) is the most comprehensive resource to reference when working on Origami projects.
+If you have followed along this far congratulations!
 
 We hope this step-by-step tutorial has helped make you feel more able to contribute to Origami. Both in terms of creating new components, maintaining existing components, and influencing the direction of Origami as a whole.
 
