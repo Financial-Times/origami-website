@@ -150,23 +150,8 @@ First we will update our border colour using [o-colors](https://registry.origami
 
 ### Install Component Dependencies
 
-<<<<<<< HEAD
-The first step is to install each component we want to use via [Bower](https://bower.io/) (a package manager like [npm](https://www.npmjs.com/)). In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file. We recommend adding it to your home directory `~/.bowerrc`:
-<pre><code class="o-syntax-highlight--json">{
-	"registry": {
-		"search": [
-			"https://origami-bower-registry.ft.com",
-			"https://registry.bower.io"
-		]
-	}
-}</code></pre>
-
-With Bower configured, we can now run:
-<pre><code class="o-syntax-highlight--bash">bower install o-colors@^5.0.0 o-spacing@^2.0.0 o-typography@^6.0.0 o-buttons@^6.0.0 --save</code></pre>
-=======
 The first step is to install each component we want to use via [npm](https://npmjs.com/):
 <pre><code class="o-syntax-highlight--bash">npm install --save '@financial-times/o-colors@^5.0.0' '@financial-times/o-spacing@^2.0.0' '@financial-times/o-typography@^6.0.0' '@financial-times/o-buttons@^6.0.0'</code></pre>
->>>>>>> v2.0
 
 You should now have a `node_modules` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 
