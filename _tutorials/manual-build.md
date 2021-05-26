@@ -16,7 +16,7 @@ This tutorial assumes that:
 - You have not implemented a build step
 - You are using a UNIX-like OS with a bash shell
 - You are familiar with JavaScript, and <abbr title="Sassy Cascading Style Sheets"><a href="https://sass-lang.com/" class="o-typography-link--external">SCSS</a></abbr>
-- You have a basic understanding of package managers (<a href="https://bower.io/" class="o-typography-link--external">Bower</a>, <abbr title="Node Package Manager"><a href="https://www.npmjs.com/" class="o-typography-link--external">npm</a></abbr>)
+- You have a basic understanding of <abbr title="Node Package Manager"><a href="https://www.npmjs.com/" class="o-typography-link--external">npm</a></abbr>)
 
 ## Setting up your sandbox
 We will need a folder structure for our page. So let's begin by creating a new directory to work in.
@@ -90,30 +90,15 @@ Let's head over to <a href="https://registry.origami.ft.com/components/o-table#d
 
 <aside>If you'd like to double check your work, we've put our <code>index.html</code> up <a href="https://codepen.io/ft-origami/pen/EprYzR" class="o-typography-link--external">on CodePen</a>.</aside>
 
-## Bower & the Origami Registry
+## Origami Registry & npm
 
 Now that we have set up the scaffolding for our page, we need to install those components so we can access their respective styles and functionalities.
 
-All [Origami-compliant components](/spec/v1/components) are available for installation via Bower or npm. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are made visible to Bower through the <a href="https://origami-bower-registry.ft.com/" class="o-typography-link--external">Origami Bower Registry</a>.
-
-For this tutorial we will use Bower instead of npm. Using bower ensures a flat dependency tree by default, so we don't accidentally include multiple conflicting versions of a component (there is a separate [Bower to npm tutorial](/docs/tutorials/bower-to-npm/), which builds on this tutorial).
-
-In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file in the root of our directory:
-
-<pre><code class="o-syntax-highlight--json">{
-	"registry": {
-		"search": [
-			"https://origami-bower-registry.ft.com",
-			"https://registry.bower.io"
-		]
-	}
-}</code>
-</pre>
+All [Origami-compliant components](/spec/v1/components) are available for installation via npm. They live in the <a href="https://registry.origami.ft.com/components">Origami Registry</a>, and are published to the <a href="https://npmjs.com/" class="o-typography-link--external">public npm registry</a>.
 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--bash">o-fruit-demo
-├── .bowerrc
 ├── index.html
 └── src/
     └── main.js
@@ -121,7 +106,7 @@ In order for Bower to find the components we will be installing, we need to tell
 </pre>
 </aside>
 
-Next, we need to install our components as direct dependencies, because they are crucial to our page. We will opt to install them through the command line, and save them to a `bower.json`. For the scope of this tutorial, all that needs to be in that file right now is:
+Next, we need to install our components as direct dependencies, because they are crucial to our page. We will opt to install them through the command line, and save them to a `package.json` file. For the scope of this tutorial, all that needs to be in that file right now is:
 
 <pre><code class="o-syntax-highlight--json">{
 	"name": "o-fruit-demo"
@@ -130,17 +115,17 @@ Next, we need to install our components as direct dependencies, because they are
 
 Now we need to install our components, and we can save them all to our file by running:
 
-<pre><code class="o-syntax-highlight--bash">bower i --save o-grid o-typography o-colors o-table</code></pre>
+<pre><code class="o-syntax-highlight--bash">npm install --save @financial-times/o-grid @financial-times/o-typography @financial-times/o-colors @financial-times/o-table</code></pre>
 
-And your `bower.json` should now look something like this:
+And your `package.json` should now look something like this:
 
 <pre><code class="o-syntax-highlight--json">{
   "name": "o-fruit-demo",
   "dependencies": {
-    "o-grid": "^{{site.data.components.o-grid.version}}",
-    "o-typography": "^{{site.data.components.o-typography.version}}",
-    "o-colors": "^{{site.data.components.o-colors.version}}",
-    "o-table": "^{{site.data.components.o-table.version}}"
+    "@financial-times/o-grid": "^{{site.data.components.o-grid.version}}",
+    "@financial-times/o-typography": "^{{site.data.components.o-typography.version}}",
+    "@financial-times/o-colors": "^{{site.data.components.o-colors.version}}",
+    "@financial-times/o-table": "^{{site.data.components.o-table.version}}"
   }
 }</code>
 </pre>
@@ -150,9 +135,8 @@ And your `bower.json` should now look something like this:
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--bash">o-fruit-demo
-├── .bowerrc
-├── bower.json
-├── bower_components/
+├── package.json
+├── node_modules/
 ├── index.html
 └── src/
     └── main.js
@@ -174,9 +158,8 @@ This command will compile your code to a `public` directory every time you make 
 <aside class="no-padding">
 <p>Our folder structure so far:</p>
 <pre><code class="o-syntax-highlight--bash">o-fruit-demo
-── .bowerrc
-├── bower.json
-├── bower_components/
+├── package.json
+├── node_modules/
 ├── index.html
 ├── public/
 │   ├── main.css
@@ -197,11 +180,11 @@ So we can monitor what projects component assets are being used, some components
 
 To include the components Sass use `@import`. For example this makes all `o-grid` Sass mixins, functions, and variables available:
 <pre><code class="o-syntax-highlight--scss">$system-code: 'test';
-@import 'o-grid/main';</code></pre>
+@import '@financial-times/o-grid';</code></pre>
 
 By default Origami components do not output any CSS when you import them. This is so your project can granularly include only the CSS it needs from each component. To output a components CSS use its mixins, which are documented in the component [README](https://registry.origami.ft.com/components/o-grid/readme#sass) and [Sassdoc](https://registry.origami.ft.com/components/o-grid/sassdoc). Most components include a primary mixin which matches the component name. These include all CSS by default and accept a map of options to include CSS for specific features. For the `o-grid` component this is a mixin named `oGrid`:
 
-<pre><code class="o-syntax-highlight--scss">@import 'o-grid/main';
+<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-grid';
 // output all o-grid css
 @include oGrid();</code></pre>
 
@@ -210,7 +193,7 @@ All Origami components have a <a href="/docs/components/silent-mode/">silent mod
 
 <pre><code class="o-syntax-highlight--scss">// deprecated: output all o-grid css using the silent mode variable
 $o-grid-is-silent: false;
-@import 'o-grid/main';</code></pre>
+@import '@financial-times/o-grid';</code></pre>
 
 You may see this in existing projects but this method of including CSS is deprecated. We recommend using the component's mixins instead.
 </aside>
@@ -227,7 +210,7 @@ We're going to get a little more specific with <a href="https://registry.origami
 
 We only want the base styling of a table, and some stripes to tell each row apart, so pass an options map to the `oTable` mixin:
 
-<pre><code class="o-syntax-highlight--scss">@import 'o-table/main';
+<pre><code class="o-syntax-highlight--scss">@import '@financial-times/o-table';
 @include oTable($opts: ('stripes'));</code></pre>
 
 Other options are [documented in the README](https://registry.origami.ft.com/components/o-table/readme#sass).
@@ -238,7 +221,7 @@ We'll be using <a href="https://registry.origami.ft.com/components/o-colors">o-c
 
 o-colors defines [colours by name](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours), e.g. "crimson", and [colours by usecase](https://registry.origami.ft.com/components/o-colors/readme/#palette-colours) e.g. "page background". We can use the Sass functions `oColorsByName` and `oColorsByUsecase` to get a colours hex value from our palette.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import 'o-colors/main';
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--scss">@import '@financial-times/o-colors';
 
 body {
 	background-color: oColorsByUsecase('page', 'background');
@@ -257,7 +240,7 @@ To choose a brand other than the default "master" brand, set the `$o-brand` <abb
 
 To see this in action we can set our brand to "internal":
 <pre><code class="o-syntax-highlight--scss">$o-brand: "internal"; // Set brand before anything else.
-@import 'o-colors/main';
+@import '@financial-times/o-colors';
 //...</code></pre>
 
 As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` and the stripes of `o-table` have changed. The typography of our project has also changed.
@@ -278,7 +261,7 @@ Origami components listen for a custom event named `o.DOMContentLoaded` in order
 
 We'll need to add this to our file:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--js">import 'o-table';
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--js">import '@financial-times/o-table';
 
 // Wait until the page has loaded
 if (document.readyState === 'interactive' || document.readyState === 'complete') {

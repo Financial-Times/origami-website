@@ -150,6 +150,7 @@ First we will update our border colour using [o-colors](https://registry.origami
 
 ### Install Component Dependencies
 
+<<<<<<< HEAD
 The first step is to install each component we want to use via [Bower](https://bower.io/) (a package manager like [npm](https://www.npmjs.com/)). In order for Bower to find the components we will be installing, we need to tell it where to look. For that, we use a `.bowerrc` file. We recommend adding it to your home directory `~/.bowerrc`:
 <pre><code class="o-syntax-highlight--json">{
 	"registry": {
@@ -162,15 +163,19 @@ The first step is to install each component we want to use via [Bower](https://b
 
 With Bower configured, we can now run:
 <pre><code class="o-syntax-highlight--bash">bower install o-colors@^5.0.0 o-spacing@^2.0.0 o-typography@^6.0.0 o-buttons@^6.0.0 --save</code></pre>
+=======
+The first step is to install each component we want to use via [npm](https://npmjs.com/):
+<pre><code class="o-syntax-highlight--bash">npm install --save '@financial-times/o-colors@^5.0.0' '@financial-times/o-spacing@^2.0.0' '@financial-times/o-typography@^6.0.0' '@financial-times/o-buttons@^6.0.0'</code></pre>
+>>>>>>> v2.0
 
-You should now have a `bower_components` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
+You should now have a `node_modules` directory with all the components we just installed. We can now make their Sass available for us to use with `@import` statements at the top of `main.scss`.
 
 <pre><code class="o-syntax-highlight--diff">// main.scss
 
-+@import 'o-colors/main';
-+@import 'o-spacing/main';
-+@import 'o-typography/main';
-+@import 'o-buttons/main';
++@import '@financial-times/o-colors';
++@import '@financial-times/o-spacing';
++@import '@financial-times/o-typography';
++@import '@financial-times/o-buttons';
 @import 'src/scss/variables';
 </code></pre>
 
@@ -282,7 +287,7 @@ To style our components we covered many topics in this part of the tutorial. We 
 - Origami component CSS is written with [Sass](https://sass-lang.com/documentation).
 - Component Sass includes [SassDoc](http://sassdoc.com/) comments for Sass documentation.
 - Conventional Origami Sass patterns such as the ["primary mixin"](/spec/v1/components/sass/#primary-mixin) and ["silent mode"](/spec/v1/components/sass/#sass-silent-mode).
-- How to install Origami component dependencies from the [Origami Bower Registry](https://github.com/Financial-Times/origami-bower-registry).
+- How to install Origami component dependencies from the [public npm registry](https://npmjs.com).
 - And finally how to include and use Sass from `o-colors`, `o-spacing`, `o-typography`, and `o-buttons`.
 
 Now we know how to add styles, in part three we will build on that knowledge to provide new visual variations of our component. We will add an alternative `inverse` theme that will modify the appearance of `o-example` to look better on a dark background. We will also "brand" our component to change its appearance depending on whether it is used within a reader facing ft.com project, internal project, or elsewhere. [Continue to part three](/docs/tutorials/create-a-new-component-part-3).

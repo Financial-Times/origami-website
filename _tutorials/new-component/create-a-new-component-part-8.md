@@ -59,11 +59,7 @@ Origami components use Github Actions for a number of helpful functions includin
 - Run component tests when new commits are made to a pull request.
 - Automatically release minor and patch updates to developer dependencies given tests pass.
 - Add a [semver](https://semver.org/) git tag to release a component when a pull request with a [release label](https://github.com/Financial-Times/origami-labels#continuous-delivery-labels) is merged.
-- Build and publish an [npm](https://www.npmjs.com/) package when a release is made with a git tag, so Origami components may be included via [Bower](https://bower.io/) or [npm](https://www.npmjs.com/)
-
-<aside>
-Although Origami components are authored using Bower, components are published to npm so projects which use Origami may choose to use npm over Bower (<a href="/docs/tutorials/npm/">but we still recommend Bower for now</a>).
-</aside>
+- Build and publish an [npm](https://www.npmjs.com/) package when a release is made with a git tag, so Origami components may be included via [npm](https://www.npmjs.com/)
 
 To see these Github Actions in practise let's release our component.
 

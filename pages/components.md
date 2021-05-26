@@ -32,8 +32,8 @@ How you choose to include Origami components in your project will depend on your
 	If you would like help with this, you can visit the [Origami Build Service tutorial](/docs/tutorials/build-service/).
 
 
-- **Using a Package Manager (Bower/npm):**
+- **Using a Package Manager (npm):**
 
-	In order to customise your page and have more granular control over a components stylistic and behavioural features build Origami components manually. We currently do this by installing Origami components from the command line via the Bower or npm package manager. This process relies on a build step, which you may already have in your project.
+	In order to customise your page and have more granular control over a components stylistic and behavioural features build Origami components manually. We currently do this by installing Origami components from the command line via the npm package manager. This process relies on a build step, which you may already have in your project.
 
-	If you would like help with this, you can visit the [Package Manager (Bower/npm) tutorial](/docs/tutorials/manual-build/).
+	If you would like help with this, you can visit the [Package Manager (npm) tutorial](/docs/tutorials/manual-build/).

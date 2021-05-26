@@ -28,15 +28,17 @@ _Note: These [drawbacks will be addressed with component updates by Q3 2021](/bl
 ## Migrating a project which uses Origami components from bower to npmjs
 
 ### TLDR
+- Upgrade to the latest Bower release of a component.
 - package-names now begin with @financial-times.
 - JavaScript imports now require @financial-times at the start
-- Sass imports stay the same, they don't require @financial-times at the start
-- Sass needs to have an "includePaths" which contains "node_modules/@financial-times" and not "bower_components"
-
+- Sass imports require @financial-times at the start
+- Sass needs to have an "includePaths" which contains "node_modules" and not "bower_components"
 
 ### Replace bower.json
 
-Copy all Origami dependencies from bower.json.dependencies and place in package.json.dependencies and then prepend their names with @financial-times.
+The first step is to update to the latest version of the Origami components on Bower, this is because only the latest version of Origami components are on npm. To find the last Bower release of a component run the `bower info [component-name]`, which will return a list of versions for that component which has been published to Bower.
+
+Next, copy all Origami dependencies from bower.json.dependencies and place in package.json.dependencies and then prepend their names with @financial-times.
 
 E.G.
 *bower.json*
@@ -90,7 +92,7 @@ Becomes a *package.json* that looks like this
 }
 ```
 
-If you have anything left in your bower.json.dependencies, you should see if they exist on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> and use that version instead. Migrating a project becomes much simpler when there are no bower.json dependencies at all.
+If you have anything left in your bower.json.dependencies, you should see if they exist on <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a> and use that version instead.
 
 Run `npm install`, if it fails and says something similar to "code ETARGET No matching version found for @financial-times/example", it means that you would also need to update to the latest version of that component. This is because we have not published all the historical versions of Origami components onto <a href="https://www.npmjs.com/" class="o-typography-link--external">npmjs</a>.
 

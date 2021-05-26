@@ -28,9 +28,8 @@ In this tutorial we'll build an Origami component. Our example component will di
 Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
 
 To follow this tutorial ensure the following software is install on your machine:
-- [Node.js](https://nodejs.org/en/) (Version 10 or higher)
-- [npm](https://www.npmjs.com/get-npm) (Version 5 or higher)
-- [Bower](https://bower.io/)
+- [NodeJS](https://nodejs.org/en/) (Version 10 or higher)
+- [NPM](https://www.npmjs.com/get-npm) (Version 7 or higher)
 
 In addition this tutorial introduces a number of tools and libraries such as [git](https://git-scm.com/), [Sass](https://sass-lang.com/), [sinon.js](https://sinonjs.org/), etc. We do not cover these in depth but attempt to include brief descriptions and links to relevant documentation so that you may learn separately about the parts which are new to you.
 
@@ -114,7 +113,6 @@ o-example
 ├── .gitignore
 ├── .stylelintrc.js
 ├── README.md
-├── bower.json
 ├── demos
 │   └── src
 │       ├── demo.js
