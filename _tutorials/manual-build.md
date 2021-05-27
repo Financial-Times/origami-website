@@ -189,13 +189,11 @@ By default Origami components do not output any CSS when you import them. This i
 @include oGrid();</code></pre>
 
 <aside>
-All Origami components have a <a href="/docs/components/silent-mode/">silent mode</a> variable which, when set to false, also outputs all of the CSS for a component.
+Some Origami components have a <a href="/docs/components/silent-mode/">silent mode</a> variable which, when set to false, outputs all of the CSS for a component. This method of including CSS is deprecated. We recommend using the component's mixins instead.
 
 <pre><code class="o-syntax-highlight--scss">// deprecated: output all o-grid css using the silent mode variable
 $o-grid-is-silent: false;
 @import '@financial-times/o-grid/main';</code></pre>
-
-You may see this in existing projects but this method of including CSS is deprecated. We recommend using the component's mixins instead.
 </aside>
 
 If we open our page in a browser window (visit `http://localhost:3000` after running the origami-workshop command discussed above), we'll see that our content is now centred on the page. This is because of the classes that we added to our outside `div` at the very beginning.
