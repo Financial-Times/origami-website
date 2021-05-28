@@ -11,7 +11,7 @@ redirect_from:
   - /docs/component-spec/
 
 # Navigation config
-nav_display: true
+nav_display: false
 nav_label: Spec
 nav_order: 20
 ---
