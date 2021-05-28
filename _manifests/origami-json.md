@@ -1,5 +1,10 @@
 ---
 title: origami.json
+
+# Navigation config
+nav_display: true
+nav_label: origami.json
+nav_order: 20
 ---
 
 # {{page.title}}

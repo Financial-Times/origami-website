@@ -1,5 +1,10 @@
 ---
 title: imageset.json
+
+# Navigation config
+nav_display: true
+nav_label: imageset.json
+nav_order: 30
 ---
 
 # {{page.title}}
