@@ -1,5 +1,7 @@
 ---
 title: origami.json
+description: Responsible for describing various aspects of an Origami project.
+cta: Read more about the origami.json manifest.
 
 # Navigation config
 nav_display: true
