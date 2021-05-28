@@ -7,6 +7,9 @@ collections:
   services:
     output: false
     permalink: /docs/:collection/:name/
+  manifests:
+    output: true
+    permalink: /docs/:collection/:name/
   tutorials:
     output: true
     permalink: /docs/:collection/:name/
