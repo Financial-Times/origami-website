@@ -1,5 +1,7 @@
 ---
 title: imageset.json
+description: Builds on the `origami.json` manifest by describing aspects specific to an Origami imageset.
+cta: Read more about the imageset.json manifest.
 
 # Navigation config
 nav_display: true
