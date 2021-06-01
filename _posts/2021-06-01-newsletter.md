@@ -1,6 +1,6 @@
 ---
 title: Origami Newsletter, May 2021
-description: undefined
+description: The Origami specification is no more
 author: chee rabbits, lee moody
 tags:
 - Newsletter
@@ -43,18 +43,6 @@ Retiring the specification gives us the opportunity to create better, faster, mo
 
 We'll be going into a lot more detail about our plans in a blog post at the end of Q2.
 
-
-
-### 
-
-
-
-
-### 
-
-
-
-
 ## Special thanks
 
 This issues special thanks goes to Nick Ramsbottom! Nick worked with us on a component update to support New Product Development work, and enthusiastically got involved in the development. Together we were able to avoid project-specific overrides for a more reliable, consistent user interface.
@@ -64,5 +52,4 @@ If your team are looking to customise an Origami component for a project, checko
 ## Broader update
 
 A digest of other things that have happened this month:
-
 
