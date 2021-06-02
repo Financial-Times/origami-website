@@ -51,5 +51,26 @@ If your team are looking to customise an Origami component for a project, checko
 
 ## Broader update
 
-A digest of other things that have happened this month:
+A digest of other things that have happened since our last update:
 
+- DEPRECATED: [podcast-logos](https://github.com/Financial-Times/podcast-logos), podcast logos are no longer updated in Origami, refer to Acast, the podcast hosting system we use.
+- MINOR: [o-colors](https://github.com/Financial-Times/o-colors) adds a new "matisse" colour, which is used by partner content.
+- MINOR: [o-forms](https://github.com/Financial-Times/o-forms) provide styling for a file upload input `input[type="file"]` 🎉, and fixes the low contrast of valid form fields for the whitelabel brand.
+- MINOR: [o-labels](https://github.com/Financial-Times/o-labels) adds a wider selection of labels for the internal brand, using colours from our palette.
+- MINOR: [o-layout](https://github.com/Financial-Times/o-layout) fixes an issue where the "muted hero" area was obscured by the page background colour.
+- MINOR: [o-tooltip](https://github.com/Financial-Times/o-tooltip) adds Sass customisation options, including foreground and background colours. Thanks again, Nick Ramsbottom!
+- MINOR: [polyfill-library](https://github.com/Financial-Times/polyfill-library) adds a polyfill for `HTMLInputElement.prototype.valueAsDate`, fix a [`URLSearchParams` bug](https://github.com/Financial-Times/polyfill-library/issues/1048), and more ([polyfill-library releases](https://github.com/Financial-Times/polyfill-library/releases)).
+- PATCH: [change-api-action](https://github.com/Financial-Times/change-api-action) only adds `githubname` to the change api payload if the action was triggered by a github user, this fixes the action when trigged at set intervals by a cron for example.
+- PATCH: [o-grid](https://github.com/Financial-Times/o-grid) fixes `o-grid.layoutChange` events given custom layouts (breakpoints). Thanks for your help with that, Eray Baskin!
+- PATCH: [o-table](https://github.com/Financial-Times/o-table) fixes the `updateRows` method to account for removed or changed rows. Thanks Emma Lewis for your work investigating that one!
+- PATCH: [origami-percy](https://github.com/Financial-Times/origami-percy) is used for component visual regression testing, it's now more reliable and will not error if no component demos are found for a supported brand. In addition it runs automatically for each component now and the `percy` Github label, which used to trigger tests, has been removed.
+- PATCH: [useragent_parser](https://github.com/Financial-Times/useragent_parser) updates the detection logic for more accurate reporting of ios 11 and newer versions.
+- The [Origami Registry](https://registry.origami.ft.com/components) now shows stable releases of components by default. Use the version switcher in the right-hand sidebar to preview upcoming beta releases.
+- The following projects have had additional updates to support the [migration from bower to NPM](https://origami.ft.com/blog/2021/01/18/deprecating-bower-and-origami-via-npm/):
+   - [origami-repo-data](https://github.com/Financial-Times/origami-repo-data)
+   - [origami-website](https://github.com/Financial-Times/origami-website)
+   - [o-test-component](https://github.com/Financial-Times/o-test-component)
+   - [origami-build-tools](https://github.com/Financial-Times/origami-build-tools)
+   - [origami-build-service](https://github.com/Financial-Times/origami-build-service)
+   - [create-origami-component](https://github.com/Financial-Times/create-origami-component)
+   - [remark-preset-lint-origami-component](https://github.com/Financial-Times/remark-preset-lint-origami-component)
