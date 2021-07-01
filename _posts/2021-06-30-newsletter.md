@@ -1,6 +1,6 @@
 ---
 title: Origami Newsletter, June 2021
-description: undefined
+description: Origami via Bower is deprecated, please migrate to the npm versions. A new autocomplete component has been built and is ready for use.
 author: Origami team
 tags:
 - Newsletter
