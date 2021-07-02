@@ -238,7 +238,7 @@ To choose a brand other than the default "master" brand, set the `$o-brand` <abb
 
 To see this in action we can set our brand to "internal":
 <pre><code class="o-syntax-highlight--scss">$o-brand: "internal"; // Set brand before anything else.
-@import '@financial-times/o-colors';
+@import '@financial-times/o-colors/main';
 //...</code></pre>
 
 As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` and the stripes of `o-table` have changed. The typography of our project has also changed.
