@@ -4,7 +4,7 @@
 -->
 # Origami Documentation
 
-A site to document the Origami team, spec, components, and services.
+A site to document the Origami team, components, and services.
 
 ## Code
 

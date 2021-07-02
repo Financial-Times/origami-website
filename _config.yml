@@ -7,6 +7,9 @@ collections:
   services:
     output: false
     permalink: /docs/:collection/:name/
+  manifests:
+    output: true
+    permalink: /docs/:collection/:name/
   tutorials:
     output: true
     permalink: /docs/:collection/:name/
@@ -27,6 +30,10 @@ defaults:
     values:
       layout: o-layout-docs
   - scope:
+      path: "_specification-v1"
+    values:
+      layout: spec-v1
+  - scope:
       path: ""
       type: posts
     values:
@@ -41,6 +48,11 @@ defaults:
 
 # Blog post permalinks
 permalink: /blog/:year/:month/:day/:title/
+
+# Atom Feed attributes (jekyll-feed does not use scoped-config so this is site-wide)
+title: "Origami Newsletter"
+url: "https://origami.ft.com"
+description: "Origami is a group of services, components, and tools used to help design & build digital products for FT brands."
 
 # Files and directories to exclude from compilation
 exclude:
@@ -65,6 +77,7 @@ repository: Financial-Times/origami
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-feed
   - jemoji
 
 # Timezone setting

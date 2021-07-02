@@ -18,8 +18,6 @@ To strike a balance between a professional and friendly tone, while being clear 
 
 ## General Styles
 
-Origami has a [normative specification](/spec) for _building_ a component, which follows more formal conventions. But we also maintain a lot of documentation on how to _use_ our components and services. For these, we aim to use a more casual tone.
-
 ##### Be conversational
 - Use contractions: "we're" over "we are"
 - Starting sentences with conjunctions like "but" or "so" is allowed.

@@ -28,9 +28,8 @@ In this tutorial we'll build an Origami component. Our example component will di
 Before you get started, it's a good idea to discuss your new component with the Origami team first. The team will be able to make sure there's not an existing component or [component proposal](https://github.com/Financial-Times/origami#propose-a-new-component) that fulfils the same purpose, and will be available to answer any questions.
 
 To follow this tutorial ensure the following software is install on your machine:
-- [Node.js](https://nodejs.org/en/) (Version 10 or higher)
-- [npm](https://www.npmjs.com/get-npm) (Version 5 or higher)
-- [Bower](https://bower.io/)
+- [NodeJS](https://nodejs.org/en/) (Version 10 or higher)
+- [NPM](https://www.npmjs.com/get-npm) (Version 7 or higher)
 
 In addition this tutorial introduces a number of tools and libraries such as [git](https://git-scm.com/), [Sass](https://sass-lang.com/), [sinon.js](https://sinonjs.org/), etc. We do not cover these in depth but attempt to include brief descriptions and links to relevant documentation so that you may learn separately about the parts which are new to you.
 
@@ -38,10 +37,10 @@ If you have any questions please contact the Origami team to help make this tuto
 
 ## The Origami Specification
 
-All Origami components **must** meet the requirements defined in the [Origami Component Specification](/spec/v1/components/). The specification covers folder structure, code standards, documentation and more. We'll refer to this document throughout this tutorial.
+The [Origami Specification](/spec/v1/) is deprecated, new components may diverge from its rules. However, some Origami tools and services continue to depend on parts of the deprecated specification so we will refer to relevant sections of the specification throughout this tutorial. Including for folder structure, code standards, documentation and more.
 
 <aside>
-If this tutorial contradicts or misses anything required in the <a href="/spec/v1/components/">Origami Component Specification</a>, the specification is correct and this tutorial is wrong. If you find a case like that please let the Origami team know so we can ensure this tutorial is always up to date.
+See our [blogpost on why the Origami specification is deprecated](https://origami.ft.com/blog/2021/06/01/newsletter/#the-origami-specification-is-no-more).
 </aside>
 
 ## Build Tools
@@ -114,7 +113,6 @@ o-example
 ├── .gitignore
 ├── .stylelintrc.js
 ├── README.md
-├── bower.json
 ├── demos
 │   └── src
 │       ├── demo.js
@@ -215,7 +213,7 @@ The `div` tag in our demo may be any HTML tag provided there is a `data-o-compon
 ## Part Two: Base Styles
 
 In part one we learnt:
-- The [Origami component specification](/spec/v1/components/) tells us what standards we must meet to create an Origami component.
+- The [Origami specification](/spec/v1/) is deprecated, but some sections provide a useful reference to create components compatible with Origami tools and services whilst they are updated.
 - The [Origami Build Tools](https://github.com/Financial-Times/origami-build-tools) command line interface is used to help us develop and test components.
 - Specifically, we learnt about the Origami Build Tools `init` command to generate a component to work from when developing a new component.
 - Origami components use `git` source control and are stored remotely on Github.
