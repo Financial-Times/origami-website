@@ -26,11 +26,6 @@
 				</a>
 			</li>
 			<li>
-				<a href="/spec/v1/" {% if page.url == '/spec/v1/' %}aria-current="page"{% endif %}>
-					Specs
-				</a>
-			</li>
-			<li>
 				<a href="https://registry.origami.ft.com/components"> Registry</a>
 			</li>
 			<li>
@@ -111,6 +106,11 @@
 				<li>
 					<a href="/docs/services/" {% if page.url contains '/docs/services/' %}aria-current="page"{% endif %}>
 						Services
+					</a>
+				</li>
+				<li>
+					<a href="/docs/manifests/" {% if page.url contains '/docs/manifests/' %}aria-current="page"{% endif %}>
+						Manifests
 					</a>
 				</li>
 				<li>

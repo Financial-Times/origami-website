@@ -7,6 +7,9 @@ collections:
   services:
     output: false
     permalink: /docs/:collection/:name/
+  manifests:
+    output: true
+    permalink: /docs/:collection/:name/
   tutorials:
     output: true
     permalink: /docs/:collection/:name/
@@ -26,6 +29,10 @@ defaults:
       path: ""
     values:
       layout: o-layout-docs
+  - scope:
+      path: "_specification-v1"
+    values:
+      layout: spec-v1
   - scope:
       path: ""
       type: posts

@@ -1,18 +1,21 @@
 ---
-title: Origami.json Manifest Specification
-description: A specification which describes the required structure of an Origami.json manifest file.
-cta: Read the manifest spec
+title: origami.json
+description: Responsible for describing various aspects of an Origami project.
+cta: Read more about the origami.json manifest.
 
 # Navigation config
 nav_display: true
-nav_label: Manifest
-nav_heading_selector: h1, h2, h3
-nav_order: 25
+nav_label: origami.json
+nav_order: 20
 ---
 
 # {{page.title}}
 
-`origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami project.
+`origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami project. It is under active development and subject to change, `required` properties indicate those that Origami tools or services may still rely on.
+
+<aside>
+The <a href="https://origami.ft.com/blog/2021/06/01/newsletter/#the-origami-specification-is-no-more">Origami specification is now deprecated</a>. The structure of <code class="language-plaintext highlighter-rouge">origami.json</code> may change as Origami tooling and services are updated.
+</aside>
 
 ## Properties
 
@@ -29,7 +32,7 @@ nav_order: 25
 	</tr>
 </table>
 
-**Should** be a concise description of the purpose of the project.
+A concise description of the purpose of the project.
 <pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables"
 }</code></pre>
@@ -47,10 +50,10 @@ nav_order: 25
 	</tr>
 </table>
 
-Defines the type of Origami project that the manifest belongs to. **Must** be set to one of:
-- `"component"` or `"module"`: A front-end component that follows [the component specification](/spec/v1/components/)
+Defines the type of Origami project that the manifest belongs to:
+- `"component"` (previously `module`): A front-end component
 - `"imageset"`: A set of images that have an alias on the Origami Image Service
-- `"service"`: An HTTP service that follows [the service specification](/spec/v1/services/)
+- `"service"`: An HTTP service
 - `"cli"`: 	A command line tool
 - `"library"`: 	A library that is not a front-end component
 - `"website"`: Origami websites that aren't intended to be services
@@ -59,12 +62,8 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 - `"meta"`: Repository-only projects that relate to how Origami works
 - `null`: An Origami project that does not fit any of the named categories
 
-<aside>
-	The <code>type</code> of <code>"module"</code> is a hangover from when client-side Origami components were named "modules". It's likely to be deprecated or removed in a later version of the spec.
-</aside>
-
 <pre><code class="o-syntax-highlight--json">{
-	"origamiType": "module"
+	"origamiType": "component"
 }</code></pre>
 
 ### origamiVersion
@@ -80,7 +79,7 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-**Must** be set to `1`. It is the version of Origami to which the project conforms.
+The version of the [Origami specification](/spec/) the project follows. Note that the specification is now deprecated as of v1, any value other than `1`, for example `2.0`, indicates the project does not follow a specification:
 <pre><code class="o-syntax-highlight--json">{
 	"origamiVersion": 1
 }</code></pre>
@@ -98,8 +97,8 @@ Defines the type of Origami project that the manifest belongs to. **Must** be se
 	</tr>
 </table>
 
-For components which support [brands](/docs/components/branding/), this **must** be an array of one or more brands: "master", "internal, "whitelabel".
-If the brands property does not exist, this means the component supports all the brands.
+For components which support [brands](/docs/components/customisation/), an array of one or more brands: "master", "internal, "whitelabel".
+If the brands property does not exist, this means the component is unbranded and supports all the brands.
 
 ### keywords
 
@@ -114,7 +113,7 @@ If the brands property does not exist, this means the component supports all the
 	</tr>
 </table>
 
-Expects keywords related to the project to help discover it in the registry. These **should** be stored as an array. These **may** be stored as a comma-separated string.
+Expects keywords related to the project to help discover it in the registry.
 
 <pre><code class="o-syntax-highlight--json">{
 	"keywords": ["table", "rows", "columns"]
@@ -133,9 +132,9 @@ Expects keywords related to the project to help discover it in the registry. The
 	</tr>
 </table>
 
-*Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`.
+*Applies to `{ "origamiType": "component" }`.
 
-Describes the organisational category the component belongs to. **Must** be one of:
+Describes the organisational category the component belongs to:
 - `"utilities"`: Sass and JavaScript utilities that provide no markup, provide no classes and are used to encapsulate shared logic between components
 - `"primitives"`: Base components that provide minimal markup and are used by other components
 - `"components"`: Components built from primitives and utilities, which provide markup for a complete user interface
@@ -156,7 +155,7 @@ Describes the organisational category the component belongs to. **Must** be one 
 		<td><code>true</code></td>
 	</tr>
 </table>
-Describes where a user can go for support on this project. **Should** be the URL of the project's GitHub issues.
+Describes where a user can go for support on this project, e.g. the project's GitHub issues.
 
 <pre><code class="o-syntax-highlight--json">{
 	"support": "https://github.com/Financial-Times/o-table/issues"
@@ -175,7 +174,7 @@ Describes where a user can go for support on this project. **Should** be the URL
 	</tr>
 </table>
 
-Describes the support status of the project's major version. **Must** be one of:
+Describes the support status of the project's major version:
 - `active`: feature development ongoing, bug reports will be gratefully received and acted upon promptly
 - `maintained`: not actively developed but reproducible bugs will be fixed promptly and work done where necessary to maintain compatibility with platforms and other projects
 - `deprecated`: not actively developed, not recommended for new projects, only the most disabling bugs will be addressed and only when time allows, but existing implementations may still work
@@ -206,9 +205,9 @@ Describes contact details a user can choose from to find support for this projec
 - decommissioning the project when appropriate
 - provide support to the users of the project
 
-The object **requires** two properties:
-- `email`: type `String`. Is an email address that users can request support from. This email **must** be group or role based, not a named individual
-- `slack`: type `String`. Is a slack channel that users can go to for support. This **must** be in the format: organisation/channel-name
+The object requires two properties:
+- `email`: type `String`. Is an email address that users can request support from. We recommend a group or role based email, not a named individual
+- `slack`: type `String`. Is a slack channel that users can go to for support in the format: organisation/channel-name
 
 <pre><code class="o-syntax-highlight--json">{
 	"supportContact": {
@@ -216,29 +215,6 @@ The object **requires** two properties:
 		"slack": "financialtimes/origami-support"
 	}
 }</code></pre>
-
-
-### ci
-<table class="o-manifest__table o-table o-table--compact o-table--row-headings o-table--vertical-lines o-table--horizontal-lines" data-o-component="o-table">
-	<tr>
-		<th scope="row" role="rowheader">Type</th>
-		<td><code>Object</code></td>
-	</tr>
-	<tr>
-		<th scope="row" role="rowheader">Required</th>
-		<td><code>false</code></td>
-	</tr>
-</table>
-_This object is no longer used in the Origami manifest. It is documented here for the purpose of reference in case a project does still use it_. Describes a set of one or more URLs where build information can be found.
-<pre><code class="o-syntax-highlight--json">{
-	"ci": {
-		"circle": "https://circleci.com/api/v1/project/owner/repo",
-		"travis": "https://api.travis-ci.org/repos/owner/repo/builds.json",
-		"jenkins": "https://jenkins.example.com/job/"
-	}
-}</code></pre>
-
-circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/repo)
 
 ### browserFeatures
 
@@ -253,7 +229,7 @@ circle:	A CircleCI build status URL (https://circleci.com/api/v1/project/owner/r
 	</tr>
 </table>
 
-Applies to `{ "origamiType": "component" }` and `{ "origamiType": "module" }`. Outlines the browser features required for the component's functionality.
+Applies to `{ "origamiType": "component" }`. Outlines the browser features required for the component's functionality.
 The object accepts two properties:
 - `required`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component assumes exists. If these features do not exist, the component may error.
 - `optional`: type `Array`. A list of <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a> features or <a href="https://modernizr.com/docs/" class="o-typography-link--external">Modernizr</a> tests, which the component  will use if they are available in the browser. If not the component may offer different or reduced functionality, but with graceful degradation.
@@ -393,7 +369,7 @@ This example joins all of the property snippets outlined above:
 <pre><code class="o-syntax-highlight--json">{
 	"description": "Branded tables",
 	"origamiType": "component",
-	"origamiVersion": 1,
+	"origamiVersion": '2.0',
 	"keywords": ["table", "rows", "columns"],
 	"origamiCategory": "components",
 	"support": "https://github.com/Financial-Times/o-table/issues",

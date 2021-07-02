@@ -1,18 +1,19 @@
 ---
 title: Silent mode
-description: Documentation on how to use Origami's 'silent mode', which allows you to control the output size of a component's CSS.
+description: Documentation on how to use Origami component's deprecated 'silent mode'. This allows you to control the CSS output of a component.
 cta: Learn about silent mode
 
+collection_listing_display: false
+
 # Navigation config
-nav_display: true
+nav_display: false
 nav_label: Silent mode
 nav_order: 40
 ---
 
 # {{ page.title }}
 
-Every styled Origami component comes with a 'silent mode'. At its very core, the silent mode controls the output of a component's <abbr title="Sassy Cascading Style Sheets">SCSS</abbr>.
-An Origami component generally has a comprehensive set of <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> mixins and variables that define most of its styling.
+Some styled Origami components come with a 'silent mode' [Sass](https://sass-lang.com/) variable, which is used to control when the component outputs CSS. However, this is now deprecated in favour of including a [Sass](https://sass-lang.com/) mixin to control CSS output.
 
 <aside>The <a href="https://sass-lang.com/guide" class="o-typography-link--external">Sass Guide</a> has more information about <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> mixins, and many other features.</aside>
 

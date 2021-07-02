@@ -71,14 +71,19 @@
 </head>
 <body>
 	<div class="o-layout {% if layout.o_layout_type %}o-layout--{{layout.o_layout_type}}{% else %}o-layout--docs{% endif %}" data-o-component="o-layout" data-o-layout-nav-heading-selector="{% if page.nav_heading_selector %}{{page.nav_heading_selector}}{% else %}h1, h2{% endif %}">
+		{% unless header %}
 		<div class="o-layout__header">
 			{% include header.html %}
 		</div>
+		{% endunless %}
 
 		{{content}}
 
-		{% include footer.html %}
-
+		{% unless footer %}
+		<div class="o-layout__footer">
+			{% include footer.html %}
+		</div>
+		{% endunless %}
 	</div>
 
 	{% if page.hasCharts %}
