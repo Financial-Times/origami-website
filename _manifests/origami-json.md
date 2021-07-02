@@ -14,7 +14,7 @@ nav_order: 20
 `origami.json` is a <a href="https://www.json.org/" class="o-typography-link--external"><abbr title="JavaScript Object Notation">JSON</abbr></a> format file that is responsible for describing various aspects of an Origami project. It is under active development and subject to change, `required` properties indicate those that Origami tools or services may still rely on.
 
 <aside>
-The <a href="/TODO-why-we-deprecated-the-spec">Origami specification is now deprecated</a>. The structure of <code class="language-plaintext highlighter-rouge">origami.json</code> may change as Origami tooling and services are updated.
+The <a href="https://origami.ft.com/blog/2021/06/01/newsletter/#the-origami-specification-is-no-more">Origami specification is now deprecated</a>. The structure of <code class="language-plaintext highlighter-rouge">origami.json</code> may change as Origami tooling and services are updated.
 </aside>
 
 ## Properties

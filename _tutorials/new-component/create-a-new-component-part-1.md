@@ -40,7 +40,7 @@ If you have any questions please contact the Origami team to help make this tuto
 The [Origami Specification](/spec/v1/) is deprecated, new components may diverge from its rules. However, some Origami tools and services continue to depend on parts of the deprecated specification so we will refer to relevant sections of the specification throughout this tutorial. Including for folder structure, code standards, documentation and more.
 
 <aside>
-See our [blogpost on why the Origami specification is deprecated](TODO-why-is-spec-deprecated).
+See our [blogpost on why the Origami specification is deprecated](https://origami.ft.com/blog/2021/06/01/newsletter/#the-origami-specification-is-no-more).
 </aside>
 
 ## Build Tools
