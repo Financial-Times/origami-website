@@ -42,7 +42,11 @@ Another one of our objectives this quarter was to build an autocomplete/type-ahe
 If your product is already using an autocomplete component or wanting to use one, we recommend looking at [o-autocomplete](https://registry.origami.ft.com/components/o-autocomplete) and seeing if you can start using it instead as it is actively being worked on by the Origami and Product Design.
 
 
-### 
+### Origami Build Service version 2 is deprecated
+
+This version of the build service uses the now deprecated FT Bower Registry. We have built a new version, version 3, which does not use the FT Bower Registry. To help projects migrate to version 3, we have built a tool which will list out the specific steps for a project to do in order to successfully migrate over to the new version.
+
+We are tracking the projects which will need to be migrated to the new version in a [spreadsheet](https://docs.google.com/spreadsheets/d/1Pem5e6cR0aiuKpYa7VD08AnSSynzjRtWt_VAHAoyhPQ/edit#gid=0).
 
 
 
@@ -54,5 +58,4 @@ If your product is already using an autocomplete component or wanting to use one
 ## Broader update
 
 A digest of other things that have happened this month:
-
 
