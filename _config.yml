@@ -49,6 +49,11 @@ defaults:
 # Blog post permalinks
 permalink: /blog/:year/:month/:day/:title/
 
+# Atom Feed attributes (jekyll-feed does not use scoped-config so this is site-wide)
+title: "Origami Newsletter"
+url: "https://origami.ft.com"
+description: "Origami is a group of services, components, and tools used to help design & build digital products for FT brands."
+
 # Files and directories to exclude from compilation
 exclude:
   - .pa11yci.js
@@ -72,6 +77,7 @@ repository: Financial-Times/origami
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-feed
   - jemoji
 
 # Timezone setting
