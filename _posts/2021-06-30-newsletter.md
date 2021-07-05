@@ -48,3 +48,8 @@ This version of the build service uses the now deprecated FT Bower Registry. We 
 
 We are tracking the projects which will need to be migrated to the new version in a [spreadsheet](https://docs.google.com/spreadsheets/d/1Pem5e6cR0aiuKpYa7VD08AnSSynzjRtWt_VAHAoyhPQ/edit#gid=0).
 
+
+## Special thanks
+
+This issues special thanks goes to Xuan Zhang! Xuan worked on the design and interactions for the new o-autocomplete component and was very helpful in explaining the designs and how they should look on different devices.
+
