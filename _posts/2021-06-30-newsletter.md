@@ -46,7 +46,7 @@ If your product is already using an autocomplete component or wanting to use one
 
 This version of the build service uses the now deprecated FT Bower Registry. We have built a new version, version 3, which does not use the FT Bower Registry. To help projects migrate to version 3, we have built [a tool](https://www.ft.com/__origami/service/build/url-updater) which will list out the specific steps for a project to do in order to successfully migrate over to the new version.
 
-We are tracking the projects which will need to be migrated to the new version in a [spreadsheet](https://docs.google.com/spreadsheets/d/1Pem5e6cR0aiuKpYa7VD08AnSSynzjRtWt_VAHAoyhPQ/edit#gid=0).
+We are tracking the projects which will need to be migrated to the new version in [the same spreadshet we are tracking the Bower migration](https://docs.google.com/spreadsheets/d/1Pem5e6cR0aiuKpYa7VD08AnSSynzjRtWt_VAHAoyhPQ/edit#gid=0).
 
 
 ## Special thanks
