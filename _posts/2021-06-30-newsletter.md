@@ -57,7 +57,7 @@ This issues special thanks goes to Xuan Zhang! Xuan worked on the design and int
 ## Broader update
 
 - MAJOR: All Origami maintained components have been migrated from Bower to NPM
-- MAJOR: [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) version 11 released, dropping support for Bower and adding fully support for NPM
+- MAJOR: [origami-build-tools](https://github.com/Financial-Times/origami-build-tools) version 11 released, dropping support for Bower and adding full support for NPM
 - MINOR: [o-colors](https://github.com/Financial-Times/o-colors) added a new palette named "partner content" with a new colour named "Matisse"
 - PATCH: [o-layout](https://github.com/Financial-Times/o-layout) added missing closing div to the footer markup in the component's demos
 - PATCH: [o-teaser](https://github.com/Financial-Times/o-teaser) updated the partner content label colour to "matisse"
