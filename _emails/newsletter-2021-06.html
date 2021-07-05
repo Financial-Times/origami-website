@@ -56,4 +56,12 @@ We are tracking the projects which will need to be migrated to the new version i
 {% endcapture %} {% include email/markdown.html content=text %}
 
 
+<!-- Special thanks -->
+{% include email/h2.html content="Special Thanks" %}
 
+{% capture text %}
+This issues special thanks goes to Xuan Zhang!
+
+Xuan worked on the design and interactions for the new o-autocomplete component and was very helpful in explaining the designs and how they should look on different devices.
+{% endcapture %}
+{% include email/markdown.html content=text %}
