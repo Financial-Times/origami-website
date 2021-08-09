@@ -72,8 +72,9 @@ Your migration to npm Origami components is finished! 🎉
 1. Remove the `bower.json` file and `.bowerrc` file if it exists. E.G. `rm -f .bowerrc bower.json`
 1. Remove the `bower_components` directory. `rm -rf bower_components`
 1. Remove `bower` from the `package.json` file. E.G. `npm uninstall bower`
-1. Update the Sass compiler's `includePath` configuration to include `node_modules` and remove `bower_components`
-1. Update the Origami Sass imports to include the `@financial-times` namespace. E.G. `@import 'o-icons/main';` becomes `@import '@financial-times/o-icons/main';`
+1. Update the Sass compiler's `includePath` configuration to include `node_modules` and remove `bower_components`, then either:
+    - Add an additional path `node_modules/@financial-times` to resolve Sass published under `@financial-times` without specifying a namespace. Or;
+    - Update the Origami Sass imports to include the `@financial-times` namespace. E.G. `@import 'o-icons/main';` becomes `@import '@financial-times/o-icons/main';`
 1. Update your Origami JavaScript imports to include the `@financial-times` namespace. E.G. `import oTracking from 'o-tracking';` becomes `import oTracking from '@financial-times/o-tracking';` and `import 'o-layout';` becomes `import '@financial-times/o-layout';`
 1. Run the project locally and confirm it is still working correctly
 
