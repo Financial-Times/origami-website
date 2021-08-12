@@ -50,7 +50,7 @@ endif
 # Fetch component data for use in the site
 fetch-component-data:
 	@echo "Fetching component data"
-	@curl -s -H 'X-Api-Key: $(REPO_DATA_API_KEY)' -H 'X-Api-Secret: $(REPO_DATA_API_SECRET)' 'https://origami-repo-data.ft.com/v1/repos' \
+	@curl -s -H 'X-Api-Key: $(REPO_DATA_API_KEY)' -H 'X-Api-Secret: $(REPO_DATA_API_SECRET)' 'https://origami-repo-data.ft.com/v1/repos?type=component,module,library' \
 		| ./scripts/extract-components.js \
 		> _data/components.json
 
