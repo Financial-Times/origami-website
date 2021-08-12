@@ -1,7 +1,7 @@
 ---
 title: Include Components Using the Origami Build Service
 description: A step-by-step tutorial which teaches you how to use Origami components via the Origami Build Service.
-cta: Learn how to build web pages using the Build Service
+cta: Learn how to build web pages using the Origami Build Service
 
 # Redirect from legacy URLs
 redirect_from:
@@ -12,7 +12,7 @@ redirect_from:
 
 Using the Origami Build Service is the quickest way of getting Origami components to work in your product. The service bundles together the <abbr title="Cascading Style Sheets">CSS</abbr> and the JavaScript for all Origami components on a central server. You can then access specific component bundles by using a `link` or `script` tag.
 
-<aside>You can find more detailed information on the Build Service's self hosted <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external"><abbr title="Application Programming Interface">API</abbr> and technical documentation</a>.</aside>
+<aside>You can find more detailed information on the Origami Build Service's self hosted <a href="https://www.ft.com/__origami/service/build" class="o-typography-link--external"><abbr title="Application Programming Interface">API</abbr> and technical documentation</a>.</aside>
 
 Below is a step by step walkthrough for building a page for an article about fruit, with FT.com colors and fonts, and we'll include a few Origami components to do so.
 
@@ -81,24 +81,30 @@ We can find the markup for the <a href="https://registry.origami.ft.com/componen
 
 ## Component <abbr title="Cascading Style Sheets">CSS</abbr>
 
-Now we come to the second step in putting our page together, and a big part of what makes the Build Service a quick solution.
+Now we come to the second step in putting our page together, and a big part of what makes the Origami Build Service a quick solution.
 
-The Build Service will perform a number of build steps to compile and bundle up the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that most Origami component styles are written in. Since it is all bundled for us to pick and choose from, let's begin by styling our grid. This means we'll have to add a `link` tag to our `<head>`
+The Origami Build Service will perform a number of build steps to compile and bundle up the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that most Origami component styles are written in. Since it is all bundled for us to pick and choose from, let's begin by styling our grid. This means we'll have to add a `link` tag to our `<head>` tag.
 
-The `href` of that link references the endpoint that serves all <abbr title="Cascading Style Sheets">CSS</abbr> bundles in the Build Service. The most important part of this url is the query parameter - it specifies what component and which version of it we're after:
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}}&brand=master&system_code=origami"/></code></pre>
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}}"/></code></pre>
+The `href` attribute references the Origami Build Service endpoint that serves a <abbr title="Cascading Style Sheets">CSS</abbr> bundle. The most important part of this url is the `components`, `brand`, and `system_code` query parameters.
+
+The system code is the <a href="https://biz-ops.in.ft.com/list/Systems">bizops system code</a> for the FT system which is making the Origami build service request. Make sure to update this to a code for your system. For the purposes of this tutorial only we'll use `origami`.
+
+The component query parameter is used to specify what components and which version we want to include. The the above we request `o-grid@^{{site.data.components.o-grid.version}}`.
+
+The brand query parameter will affect the appearance of included components, its value depends on what kind of project we are building  – more on this later.
 
 <aside><a href="https://codepen.io/ft-origami/pen/ajazYj" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
-Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` <abbr title="Cascading Style Sheets">CSS</abbr> bundle from the Build Service.
+Now, you should see all of your content snap to the center of the page. This means that we've successfully fetched the `o-grid` <abbr title="Cascading Style Sheets">CSS</abbr> bundle from the Origami Build Service.
 
 But we also want to style our content and our table, and fetch the right color from our color palette.
 
-It is important to highlight that you only need **one** link tag per page, regardless of how many components you are using. The Build Service can include more than one component in the bundle we ask for, meaning that we can add multiple components to the same URL. This avoids duplicating the <abbr title="Cascading Style Sheets">CSS</abbr> that is shared between components, because we are only downloading it all once.
+It is important to highlight that you only need **one** link tag per page, regardless of how many components you are using. The Origami Build Service can include more than one component in the bundle we ask for, meaning that we can add multiple components to the same URL. This avoids duplicating the <abbr title="Cascading Style Sheets">CSS</abbr> that is shared between components, because we are only downloading it all once.
 
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=master&system_code=origami"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/LBJErq" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
@@ -106,18 +112,18 @@ And now, when we look at our page, we should have a styled table, different typo
 
 ### Selecting A Brand
 
-By default Origami components are tailored for public facing, ft.com products -- these are known as "master brand" products. But Origami components offer tailored support for other contexts with component [branding](/docs/components/branding/).
+Public facing, ft.com product are known as "master brand" products, by setting the brand query parameter to "master" we are requesting that style of component. But Origami components offer tailored support for other contexts with component [branding](/docs/components/branding/).
 
-To choose a brand other than the default "master" brand, we append the `brand` parameter to our <abbr title="Cascading Style Sheets">CSS</abbr> build service url e.g. `&brand=internal`:
+For example we could set the brand to `internal`.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal&system_code=origami"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/VENXyQ" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` classes has changed, as have the stripes of `o-table`. Our typography set with `o-typography` classes has also changed.
 
-Now undo that by removing `&brand=internal` from the build service url, allowing our project to default to the "master" brand again.
+Now undo that by setting `&brand=master` again.
 
-For a list of supported brands and their purpose see [component brands](/docs/components/branding/).
+For a list of supported brands and their purpose see the [component customisation page](/docs/components/customisation/).
 
 ## Component JavaScript
 
@@ -125,20 +131,22 @@ There is one more step, before our page is entirely functional. Not all Origami 
 
 So our final step involves providing our table with the ability to sort its content. Much like the `link` tag for the <abbr title="Cascading Style Sheets">CSS</abbr>, we fetch JavaScript bundles from a Build Service endpoint, through a `script` tag. And, also like the url for the `link` tag, the `script src` expects a query parameter, which can also be more than one component.
 
+In addition to the `o-table` component we also request `o-autoinit`, which will automatically find and initialise all our requested components on the page when it's ready.
+
 For now though, let's add the following to our `<head>`:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-table@^{{site.data.components.o-table.version}}" defer>&lt;/script></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v3/bundles/js?components=o-table@^{{site.data.components.o-table.version}},o-autoinit@^{{site.data.components.o-autoinit.version}}&system_code=origami" defer>&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
 
 ## Next steps
 
-We've stepped through a basic set up of components with the Build Service, and these are the fundamental steps for any component you might want to use within your product.
+We've stepped through a basic set up of components with the Origami Build Service, and these are the fundamental steps for any component you might want to use within your product.
 
 There are a few more aspects to the development of a product with Origami components that are important for compatibility and consistency, and we encourage you to read more about them:
 
 - Origami components have been developed to provide a 'core' experience for older browsers, and an 'enhanced' experience for newer ones, and we check for this using a ['cuts the mustard'](/docs/components/compatibility/#cuts-the-mustard) test, which can determine which experience to serve to which browser.
 - Another service we provide is the <a href="https://polyfill.io" class="o-typography-link--external">Polyfill Service</a>, which makes newer APIs available to older browsers, allowing us to write code to modern standards.
-- Learn more about Origami supported ['brands'](/docs/components/branding/), which can change the appearance of components and provide unique features for different projects.
+- Learn more about [Origami brands and component customisation](/docs/components/customisation/), which can change the appearance of components and provide unique features for different projects.
 - [Component versioning](/docs/components/versioning/) is also important when building and maintaining products that use Origami components.
