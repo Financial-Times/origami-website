@@ -10,7 +10,6 @@ process.stdin.on('end', () => {
 
 function extractComponentMap(repos) {
 	return repos
-		.filter(repo => repo.type === 'module')
 		.map(simplifyRepo)
 		.reduce((map, repo) => {
 			map[repo.name] = repo;
