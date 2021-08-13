@@ -87,11 +87,11 @@ The Origami Build Service will perform a number of build steps to compile and bu
 
 <pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}}&brand=master&system_code=origami"/></code></pre>
 
-The `href` attribute references the Origami Build Service endpoint that serves a <abbr title="Cascading Style Sheets">CSS</abbr> bundle. The most important part of this url is the `components`, `brand`, and `system_code` query parameters.
+The `href` attribute references the Origami Build Service endpoint that serves a <abbr title="Cascading Style Sheets">CSS</abbr> bundle. The most important parts of this url are the `components`, `brand`, and `system_code` query parameters.
 
 The system code is the <a href="https://biz-ops.in.ft.com/list/Systems">bizops system code</a> for the FT system which is making the Origami build service request. Make sure to update this to a code for your system. For the purposes of this tutorial only we'll use `origami`.
 
-The component query parameter is used to specify what components and which version we want to include. The the above we request `o-grid@^{{site.data.components.o-grid.version}}`.
+The component query parameter is used to specify what components and which version we want to include. In the above we request `o-grid@^{{site.data.components.o-grid.version}}`.
 
 The brand query parameter will affect the appearance of included components, its value depends on what kind of project we are building  – more on this later.
 
