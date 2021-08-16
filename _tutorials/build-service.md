@@ -85,11 +85,11 @@ Now we come to the second step in putting our page together, and a big part of w
 
 The Origami Build Service will perform a number of build steps to compile and bundle up the <abbr title="Sassy Cascading Style Sheets">SCSS</abbr> that most Origami component styles are written in. Since it is all bundled for us to pick and choose from, let's begin by styling our grid. This means we'll have to add a `link` tag to our `<head>` tag.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}}&brand=master&system_code=origami"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}}&brand=master&system_code=$$$-no-bizops-system-code-$$$"/></code></pre>
 
 The `href` attribute references the Origami Build Service endpoint that serves a <abbr title="Cascading Style Sheets">CSS</abbr> bundle. The most important parts of this url are the `components`, `brand`, and `system_code` query parameters.
 
-The system code is the <a href="https://biz-ops.in.ft.com/list/Systems">bizops system code</a> for the FT system which is making the Origami build service request. Make sure to update this to a code for your system. For the purposes of this tutorial only we'll use `origami`.
+The system code is the <a href="https://biz-ops.in.ft.com/list/Systems">bizops system code</a> for the FT system which is making the Origami build service request. A valid system code is important for usage attribution and technical support, but for the purposes of this tutorial we'll use a placeholder value `$$$-no-bizops-system-code-$$$`.
 
 The component query parameter is used to specify what components and which version we want to include. In the above we request `o-grid@^{{site.data.components.o-grid.version}}`.
 
@@ -104,7 +104,7 @@ It is important to highlight that you only need **one** link tag per page, regar
 
 So in order to add the styling for all of our other components, we need to add a few components (and versions!) to the query parameter of our original url:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=master&system_code=origami"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=master&system_code=$$$-no-bizops-system-code-$$$"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/LBJErq" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 And now, when we look at our page, we should have a styled table, different typography and a type of grid in place.
@@ -116,7 +116,7 @@ Public facing, ft.com product are known as "master brand" products, by setting t
 
 For example we could set the brand to `internal`.
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal&system_code=origami"/></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v3/bundles/css?components=o-grid@^{{site.data.components.o-grid.version}},o-colors@^{{site.data.components.o-colors.version}},o-typography@^{{site.data.components.o-typography.version}},o-table@^{{site.data.components.o-table.version}}&brand=internal&system_code=$$$-no-bizops-system-code-$$$"/></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/VENXyQ" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 As the colour palette for the "internal" brand does not include "paper" (FT pink), the background we set with `o-colors` classes has changed, as have the stripes of `o-table`. Our typography set with `o-typography` classes has also changed.
@@ -135,7 +135,7 @@ In addition to the `o-table` component we also request `o-autoinit`, which will 
 
 For now though, let's add the following to our `<head>`:
 
-<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v3/bundles/js?components=o-table@^{{site.data.components.o-table.version}},o-autoinit@^{{site.data.components.o-autoinit.version}}&system_code=origami" defer>&lt;/script></code></pre>
+<pre class="o-layout__main__full-span"><code class="o-syntax-highlight--html">&lt;script src="https://www.ft.com/__origami/service/build/v3/bundles/js?components=o-table@^{{site.data.components.o-table.version}},o-autoinit@^{{site.data.components.o-autoinit.version}}&system_code=$$$-no-bizops-system-code-$$$" defer>&lt;/script></code></pre>
 <aside><a href="https://codepen.io/ft-origami/pen/ejLNNL" rel="noreferrer noopener" target="_blank" class="o-typography-link o-typography-link--external">Show me the CodePen (opens a new tab)</a></aside>
 
 Now you can scroll down to your table, and sort fruit alphabetically by name or characteristic, or numerically by popularity.
